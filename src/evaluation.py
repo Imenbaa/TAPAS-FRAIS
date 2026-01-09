@@ -11,17 +11,8 @@ from utils.normalise_text import normalization
 from pathlib import Path
 from hyperpyyaml import load_hyperpyyaml
 
-log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/wer_evaluation.log")
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s",
-    handlers=[
-        logging.FileHandler(log_file, mode="w"),
-        logging.StreamHandler(),  # remove if you want file-only
-    ],
-)
 
-wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
+
 
 models = ["wav2vec"]
 #datasets = ["TAPAS-FRAIS","CV","TYPALOC","Ester","Librispeech","Rhapsodie"]
@@ -33,10 +24,20 @@ parser = argparse.ArgumentParser(description="Evaluate multiple ASR models on fr
 parser.add_argument("--model", type=str,choices = models ,required= True, help="The ASR model")
 parser.add_argument("--wav_data", type=str,required=True, help="The path to the wav files")
 parser.add_argument("--ref_trans", type=str,required=True, help="The reference transcription")
+parser.add_argument("--log_file", type=str,required=True, help="The logfile name")
 
 args = parser.parse_args()
+log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+ args.log_file + ".log")
+wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    handlers=[
+        logging.FileHandler(args.log_file, mode="w"),
+        logging.StreamHandler(),  # remove if you want file-only
+    ],
+)
 logger = logging.getLogger(__name__)
-
 def main(args):
     #-------------------------------- Model inference -------------------------------
     #--------------------------------------------------------------------------------
@@ -44,27 +45,30 @@ def main(args):
         asr_model = EncoderASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr", savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr")
         WERs = []
         for f in os.listdir(args.ref_trans):
-            wer_hparams["wer_stats"].clear()
-            ref_transcriptions = get_textgrid_transcription(os.path.join(args.ref_trans, f))
-            pred_transcriptions = asr_model.transcribe_file(os.path.join(args.wav_data, f.split(".")[0]+".wav"))
-            #wer_metric.append(f.split(".")[0],normalization(pred_transcriptions),normalization(ref_transcriptions))
+            if os.path.exists(os.path.join(args.wav_data, f.split(".")[0]+".wav")):
+                wer_hparams["wer_stats"].clear()
+                ref_transcriptions = get_textgrid_transcription(os.path.join(args.ref_trans, f))
+                pred_transcriptions = asr_model.transcribe_file(os.path.join(args.wav_data, f.split(".")[0]+".wav"))
+                #wer_metric.append(f.split(".")[0],normalization(pred_transcriptions),normalization(ref_transcriptions))
 
-            wer_hparams["wer_stats"].append(
-                ids=list(range(len(ref_transcriptions))),
-                predict=[normalization(pred_transcriptions)],
-                target=[normalization(ref_transcriptions)])
+                wer_hparams["wer_stats"].append(
+                    ids=list(range(len(ref_transcriptions))),
+                    predict=[normalization(pred_transcriptions)],
+                    target=[normalization(ref_transcriptions)])
 
-            stats = wer_hparams["wer_stats"].summarize()
-            logger.info(
-                    "File: %s | WER=%f | S=%d D=%d I=%d",
-                    f.split(".")[0],
-                    stats["WER"],
-                    stats["substitutions"],
-                    stats["deletions"],
-                    stats["insertions"],
-                )
-            logger.info("-" * 30)
-            WERs.append(stats["WER"])
+                stats = wer_hparams["wer_stats"].summarize()
+                logger.info(
+                        "File: %s | WER=%f | S=%d D=%d I=%d",
+                        f.split(".")[0],
+                        stats["WER"],
+                        stats["substitutions"],
+                        stats["deletions"],
+                        stats["insertions"],
+                    )
+                logger.info("-" * 30)
+                WERs.append(stats["WER"])
+            else:
+                logging.warning(f"The file {f.split('.')[0]+'.wav'} does not exist")
         # Compute final WER
         global_stats = sum(WERs)/len(WERs)
 
