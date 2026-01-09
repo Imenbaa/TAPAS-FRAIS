@@ -1,0 +1,115 @@
+2026-01-09 14:26:14,309 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-09 14:26:14,339 | DEBUG | torchaudio 2.9+ detected - audio backend checking skipped (handled by torchcodec)
+2026-01-09 14:26:15,237 | WARNING | speechbrain.integrations.huggingface.huggingface - Wav2Vec2Model is frozen.
+2026-01-09 14:26:15,251 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr.
+2026-01-09 14:26:15,251 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-09 14:26:15,251 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-09 14:26:15,251 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-09 14:26:15,252 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-09 14:26:15,252 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-09 14:26:15,252 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-09 14:26:15,252 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-09 14:26:15,252 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-09 14:26:15,252 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-09 14:26:15,252 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-09 14:26:20,328 | DEBUG | Registered checkpoint save hook for save
+2026-01-09 14:26:20,328 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-09 14:26:20,333 | INFO | File: MO_H_SD29_2016_05_20_ModuleDescription_description | WER=55.932203 | S=27 D=39 I=0
+2026-01-09 14:26:20,333 | INFO | ------------------------------
+2026-01-09 14:26:32,990 | INFO | File: MO_H_ER21_2016_04_11_ModuleDescription_description | WER=28.444444 | S=26 D=37 I=1
+2026-01-09 14:26:32,991 | INFO | ------------------------------
+2026-01-09 14:26:36,320 | INFO | File: MO_F_SD22_2016_05_03_ModuleDescription_description | WER=22.093023 | S=13 D=6 I=0
+2026-01-09 14:26:36,320 | INFO | ------------------------------
+2026-01-09 14:26:37,653 | INFO | File: MO_H_ER50_2017_05_29_ModuleDescription_description | WER=17.500000 | S=8 D=6 I=0
+2026-01-09 14:26:37,654 | INFO | ------------------------------
+2026-01-09 14:26:42,023 | INFO | File: MO_F_ER05_2016_04_06_ModuleDescription_description | WER=12.182741 | S=14 D=10 I=0
+2026-01-09 14:26:42,023 | INFO | ------------------------------
+2026-01-09 14:26:52,848 | INFO | File: MO_F_ER20_2016_04_11_ModuleDescription_description | WER=10.727969 | S=19 D=8 I=1
+2026-01-09 14:26:52,849 | INFO | ------------------------------
+2026-01-09 14:26:57,129 | INFO | File: MO_H_ER25_2016_04_16_ModuleDescription_description | WER=23.750000 | S=11 D=27 I=0
+2026-01-09 14:26:57,129 | INFO | ------------------------------
+2026-01-09 14:26:57,130 | WARNING | The file MO_H_ER25_2016_04_16_ModuleDescription_description_2.TextGrid.wav does not exist
+2026-01-09 14:27:06,564 | INFO | File: MO_H_ER44_2017_01_26_ModuleDescription_description | WER=11.538462 | S=19 D=11 I=0
+2026-01-09 14:27:06,564 | INFO | ------------------------------
+2026-01-09 14:27:07,572 | INFO | File: MO_H_AV39_2016_06_11_ModuleDescription_description | WER=8.791209 | S=5 D=3 I=0
+2026-01-09 14:27:07,572 | INFO | ------------------------------
+2026-01-09 14:27:12,239 | INFO | File: MO_H_SD27_2016_05_20_ModuleDescription_description | WER=73.846154 | S=14 D=33 I=1
+2026-01-09 14:27:12,240 | INFO | ------------------------------
+2026-01-09 14:27:34,165 | INFO | File: MO_H_AV03_2016_04_10_ModuleDescription_description | WER=16.140351 | S=29 D=17 I=0
+2026-01-09 14:27:34,166 | INFO | ------------------------------
+2026-01-09 14:27:41,183 | INFO | File: MO_F_AV07_2016_06_07_ModuleDescription_description | WER=24.766355 | S=26 D=27 I=0
+2026-01-09 14:27:41,184 | INFO | ------------------------------
+2026-01-09 14:27:43,181 | INFO | File: MO_F_SD06_2016_04_18_ModuleDescription_description | WER=20.338983 | S=11 D=13 I=0
+2026-01-09 14:27:43,181 | INFO | ------------------------------
+2026-01-09 14:28:01,884 | INFO | File: MO_F_SD14_2016_04_25_ModuleDescription_description | WER=22.000000 | S=27 D=27 I=1
+2026-01-09 14:28:01,884 | INFO | ------------------------------
+2026-01-09 14:28:13,655 | INFO | File: MO_F_ER12_2016_04_07_ModuleDescription_description | WER=15.094340 | S=24 D=8 I=0
+2026-01-09 14:28:13,655 | INFO | ------------------------------
+2026-01-09 14:28:20,493 | INFO | File: MO_F_ER04_2016_04_05_ModuleDescription_description | WER=13.402062 | S=17 D=8 I=1
+2026-01-09 14:28:20,493 | INFO | ------------------------------
+2026-01-09 14:28:48,639 | INFO | File: MO_F_AV13_2016_04_18_ModuleDescription_description | WER=14.678899 | S=30 D=18 I=0
+2026-01-09 14:28:48,639 | INFO | ------------------------------
+2026-01-09 14:28:48,639 | WARNING | The file MO_F_SD14_2016_08_13_ModuleDescription_description_2.TextGrid.wav does not exist
+2026-01-09 14:30:43,688 | INFO | File: MO_H_SD31_2016_05_27_ModuleDescription_description | WER=38.129496 | S=91 D=63 I=5
+2026-01-09 14:30:43,688 | INFO | ------------------------------
+2026-01-09 14:30:47,724 | INFO | File: MO_H_SD05_2016_08_22_ModuleDescription_description | WER=20.529801 | S=12 D=19 I=0
+2026-01-09 14:30:47,724 | INFO | ------------------------------
+2026-01-09 14:30:54,934 | INFO | File: MO_H_SD16_2016_04_25_ModuleDescription_description | WER=21.546961 | S=23 D=16 I=0
+2026-01-09 14:30:54,935 | INFO | ------------------------------
+2026-01-09 14:30:58,123 | INFO | File: MO_F_ER14_2016_04_08_ModuleDescription_description | WER=14.814815 | S=10 D=6 I=0
+2026-01-09 14:30:58,123 | INFO | ------------------------------
+2026-01-09 14:31:03,648 | INFO | File: MO_H_ER46_2017_03_31_ModuleDescription_description | WER=21.854305 | S=15 D=17 I=1
+2026-01-09 14:31:03,648 | INFO | ------------------------------
+2026-01-09 14:31:04,573 | INFO | File: MO_H_AV34_2016_06_07_ModuleDescription_description | WER=17.777778 | S=3 D=5 I=0
+2026-01-09 14:31:04,573 | INFO | ------------------------------
+2026-01-09 14:31:06,144 | INFO | File: MO_H_ER42_2017_01_24_ModuleDescription_description | WER=6.666667 | S=2 D=0 I=0
+2026-01-09 14:31:06,144 | INFO | ------------------------------
+2026-01-09 14:31:18,405 | INFO | File: MO_F_AV07_2016_04_13_ModuleDescription_description | WER=18.884120 | S=21 D=23 I=0
+2026-01-09 14:31:18,405 | INFO | ------------------------------
+2026-01-09 14:31:20,261 | INFO | File: MO_H_ER11_2016_04_07_ModuleDescription_description | WER=8.571429 | S=5 D=1 I=0
+2026-01-09 14:31:20,261 | INFO | ------------------------------
+2026-01-09 14:31:30,155 | INFO | File: MO_F_AV04_2016_04_12_ModuleDescription_description | WER=33.500000 | S=33 D=34 I=0
+2026-01-09 14:31:30,155 | INFO | ------------------------------
+2026-01-09 14:32:09,731 | INFO | File: MO_F_ER20_2016_06_08_ModuleDescription_description | WER=17.782910 | S=46 D=30 I=1
+2026-01-09 14:32:09,731 | INFO | ------------------------------
+2026-01-09 14:32:24,989 | INFO | File: MO_F_SD04_2016_04_15_ModuleDescription_description | WER=14.077670 | S=18 D=8 I=3
+2026-01-09 14:32:24,989 | INFO | ------------------------------
+2026-01-09 14:32:27,575 | INFO | File: MO_H_ER13_2016_04_08_ModuleDescription_description | WER=30.487805 | S=14 D=8 I=3
+2026-01-09 14:32:27,575 | INFO | ------------------------------
+2026-01-09 14:32:32,703 | INFO | File: MO_F_AV16_2016_04_18_ModuleDescription_description | WER=21.301775 | S=19 D=16 I=1
+2026-01-09 14:32:32,703 | INFO | ------------------------------
+2026-01-09 14:32:37,809 | INFO | File: MO_F_SD17_2016_05_03_ModuleDescription_description | WER=16.346154 | S=9 D=8 I=0
+2026-01-09 14:32:37,810 | INFO | ------------------------------
+2026-01-09 14:33:23,441 | INFO | File: MO_F_AV40_2016_06_11_ModuleDescription_description | WER=14.369501 | S=38 D=9 I=2
+2026-01-09 14:33:23,441 | INFO | ------------------------------
+2026-01-09 14:34:03,807 | INFO | File: MO_H_AV03_2016_06_12_ModuleDescription_description | WER=25.146199 | S=47 D=39 I=0
+2026-01-09 14:34:03,807 | INFO | ------------------------------
+2026-01-09 14:34:19,746 | INFO | File: MO_F_SD17_2016_05_02_ModuleDescription_description | WER=8.680556 | S=17 D=8 I=0
+2026-01-09 14:34:19,746 | INFO | ------------------------------
+2026-01-09 14:34:22,113 | INFO | File: MO_F_AV29_2016_05_25_ModuleDescription_description | WER=23.255814 | S=8 D=12 I=0
+2026-01-09 14:34:22,113 | INFO | ------------------------------
+2026-01-09 14:34:23,434 | INFO | File: MO_H_ER15_2016_04_08_ModuleDescription_description | WER=21.153846 | S=6 D=3 I=2
+2026-01-09 14:34:23,434 | INFO | ------------------------------
+2026-01-09 14:34:30,602 | INFO | File: MO_H_SD10_2016_08_24_ModuleDescription_description | WER=28.758170 | S=17 D=27 I=0
+2026-01-09 14:34:30,603 | INFO | ------------------------------
+2026-01-09 14:34:35,696 | INFO | File: MO_H_AV12_2016_04_15_ModuleDescription_description | WER=15.116279 | S=14 D=12 I=0
+2026-01-09 14:34:35,696 | INFO | ------------------------------
+2026-01-09 14:34:39,343 | INFO | File: MO_H_SD10_2016_04_22_ModuleDescription_description | WER=39.316239 | S=19 D=27 I=0
+2026-01-09 14:34:39,343 | INFO | ------------------------------
+2026-01-09 14:34:54,275 | INFO | File: MO_F_SD04_2016_08_22_ModuleDescription_description | WER=15.322581 | S=26 D=10 I=2
+2026-01-09 14:34:54,275 | INFO | ------------------------------
+2026-01-09 14:34:57,194 | INFO | File: MO_H_ER42_2017_03_31_ModuleDescription_description | WER=15.000000 | S=5 D=1 I=0
+2026-01-09 14:34:57,194 | INFO | ------------------------------
+2026-01-09 14:35:06,499 | INFO | File: MO_F_ER03_2016_04_05_ModuleDescription_description | WER=6.666667 | S=8 D=4 I=0
+2026-01-09 14:35:06,499 | INFO | ------------------------------
+2026-01-09 14:35:10,934 | INFO | File: MO_H_ER07_2016_04_06_ModuleDescription_description | WER=31.623932 | S=19 D=18 I=0
+2026-01-09 14:35:10,934 | INFO | ------------------------------
+2026-01-09 14:35:14,791 | INFO | File: MO_F_SD20_2016_05_02_ModuleDescription_description | WER=16.279070 | S=9 D=12 I=0
+2026-01-09 14:35:14,791 | INFO | ------------------------------
+2026-01-09 14:35:26,065 | INFO | File: MO_F_AV08_2016_04_13_ModuleDescription_description | WER=29.473684 | S=24 D=32 I=0
+2026-01-09 14:35:26,065 | INFO | ------------------------------
+2026-01-09 14:35:35,173 | INFO | File: MO_H_SD26_2016_05_13_ModuleDescription_description | WER=9.821429 | S=12 D=10 I=0
+2026-01-09 14:35:35,173 | INFO | ------------------------------
+2026-01-09 14:35:35,173 | INFO | ===================== GLOBAL WER ======================
+2026-01-09 14:35:35,173 | INFO | WER: 21.14%
+2026-01-09 14:35:35,173 | INFO | =============================================================
