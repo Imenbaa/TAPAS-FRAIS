@@ -1,28 +1,31 @@
-from textgrid import TextGrid
+from textgrid import TextGrid, IntervalTier
 
-def get_textgrid_transcription(tg_path, tier_name="transcription"):
-    """
-    Read a TextGrid file and return the concatenated transcription from the specified tier.
-    """
+def get_textgrid_transcription(tg_path, tier_name):
     tg = TextGrid.fromFile(tg_path)
 
-    # Find the tier
+    # Afficher les tiers disponibles (debug)
+    available_tiers = [t.name for t in tg.tiers]
+
+    # Chercher le bon tier
     tier = None
     for t in tg.tiers:
-        if t.name.lower() == tier_name.lower():
+        if t.name.strip().lower() == tier_name.strip().lower():
             tier = t
             break
 
     if tier is None:
-        # fallback: take first tier
-        tier = tg.tiers[0]
+        raise ValueError(
+            f"Tier '{tier_name}' introuvable. "
+            f"Tiers disponibles: {available_tiers}"
+        )
 
-    # Concatenate all non-empty intervals
+    if not isinstance(tier, IntervalTier):
+        raise ValueError(f"Le tier '{tier.name}' n'est pas un IntervalTier")
+
     words = [
         interval.mark.strip()
         for interval in tier.intervals
-        if interval.mark and interval.mark.strip()
+        if interval.mark.strip()
     ]
 
-    transcription = " ".join(words)
-    return transcription
+    return " ".join(words)
