@@ -1,6 +1,81 @@
 from textgrid import TextGrid, IntervalTier
 
-def get_textgrid_transcription(tg_path, tier_name):
+from textgrid import TextGrid, IntervalTier
+
+PHONE_LIKE_TOKENS = {
+    "a", "e", "i", "o", "u", "y",
+    "p", "b", "t", "d", "k", "g",
+    "s", "z", "f", "v", "m", "n", "l", "r"
+}
+
+WORD_TIER_KEYWORDS = [
+    "word", "words", "trans", "orth", "sentence", "text"
+]
+
+def is_phone_like(text):
+    """Heuristic: phones are short, no spaces, often single chars"""
+    text = text.strip().lower()
+    if not text:
+        return True
+    if " " in text:
+        return False
+    if len(text) <= 2:
+        return True
+    return text in PHONE_LIKE_TOKENS
+
+
+def tier_score(tier: IntervalTier):
+    """
+    Higher score = more likely to be a word tier
+    """
+    texts = [i.mark.strip() for i in tier.intervals if i.mark.strip()]
+    if not texts:
+        return -1
+
+    avg_len = sum(len(t) for t in texts) / len(texts)
+    space_ratio = sum(" " in t for t in texts) / len(texts)
+    phone_ratio = sum(is_phone_like(t) for t in texts) / len(texts)
+
+    name_bonus = any(k in tier.name.lower() for k in WORD_TIER_KEYWORDS)
+
+    score = (
+        avg_len * 0.5 +
+        space_ratio * 10 -
+        phone_ratio * 5 +
+        (5 if name_bonus else 0)
+    )
+    return score
+
+
+def get_textgrid_transcription(tg_path):
+    tg = TextGrid.fromFile(tg_path)
+
+    candidate_tiers = [
+        t for t in tg.tiers if isinstance(t, IntervalTier)
+    ]
+
+    if not candidate_tiers:
+        return ""
+
+    # Rank tiers by likelihood of being word tiers
+    scored = [(tier_score(t), t) for t in candidate_tiers]
+    scored.sort(key=lambda x: x[0], reverse=True)
+
+    best_score, best_tier = scored[0]
+
+    # Safety check: avoid pure phone tiers
+    if best_score < 0:
+        return ""
+
+    transcription = " ".join(
+        i.mark.strip()
+        for i in best_tier.intervals
+        if i.mark.strip()
+    )
+
+    return transcription
+
+def get_textgrid_transcription_rhap(tg_path, tier_name):
     tg = TextGrid.fromFile(tg_path)
 
     # Afficher les tiers disponibles (debug)
@@ -29,3 +104,17 @@ def get_textgrid_transcription(tg_path, tier_name):
     ]
 
     return " ".join(words)
+
+def get_textgrid_transcription_tapas(tg_path, tier_name="transcription"):
+    """ Read a TextGrid file and return the concatenated transcription from the specified tier. """
+    tg = TextGrid.fromFile(tg_path)
+    tier = None
+    for t in tg.tiers:
+        if t.name.lower() == tier_name.lower():
+            tier = t
+            break
+    if tier is None:
+        tier = tg.tiers[0]
+    words = [ interval.mark.strip() for interval in tier.intervals if interval.mark and interval.mark.strip() ]
+    transcription = " ".join(words)
+    return transcription

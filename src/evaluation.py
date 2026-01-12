@@ -6,7 +6,7 @@ from speechbrain.inference.ASR import WhisperASR
 from speechbrain.inference.ASR import EncoderASR
 from speechbrain.utils.metric_stats import ErrorRateStats
 from textgrid import TextGrid
-from utils.read_transcription import get_textgrid_transcription
+from utils.read_transcription import *
 from utils.normalise_text import normalization
 from pathlib import Path
 from hyperpyyaml import load_hyperpyyaml
@@ -44,17 +44,25 @@ def main(args):
     if args.model == "wav2vec":
         asr_model = EncoderASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr", savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr")
         WERs = []
+
+        tg_map={}
+        number_files=0
         for f in os.listdir(args.ref_trans):
-            if os.path.exists(os.path.join(args.wav_data, f.split(".")[0]+".wav")):
+            print(f)
+            if "Rhapsodie" in args.ref_trans:
+                tg_map[f] = f.split("-")[0]+"-"+f.split("-")[1]+".TextGrid" #Rhap-D0005-Pro.TextGrid = Rhap-D0005.TextGrid
+            else:
+                tg_map[f] = f
+            if os.path.exists(os.path.join(args.wav_data, tg_map[f].split(".")[0]+".wav")):
+                number_files+=1
                 wer_hparams["wer_stats"].clear()
                 ref_transcriptions = get_textgrid_transcription(os.path.join(args.ref_trans, f))
-                pred_transcriptions = asr_model.transcribe_file(os.path.join(args.wav_data, f.split(".")[0]+".wav"))
+                pred_transcriptions = asr_model.transcribe_file(os.path.join(args.wav_data, tg_map[f].split(".")[0]+".wav"))
                 #wer_metric.append(f.split(".")[0],normalization(pred_transcriptions),normalization(ref_transcriptions))
-
-                wer_hparams["wer_stats"].append(
-                    ids=list(range(len(ref_transcriptions))),
-                    predict=[normalization(pred_transcriptions)],
-                    target=[normalization(ref_transcriptions)])
+                #print(pred_transcriptions)
+                #print(normalization(pred_transcriptions))
+                #print(normalization(ref_transcriptions))
+                wer_hparams["wer_stats"].append(ids=list(range(len(ref_transcriptions))),predict=[normalization(pred_transcriptions)],target=[normalization(ref_transcriptions)])
 
                 stats = wer_hparams["wer_stats"].summarize()
                 logger.info(
@@ -69,10 +77,12 @@ def main(args):
                 WERs.append(stats["WER"])
             else:
                 logging.warning(f"The file {f.split('.')[0]+'.wav'} does not exist")
+            #break
         # Compute final WER
         global_stats = sum(WERs)/len(WERs)
 
         logger.info("===================== GLOBAL WER ======================")
+        logger.info("The number of files is ", number_files)
         logger.info("WER: %.2f%%", global_stats)
         logger.info("=============================================================")
 if __name__ == "__main__":
