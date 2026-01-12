@@ -4,3 +4,4 @@ __pycache__/
 pretrained_models/
 ._.DS_Store
 ._pretrained_models
+data/
