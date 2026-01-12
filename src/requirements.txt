@@ -1,0 +1,13 @@
+soundfile==0.13.1
+speechbrain @ git+https://github.com/speechbrain/speechbrain.git@264b642d7820547f02ae25cba028a4ae96f0e88f
+sympy==1.14.0
+TextGrid==1.6.1
+tokenizers==0.15.2
+torch==2.9.1
+torchaudio==2.9.1
+tqdm==4.67.1
+transformers==4.38.2
+triton==3.5.1
+typer-slim==0.21.1
+typing_extensions==4.15.0
+urllib3==2.6.3
