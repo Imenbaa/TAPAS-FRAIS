@@ -2,28 +2,31 @@ import re
 import unicodedata
 
 def normalization(text):
-    # 1. Unicode normalize (NFKC)
-    text = unicodedata.normalize("NFKC", text)
+    # 1. Unicode normalize
+    text = unicodedata.normalize("NFKD", text)
 
-    # 2. Remove text inside square brackets [...]
+    # 2. Remove accents (diacritics)
+    text = "".join(
+        ch for ch in text
+        if unicodedata.category(ch) != "Mn"
+    )
+
+    # 3. Remove text inside square brackets
     text = re.sub(r"\[[^\]]*\]", " ", text)
 
-    # 3. Remove text inside parentheses (...)
+    # 4. Remove text inside parentheses
     text = re.sub(r"\([^)]*\)", " ", text)
 
-    # 4. Replace markers, symbols, and punctuation with space
-    # Unicode categories:
-    # M = Mark, S = Symbol, P = Punctuation
+    # 5. Remove symbols & punctuation
     text = "".join(
-        " " if unicodedata.category(ch)[0] in {"M", "S", "P"} else ch
+        " " if unicodedata.category(ch)[0] in {"S", "P"} else ch
         for ch in text
     )
 
-    # 5. Lowercase
+    # 6. Lowercase
     text = text.lower()
 
-    # 6. Replace successive whitespace with a single space
+    # 7. Normalize spaces
     text = re.sub(r"\s+", " ", text).strip()
 
     return text.split(" ")
-
