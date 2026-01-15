@@ -9,7 +9,7 @@ from hyperpyyaml import load_hyperpyyaml
 from normalise_text import normalization
 from pathlib import Path
 import logging
-log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/whisper_tapas_verif_vad_chunk.log")
+log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/whisper_tapas_nonverif_vad_chunk.log")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
@@ -98,7 +98,7 @@ def load_words_from_textgrid(tg_path, tier_name="ORT-MAU"):
         )
 
     tier_index = names.index(tier_name)
-    tier = tg.tiers[tier_index]   # ✅ LA BONNE API CHEZ TOI
+    tier = tg.tiers[tier_index]
 
     words = []
     for interval in tier.intervals:
@@ -155,92 +155,79 @@ def ref_text_for_chunk(words, start, end):
 
 if __name__ == "__main__":
     wav_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Data_Mons/Description"
-    tg_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Mons TextGrid verifie + 50 ans"
+    tg_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Mons TextGrid non verifie"
     asr_model = WhisperASR.from_hparams(
         source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr",
         savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr", run_opts={"device":"cuda"})
     wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
     WERs= []
+    number_files=0
     for f in os.listdir(tg_path):
-        wav_file = os.path.join(wav_path,f.split(".")[0] + ".wav")
-        trans_file = os.path.join(tg_path,f)
-        # load audio
-        audio_np,sr = read_audio_16k(wav_file)
+        if os.path.exists(os.path.join(wav_path,f.split(".")[0] + ".wav")):
+            number_files += 1
+            wav_file = os.path.join(wav_path, f.split(".")[0] + ".wav")
+            trans_file = os.path.join(tg_path, f)
+            logging.info(f" File duration: {librosa.get_duration(path=wav_file)} seconds")
+            # load audio
+            audio_np,sr = read_audio_16k(wav_file)
+            wav = torch.from_numpy(audio_np)
+            # VAD + chunking
+            chunks = vad_chunk_with_timestamps(wav,sampling_rate=16000,max_chunk_duration=30.0)
+            print("Number of chunks:", len(chunks))
+            results = whisper_transcribe_chunks(asr_model,wav,chunks)
+            full_hyp = merge_transcriptions(results)
+            words = load_words_from_textgrid(trans_file,tier_name="ORT-MAU")
+            # Attach references
+            for r in results:
+                r["ref"] = ref_text_for_chunk(words, r["start"], r["end"])
+            for id,r in enumerate(results):
+                print(f"[{r['start']:.2f}-{r['end']:.2f}]")
+                print("REF:", r["ref"])
+                print("HYP:", r["text"])
+                if r["ref"].strip():
+                    wer_hparams["wer_stats"].clear()
+                    wer_hparams["wer_stats"].append(ids=list(range(len(r["ref"]))),
+                                                predict=[normalization(r["text"])],
+                                                target=[normalization(r["ref"])])
 
-        wav = torch.from_numpy(audio_np)
-
-        # VAD + chunking
-        chunks = vad_chunk_with_timestamps(
-            wav,
-            sampling_rate=16000,
-            max_chunk_duration=30.0
-        )
-
-        print("Number of chunks:", len(chunks))
-
-
-
-        results = whisper_transcribe_chunks(
-            asr_model,
-            wav,
-            chunks
-        )
-
-        full_hyp = merge_transcriptions(results)
-        words = load_words_from_textgrid(
-            trans_file,
-            tier_name="ORT-MAU"
-        )
-        # Attach references
-        for r in results:
-            r["ref"] = ref_text_for_chunk(
-                words, r["start"], r["end"]
+                    stats = wer_hparams["wer_stats"].summarize()
+                    print(f'WER= {stats["WER"]},S = {stats["substitutions"]},D = {stats["deletions"]}, I = {stats["insertions"]}')
+                    logger.info(
+                        "Chunk: %d | WER=%f | S=%d D=%d I=%d",
+                        id,
+                        stats["WER"],
+                        stats["substitutions"],
+                        stats["deletions"],
+                        stats["insertions"],
+                    )
+            logger.info("-" * 30)
+            logger.info("-" * 30)
+            ref_full = " ".join(
+                r["ref"] for r in results if r["ref"].strip()
             )
-        for id,r in enumerate(results):
-            print(f"[{r['start']:.2f}-{r['end']:.2f}]")
-            print("REF:", r["ref"])
-            print("HYP:", r["text"])
-            if r["ref"].strip():
-                wer_hparams["wer_stats"].clear()
-                wer_hparams["wer_stats"].append(ids=list(range(len(r["ref"]))),
-                                            predict=[normalization(r["text"])],
-                                            target=[normalization(r["ref"])])
 
-                stats = wer_hparams["wer_stats"].summarize()
-                print(f'WER= {stats["WER"]},S = {stats["substitutions"]},D = {stats["deletions"]}, I = {stats["insertions"]}')
-                logger.info(
-                    "Chunk: %d | WER=%f | S=%d D=%d I=%d",
-                    id,
-                    stats["WER"],
-                    stats["substitutions"],
-                    stats["deletions"],
-                    stats["insertions"],
-                )
-        logger.info("-" * 30)
-        logger.info("-" * 30)
-        ref_full = " ".join(
-            r["ref"] for r in results if r["ref"].strip()
-        )
+            hyp_full = " ".join(
+                r["text"] for r in results if r["text"].strip()
+            )
+            wer_hparams["wer_stats"].clear()
+            wer_hparams["wer_stats"].append(ids=list(range(len(ref_full))),
+                                            predict=[normalization(hyp_full)],
+                                            target=[normalization(ref_full)])
+            stats = wer_hparams["wer_stats"].summarize()
+            logger.info(
+                "File: %s | WER=%f | S=%d D=%d I=%d",
+                f.split(".")[0],
+                stats["WER"],
+                stats["substitutions"],
+                stats["deletions"],
+                stats["insertions"],
+            )
+            logger.info("-" * 30)
+            logger.info("-" * 30)
+            WERs.append(stats["WER"])
+        else:
+            logging.warning(f"The file {os.path.join(wav_path,f.split('.')[0] + '.wav')} does not exist")
 
-        hyp_full = " ".join(
-            r["text"] for r in results if r["text"].strip()
-        )
-        wer_hparams["wer_stats"].clear()
-        wer_hparams["wer_stats"].append(ids=list(range(len(ref_full))),
-                                        predict=[normalization(hyp_full)],
-                                        target=[normalization(ref_full)])
-        stats = wer_hparams["wer_stats"].summarize()
-        logger.info(
-            "File: %s | WER=%f | S=%d D=%d I=%d",
-            f.split(".")[0],
-            stats["WER"],
-            stats["substitutions"],
-            stats["deletions"],
-            stats["insertions"],
-        )
-        logger.info("-" * 30)
-        logger.info("-" * 30)
-        WERs.append(stats["WER"])
     # Compute final WER
     global_stats = sum(WERs) / len(WERs)
 

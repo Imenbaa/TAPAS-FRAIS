@@ -10,6 +10,7 @@ pip install -r src/requirements.txt
 
 ## TAPAS-FRAIS DATASET
 - Belge
+- descriptive speech
 - Good quality audio
 - Spontanous
 - Word and phone transcription
@@ -31,17 +32,38 @@ pip install -r src/requirements.txt
 - ##### Conformer (trained on commonvoice)
 - ##### Whisper-medium (finetuned on commonvoice-14.0)
 
+## VAd+ chunking for whisper
+Limits of applying whisper on data directly:
+- Whisper is trained on short speech segments (30 sec), will split arbitrary
+- Whisper may hallucinate during silent regions --> need of VAD
+- Whisper drop uncertain speech --> incomplete transcriptions
+- Whisper normalize and summarize transcription
+Proposed solution:
+- Applying VAD to decide where there is speech ==> Mark where speech is detected without removing silence or changing audio
+- Speech segments produced by the VAD are grouped into chunks of maximum duration of 30 seconds. Consecutive speech segments separated by a pause ≤ 0.6 seconds are merged. Longer pauses create a new chunk.
+With this method the original timestamp is preserved and we prevent over-segmentation caused by micro-pauses.
+- Then, for each chunk, the audio is extracted directly from the original waveform using its timestamps and chunks are processed independently
 
-| Datasets                       | Models                      | WER        |
-|--------------------------------|-----------------------------|------------|
+
+| Datasets                       | Models                     | WER        |
+|--------------------------------|----------------------------|------------|
 | TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr | 24.63%     |
 | TAPAS-FRAIS-verified (16k)     | asr-wav2vec2-commonvoice-fr | 24.41%     |
 | TAPAS-FRAIS-non-verified       | asr-wav2vec2-commonvoice-fr | **21.14%** |
-| TAPAS-FRAIS-non-verified (16k) | asr-wav2vec2-commonvoice-fr | **20.70%** |
-| TAPAS-FRAIS-verified           | whisper-medium              | 59.81%     |
-| TAPAS-FRAIS-non-verified       | whisper-medium              | 62.17%     |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk    | 31.13%     |
-  ------------------------------------------------------------------
+| TAPAS-FRAIS-non-verified (16k) | asr-wav2vec2-commonvoice-fr| **20.70%** |
+| TAPAS-FRAIS-verified           | whisper-medium             | 59.81%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium             | 62.17%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD         | 62.39%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk   | 31.13%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk   | 34.44%     |
+  ---------------------------------------------------------------------------
+
+- With wav2vec the WER on non verified is always better than verified by human. But for whisper, the WER on verified is better than non verified, this could be explained by the fact that whisper has a closer transcriptions to human because it interprets speech.
+
+
+
+
+
 | Datasets             | Models                  | WER Rouas | WER    |
 |----------------------|-------------------------|-----------|--------|
 | TAPAS-FRAIS-verified | HMM-TDNN (ester)        | 30.9%     | 27.95% |
