@@ -1,0 +1,133 @@
+2026-01-12 09:03:51,976 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-12 09:03:52,006 | DEBUG | torchaudio 2.9+ detected - audio backend checking skipped (handled by torchcodec)
+2026-01-12 09:03:52,875 | WARNING | speechbrain.integrations.huggingface.huggingface - Wav2Vec2Model is frozen.
+2026-01-12 09:03:52,890 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr.
+2026-01-12 09:03:52,890 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-12 09:03:52,890 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-12 09:03:52,890 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-12 09:03:52,890 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-12 09:03:52,891 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-12 09:03:52,891 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-12 09:03:52,891 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-12 09:03:52,891 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-12 09:03:52,891 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-12 09:03:52,891 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/pretrained_models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-12 09:03:56,630 | DEBUG | Registered checkpoint save hook for save
+2026-01-12 09:03:56,630 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-12 09:03:56,635 | INFO | File: Rhap-D0020-Pro | WER=23.076923 | S=12 D=12 I=0
+2026-01-12 09:03:56,635 | INFO | ------------------------------
+2026-01-12 09:08:15,103 | INFO | File: Rhap-D2002-Pro | WER=49.013158 | S=207 D=237 I=3
+2026-01-12 09:08:15,104 | INFO | ------------------------------
+2026-01-12 09:08:22,834 | INFO | File: Rhap-M0009-Pro | WER=33.023256 | S=34 D=37 I=0
+2026-01-12 09:08:22,835 | INFO | ------------------------------
+2026-01-12 09:08:27,560 | INFO | File: Rhap-D0017-Pro | WER=20.909091 | S=11 D=12 I=0
+2026-01-12 09:08:27,560 | INFO | ------------------------------
+2026-01-12 09:09:11,366 | INFO | File: Rhap-D2006-Pro | WER=52.521008 | S=42 D=10 I=73
+2026-01-12 09:09:11,367 | INFO | ------------------------------
+2026-01-12 09:09:19,680 | INFO | File: Rhap-M0002-Pro | WER=28.787879 | S=26 D=29 I=2
+2026-01-12 09:09:19,680 | INFO | ------------------------------
+2026-01-12 09:11:28,760 | INFO | File: Rhap-D2009-Pro | WER=29.182879 | S=152 D=142 I=6
+2026-01-12 09:11:28,760 | INFO | ------------------------------
+2026-01-12 09:11:41,297 | INFO | File: Rhap-M0023-Pro | WER=35.312500 | S=26 D=86 I=1
+2026-01-12 09:11:41,297 | INFO | ------------------------------
+2026-01-12 09:14:06,176 | INFO | File: Rhap-D0001-Pro | WER=69.561069 | S=189 D=538 I=2
+2026-01-12 09:14:06,176 | INFO | ------------------------------
+2026-01-12 09:15:31,434 | INFO | File: Rhap-D0005-Pro | WER=52.631579 | S=146 D=341 I=3
+2026-01-12 09:15:31,434 | INFO | ------------------------------
+2026-01-12 09:15:43,309 | INFO | File: Rhap-M0016-Pro | WER=29.166667 | S=31 D=36 I=3
+2026-01-12 09:15:43,309 | INFO | ------------------------------
+2026-01-12 09:15:59,277 | INFO | File: Rhap-M0003-Pro | WER=30.701754 | S=36 D=69 I=0
+2026-01-12 09:15:59,277 | INFO | ------------------------------
+2026-01-12 09:17:58,809 | INFO | File: Rhap-D0004-Pro | WER=39.809193 | S=193 D=266 I=0
+2026-01-12 09:17:58,810 | INFO | ------------------------------
+2026-01-12 09:20:02,900 | INFO | File: Rhap-D2005-Pro | WER=32.203390 | S=159 D=160 I=4
+2026-01-12 09:20:02,901 | INFO | ------------------------------
+2026-01-12 09:22:02,200 | INFO | File: Rhap-D0002-Pro | WER=40.320963 | S=177 D=223 I=2
+2026-01-12 09:22:02,200 | INFO | ------------------------------
+2026-01-12 09:22:04,860 | INFO | File: Rhap-M0006-Pro | WER=27.678571 | S=15 D=16 I=0
+2026-01-12 09:22:04,860 | INFO | ------------------------------
+2026-01-12 09:22:40,435 | INFO | File: Rhap-D1002-Pro | WER=32.251521 | S=57 D=96 I=6
+2026-01-12 09:22:40,435 | INFO | ------------------------------
+2026-01-12 09:26:58,559 | INFO | File: Rhap-D1001-Pro | WER=37.636544 | S=193 D=172 I=14
+2026-01-12 09:26:58,559 | INFO | ------------------------------
+2026-01-12 09:26:59,898 | INFO | File: Rhap-M0004-Pro | WER=13.333333 | S=4 D=2 I=0
+2026-01-12 09:26:59,898 | INFO | ------------------------------
+2026-01-12 09:29:10,763 | INFO | File: Rhap-D2012-Pro | WER=37.412237 | S=203 D=167 I=3
+2026-01-12 09:29:10,763 | INFO | ------------------------------
+2026-01-12 09:31:29,655 | INFO | File: Rhap-D2010-Pro | WER=49.445471 | S=229 D=302 I=4
+2026-01-12 09:31:29,655 | INFO | ------------------------------
+2026-01-12 09:31:36,654 | INFO | File: Rhap-M0019-Pro | WER=32.978723 | S=22 D=37 I=3
+2026-01-12 09:31:36,654 | INFO | ------------------------------
+2026-01-12 09:31:56,508 | INFO | File: Rhap-M2005-Pro | WER=21.489971 | S=48 D=26 I=1
+2026-01-12 09:31:56,508 | INFO | ------------------------------
+2026-01-12 09:32:09,599 | INFO | File: Rhap-M1001-Pro | WER=34.285714 | S=56 D=75 I=1
+2026-01-12 09:32:09,599 | INFO | ------------------------------
+2026-01-12 09:32:15,096 | INFO | File: Rhap-M0007-Pro | WER=28.571429 | S=14 D=33 I=3
+2026-01-12 09:32:15,096 | INFO | ------------------------------
+2026-01-12 09:40:08,735 | INFO | File: Rhap-M2004-Pro | WER=27.586207 | S=294 D=38 I=12
+2026-01-12 09:40:08,756 | INFO | ------------------------------
+2026-01-12 09:41:21,794 | INFO | File: Rhap-D2011-Pro | WER=39.615385 | S=183 D=227 I=2
+2026-01-12 09:41:21,794 | INFO | ------------------------------
+2026-01-12 09:41:32,728 | INFO | File: Rhap-D1003-Pro | WER=46.748682 | S=131 D=131 I=4
+2026-01-12 09:41:32,728 | INFO | ------------------------------
+2026-01-12 09:42:17,764 | INFO | File: Rhap-D0003-Pro | WER=50.155763 | S=193 D=288 I=2
+2026-01-12 09:42:17,764 | INFO | ------------------------------
+2026-01-12 09:46:53,045 | INFO | File: Rhap-D2008-Pro | WER=48.779320 | S=501 D=513 I=5
+2026-01-12 09:46:53,045 | INFO | ------------------------------
+2026-01-12 09:46:58,644 | INFO | File: Rhap-M0018-Pro | WER=22.957198 | S=23 D=35 I=1
+2026-01-12 09:46:58,644 | INFO | ------------------------------
+2026-01-12 09:48:55,530 | INFO | File: Rhap-D0006-Pro | WER=56.235828 | S=207 D=533 I=4
+2026-01-12 09:48:55,530 | INFO | ------------------------------
+2026-01-12 09:49:02,368 | INFO | File: Rhap-M0022-Pro | WER=26.666667 | S=18 D=42 I=0
+2026-01-12 09:49:02,368 | INFO | ------------------------------
+2026-01-12 09:49:30,979 | INFO | File: Rhap-D2004-Pro | WER=52.694611 | S=142 D=383 I=3
+2026-01-12 09:49:30,979 | INFO | ------------------------------
+2026-01-12 09:49:33,902 | INFO | File: Rhap-M0001-Pro | WER=21.014493 | S=13 D=16 I=0
+2026-01-12 09:49:33,903 | INFO | ------------------------------
+2026-01-12 09:49:55,112 | INFO | File: Rhap-M2001-Pro | WER=11.338290 | S=52 D=7 I=2
+2026-01-12 09:49:55,113 | INFO | ------------------------------
+2026-01-12 09:50:29,648 | INFO | File: Rhap-D2007-Pro | WER=58.458458 | S=214 D=368 I=2
+2026-01-12 09:50:29,648 | INFO | ------------------------------
+2026-01-12 09:50:32,418 | INFO | File: Rhap-M0011-Pro | WER=25.786164 | S=28 D=12 I=1
+2026-01-12 09:50:32,419 | INFO | ------------------------------
+2026-01-12 09:51:01,827 | INFO | File: Rhap-M1003-Pro | WER=35.221675 | S=129 D=157 I=0
+2026-01-12 09:51:01,827 | INFO | ------------------------------
+2026-01-12 09:51:04,202 | INFO | File: Rhap-M0024-Pro | WER=23.484848 | S=12 D=19 I=0
+2026-01-12 09:51:04,203 | INFO | ------------------------------
+2026-01-12 09:56:01,149 | INFO | File: Rhap-D2001-Pro | WER=48.014077 | S=513 D=433 I=9
+2026-01-12 09:56:01,149 | INFO | ------------------------------
+2026-01-12 09:56:17,565 | INFO | File: Rhap-D2013-Pro | WER=15.156250 | S=78 D=15 I=4
+2026-01-12 09:56:17,565 | INFO | ------------------------------
+2026-01-12 09:58:24,255 | INFO | File: Rhap-M2002-Pro | WER=39.419404 | S=254 D=259 I=3
+2026-01-12 09:58:24,255 | INFO | ------------------------------
+2026-01-12 09:58:43,523 | INFO | File: Rhap-D0008-Pro | WER=39.545455 | S=100 D=160 I=1
+2026-01-12 09:58:43,524 | INFO | ------------------------------
+2026-01-12 09:59:37,687 | INFO | File: Rhap-M2003-Pro | WER=11.004127 | S=76 D=4 I=0
+2026-01-12 09:59:37,688 | INFO | ------------------------------
+2026-01-12 09:59:40,199 | INFO | File: Rhap-M0005-Pro | WER=20.567376 | S=15 D=14 I=0
+2026-01-12 09:59:40,199 | INFO | ------------------------------
+2026-01-12 10:00:50,548 | INFO | File: Rhap-D0009-Pro | WER=65.887097 | S=288 D=526 I=3
+2026-01-12 10:00:50,549 | INFO | ------------------------------
+2026-01-12 10:00:55,670 | INFO | File: Rhap-M0021-Pro | WER=20.224719 | S=17 D=19 I=0
+2026-01-12 10:00:55,670 | INFO | ------------------------------
+2026-01-12 10:02:47,157 | INFO | File: Rhap-D2003-Pro | WER=81.503759 | S=321 D=763 I=0
+2026-01-12 10:02:47,158 | INFO | ------------------------------
+2026-01-12 10:02:48,571 | INFO | File: Rhap-M0014-Pro | WER=25.882353 | S=8 D=14 I=0
+2026-01-12 10:02:48,571 | INFO | ------------------------------
+2026-01-12 10:02:49,727 | INFO | File: Rhap-M0015-Pro | WER=29.113924 | S=11 D=11 I=1
+2026-01-12 10:02:49,727 | INFO | ------------------------------
+2026-01-12 10:59:51,929 | INFO | File: Rhap-M2006-Pro | WER=140.637860 | S=487 D=104 I=776
+2026-01-12 10:59:51,941 | INFO | ------------------------------
+2026-01-12 11:00:07,612 | INFO | File: Rhap-D0007-Pro | WER=43.750000 | S=30 D=32 I=1
+2026-01-12 11:00:07,613 | INFO | ------------------------------
+2026-01-12 11:00:10,953 | INFO | File: Rhap-M0013-Pro | WER=22.727273 | S=10 D=30 I=0
+2026-01-12 11:00:10,954 | INFO | ------------------------------
+2026-01-12 11:00:12,649 | INFO | File: Rhap-M0012-Pro | WER=26.923077 | S=8 D=6 I=0
+2026-01-12 11:00:12,649 | INFO | ------------------------------
+2026-01-12 11:00:13,808 | INFO | File: Rhap-M0008-Pro | WER=24.561404 | S=3 D=11 I=0
+2026-01-12 11:00:13,808 | INFO | ------------------------------
+2026-01-12 11:00:14,779 | INFO | File: Rhap-M0010-Pro | WER=25.396825 | S=9 D=7 I=0
+2026-01-12 11:00:14,780 | INFO | ------------------------------
+2026-01-12 11:00:14,782 | INFO | ===================== GLOBAL WER ======================
+2026-01-12 11:00:14,782 | INFO | WER: 36.99%
+2026-01-12 11:00:14,796 | INFO | =============================================================

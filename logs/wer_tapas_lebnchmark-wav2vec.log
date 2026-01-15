@@ -1,0 +1,1 @@
+2026-01-13 15:53:29,589 | DEBUG | Fetch: Local file found, creating symlink '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/wav2vec2-fr-3k-large/hyperparams.yaml' -> '/tmp/sb_cache/hyperparams.yaml'

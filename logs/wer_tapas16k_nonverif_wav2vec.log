@@ -1,0 +1,296 @@
+2026-01-14 13:26:22,211 | INFO | The data is being resampled to 16000
+2026-01-14 13:26:23,197 | INFO | ✔ MO_H_ER43_2017_05_23_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,269 | INFO | ✔ MO_F_AV14_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,335 | INFO | ✔ MO_H_SD25_2016_05_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,386 | INFO | ✔ MO_H_ER46_2017_03_31_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,461 | INFO | ✔ MO_F_AV09_2016_04_15_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,492 | INFO | ✔ MO_H_ER13_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,526 | INFO | ✔ MO_H_AV18_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,550 | INFO | ✔ MO_F_AV06_2016_04_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,571 | INFO | ✔ MO_H_ER40_2017_01_24_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,603 | INFO | ✔ MO_H_SD07_2016_04_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,690 | INFO | ✔ MO_H_ER41_2017_01_24_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,727 | INFO | ✔ MO_H_ER42_2017_03_31_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,805 | INFO | ✔ MO_H_SD36_2016_06_23_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,885 | INFO | ✔ MO_H_ER44_2017_01_26_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,901 | INFO | ✔ MO_H_AV34_2016_06_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:23,992 | INFO | ✔ MO_H_ER21_2016_04_11_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,212 | INFO | ✔ MO_F_AV05_2016_04_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,301 | INFO | ✔ MO_F_SD35_2016_06_23_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,383 | INFO | ✔ MO_F_AV23_2016_04_19_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,425 | INFO | ✔ MO_H_AV37_2016_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,491 | INFO | ✔ MO_H_AV22_2016_04_19_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,535 | INFO | ✔ MO_H_AV19_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,600 | INFO | ✔ MO_H_AV22_2016_04_19_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:24,713 | INFO | ✔ MO_H_AV03_2016_04_10_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,775 | INFO | ✔ MO_H_ER23_2016_04_14_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,832 | INFO | ✔ MO_H_ER25_2016_04_16_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:24,868 | INFO | ✔ MO_H_ER15_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,918 | INFO | ✔ MO_F_SD23_2016_05_03_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:24,972 | INFO | ✔ MO_H_ER09_2016_04_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,024 | INFO | ✔ MO_H_AV30_2016_06_05_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,102 | INFO | ✔ MO_F_SD38_2016_06_28_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,417 | INFO | ✔ MO_H_SD31_2016_05_27_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,523 | INFO | ✔ MO_F_AV27_2016_05_14_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,560 | INFO | ✔ MO_F_ER02_2016_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,609 | INFO | ✔ MO_F_AV16_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,641 | INFO | ✔ MO_F_ER22_2016_04_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,799 | INFO | ✔ MO_F_SD14_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,883 | INFO | ✔ MO_F_AV21_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,941 | INFO | ✔ MO_F_ER04_2016_04_05_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:25,944 | INFO | ✔ MO_F_SD14_2016_08_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,042 | INFO | ✔ MO_F_ER08_2016_04_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,087 | INFO | ✔ MO_F_ER14_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,140 | INFO | ✔ MO_F_AV25_2016_05_14_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,179 | INFO | ✔ MO_H_SD29_2016_05_20_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,242 | INFO | ✔ MO_F_AV26_2016_05_14_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,318 | INFO | ✔ MO_H_ER47_2017_03_31_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,405 | INFO | ✔ MO_H_ER27_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,487 | INFO | ✔ MO_F_ER20_2016_04_11_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,707 | INFO | ✔ MO_F_SD14_2016_08_13_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:26,747 | INFO | ✔ MO_H_AV24_2016_05_14_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,780 | INFO | ✔ MO_H_ER42_2017_01_24_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,871 | INFO | ✔ MO_H_ER41_2017_05_29_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,947 | INFO | ✔ MO_F_AV08_2016_04_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:26,978 | INFO | ✔ MO_F_ER06_2016_04_06_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,071 | INFO | ✔ MO_H_AV22_2016_06_09_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:27,149 | INFO | ✔ MO_F_AV07_2016_04_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,511 | INFO | ✔ MO_F_SD33_2016_06_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,599 | INFO | ✔ MO_F_AV17_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,681 | INFO | ✔ MO_H_ER48_2017_01_28_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,786 | INFO | ✔ MO_F_SD28_2016_05_20_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,823 | INFO | ✔ MO_F_SD06_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,851 | INFO | ✔ MO_H_ER11_2016_04_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,877 | INFO | ✔ MO_H_AV39_2016_06_11_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,954 | INFO | ✔ MO_F_ER12_2016_04_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:27,989 | INFO | ✔ MO_H_ER49_2017_01_28_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,086 | INFO | ✔ MO_H_AV22_2016_06_09_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,180 | INFO | ✔ MO_H_SD11_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,405 | INFO | ✔ MO_F_AV40_2016_06_11_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,478 | INFO | ✔ MO_F_SD18_2016_05_02_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,538 | INFO | ✔ MO_F_SD24_2016_05_03_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,598 | INFO | ✔ MO_F_AV07_2016_06_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,673 | INFO | ✔ MO_H_ER24_2016_04_15_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,727 | INFO | ✔ MO_H_ER25_2016_04_16_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:28,732 | INFO | ✔ MO_F_ER06_2016_04_06_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:29,000 | INFO | ✔ MO_F_SD12_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,104 | INFO | ✔ MO_F_SD08_2016_04_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,187 | INFO | ✔ MO_H_ER17_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,263 | INFO | ✔ MO_H_SD30_2016_05_21_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,300 | INFO | ✔ MO_H_AV38_2016_06_10_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,353 | INFO | ✔ MO_H_ER48_2017_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,409 | INFO | ✔ MO_H_SD10_2016_08_24_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,443 | INFO | ✔ MO_F_ER16_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,500 | INFO | ✔ MO_F_ER08_2016_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,506 | INFO | ✔ MO_H_AV18_2016_04_18_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:29,551 | INFO | ✔ MO_F_SD17_2016_05_03_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,581 | INFO | ✔ MO_F_AV29_2016_05_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,614 | INFO | ✔ MO_H_ER49_2017_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,689 | INFO | ✔ MO_F_ER10_2016_04_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,726 | INFO | ✔ MO_F_SD20_2016_05_02_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:29,881 | INFO | ✔ MO_F_ER20_2016_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,014 | INFO | ✔ MO_F_AV04_2016_04_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,071 | INFO | ✔ MO_H_AV12_2016_04_15_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,108 | INFO | ✔ MO_H_SD10_2016_04_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,155 | INFO | ✔ MO_H_ER09_2016_06_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,207 | INFO | ✔ MO_F_ER05_2016_04_06_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,241 | INFO | ✔ MO_H_AV10_2016_04_15_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,368 | INFO | ✔ MO_F_AV13_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,518 | INFO | ✔ MO_F_ER18_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,613 | INFO | ✔ MO_H_ER47_2017_01_27_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,703 | INFO | ✔ MO_F_SD17_2016_05_02_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,750 | INFO | ✔ MO_H_ER40_2017_05_23_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,849 | INFO | ✔ MO_F_SD04_2016_04_15_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:30,853 | INFO | ✔ MO_H_ER09_2016_04_07_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:30,910 | INFO | ✔ MO_H_SD27_2016_05_20_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,238 | INFO | ✔ MO_F_AV36_2016_06_07_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,343 | INFO | ✔ MO_F_ER03_2016_04_05_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,428 | INFO | ✔ MO_H_SD16_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,658 | INFO | ✔ MO_F_AV05_2016_06_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,745 | INFO | ✔ MO_H_ER43_2017_01_24_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,788 | INFO | ✔ MO_F_SD15_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,829 | INFO | ✔ MO_H_AV33_2016_06_06_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,919 | INFO | ✔ MO_F_SD04_2016_08_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,956 | INFO | ✔ MO_F_ER02_2016_04_04_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:31,958 | INFO | ✔ MO_H_AV39_2016_06_11_ModuleDescription_description 2.wav resampled 44100 → 16000
+2026-01-14 13:26:32,057 | INFO | ✔ MO_F_SD32_2016_06_16_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,316 | INFO | ✔ MO_H_SD13_2016_08_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,355 | INFO | ✔ MO_F_SD19_2016_05_02_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,421 | INFO | ✔ MO_H_SD26_2016_05_13_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,518 | INFO | ✔ MO_F_AV01_2016_04_08_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,721 | INFO | ✔ MO_H_AV03_2016_06_12_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,902 | INFO | ✔ MO_H_SD13_2016_04_25_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:32,962 | INFO | ✔ MO_H_ER46_2017_01_27_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,002 | INFO | ✔ MO_F_ER19_2016_04_10_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,034 | INFO | ✔ MO_H_ER50_2017_05_29_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,078 | INFO | ✔ MO_F_SD22_2016_05_03_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,118 | INFO | ✔ MO_H_ER07_2016_04_06_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,174 | INFO | ✔ MO_F_ER26_2016_04_18_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,216 | INFO | ✔ MO_H_SD05_2016_08_22_ModuleDescription_description.wav resampled 44100 → 16000
+2026-01-14 13:26:33,217 | INFO | Done.
+2026-01-14 13:26:33,217 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-14 13:26:33,218 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-14 13:26:33,258 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-14 13:26:34,156 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-14 13:26:34,168 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-14 13:26:34,168 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-14 13:26:34,168 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-14 13:26:34,168 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-14 13:26:34,168 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-14 13:26:34,168 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-14 13:26:34,169 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-14 13:26:34,169 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-14 13:26:34,169 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-14 13:26:34,169 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-14 13:26:34,169 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-14 13:26:37,164 | INFO |  File duration: 46.2309375 seconds
+2026-01-14 13:26:38,693 | INFO | Created a temporary directory at /tmp/tmpfn6stsfs
+2026-01-14 13:26:38,693 | INFO | Writing /tmp/tmpfn6stsfs/_remote_module_non_scriptable.py
+2026-01-14 13:26:38,818 | DEBUG | Registered checkpoint save hook for save
+2026-01-14 13:26:38,819 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-14 13:26:38,824 | INFO | File: MO_H_SD29_2016_05_20_ModuleDescription_description | WER=55.932203 | S=27 D=39 I=0
+2026-01-14 13:26:38,824 | INFO | ------------------------------
+2026-01-14 13:26:38,824 | INFO |  File duration: 99.7529375 seconds
+2026-01-14 13:26:39,202 | INFO | File: MO_H_ER21_2016_04_11_ModuleDescription_description | WER=28.000000 | S=25 D=37 I=1
+2026-01-14 13:26:39,202 | INFO | ------------------------------
+2026-01-14 13:26:39,203 | INFO |  File duration: 52.96475 seconds
+2026-01-14 13:26:39,359 | INFO | File: MO_F_SD22_2016_05_03_ModuleDescription_description | WER=23.255814 | S=14 D=6 I=0
+2026-01-14 13:26:39,359 | INFO | ------------------------------
+2026-01-14 13:26:39,359 | INFO |  File duration: 31.230875 seconds
+2026-01-14 13:26:39,432 | INFO | File: MO_H_ER50_2017_05_29_ModuleDescription_description | WER=17.500000 | S=8 D=6 I=0
+2026-01-14 13:26:39,432 | INFO | ------------------------------
+2026-01-14 13:26:39,432 | INFO |  File duration: 64.830125 seconds
+2026-01-14 13:26:39,633 | INFO | File: MO_F_ER05_2016_04_06_ModuleDescription_description | WER=10.152284 | S=12 D=8 I=0
+2026-01-14 13:26:39,633 | INFO | ------------------------------
+2026-01-14 13:26:39,633 | INFO |  File duration: 94.29625 seconds
+2026-01-14 13:26:39,974 | INFO | File: MO_F_ER20_2016_04_11_ModuleDescription_description | WER=10.727969 | S=19 D=8 I=1
+2026-01-14 13:26:39,974 | INFO | ------------------------------
+2026-01-14 13:26:39,974 | INFO |  File duration: 64.2031875 seconds
+2026-01-14 13:26:40,163 | INFO | File: MO_H_ER25_2016_04_16_ModuleDescription_description | WER=23.750000 | S=11 D=27 I=0
+2026-01-14 13:26:40,163 | INFO | ------------------------------
+2026-01-14 13:26:40,163 | WARNING | The file MO_H_ER25_2016_04_16_ModuleDescription_description_2.wav does not exist
+2026-01-14 13:26:40,164 | INFO |  File duration: 89.0253125 seconds
+2026-01-14 13:26:40,480 | INFO | File: MO_H_ER44_2017_01_26_ModuleDescription_description | WER=11.153846 | S=19 D=10 I=0
+2026-01-14 13:26:40,480 | INFO | ------------------------------
+2026-01-14 13:26:40,481 | INFO |  File duration: 31.045125 seconds
+2026-01-14 13:26:40,555 | INFO | File: MO_H_AV39_2016_06_11_ModuleDescription_description | WER=7.692308 | S=5 D=2 I=0
+2026-01-14 13:26:40,555 | INFO | ------------------------------
+2026-01-14 13:26:40,556 | INFO |  File duration: 65.410625 seconds
+2026-01-14 13:26:40,724 | INFO | File: MO_H_SD27_2016_05_20_ModuleDescription_description | WER=75.384615 | S=14 D=34 I=1
+2026-01-14 13:26:40,724 | INFO | ------------------------------
+2026-01-14 13:26:40,724 | INFO |  File duration: 130.705125 seconds
+2026-01-14 13:26:41,294 | INFO | File: MO_H_AV03_2016_04_10_ModuleDescription_description | WER=15.438596 | S=28 D=16 I=0
+2026-01-14 13:26:41,294 | INFO | ------------------------------
+2026-01-14 13:26:41,295 | INFO |  File duration: 72.0515625 seconds
+2026-01-14 13:26:41,524 | INFO | File: MO_F_AV07_2016_06_07_ModuleDescription_description | WER=24.299065 | S=24 D=28 I=0
+2026-01-14 13:26:41,524 | INFO | ------------------------------
+2026-01-14 13:26:41,525 | INFO |  File duration: 36.17675 seconds
+2026-01-14 13:26:41,605 | INFO | File: MO_F_SD06_2016_04_18_ModuleDescription_description | WER=19.491525 | S=10 D=13 I=0
+2026-01-14 13:26:41,605 | INFO | ------------------------------
+2026-01-14 13:26:41,605 | INFO |  File duration: 118.8861875 seconds
+2026-01-14 13:26:41,995 | INFO | File: MO_F_SD14_2016_04_25_ModuleDescription_description | WER=22.400000 | S=28 D=27 I=1
+2026-01-14 13:26:41,995 | INFO | ------------------------------
+2026-01-14 13:26:41,995 | INFO |  File duration: 91.5330625 seconds
+2026-01-14 13:26:42,261 | INFO | File: MO_F_ER12_2016_04_07_ModuleDescription_description | WER=15.094340 | S=23 D=8 I=1
+2026-01-14 13:26:42,261 | INFO | ------------------------------
+2026-01-14 13:26:42,261 | INFO |  File duration: 70.054625 seconds
+2026-01-14 13:26:42,489 | INFO | File: MO_F_ER04_2016_04_05_ModuleDescription_description | WER=11.340206 | S=14 D=7 I=1
+2026-01-14 13:26:42,489 | INFO | ------------------------------
+2026-01-14 13:26:42,489 | INFO |  File duration: 144.637125 seconds
+2026-01-14 13:26:43,166 | INFO | File: MO_F_AV13_2016_04_18_ModuleDescription_description | WER=14.373089 | S=30 D=17 I=0
+2026-01-14 13:26:43,166 | INFO | ------------------------------
+2026-01-14 13:26:43,166 | WARNING | The file MO_F_SD14_2016_08_13_ModuleDescription_description_2.wav does not exist
+2026-01-14 13:26:43,166 | INFO |  File duration: 299.5374375 seconds
+2026-01-14 13:26:45,687 | INFO | File: MO_H_SD31_2016_05_27_ModuleDescription_description | WER=38.609113 | S=91 D=64 I=6
+2026-01-14 13:26:45,687 | INFO | ------------------------------
+2026-01-14 13:26:45,688 | INFO |  File duration: 50.9910625 seconds
+2026-01-14 13:26:45,818 | INFO | File: MO_H_SD05_2016_08_22_ModuleDescription_description | WER=19.205298 | S=9 D=20 I=0
+2026-01-14 13:26:45,819 | INFO | ------------------------------
+2026-01-14 13:26:45,819 | INFO |  File duration: 69.9153125 seconds
+2026-01-14 13:26:46,031 | INFO | File: MO_H_SD16_2016_04_25_ModuleDescription_description | WER=20.994475 | S=22 D=16 I=0
+2026-01-14 13:26:46,032 | INFO | ------------------------------
+2026-01-14 13:26:46,032 | INFO |  File duration: 43.7231875 seconds
+2026-01-14 13:26:46,139 | INFO | File: MO_F_ER14_2016_04_08_ModuleDescription_description | WER=14.814815 | S=10 D=6 I=0
+2026-01-14 13:26:46,140 | INFO | ------------------------------
+2026-01-14 13:26:46,140 | INFO |  File duration: 58.839375 seconds
+2026-01-14 13:26:46,298 | INFO | File: MO_H_ER46_2017_03_31_ModuleDescription_description | WER=22.516556 | S=16 D=17 I=1
+2026-01-14 13:26:46,298 | INFO | ------------------------------
+2026-01-14 13:26:46,298 | INFO |  File duration: 17.02025 seconds
+2026-01-14 13:26:46,342 | INFO | File: MO_H_AV34_2016_06_07_ModuleDescription_description | WER=15.555556 | S=2 D=5 I=0
+2026-01-14 13:26:46,343 | INFO | ------------------------------
+2026-01-14 13:26:46,343 | INFO |  File duration: 30.4878125 seconds
+2026-01-14 13:26:46,397 | INFO | File: MO_H_ER42_2017_01_24_ModuleDescription_description | WER=6.666667 | S=2 D=0 I=0
+2026-01-14 13:26:46,398 | INFO | ------------------------------
+2026-01-14 13:26:46,398 | INFO |  File duration: 91.324125 seconds
+2026-01-14 13:26:46,712 | INFO | File: MO_F_AV07_2016_04_13_ModuleDescription_description | WER=18.454936 | S=19 D=24 I=0
+2026-01-14 13:26:46,712 | INFO | ------------------------------
+2026-01-14 13:26:46,713 | INFO |  File duration: 33.8779375 seconds
+2026-01-14 13:26:46,789 | INFO | File: MO_H_ER11_2016_04_07_ModuleDescription_description | WER=5.714286 | S=3 D=1 I=0
+2026-01-14 13:26:46,789 | INFO | ------------------------------
+2026-01-14 13:26:46,790 | INFO |  File duration: 80.898375 seconds
+2026-01-14 13:26:47,008 | INFO | File: MO_F_AV04_2016_04_12_ModuleDescription_description | WER=32.000000 | S=31 D=33 I=0
+2026-01-14 13:26:47,008 | INFO | ------------------------------
+2026-01-14 13:26:47,008 | INFO |  File duration: 167.6945625 seconds
+2026-01-14 13:26:47,686 | INFO | File: MO_F_ER20_2016_06_08_ModuleDescription_description | WER=16.628176 | S=41 D=30 I=1
+2026-01-14 13:26:47,686 | INFO | ------------------------------
+2026-01-14 13:26:47,687 | INFO |  File duration: 102.1678125 seconds
+2026-01-14 13:26:47,989 | INFO | File: MO_F_SD04_2016_04_15_ModuleDescription_description | WER=13.106796 | S=17 D=7 I=3
+2026-01-14 13:26:47,989 | INFO | ------------------------------
+2026-01-14 13:26:47,989 | INFO |  File duration: 36.75725 seconds
+2026-01-14 13:26:48,075 | INFO | File: MO_H_ER13_2016_04_08_ModuleDescription_description | WER=31.707317 | S=11 D=11 I=4
+2026-01-14 13:26:48,075 | INFO | ------------------------------
+2026-01-14 13:26:48,076 | INFO |  File duration: 53.91675 seconds
+2026-01-14 13:26:48,223 | INFO | File: MO_F_AV16_2016_04_18_ModuleDescription_description | WER=21.301775 | S=19 D=16 I=1
+2026-01-14 13:26:48,223 | INFO | ------------------------------
+2026-01-14 13:26:48,224 | INFO |  File duration: 53.9864375 seconds
+2026-01-14 13:26:48,358 | INFO | File: MO_F_SD17_2016_05_03_ModuleDescription_description | WER=13.461538 | S=6 D=8 I=0
+2026-01-14 13:26:48,358 | INFO | ------------------------------
+2026-01-14 13:26:48,359 | INFO |  File duration: 178.933 seconds
+2026-01-14 13:26:49,307 | INFO | File: MO_F_AV40_2016_06_11_ModuleDescription_description | WER=15.249267 | S=40 D=11 I=1
+2026-01-14 13:26:49,307 | INFO | ------------------------------
+2026-01-14 13:26:49,307 | INFO |  File duration: 169.1341875 seconds
+2026-01-14 13:26:49,961 | INFO | File: MO_H_AV03_2016_06_12_ModuleDescription_description | WER=23.099415 | S=41 D=38 I=0
+2026-01-14 13:26:49,961 | INFO | ------------------------------
+2026-01-14 13:26:49,961 | INFO |  File duration: 102.1678125 seconds
+2026-01-14 13:26:50,276 | INFO | File: MO_F_SD17_2016_05_02_ModuleDescription_description | WER=7.986111 | S=14 D=9 I=0
+2026-01-14 13:26:50,276 | INFO | ------------------------------
+2026-01-14 13:26:50,277 | INFO |  File duration: 34.7370625 seconds
+2026-01-14 13:26:50,349 | INFO | File: MO_F_AV29_2016_05_25_ModuleDescription_description | WER=23.255814 | S=8 D=12 I=0
+2026-01-14 13:26:50,349 | INFO | ------------------------------
+2026-01-14 13:26:50,349 | INFO |  File duration: 25.031125 seconds
+2026-01-14 13:26:50,405 | INFO | File: MO_H_ER15_2016_04_08_ModuleDescription_description | WER=21.153846 | S=6 D=3 I=2
+2026-01-14 13:26:50,405 | INFO | ------------------------------
+2026-01-14 13:26:50,405 | INFO |  File duration: 65.73575 seconds
+2026-01-14 13:26:50,589 | INFO | File: MO_H_SD10_2016_08_24_ModuleDescription_description | WER=28.104575 | S=17 D=26 I=0
+2026-01-14 13:26:50,589 | INFO | ------------------------------
+2026-01-14 13:26:50,589 | INFO |  File duration: 53.661375 seconds
+2026-01-14 13:26:50,735 | INFO | File: MO_H_AV12_2016_04_15_ModuleDescription_description | WER=15.697674 | S=15 D=12 I=0
+2026-01-14 13:26:50,735 | INFO | ------------------------------
+2026-01-14 13:26:50,736 | INFO |  File duration: 43.792875 seconds
+2026-01-14 13:26:50,844 | INFO | File: MO_H_SD10_2016_04_22_ModuleDescription_description | WER=40.170940 | S=18 D=29 I=0
+2026-01-14 13:26:50,844 | INFO | ------------------------------
+2026-01-14 13:26:50,844 | INFO |  File duration: 98.9866875 seconds
+2026-01-14 13:26:51,203 | INFO | File: MO_F_SD04_2016_08_22_ModuleDescription_description | WER=15.322581 | S=27 D=9 I=2
+2026-01-14 13:26:51,203 | INFO | ------------------------------
+2026-01-14 13:26:51,203 | INFO |  File duration: 38.568375 seconds
+2026-01-14 13:26:51,276 | INFO | File: MO_H_ER42_2017_03_31_ModuleDescription_description | WER=15.000000 | S=5 D=1 I=0
+2026-01-14 13:26:51,276 | INFO | ------------------------------
+2026-01-14 13:26:51,276 | INFO |  File duration: 75.302375 seconds
+2026-01-14 13:26:51,486 | INFO | File: MO_F_ER03_2016_04_05_ModuleDescription_description | WER=6.111111 | S=7 D=4 I=0
+2026-01-14 13:26:51,487 | INFO | ------------------------------
+2026-01-14 13:26:51,487 | INFO |  File duration: 48.2743125 seconds
+2026-01-14 13:26:51,606 | INFO | File: MO_H_ER07_2016_04_06_ModuleDescription_description | WER=31.623932 | S=19 D=18 I=0
+2026-01-14 13:26:51,606 | INFO | ------------------------------
+2026-01-14 13:26:51,607 | INFO |  File duration: 44.535875 seconds
+2026-01-14 13:26:51,718 | INFO | File: MO_F_SD20_2016_05_02_ModuleDescription_description | WER=16.279070 | S=9 D=12 I=0
+2026-01-14 13:26:51,718 | INFO | ------------------------------
+2026-01-14 13:26:51,718 | INFO |  File duration: 84.1259375 seconds
+2026-01-14 13:26:51,988 | INFO | File: MO_F_AV08_2016_04_13_ModuleDescription_description | WER=28.421053 | S=22 D=31 I=1
+2026-01-14 13:26:51,988 | INFO | ------------------------------
+2026-01-14 13:26:51,988 | INFO |  File duration: 74.97725 seconds
+2026-01-14 13:26:52,196 | INFO | File: MO_H_SD26_2016_05_13_ModuleDescription_description | WER=8.928571 | S=11 D=9 I=0
+2026-01-14 13:26:52,196 | INFO | ------------------------------
+2026-01-14 13:26:52,196 | INFO | ===================== GLOBAL WER ======================
+2026-01-14 13:26:52,196 | INFO | The number of files is 47
+2026-01-14 13:26:52,196 | INFO | WER: 20.70%
+2026-01-14 13:26:52,197 | INFO | =============================================================

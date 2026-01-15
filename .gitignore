@@ -1,7 +1,6 @@
 .DS_Store
 __pycache__/
 *.pyc
-pretrained_models/
+models/
 ._.DS_Store
-._pretrained_models
 data/

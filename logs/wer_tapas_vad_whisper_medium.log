@@ -1,0 +1,216 @@
+2026-01-14 09:21:54,783 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/hyperparams.yaml'
+2026-01-14 09:21:56,981 | WARNING | speechbrain.integrations.huggingface.huggingface - WhisperModel is frozen.
+2026-01-14 09:21:56,981 | WARNING | speechbrain.integrations.huggingface.whisper - whisper encoder-decoder is frozen.
+2026-01-14 09:21:57,752 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr.
+2026-01-14 09:21:57,752 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt'
+2026-01-14 09:21:57,753 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-14 09:21:57,753 | INFO | Loading pretrained files for: whisper
+2026-01-14 09:21:57,753 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-14 09:22:01,439 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-14 09:23:08,552 | INFO | File: MO_H_ER48_2017_01_28_ModuleDescription_description | WER=33.333333 | S=6 D=31 I=2
+2026-01-14 09:23:08,553 | INFO | ------------------------------
+2026-01-14 09:23:08,553 | INFO |  File duration: 48.042086167800456 seconds
+2026-01-14 09:23:34,760 | INFO | File: MO_F_ER19_2016_04_10_ModuleDescription_description | WER=68.918919 | S=2 D=49 I=0
+2026-01-14 09:23:34,760 | INFO | ------------------------------
+2026-01-14 09:23:34,761 | INFO |  File duration: 86.98195011337869 seconds
+2026-01-14 09:24:38,875 | INFO | File: MO_H_SD36_2016_06_23_ModuleDescription_description | WER=59.440559 | S=14 D=70 I=1
+2026-01-14 09:24:38,875 | INFO | ------------------------------
+2026-01-14 09:24:38,876 | INFO |  File duration: 107.67092970521541 seconds
+2026-01-14 09:26:04,894 | INFO | File: MO_H_SD11_2016_04_25_ModuleDescription_description | WER=71.929825 | S=32 D=132 I=0
+2026-01-14 09:26:04,894 | INFO | ------------------------------
+2026-01-14 09:26:04,894 | INFO |  File duration: 39.450702947845805 seconds
+2026-01-14 09:26:37,494 | INFO | File: MO_H_AV18_2016_04_18_ModuleDescription_description | WER=45.569620 | S=5 D=31 I=0
+2026-01-14 09:26:37,495 | INFO | ------------------------------
+2026-01-14 09:26:37,495 | INFO |  File duration: 42.44607709750567 seconds
+2026-01-14 09:27:03,382 | INFO | File: MO_F_ER02_2016_04_04_ModuleDescription_description | WER=60.465116 | S=5 D=21 I=0
+2026-01-14 09:27:03,382 | INFO | ------------------------------
+2026-01-14 09:27:03,383 | INFO |  File duration: 73.74657596371883 seconds
+2026-01-14 09:28:30,909 | INFO | File: MO_F_SD24_2016_05_03_ModuleDescription_description | WER=62.903226 | S=29 D=87 I=1
+2026-01-14 09:28:30,909 | INFO | ------------------------------
+2026-01-14 09:28:30,910 | INFO |  File duration: 91.9742403628118 seconds
+2026-01-14 09:29:51,378 | INFO | File: MO_H_ER24_2016_04_15_ModuleDescription_description | WER=59.375000 | S=10 D=84 I=1
+2026-01-14 09:29:51,378 | INFO | ------------------------------
+2026-01-14 09:29:51,379 | INFO |  File duration: 84.31165532879818 seconds
+2026-01-14 09:31:11,298 | INFO | File: MO_F_AV27_2016_05_14_ModuleDescription_description | WER=64.077670 | S=9 D=123 I=0
+2026-01-14 09:31:11,299 | INFO | ------------------------------
+2026-01-14 09:31:11,299 | INFO |  File duration: 52.964716553287985 seconds
+2026-01-14 09:31:38,645 | INFO | File: MO_F_SD22_2016_05_03_ModuleDescription_description | WER=66.265060 | S=1 D=53 I=1
+2026-01-14 09:31:38,645 | INFO | ------------------------------
+2026-01-14 09:31:38,646 | INFO |  File duration: 299.5374149659864 seconds
+2026-01-14 09:34:39,590 | INFO | File: MO_F_SD33_2016_06_22_ModuleDescription_description | WER=80.924855 | S=33 D=521 I=6
+2026-01-14 09:34:39,590 | INFO | ------------------------------
+2026-01-14 09:34:39,591 | INFO |  File duration: 90.53460317460318 seconds
+2026-01-14 09:36:09,063 | INFO | File: MO_F_AV09_2016_04_15_ModuleDescription_description | WER=67.924528 | S=17 D=163 I=0
+2026-01-14 09:36:09,063 | INFO | ------------------------------
+2026-01-14 09:36:09,064 | INFO |  File duration: 66.20009070294785 seconds
+2026-01-14 09:37:04,325 | INFO | File: MO_H_ER09_2016_04_07_ModuleDescription_description | WER=64.615385 | S=6 D=78 I=0
+2026-01-14 09:37:04,326 | INFO | ------------------------------
+2026-01-14 09:37:04,326 | INFO |  File duration: 65.15519274376418 seconds
+2026-01-14 09:37:58,561 | INFO | File: MO_F_AV25_2016_05_14_ModuleDescription_description | WER=48.780488 | S=2 D=58 I=0
+2026-01-14 09:37:58,561 | INFO | ------------------------------
+2026-01-14 09:37:58,562 | INFO |  File duration: 93.71573696145124 seconds
+2026-01-14 09:39:10,056 | INFO | File: MO_H_ER47_2017_03_31_ModuleDescription_description | WER=75.330396 | S=5 D=166 I=0
+2026-01-14 09:39:10,056 | INFO | ------------------------------
+2026-01-14 09:39:10,056 | INFO |  File duration: 221.5183673469388 seconds
+2026-01-14 09:42:11,972 | INFO | File: MO_H_SD13_2016_08_13_ModuleDescription_description | WER=62.891566 | S=18 D=242 I=1
+2026-01-14 09:42:11,972 | INFO | ------------------------------
+2026-01-14 09:42:11,973 | INFO |  File duration: 85.2172335600907 seconds
+2026-01-14 09:43:07,671 | INFO | File: MO_H_ER47_2017_01_27_ModuleDescription_description | WER=68.899522 | S=7 D=136 I=1
+2026-01-14 09:43:07,671 | INFO | ------------------------------
+2026-01-14 09:43:07,672 | INFO |  File duration: 68.0344671201814 seconds
+2026-01-14 09:44:12,122 | INFO | File: MO_F_ER08_2016_06_08_ModuleDescription_description | WER=53.061224 | S=19 D=59 I=0
+2026-01-14 09:44:12,122 | INFO | ------------------------------
+2026-01-14 09:44:12,123 | INFO |  File duration: 116.70349206349206 seconds
+2026-01-14 09:45:41,962 | INFO | File: MO_F_AV01_2016_04_08_ModuleDescription_description | WER=58.367347 | S=5 D=137 I=1
+2026-01-14 09:45:41,962 | INFO | ------------------------------
+2026-01-14 09:45:41,963 | INFO |  File duration: 24.589931972789117 seconds
+2026-01-14 09:46:05,863 | INFO | File: MO_H_ER40_2017_01_24_ModuleDescription_description | WER=75.000000 | S=1 D=41 I=0
+2026-01-14 09:46:05,863 | INFO | ------------------------------
+2026-01-14 09:46:05,864 | INFO |  File duration: 41.98167800453515 seconds
+2026-01-14 09:46:43,186 | INFO | File: MO_H_AV10_2016_04_15_ModuleDescription_description | WER=46.808511 | S=4 D=39 I=1
+2026-01-14 09:46:43,186 | INFO | ------------------------------
+2026-01-14 09:46:43,187 | INFO |  File duration: 31.346938775510203 seconds
+2026-01-14 09:47:25,576 | INFO | File: MO_H_AV24_2016_05_14_ModuleDescription_description | WER=44.705882 | S=14 D=23 I=1
+2026-01-14 09:47:25,576 | INFO | ------------------------------
+2026-01-14 09:47:25,577 | INFO |  File duration: 73.53759637188209 seconds
+2026-01-14 09:48:20,267 | INFO | File: MO_F_SD18_2016_05_02_ModuleDescription_description | WER=68.452381 | S=3 D=111 I=1
+2026-01-14 09:48:20,267 | INFO | ------------------------------
+2026-01-14 09:48:20,268 | INFO |  File duration: 92.13678004535147 seconds
+2026-01-14 09:49:18,244 | INFO | File: MO_F_ER08_2016_04_07_ModuleDescription_description | WER=62.893082 | S=12 D=88 I=0
+2026-01-14 09:49:18,244 | INFO | ------------------------------
+2026-01-14 09:49:18,244 | INFO |  File duration: 75.62739229024943 seconds
+2026-01-14 09:49:50,331 | INFO | File: MO_F_AV14_2016_04_18_ModuleDescription_description | WER=64.062500 | S=15 D=25 I=1
+2026-01-14 09:49:50,331 | INFO | ------------------------------
+2026-01-14 09:49:50,332 | INFO |  File duration: 57.79446712018141 seconds
+2026-01-14 09:50:45,245 | INFO | File: MO_H_ER48_2017_04_08_ModuleDescription_description | WER=48.214286 | S=4 D=50 I=0
+2026-01-14 09:50:45,245 | INFO | ------------------------------
+2026-01-14 09:50:45,245 | INFO |  File duration: 67.17532879818594 seconds
+2026-01-14 09:51:55,286 | INFO | File: MO_H_ER23_2016_04_14_ModuleDescription_description | WER=49.390244 | S=26 D=55 I=0
+2026-01-14 09:51:55,287 | INFO | ------------------------------
+2026-01-14 09:51:55,287 | INFO |  File duration: 76.74195011337868 seconds
+2026-01-14 09:53:19,794 | INFO | File: MO_H_AV22_2016_04_19_ModuleDescription_description | WER=50.641026 | S=12 D=66 I=1
+2026-01-14 09:53:19,794 | INFO | ------------------------------
+2026-01-14 09:53:19,795 | INFO |  File duration: 65.57315192743764 seconds
+2026-01-14 09:54:10,698 | INFO | File: MO_H_ER17_2016_04_08_ModuleDescription_description | WER=74.213836 | S=9 D=109 I=0
+2026-01-14 09:54:10,699 | INFO | ------------------------------
+2026-01-14 09:54:10,699 | INFO |  File duration: 92.39219954648526 seconds
+2026-01-14 09:55:25,582 | INFO | File: MO_F_SD28_2016_05_20_ModuleDescription_description | WER=63.978495 | S=2 D=117 I=0
+2026-01-14 09:55:25,582 | INFO | ------------------------------
+2026-01-14 09:55:25,583 | INFO |  File duration: 47.972426303854874 seconds
+2026-01-14 09:56:20,933 | INFO | File: MO_H_AV33_2016_06_06_ModuleDescription_description | WER=72.727273 | S=12 D=82 I=2
+2026-01-14 09:56:20,933 | INFO | ------------------------------
+2026-01-14 09:56:20,933 | INFO |  File duration: 75.67383219954648 seconds
+2026-01-14 09:57:13,389 | INFO | File: MO_F_AV26_2016_05_14_ModuleDescription_description | WER=70.165746 | S=3 D=124 I=0
+2026-01-14 09:57:13,389 | INFO | ------------------------------
+2026-01-14 09:57:13,390 | INFO |  File duration: 33.065215419501136 seconds
+2026-01-14 09:57:48,176 | INFO | File: MO_H_AV38_2016_06_10_ModuleDescription_description | WER=53.333333 | S=10 D=29 I=1
+2026-01-14 09:57:48,177 | INFO | ------------------------------
+2026-01-14 09:57:48,177 | INFO |  File duration: 94.57487528344672 seconds
+2026-01-14 09:58:45,722 | INFO | File: MO_F_AV23_2016_04_19_ModuleDescription_description | WER=62.048193 | S=6 D=97 I=0
+2026-01-14 09:58:45,723 | INFO | ------------------------------
+2026-01-14 09:58:45,723 | INFO |  File duration: 117.0053514739229 seconds
+2026-01-14 10:00:13,120 | INFO | File: MO_F_SD32_2016_06_16_ModuleDescription_description | WER=55.932203 | S=21 D=78 I=0
+2026-01-14 10:00:13,121 | INFO | ------------------------------
+2026-01-14 10:00:13,121 | INFO |  File duration: 36.45532879818594 seconds
+2026-01-14 10:00:53,622 | INFO | File: MO_F_ER16_2016_04_08_ModuleDescription_description | WER=55.000000 | S=25 D=16 I=3
+2026-01-14 10:00:53,623 | INFO | ------------------------------
+2026-01-14 10:00:53,623 | INFO |  File duration: 38.91664399092971 seconds
+2026-01-14 10:01:30,151 | INFO | File: MO_H_ER49_2017_06_08_ModuleDescription_description | WER=98.969072 | S=11 D=85 I=0
+2026-01-14 10:01:30,151 | INFO | ------------------------------
+2026-01-14 10:01:30,152 | INFO |  File duration: 30.30204081632653 seconds
+2026-01-14 10:01:51,743 | INFO | File: MO_F_ER02_2016_06_08_ModuleDescription_description | WER=71.428571 | S=1 D=24 I=0
+2026-01-14 10:01:51,743 | INFO | ------------------------------
+2026-01-14 10:01:51,743 | INFO |  File duration: 61.37034013605442 seconds
+2026-01-14 10:02:45,320 | INFO | File: MO_H_AV30_2016_06_05_ModuleDescription_description | WER=65.000000 | S=7 D=84 I=0
+2026-01-14 10:02:45,320 | INFO | ------------------------------
+2026-01-14 10:02:45,321 | INFO |  File duration: 251.1238095238095 seconds
+2026-01-14 10:05:58,948 | INFO | File: MO_F_SD12_2016_04_25_ModuleDescription_description | WER=69.734513 | S=30 D=360 I=4
+2026-01-14 10:05:58,948 | INFO | ------------------------------
+2026-01-14 10:05:58,949 | INFO |  File duration: 77.99582766439909 seconds
+2026-01-14 10:07:26,629 | INFO | File: MO_H_SD25_2016_05_12_ModuleDescription_description | WER=55.327869 | S=4 D=130 I=1
+2026-01-14 10:07:26,629 | INFO | ------------------------------
+2026-01-14 10:07:26,630 | INFO |  File duration: 196.76589569160998 seconds
+2026-01-14 10:09:23,633 | INFO | File: MO_H_SD13_2016_04_25_ModuleDescription_description | WER=74.052478 | S=7 D=247 I=0
+2026-01-14 10:09:23,633 | INFO | ------------------------------
+2026-01-14 10:09:23,634 | INFO |  File duration: 90.9990022675737 seconds
+2026-01-14 10:10:50,383 | INFO | File: MO_F_SD38_2016_06_28_ModuleDescription_description | WER=54.187192 | S=11 D=99 I=0
+2026-01-14 10:10:50,383 | INFO | ------------------------------
+2026-01-14 10:10:50,384 | INFO |  File duration: 165.51183673469387 seconds
+2026-01-14 10:13:02,120 | INFO | File: MO_F_ER18_2016_04_08_ModuleDescription_description | WER=59.271523 | S=15 D=163 I=1
+2026-01-14 10:13:02,120 | INFO | ------------------------------
+2026-01-14 10:13:02,121 | INFO |  File duration: 33.50639455782313 seconds
+2026-01-14 10:13:30,727 | INFO | File: MO_F_ER06_2016_04_06_ModuleDescription_description | WER=33.333333 | S=7 D=9 I=0
+2026-01-14 10:13:30,727 | INFO | ------------------------------
+2026-01-14 10:13:30,728 | INFO |  File duration: 37.70920634920635 seconds
+2026-01-14 10:14:16,541 | INFO | File: MO_F_ER22_2016_04_12_ModuleDescription_description | WER=78.861789 | S=8 D=88 I=1
+2026-01-14 10:14:16,541 | INFO | ------------------------------
+2026-01-14 10:14:16,541 | INFO |  File duration: 88.46802721088436 seconds
+2026-01-14 10:15:44,168 | INFO | File: MO_H_ER27_2016_04_18_ModuleDescription_description | WER=42.483660 | S=14 D=51 I=0
+2026-01-14 10:15:44,168 | INFO | ------------------------------
+2026-01-14 10:15:44,169 | INFO |  File duration: 54.102494331065756 seconds
+2026-01-14 10:16:53,742 | INFO | File: MO_H_ER40_2017_05_23_ModuleDescription_description | WER=61.940299 | S=24 D=50 I=9
+2026-01-14 10:16:53,742 | INFO | ------------------------------
+2026-01-14 10:16:53,742 | INFO |  File duration: 33.274195011337866 seconds
+2026-01-14 10:17:24,694 | INFO | File: MO_F_SD19_2016_05_02_ModuleDescription_description | WER=59.770115 | S=3 D=49 I=0
+2026-01-14 10:17:24,694 | INFO | ------------------------------
+2026-01-14 10:17:24,695 | INFO |  File duration: 88.53768707482993 seconds
+2026-01-14 10:18:48,639 | INFO | File: MO_F_ER10_2016_04_07_ModuleDescription_description | WER=65.989848 | S=11 D=118 I=1
+2026-01-14 10:18:48,639 | INFO | ------------------------------
+2026-01-14 10:18:48,658 | INFO |  File duration: 102.02848072562358 seconds
+2026-01-14 10:19:46,072 | INFO | File: MO_H_ER41_2017_01_24_ModuleDescription_description | WER=68.789809 | S=6 D=102 I=0
+2026-01-14 10:19:46,072 | INFO | ------------------------------
+2026-01-14 10:19:46,073 | INFO |  File duration: 109.3427664399093 seconds
+2026-01-14 10:21:26,510 | INFO | File: MO_H_AV22_2016_06_09_ModuleDescription_description | WER=52.863436 | S=32 D=87 I=1
+2026-01-14 10:21:26,510 | INFO | ------------------------------
+2026-01-14 10:21:26,511 | INFO |  File duration: 81.36272108843538 seconds
+2026-01-14 10:22:46,550 | INFO | File: MO_F_SD35_2016_06_23_ModuleDescription_description | WER=74.427481 | S=8 D=187 I=0
+2026-01-14 10:22:46,551 | INFO | ------------------------------
+2026-01-14 10:22:46,551 | INFO |  File duration: 36.6875283446712 seconds
+2026-01-14 10:23:17,621 | INFO | File: MO_H_SD07_2016_04_22_ModuleDescription_description | WER=61.111111 | S=9 D=34 I=1
+2026-01-14 10:23:17,621 | INFO | ------------------------------
+2026-01-14 10:23:17,622 | INFO |  File duration: 299.5374149659864 seconds
+2026-01-14 10:28:02,814 | INFO | File: MO_F_AV36_2016_06_07_ModuleDescription_description | WER=77.450980 | S=25 D=764 I=1
+2026-01-14 10:28:02,814 | INFO | ------------------------------
+2026-01-14 10:28:02,815 | INFO |  File duration: 74.60571428571428 seconds
+2026-01-14 10:29:08,412 | INFO | File: MO_H_ER41_2017_05_29_ModuleDescription_description | WER=58.252427 | S=6 D=52 I=2
+2026-01-14 10:29:08,412 | INFO | ------------------------------
+2026-01-14 10:29:08,413 | INFO |  File duration: 44.860952380952384 seconds
+2026-01-14 10:29:37,927 | INFO | File: MO_H_AV19_2016_04_18_ModuleDescription_description | WER=79.166667 | S=0 D=57 I=0
+2026-01-14 10:29:37,928 | INFO | ------------------------------
+2026-01-14 10:29:37,929 | INFO |  File duration: 82.38439909297053 seconds
+2026-01-14 10:31:03,144 | INFO | File: MO_F_SD08_2016_04_22_ModuleDescription_description | WER=41.732283 | S=9 D=44 I=0
+2026-01-14 10:31:03,144 | INFO | ------------------------------
+2026-01-14 10:31:03,144 | INFO |  File duration: 66.26975056689342 seconds
+2026-01-14 10:32:08,087 | INFO | File: MO_F_ER26_2016_04_18_ModuleDescription_description | WER=68.707483 | S=3 D=98 I=0
+2026-01-14 10:32:08,087 | INFO | ------------------------------
+2026-01-14 10:32:08,088 | INFO |  File duration: 36.6875283446712 seconds
+2026-01-14 10:33:00,183 | INFO | File: MO_H_AV37_2016_06_08_ModuleDescription_description | WER=79.279279 | S=3 D=85 I=0
+2026-01-14 10:33:00,183 | INFO | ------------------------------
+2026-01-14 10:33:00,184 | INFO |  File duration: 56.447709750566894 seconds
+2026-01-14 10:33:57,728 | INFO | File: MO_H_ER09_2016_06_08_ModuleDescription_description | WER=70.312500 | S=1 D=89 I=0
+2026-01-14 10:33:57,728 | INFO | ------------------------------
+2026-01-14 10:33:57,730 | INFO |  File duration: 64.66757369614513 seconds
+2026-01-14 10:34:58,582 | INFO | File: MO_H_ER43_2017_01_24_ModuleDescription_description | WER=54.867257 | S=4 D=58 I=0
+2026-01-14 10:34:58,582 | INFO | ------------------------------
+2026-01-14 10:34:58,582 | INFO |  File duration: 27.353106575963718 seconds
+2026-01-14 10:35:30,516 | INFO | File: MO_F_AV06_2016_04_13_ModuleDescription_description | WER=67.213115 | S=26 D=15 I=0
+2026-01-14 10:35:30,517 | INFO | ------------------------------
+2026-01-14 10:35:30,517 | INFO |  File duration: 79.55156462585035 seconds
+2026-01-14 10:36:49,789 | INFO | File: MO_H_ER43_2017_05_23_ModuleDescription_description | WER=74.863388 | S=10 D=126 I=1
+2026-01-14 10:36:49,789 | INFO | ------------------------------
+2026-01-14 10:36:49,790 | INFO |  File duration: 58.28208616780045 seconds
+2026-01-14 10:37:58,885 | INFO | File: MO_F_AV17_2016_04_18_ModuleDescription_description | WER=38.541667 | S=6 D=31 I=0
+2026-01-14 10:37:58,885 | INFO | ------------------------------
+2026-01-14 10:37:58,885 | INFO |  File duration: 64.92299319727891 seconds
+2026-01-14 10:39:12,731 | INFO | File: MO_H_SD30_2016_05_21_ModuleDescription_description | WER=65.131579 | S=13 D=83 I=3
+2026-01-14 10:39:12,731 | INFO | ------------------------------
+2026-01-14 10:39:12,732 | INFO |  File duration: 70.37968253968253 seconds
+2026-01-14 10:40:24,868 | INFO | File: MO_F_AV21_2016_04_18_ModuleDescription_description | WER=57.142857 | S=9 D=71 I=0
+2026-01-14 10:40:24,868 | INFO | ------------------------------
+2026-01-14 10:40:24,878 | INFO |  File duration: 40.61170068027211 seconds
+2026-01-14 10:41:25,976 | INFO | File: MO_H_ER49_2017_01_28_ModuleDescription_description | WER=71.717172 | S=9 D=57 I=5
+2026-01-14 10:41:25,976 | INFO | ------------------------------
+2026-01-14 10:41:25,976 | INFO | ===================== GLOBAL WER ======================
+2026-01-14 10:41:25,976 | INFO | The number of files is 68
+2026-01-14 10:41:25,976 | INFO | WER: 62.39%
+2026-01-14 10:41:25,977 | INFO | =============================================================
