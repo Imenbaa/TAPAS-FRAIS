@@ -109,3 +109,6 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (CTR-12)  | Whisper-medium              | 59.92%     |
 | Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%     |
 --------------------------------------------------------------
+
+### WER Analysis for datasets across ASR models
+<img src="figures/wer_typaloc_plot.png" width="600">
