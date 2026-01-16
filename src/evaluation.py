@@ -22,7 +22,7 @@ from utils.VAD_chunk import *
 from utils.wer_chunk import wer_chunk
 from utils.logging_config import setup_logging
 from utils.wer_segment import wer_segment
-models = ["wav2vec","whisper-medium","wav2vec-benchmark","whisper-VAD-chunk"]
+models = ["wav2vec","whisper-medium","wav2vec-benchmark","whisper-VAD-chunk","whisper-large","whisper-large-VAD-chunk"]
 
 parser = argparse.ArgumentParser(description="Evaluate multiple ASR models on french datasets")
 parser.add_argument("--model", type=str,choices = models ,required= True, help="The ASR model")
@@ -53,8 +53,8 @@ def main(args):
         asr_model = EncoderASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr", savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr", run_opts={"device":"cuda"})
     if args.model == "whisper-medium" or args.model == "whisper-VAD-chunk":
         asr_model = WhisperASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr",savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr", run_opts={"device":"cuda"})
-    if args.model == "wav2vec-benchmark":
-        asr_model = EncoderDecoderASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/wav2vec2-fr-3k-large",savedir="/tmp/sb_cache", run_opts={"device":"cuda"})
+    if args.model == "whisper-large" or args.model == "whisper-large-VAD-chunk":
+        asr_model = WhisperASR.from_hparams(source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr",savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr", run_opts={"device":"cuda"})
 
     WERs = []
     number_files = 0
@@ -77,12 +77,12 @@ def main(args):
                 apply_vad_to_wav(wav_file, clean_wav)
                 wav_file = clean_wav
 
-            if args.model == "whisper-medium":
+            pred_transcriptions = asr_model.transcribe_file(wav_file)
+            if args.model == "whisper-medium" or args.model == "whisper-large":
                 pred_transcriptions =" ".join(seg.words for seg in pred_transcriptions)
-            else:
-                pred_transcriptions = asr_model.transcribe_file(wav_file)
 
-            if args.model == "whisper-VAD-chunk":
+
+            if args.model == "whisper-VAD-chunk" or args.model=="whisper-large-VAD-chunk":
                 # load audio
                 audio_np, sr = read_audio_16k(wav_file)
                 wav = torch.from_numpy(audio_np)

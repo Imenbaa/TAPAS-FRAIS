@@ -1,0 +1,37 @@
+2026-01-16 15:17:29,808 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
+2026-01-16 15:17:29,808 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-16 15:17:32,097 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-16 15:17:32,098 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-16 15:17:32,854 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr.
+2026-01-16 15:17:32,854 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt'
+2026-01-16 15:17:32,854 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-16 15:17:32,854 | INFO | Loading pretrained files for: whisper
+2026-01-16 15:17:32,854 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-16 15:17:40,442 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-16 15:17:47,887 | INFO | File: CCM-001773-01_L01.wav | WER=69.491525 | S=10 D=105 I=8
+2026-01-16 15:17:47,887 | INFO | ------------------------------
+2026-01-16 15:17:47,888 | INFO |  File duration: 76.16145124716553 seconds
+2026-01-16 15:17:52,756 | INFO | File: CCM-003130-01_L01.wav | WER=71.186441 | S=23 D=99 I=4
+2026-01-16 15:17:52,756 | INFO | ------------------------------
+2026-01-16 15:17:52,756 | INFO |  File duration: 69.47410430839003 seconds
+2026-01-16 15:18:00,754 | INFO | File: CCM-003148-01_L01.wav | WER=49.735450 | S=26 D=66 I=2
+2026-01-16 15:18:00,755 | INFO | ------------------------------
+2026-01-16 15:18:00,755 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-16 15:18:07,632 | INFO | File: CCM-003346-01_L01.wav | WER=58.730159 | S=21 D=89 I=1
+2026-01-16 15:18:07,632 | INFO | ------------------------------
+2026-01-16 15:18:07,632 | INFO |  File duration: 84.14911564625851 seconds
+2026-01-16 15:18:14,631 | INFO | File: CCM-003557-01_L01.wav | WER=52.105263 | S=18 D=79 I=2
+2026-01-16 15:18:14,632 | INFO | ------------------------------
+2026-01-16 15:18:14,632 | INFO |  File duration: 124.83047619047619 seconds
+2026-01-16 15:18:22,830 | INFO | File: CCM-003733-01_L01.wav | WER=60.406091 | S=40 D=78 I=1
+2026-01-16 15:18:22,830 | INFO | ------------------------------
+2026-01-16 15:18:22,831 | INFO |  File duration: 73.3750566893424 seconds
+2026-01-16 15:18:30,904 | INFO | File: CCM-003734-01_L01.wav | WER=33.701657 | S=10 D=50 I=1
+2026-01-16 15:18:30,904 | INFO | ------------------------------
+2026-01-16 15:18:30,904 | INFO |  File duration: 68.89360544217688 seconds
+2026-01-16 15:18:35,820 | INFO | File: CCM-003848-01_L01.wav | WER=68.750000 | S=7 D=122 I=3
+2026-01-16 15:18:35,820 | INFO | ------------------------------
+2026-01-16 15:18:35,820 | INFO | ===================== GLOBAL WER ======================
+2026-01-16 15:18:35,820 | INFO | The number of files is 8
+2026-01-16 15:18:35,820 | INFO | WER: 58.01%
+2026-01-16 15:18:35,821 | INFO | =============================================================

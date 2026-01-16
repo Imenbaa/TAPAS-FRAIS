@@ -5,3 +5,5 @@ models/
 ._.DS_Store
 data/
 pretrained_models/
+whisper_checkpoints/
+.idea

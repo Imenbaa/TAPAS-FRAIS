@@ -1,0 +1,49 @@
+2026-01-16 15:18:39,679 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
+2026-01-16 15:18:39,679 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-16 15:18:42,195 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-16 15:18:42,196 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-16 15:18:43,035 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr.
+2026-01-16 15:18:43,035 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt'
+2026-01-16 15:18:43,035 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-16 15:18:43,035 | INFO | Loading pretrained files for: whisper
+2026-01-16 15:18:43,035 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-16 15:18:49,456 | INFO |  File duration: 78.42133333333334 seconds
+2026-01-16 15:18:55,985 | INFO | File: PHO-000024-01_L01.wav | WER=69.398907 | S=20 D=104 I=3
+2026-01-16 15:18:55,985 | INFO | ------------------------------
+2026-01-16 15:18:55,986 | INFO |  File duration: 217.77066666666667 seconds
+2026-01-16 15:19:05,507 | INFO | File: PHO-000566-01_L01.wav | WER=34.078212 | S=32 D=27 I=2
+2026-01-16 15:19:05,507 | INFO | ------------------------------
+2026-01-16 15:19:05,507 | INFO |  File duration: 142.57052154195011 seconds
+2026-01-16 15:19:11,109 | INFO | File: PHO-000814-01_L01.wav | WER=63.978495 | S=15 D=102 I=2
+2026-01-16 15:19:11,109 | INFO | ------------------------------
+2026-01-16 15:19:11,110 | INFO |  File duration: 97.96266666666666 seconds
+2026-01-16 15:19:17,030 | INFO | File: PHO-001070-01_L01.wav | WER=70.121951 | S=36 D=77 I=2
+2026-01-16 15:19:17,030 | INFO | ------------------------------
+2026-01-16 15:19:17,031 | INFO |  File duration: 80.43392290249433 seconds
+2026-01-16 15:19:20,942 | INFO | File: PHO-001329-01_L01.wav | WER=69.109948 | S=3 D=127 I=2
+2026-01-16 15:19:20,942 | INFO | ------------------------------
+2026-01-16 15:19:20,942 | INFO |  File duration: 93.78133333333334 seconds
+2026-01-16 15:19:28,612 | INFO | File: PHO-001473-01_L01.wav | WER=57.031250 | S=26 D=26 I=21
+2026-01-16 15:19:28,612 | INFO | ------------------------------
+2026-01-16 15:19:28,613 | INFO |  File duration: 116.65066666666667 seconds
+2026-01-16 15:19:38,887 | INFO | File: PHO-001499-01_L01.wav | WER=52.173913 | S=32 D=38 I=26
+2026-01-16 15:19:38,887 | INFO | ------------------------------
+2026-01-16 15:19:38,912 | INFO |  File duration: 165.20533333333333 seconds
+2026-01-16 15:19:49,917 | INFO | File: PHO-001522-01_L01.wav | WER=57.200000 | S=56 D=87 I=0
+2026-01-16 15:19:49,917 | INFO | ------------------------------
+2026-01-16 15:19:49,944 | INFO |  File duration: 89.088 seconds
+2026-01-16 15:19:54,773 | INFO | File: PHO-001594-01_L01.wav | WER=80.473373 | S=33 D=99 I=4
+2026-01-16 15:19:54,773 | INFO | ------------------------------
+2026-01-16 15:19:54,773 | INFO |  File duration: 85.35655328798185 seconds
+2026-01-16 15:20:00,944 | INFO | File: PHO-001670-01_L01.wav | WER=63.212435 | S=27 D=95 I=0
+2026-01-16 15:20:00,944 | INFO | ------------------------------
+2026-01-16 15:20:00,945 | INFO |  File duration: 129.2887074829932 seconds
+2026-01-16 15:20:08,073 | INFO | File: PHO-001836-01_L01.wav | WER=78.010471 | S=55 D=92 I=2
+2026-01-16 15:20:08,073 | INFO | ------------------------------
+2026-01-16 15:20:08,073 | INFO |  File duration: 67.15210884353742 seconds
+2026-01-16 15:20:13,321 | INFO | File: PHO-307175-01_L01.wav | WER=76.111111 | S=37 D=97 I=3
+2026-01-16 15:20:13,321 | INFO | ------------------------------
+2026-01-16 15:20:13,321 | INFO | ===================== GLOBAL WER ======================
+2026-01-16 15:20:13,322 | INFO | The number of files is 12
+2026-01-16 15:20:13,322 | INFO | WER: 64.24%
+2026-01-16 15:20:13,323 | INFO | =============================================================

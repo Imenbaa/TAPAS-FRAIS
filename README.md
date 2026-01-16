@@ -25,6 +25,7 @@ pip install -r src/requirements.txt
 ## Models
 
 - ##### asr-wav2vec2-commonvoice-fr( with CTC/Attention trained on CommonVoice French => WER=9.96) ==> [model](https://huggingface.co/speechbrain/asr-wav2vec2-commonvoice-fr):
+    - Use LeBenchmark/wav2vec2-FR-7K-large
     - Tokenizer (unigram) that transforms words into subword units and trained with the train transcriptions (train.tsv) of CommonVoice (FR).
     - Acoustic model (wav2vec2.0 + CTC). A pretrained wav2vec 2.0 model (LeBenchmark/wav2vec2-FR-7K-large) is combined with two DNN layers and finetuned on CommonVoice FR. The obtained final acoustic representation is given to the CTC greedy decoder.
 - ##### HMM-TDNN (trained on ester)
@@ -99,15 +100,23 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | **38.67%** |
 | Typaloc (PARK-8)  | Whisper-medium              | 67.11%     |
 | Typaloc (PARK-8)  | whisper-medium-chunk        | 48.68%     |
-| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | **41.78%** |
+| Typaloc (PARK-8)  | whisper-large               | 58.01%     |
+| Typaloc (PARK-8)  | whisper-large-VAD-chunk     | 42.26%     |
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | 41.78%     |
 | Typaloc (CEREB-7) | Whisper-medium              | 67.93%     |
 | Typaloc (CEREB-7) | whisper-medium-chunk        | 42.80%     |
+| Typaloc (CEREB-7) | whisper-large               | 61.09%     |
+| Typaloc (CEREB-7) | whisper-large-VAD-chunk     | **39.41%** |
 | Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17%     |
 | Typaloc (SLA-12)  | Whisper-medium              | 68.06%     |
-| Typaloc (SLA-12)  | whisper-medium-chunk        | **48.76%** |
-| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | **18.46%** |
+| Typaloc (SLA-12)  | whisper-medium-chunk        | 48.76%     |
+| Typaloc (SLA-12)  | whisper-large               | 64.24%     |
+| Typaloc (SLA-12)  | whisper-large-VAD-chunk     | **46.03%** |
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | 18.46%     |
 | Typaloc (CTR-12)  | Whisper-medium              | 59.92%     |
 | Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%     |
+| Typaloc (CTR-12)  | whisper-large               | 60.03%     |
+| Typaloc (CTR-12)  | whisper-large-VAD-chunk     | **14.62%** |
 --------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models
