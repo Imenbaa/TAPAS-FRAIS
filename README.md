@@ -98,10 +98,10 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 |-------------------|-----------------------------|------------| 
 | Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | **38.67%** |
 | Typaloc (PARK-8)  | Whisper-medium              | 67.11%     |
-| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.56%     |
+| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.68%     |
 | Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | **41.78%** |
 | Typaloc (CEREB-7) | Whisper-medium              | 67.93%     |
-| Typaloc (CEREB-7) | whisper-medium-chunk        | 43.23%%    |
+| Typaloc (CEREB-7) | whisper-medium-chunk        | 42.80%     |
 | Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17%     |
 | Typaloc (SLA-12)  | Whisper-medium              | 68.06%     |
 | Typaloc (SLA-12)  | whisper-medium-chunk        | **48.76%** |

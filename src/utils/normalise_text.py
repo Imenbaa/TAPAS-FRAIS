@@ -1,6 +1,7 @@
 import re
 import unicodedata
 
+
 def normalization(text):
     # 1. Unicode normalize
     text = unicodedata.normalize("NFKD", text)

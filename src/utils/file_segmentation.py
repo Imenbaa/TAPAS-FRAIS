@@ -10,6 +10,7 @@ from normalise_text import normalization
 from pathlib import Path
 import logging
 from read_transcription import *
+
 log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/whisper_CTR_vad_chunk.log")
 logging.basicConfig(
     level=logging.INFO,
@@ -24,13 +25,15 @@ def vad_chunk_with_timestamps(
     wav,
     sampling_rate=16000,
     max_chunk_duration=30.0,
-    max_pause_duration=0.6   # 👈 tolérance de pause (en secondes)
+    max_pause_duration=0.6
 ):
     """
     wav: torch.Tensor (1D, 16kHz)
     returns: list of dicts with start/end in ORIGINAL time
     """
+    vad_model, utils = torch.hub.load(repo_or_dir="snakers4/silero-vad", model="silero_vad", force_reload=False)
 
+    (get_speech_timestamps, save_audio, read_audio, VADIterator, collect_chunks) = utils
     speech_ts = get_speech_timestamps(
         wav,
         vad_model,
@@ -217,7 +220,6 @@ if __name__ == "__main__":
             chunks = vad_chunk_with_timestamps(wav,sampling_rate=16000,max_chunk_duration=30.0)
             print("Number of chunks:", len(chunks))
             results = whisper_transcribe_chunks(asr_model,wav,chunks)
-            full_hyp = merge_transcriptions(results)
             words = get_textgrid_transcription_typaloc(trans_file)
             # Attach references
             for r in results:
