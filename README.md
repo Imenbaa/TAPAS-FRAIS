@@ -28,8 +28,9 @@ pip install -r src/requirements.txt
     - Tokenizer (unigram) that transforms words into subword units and trained with the train transcriptions (train.tsv) of CommonVoice (FR).
     - Acoustic model (wav2vec2.0 + CTC). A pretrained wav2vec 2.0 model (LeBenchmark/wav2vec2-FR-7K-large) is combined with two DNN layers and finetuned on CommonVoice FR. The obtained final acoustic representation is given to the CTC greedy decoder.
 - ##### HMM-TDNN (trained on ester)
-- ##### Conformer (trained on ester)
-- ##### Conformer (trained on commonvoice)
+
+- ##### Conformer (trained on ester | Commonvoice)
+
 - ##### Whisper-medium (finetuned on commonvoice-14.0)
 
 ## VAd+ chunking for whisper
@@ -93,18 +94,18 @@ Rhapsodie(corrected) on asr-wav2vec2-commonvoice-fr WER=33.75%
 
 Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
-| Datasets          | Models                      | WER    |
-|-------------------|-----------------------------|--------| 
-| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | 38.67% |
-| Typaloc (PARK-8)  | Whisper-medium              | 67.11% |
-| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.56% |
-| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | 41.78% |
-| Typaloc (CEREB-7) | Whisper-medium              | 67.93% |
-| Typaloc (CEREB-7) | whisper-medium-chunk        | 43.23%%|
-| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17% |
-| Typaloc (SLA-12)  | Whisper-medium              | 68.06% |
-| Typaloc (SLA-12)  | whisper-medium-chunk        | 48.76% |
-| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | 18.46% |
-| Typaloc (CTR-12)  | Whisper-medium              | 59.92% |
-| Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%%|
+| Datasets          | Models                      | WER        |
+|-------------------|-----------------------------|------------| 
+| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | **38.67%** |
+| Typaloc (PARK-8)  | Whisper-medium              | 67.11%     |
+| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.56%     |
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | **41.78%** |
+| Typaloc (CEREB-7) | Whisper-medium              | 67.93%     |
+| Typaloc (CEREB-7) | whisper-medium-chunk        | 43.23%%    |
+| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17%     |
+| Typaloc (SLA-12)  | Whisper-medium              | 68.06%     |
+| Typaloc (SLA-12)  | whisper-medium-chunk        | **48.76%** |
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | **18.46%** |
+| Typaloc (CTR-12)  | Whisper-medium              | 59.92%     |
+| Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%     |
 --------------------------------------------------------------
