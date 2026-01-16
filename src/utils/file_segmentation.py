@@ -9,7 +9,8 @@ from hyperpyyaml import load_hyperpyyaml
 from normalise_text import normalization
 from pathlib import Path
 import logging
-log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/whisper_tapas_nonverif_vad_chunk.log")
+from read_transcription import *
+log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/whisper_CTR_vad_chunk.log")
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s | %(levelname)s | %(message)s",
@@ -82,16 +83,47 @@ def vad_chunk_with_timestamps(
         })
 
     return chunks
+def load_words_from_textgrid_rhap(tg_path, tier_name=None):
+    tg = TextGrid()
+    tg.read(tg_path)
+
+    names = tg.getNames()
+
+    # Auto-detect word tier if not explicitly provided
+    if tier_name is None:
+        for candidate in ["ORT-MAU", "words", "word"]:
+            if candidate in names:
+                tier_name = candidate
+                break
+
+    if tier_name not in names:
+        raise ValueError(
+            f"No suitable word tier found. Available: {names}"
+        )
+
+    tier = tg.tiers[names.index(tier_name)]
+
+    words = []
+    for interval in tier.intervals:
+        mark = interval.mark.strip()
+        if mark:
+            words.append(
+                (mark, interval.minTime, interval.maxTime)
+            )
+
+    return words
+
 def extract_chunk_audio(wav, start, end, sr=16000):
     s = int(start * sr)
     e = int(end * sr)
     return wav[s:e].unsqueeze(0)   # (1, T)
 
-def load_words_from_textgrid(tg_path, tier_name="ORT-MAU"):
+def load_words_from_textgrid(tg_path, tier_name="transcription"):
     tg = TextGrid()
     tg.read(tg_path)
 
     names = tg.getNames()
+    print(names)
     if tier_name not in names:
         raise ValueError(
             f"Tier '{tier_name}' not found. Available: {names}"
@@ -154,19 +186,29 @@ def ref_text_for_chunk(words, start, end):
     )
 
 if __name__ == "__main__":
-    wav_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Data_Mons/Description"
-    tg_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Mons TextGrid non verifie"
+    #wav_path = "/vol/corpora/TAPAS_FRAIS/Data_Partagees_Mons/Data_Mons/Description"
+    #wav_path = "/vol/corpora/Rhapsodie/wav16k_corrected"
+    wav_path = "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL"
+    tg_path = "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL"
+    #tg_path = "/vol/corpora/Rhapsodie/TextGrids-fev2013"
     asr_model = WhisperASR.from_hparams(
         source="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr",
         savedir="/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr", run_opts={"device":"cuda"})
     wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
     WERs= []
     number_files=0
-    for f in os.listdir(tg_path):
-        if os.path.exists(os.path.join(wav_path,f.split(".")[0] + ".wav")):
+    tg_to_wav = {}
+    for f in sorted(os.listdir(tg_path)):
+        if f.endswith(".TextGrid") and not f.endswith("pr_analyse.TextGrid"):
+            if "Rhapsodie" in tg_path:
+                tg_to_wav[f] = f.split("-")[0] + "-" + f.split("-")[1] + ".wav"
+            else:
+                tg_to_wav[f] = f.split(".")[0] + ".wav"
+    for tg, wav in tg_to_wav.items():
+        wav_file = os.path.join(wav_path, wav)
+        trans_file = os.path.join(tg_path, tg)
+        if os.path.exists(wav_file):
             number_files += 1
-            wav_file = os.path.join(wav_path, f.split(".")[0] + ".wav")
-            trans_file = os.path.join(tg_path, f)
             logging.info(f" File duration: {librosa.get_duration(path=wav_file)} seconds")
             # load audio
             audio_np,sr = read_audio_16k(wav_file)
@@ -176,14 +218,14 @@ if __name__ == "__main__":
             print("Number of chunks:", len(chunks))
             results = whisper_transcribe_chunks(asr_model,wav,chunks)
             full_hyp = merge_transcriptions(results)
-            words = load_words_from_textgrid(trans_file,tier_name="ORT-MAU")
+            words = get_textgrid_transcription_typaloc(trans_file)
             # Attach references
             for r in results:
                 r["ref"] = ref_text_for_chunk(words, r["start"], r["end"])
             for id,r in enumerate(results):
                 print(f"[{r['start']:.2f}-{r['end']:.2f}]")
-                print("REF:", r["ref"])
-                print("HYP:", r["text"])
+                print("REF:", normalization(r["ref"]))
+                print("HYP:", normalization(r["text"]))
                 if r["ref"].strip():
                     wer_hparams["wer_stats"].clear()
                     wer_hparams["wer_stats"].append(ids=list(range(len(r["ref"]))),
@@ -216,7 +258,7 @@ if __name__ == "__main__":
             stats = wer_hparams["wer_stats"].summarize()
             logger.info(
                 "File: %s | WER=%f | S=%d D=%d I=%d",
-                f.split(".")[0],
+                wav_file,
                 stats["WER"],
                 stats["substitutions"],
                 stats["deletions"],
@@ -226,7 +268,7 @@ if __name__ == "__main__":
             logger.info("-" * 30)
             WERs.append(stats["WER"])
         else:
-            logging.warning(f"The file {os.path.join(wav_path,f.split('.')[0] + '.wav')} does not exist")
+            logging.warning(f"The file {wav_file} does not exist")
 
     # Compute final WER
     global_stats = sum(WERs) / len(WERs)

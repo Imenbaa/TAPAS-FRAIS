@@ -33,32 +33,37 @@ pip install -r src/requirements.txt
 - ##### Whisper-medium (finetuned on commonvoice-14.0)
 
 ## VAd+ chunking for whisper
+
 Limits of applying whisper on data directly:
 - Whisper is trained on short speech segments (30 sec), will split arbitrary
 - Whisper may hallucinate during silent regions --> need of VAD
 - Whisper drop uncertain speech --> incomplete transcriptions
 - Whisper normalize and summarize transcription
-Proposed solution:
+
+==> VAD alone does change nothing, it even gave worser results than without
+
+### Proposed solution:
+
 - Applying VAD to decide where there is speech ==> Mark where speech is detected without removing silence or changing audio
 - Speech segments produced by the VAD are grouped into chunks of maximum duration of 30 seconds. Consecutive speech segments separated by a pause ≤ 0.6 seconds are merged. Longer pauses create a new chunk.
 With this method the original timestamp is preserved and we prevent over-segmentation caused by micro-pauses.
 - Then, for each chunk, the audio is extracted directly from the original waveform using its timestamps and chunks are processed independently
+- For models with VAD and with chunking, the audio files were resampled to 16KHz
 
-
-| Datasets                       | Models                     | WER        |
-|--------------------------------|----------------------------|------------|
+| Datasets                       | Models                      | WER        |
+|--------------------------------|-----------------------------|------------|
 | TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr | 24.63%     |
 | TAPAS-FRAIS-verified (16k)     | asr-wav2vec2-commonvoice-fr | 24.41%     |
 | TAPAS-FRAIS-non-verified       | asr-wav2vec2-commonvoice-fr | **21.14%** |
-| TAPAS-FRAIS-non-verified (16k) | asr-wav2vec2-commonvoice-fr| **20.70%** |
-| TAPAS-FRAIS-verified           | whisper-medium             | 59.81%     |
-| TAPAS-FRAIS-non-verified       | whisper-medium             | 62.17%     |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD         | 62.39%     |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk   | 31.13%     |
-| TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk   | 34.44%     |
+| TAPAS-FRAIS-non-verified (16k) | asr-wav2vec2-commonvoice-fr | **20.70%** |
+| TAPAS-FRAIS-verified           | whisper-medium              | 59.81%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium              | 62.17%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD          | 62.39%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk    | 31.13%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk    | 34.44%     |
   ---------------------------------------------------------------------------
 
-- With wav2vec the WER on non verified is always better than verified by human. But for whisper, the WER on verified is better than non verified, this could be explained by the fact that whisper has a closer transcriptions to human because it interprets speech.
+- Interpretation: With wav2vec the WER on non verified is always better than verified by human. But for whisper, the WER on verified is better than non verified, this could be explained by the fact that whisper has a closer transcriptions to human because it interprets speech.
 
 
 
@@ -76,10 +81,30 @@ With this method the original timestamp is preserved and we prevent over-segment
 | Datasets                 | Models                      | WER        |
 |--------------------------|-----------------------------|------------| 
 | Rhapsodie                | asr-wav2vec2-commonvoice-fr | 36.99%     |
-| Rhapsodie                | Whisper-medium              | 36.99%     |
+| Rhapsodie                | Whisper-medium              | 67.05%     |
+| Rhapsodie                | Whisper-medium-VAD-chunk    | 50.79%     |
 | Rhapsodie                | Hmm_TDNN (ester)            | 35.05%     |
 | Rhapsodie                | Conformer (ester)           | **32.32%** |
   ------------------------------------------------------------------
 Dans la version Rhapsodie corrected, il y a des fichiers wav qui ont été retirés. 
 
 Rhapsodie(corrected) on asr-wav2vec2-commonvoice-fr WER=33.75%     
+
+
+Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
+
+| Datasets          | Models                      | WER    |
+|-------------------|-----------------------------|--------| 
+| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | 38.67% |
+| Typaloc (PARK-8)  | Whisper-medium              | 67.11% |
+| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.56% |
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | 41.78% |
+| Typaloc (CEREB-7) | Whisper-medium              | 67.93% |
+| Typaloc (CEREB-7) | whisper-medium-chunk        | 43.23%%|
+| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17% |
+| Typaloc (SLA-12)  | Whisper-medium              | 68.06% |
+| Typaloc (SLA-12)  | whisper-medium-chunk        | 48.76% |
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | 18.46% |
+| Typaloc (CTR-12)  | Whisper-medium              | 59.92% |
+| Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%%|
+--------------------------------------------------------------

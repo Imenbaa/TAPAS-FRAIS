@@ -1,0 +1,59 @@
+2026-01-15 16:25:04,536 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-15 16:25:04,537 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-15 16:25:04,569 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-15 16:25:05,634 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-15 16:25:05,646 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-15 16:25:05,646 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-15 16:25:05,646 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-15 16:25:05,646 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-15 16:25:05,647 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-15 16:25:05,647 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-15 16:25:05,647 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-15 16:25:05,647 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-15 16:25:05,647 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-15 16:25:05,647 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-15 16:25:05,647 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-15 16:25:09,956 | INFO |  File duration: 68.39650793650793 seconds
+2026-01-15 16:25:11,471 | INFO | Created a temporary directory at /tmp/tmpmyaq1a14
+2026-01-15 16:25:11,471 | INFO | Writing /tmp/tmpmyaq1a14/_remote_module_non_scriptable.py
+2026-01-15 16:25:11,672 | DEBUG | Registered checkpoint save hook for save
+2026-01-15 16:25:11,672 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-15 16:25:11,686 | INFO | File: AEX-CAB000-02_L01.wav | WER=10.734463 | S=17 D=2 I=0
+2026-01-15 16:25:11,686 | INFO | ------------------------------
+2026-01-15 16:25:11,687 | INFO |  File duration: 71.22968253968254 seconds
+2026-01-15 16:25:11,910 | INFO | File: AEX-CAC000-02_L01.wav | WER=21.925134 | S=26 D=9 I=6
+2026-01-15 16:25:11,910 | INFO | ------------------------------
+2026-01-15 16:25:11,910 | INFO |  File duration: 70.09696145124717 seconds
+2026-01-15 16:25:12,089 | INFO | File: AEX-CAG000-01_L01.wav | WER=15.168539 | S=23 D=1 I=3
+2026-01-15 16:25:12,089 | INFO | ------------------------------
+2026-01-15 16:25:12,090 | INFO |  File duration: 75.73018140589569 seconds
+2026-01-15 16:25:12,335 | INFO | File: AEX-CLJ000-02_L01.wav | WER=22.702703 | S=24 D=5 I=13
+2026-01-15 16:25:12,335 | INFO | ------------------------------
+2026-01-15 16:25:12,336 | INFO |  File duration: 58.55369614512472 seconds
+2026-01-15 16:25:12,495 | INFO | File: AEX-CML000-01_L01.wav | WER=12.921348 | S=17 D=6 I=0
+2026-01-15 16:25:12,495 | INFO | ------------------------------
+2026-01-15 16:25:12,495 | INFO |  File duration: 76.21907029478459 seconds
+2026-01-15 16:25:12,735 | INFO | File: AEX-CSR000-01_L01.wav | WER=20.000000 | S=27 D=9 I=0
+2026-01-15 16:25:12,735 | INFO | ------------------------------
+2026-01-15 16:25:12,736 | INFO |  File duration: 86.34117913832199 seconds
+2026-01-15 16:25:12,961 | INFO | File: BEX-CDB000-01_L01.wav | WER=17.877095 | S=30 D=2 I=0
+2026-01-15 16:25:12,961 | INFO | ------------------------------
+2026-01-15 16:25:12,962 | INFO |  File duration: 72.99619047619048 seconds
+2026-01-15 16:25:13,189 | INFO | File: BEX-CEB000-01_L01.wav | WER=22.527473 | S=29 D=12 I=0
+2026-01-15 16:25:13,189 | INFO | ------------------------------
+2026-01-15 16:25:13,190 | INFO |  File duration: 60.74340136054422 seconds
+2026-01-15 16:25:13,333 | INFO | File: BEX-CHE000-01_L01.wav | WER=21.468927 | S=25 D=12 I=1
+2026-01-15 16:25:13,333 | INFO | ------------------------------
+2026-01-15 16:25:13,333 | INFO |  File duration: 77.60358276643991 seconds
+2026-01-15 16:25:13,569 | INFO | File: BEX-CKN000-01_L01.wav | WER=14.525140 | S=20 D=6 I=0
+2026-01-15 16:25:13,569 | INFO | ------------------------------
+2026-01-15 16:25:13,570 | INFO |  File duration: 80.38402083333334 seconds
+2026-01-15 16:25:13,877 | INFO | File: BEX-CMB000-01_L01.wav | WER=19.230769 | S=27 D=8 I=0
+2026-01-15 16:25:13,877 | INFO | ------------------------------
+2026-01-15 16:25:13,878 | INFO |  File duration: 77.83328798185941 seconds
+2026-01-15 16:25:14,127 | INFO | File: BEX-CNKN00-01_L01.wav | WER=22.404372 | S=33 D=8 I=0
+2026-01-15 16:25:14,128 | INFO | ------------------------------
+2026-01-15 16:25:14,128 | INFO | ===================== GLOBAL WER ======================
+2026-01-15 16:25:14,128 | INFO | The number of files is 12
+2026-01-15 16:25:14,128 | INFO | WER: 18.46%
+2026-01-15 16:25:14,128 | INFO | =============================================================

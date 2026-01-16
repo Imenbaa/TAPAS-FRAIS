@@ -1,0 +1,49 @@
+2026-01-15 16:29:10,599 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/hyperparams.yaml'
+2026-01-15 16:29:10,599 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-15 16:29:12,603 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-15 16:29:12,603 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-15 16:29:12,727 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr.
+2026-01-15 16:29:12,728 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt'
+2026-01-15 16:29:12,728 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-15 16:29:12,728 | INFO | Loading pretrained files for: whisper
+2026-01-15 16:29:12,728 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-15 16:29:18,097 | INFO |  File duration: 68.39650793650793 seconds
+2026-01-15 16:29:23,667 | INFO | File: AEX-CAB000-02_L01.wav | WER=62.711864 | S=13 D=98 I=0
+2026-01-15 16:29:23,667 | INFO | ------------------------------
+2026-01-15 16:29:23,667 | INFO |  File duration: 71.22968253968254 seconds
+2026-01-15 16:29:27,442 | INFO | File: AEX-CAC000-02_L01.wav | WER=60.427807 | S=11 D=102 I=0
+2026-01-15 16:29:27,442 | INFO | ------------------------------
+2026-01-15 16:29:27,442 | INFO |  File duration: 70.09696145124717 seconds
+2026-01-15 16:29:30,625 | INFO | File: AEX-CAG000-01_L01.wav | WER=62.921348 | S=4 D=108 I=0
+2026-01-15 16:29:30,625 | INFO | ------------------------------
+2026-01-15 16:29:30,626 | INFO |  File duration: 75.73018140589569 seconds
+2026-01-15 16:29:34,142 | INFO | File: AEX-CLJ000-02_L01.wav | WER=59.459459 | S=3 D=107 I=0
+2026-01-15 16:29:34,143 | INFO | ------------------------------
+2026-01-15 16:29:34,143 | INFO |  File duration: 58.55369614512472 seconds
+2026-01-15 16:29:37,390 | INFO | File: AEX-CML000-01_L01.wav | WER=67.977528 | S=10 D=109 I=2
+2026-01-15 16:29:37,390 | INFO | ------------------------------
+2026-01-15 16:29:37,390 | INFO |  File duration: 76.21907029478459 seconds
+2026-01-15 16:29:41,550 | INFO | File: AEX-CSR000-01_L01.wav | WER=58.333333 | S=12 D=93 I=0
+2026-01-15 16:29:41,550 | INFO | ------------------------------
+2026-01-15 16:29:41,551 | INFO |  File duration: 86.34117913832199 seconds
+2026-01-15 16:29:45,867 | INFO | File: BEX-CDB000-01_L01.wav | WER=58.100559 | S=14 D=89 I=1
+2026-01-15 16:29:45,867 | INFO | ------------------------------
+2026-01-15 16:29:45,868 | INFO |  File duration: 72.99619047619048 seconds
+2026-01-15 16:29:49,356 | INFO | File: BEX-CEB000-01_L01.wav | WER=62.637363 | S=8 D=106 I=0
+2026-01-15 16:29:49,356 | INFO | ------------------------------
+2026-01-15 16:29:49,356 | INFO |  File duration: 60.74340136054422 seconds
+2026-01-15 16:29:53,165 | INFO | File: BEX-CHE000-01_L01.wav | WER=61.016949 | S=11 D=96 I=1
+2026-01-15 16:29:53,165 | INFO | ------------------------------
+2026-01-15 16:29:53,166 | INFO |  File duration: 77.60358276643991 seconds
+2026-01-15 16:29:57,928 | INFO | File: BEX-CKN000-01_L01.wav | WER=54.748603 | S=16 D=82 I=0
+2026-01-15 16:29:57,928 | INFO | ------------------------------
+2026-01-15 16:29:57,929 | INFO |  File duration: 80.38402083333334 seconds
+2026-01-15 16:30:02,653 | INFO | File: BEX-CMB000-01_L01.wav | WER=53.846154 | S=9 D=89 I=0
+2026-01-15 16:30:02,653 | INFO | ------------------------------
+2026-01-15 16:30:02,653 | INFO |  File duration: 77.83328798185941 seconds
+2026-01-15 16:30:07,682 | INFO | File: BEX-CNKN00-01_L01.wav | WER=56.830601 | S=23 D=81 I=0
+2026-01-15 16:30:07,682 | INFO | ------------------------------
+2026-01-15 16:30:07,682 | INFO | ===================== GLOBAL WER ======================
+2026-01-15 16:30:07,682 | INFO | The number of files is 12
+2026-01-15 16:30:07,682 | INFO | WER: 59.92%
+2026-01-15 16:30:07,683 | INFO | =============================================================

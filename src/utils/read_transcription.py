@@ -1,6 +1,7 @@
-from textgrid import TextGrid, IntervalTier
 
-from textgrid import TextGrid, IntervalTier
+from textgrid import TextGrid, IntervalTier,PointTier
+
+import re
 
 PHONE_LIKE_TOKENS = {
     "a", "e", "i", "o", "u", "y",
@@ -105,6 +106,24 @@ def get_textgrid_transcription_rhap(tg_path, tier_name):
 
     return " ".join(words)
 
+def get_textgrid_transcription_typaloc(tg_path, tier_name="transcription"):
+    tg = TextGrid.fromFile(tg_path)
+    tier = None
+    for t in tg.tiers:
+        if t.name.lower() == tier_name.lower():
+            tier = t
+            break
+    if tier is None:
+        tier = tg.tiers[0]
+    words = []
+    for interval in tier.intervals:
+        if interval.mark.strip():
+            words.append(
+                (interval.mark.strip(),
+                 interval.minTime,
+                 interval.maxTime)
+            )
+    return words
 def get_textgrid_transcription_tapas(tg_path, tier_name="transcription"):
     """ Read a TextGrid file and return the concatenated transcription from the specified tier. """
     tg = TextGrid.fromFile(tg_path)
@@ -116,5 +135,62 @@ def get_textgrid_transcription_tapas(tg_path, tier_name="transcription"):
     if tier is None:
         tier = tg.tiers[0]
     words = [ interval.mark.strip() for interval in tier.intervals if interval.mark and interval.mark.strip() ]
+
     transcription = " ".join(words)
     return transcription
+
+
+
+def read_transcription_text_from_textgrid(tg_path):
+    """
+    Robustly extract transcription text from a TextGrid.
+    Uses CONTENT heuristics instead of tier names.
+    Returns: str
+    """
+    tg = TextGrid()
+    tg.read(tg_path)
+
+    def looks_like_words(labels):
+        """
+        Heuristic:
+        - words are longer than 2 chars OR
+        - contain apostrophes / accents
+        - phones are short (zz, tt, ii, pp, eu...)
+        """
+        if not labels:
+            return False
+
+        phone_like = 0
+        for l in labels:
+            if re.fullmatch(r"[a-z]{1,2}", l):
+                phone_like += 1
+
+        return phone_like / len(labels) < 0.4  # majority are NOT phones
+
+    best_labels = None
+
+    for tier in tg.tiers:
+        # Skip acoustic/state tiers
+        if ".hmm" in tier.name.lower():
+            continue
+
+        labels = []
+
+        if isinstance(tier, IntervalTier):
+            labels = [i.mark.strip() for i in tier.intervals if i.mark.strip()]
+
+        elif isinstance(tier, PointTier):
+            labels = [p.mark.strip() for p in tier.points if p.mark.strip()]
+
+        if looks_like_words(labels):
+            best_labels = labels
+            break
+
+    if best_labels is None:
+        raise ValueError(
+            f"Could not find a word-level transcription. "
+            f"Available tiers: {tg.getNames()}"
+        )
+
+    return " ".join(best_labels)
+

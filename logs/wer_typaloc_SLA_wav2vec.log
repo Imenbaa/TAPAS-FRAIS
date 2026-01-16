@@ -1,0 +1,59 @@
+2026-01-15 16:14:24,052 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-15 16:14:24,052 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-15 16:14:24,085 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-15 16:14:25,083 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-15 16:14:25,095 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-15 16:14:25,096 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-15 16:14:25,096 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-15 16:14:25,096 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-15 16:14:25,096 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-15 16:14:25,096 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-15 16:14:25,096 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-15 16:14:25,096 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-15 16:14:25,096 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-15 16:14:25,096 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-15 16:14:25,096 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-15 16:14:28,492 | INFO |  File duration: 78.42133333333334 seconds
+2026-01-15 16:14:30,025 | INFO | Created a temporary directory at /tmp/tmprocy6cus
+2026-01-15 16:14:30,025 | INFO | Writing /tmp/tmprocy6cus/_remote_module_non_scriptable.py
+2026-01-15 16:14:30,206 | DEBUG | Registered checkpoint save hook for save
+2026-01-15 16:14:30,206 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-15 16:14:30,218 | INFO | File: PHO-000024-01_L01.wav | WER=51.912568 | S=61 D=34 I=0
+2026-01-15 16:14:30,218 | INFO | ------------------------------
+2026-01-15 16:14:30,218 | INFO |  File duration: 217.77066666666667 seconds
+2026-01-15 16:14:31,325 | INFO | File: PHO-000566-01_L01.wav | WER=93.296089 | S=143 D=24 I=0
+2026-01-15 16:14:31,325 | INFO | ------------------------------
+2026-01-15 16:14:31,325 | INFO |  File duration: 142.57052154195011 seconds
+2026-01-15 16:14:31,906 | INFO | File: PHO-000814-01_L01.wav | WER=67.741935 | S=89 D=35 I=2
+2026-01-15 16:14:31,906 | INFO | ------------------------------
+2026-01-15 16:14:31,906 | INFO |  File duration: 97.96266666666666 seconds
+2026-01-15 16:14:32,296 | INFO | File: PHO-001070-01_L01.wav | WER=73.170732 | S=63 D=50 I=7
+2026-01-15 16:14:32,296 | INFO | ------------------------------
+2026-01-15 16:14:32,297 | INFO |  File duration: 80.43392290249433 seconds
+2026-01-15 16:14:32,605 | INFO | File: PHO-001329-01_L01.wav | WER=30.890052 | S=31 D=27 I=1
+2026-01-15 16:14:32,605 | INFO | ------------------------------
+2026-01-15 16:14:32,605 | INFO |  File duration: 93.78133333333334 seconds
+2026-01-15 16:14:32,935 | INFO | File: PHO-001473-01_L01.wav | WER=44.531250 | S=38 D=19 I=0
+2026-01-15 16:14:32,935 | INFO | ------------------------------
+2026-01-15 16:14:32,935 | INFO |  File duration: 116.65066666666667 seconds
+2026-01-15 16:14:33,344 | INFO | File: PHO-001499-01_L01.wav | WER=44.021739 | S=48 D=31 I=2
+2026-01-15 16:14:33,344 | INFO | ------------------------------
+2026-01-15 16:14:33,344 | INFO |  File duration: 165.20533333333333 seconds
+2026-01-15 16:14:34,059 | INFO | File: PHO-001522-01_L01.wav | WER=86.800000 | S=95 D=122 I=0
+2026-01-15 16:14:34,059 | INFO | ------------------------------
+2026-01-15 16:14:34,059 | INFO |  File duration: 89.088 seconds
+2026-01-15 16:14:34,366 | INFO | File: PHO-001594-01_L01.wav | WER=75.739645 | S=73 D=54 I=1
+2026-01-15 16:14:34,366 | INFO | ------------------------------
+2026-01-15 16:14:34,384 | INFO |  File duration: 85.35655328798185 seconds
+2026-01-15 16:14:34,716 | INFO | File: PHO-001670-01_L01.wav | WER=60.103627 | S=71 D=45 I=0
+2026-01-15 16:14:34,716 | INFO | ------------------------------
+2026-01-15 16:14:34,716 | INFO |  File duration: 129.2887074829932 seconds
+2026-01-15 16:14:35,191 | INFO | File: PHO-001836-01_L01.wav | WER=92.146597 | S=125 D=50 I=1
+2026-01-15 16:14:35,191 | INFO | ------------------------------
+2026-01-15 16:14:35,192 | INFO |  File duration: 67.15210884353742 seconds
+2026-01-15 16:14:35,387 | INFO | File: PHO-307175-01_L01.wav | WER=61.666667 | S=48 D=62 I=1
+2026-01-15 16:14:35,387 | INFO | ------------------------------
+2026-01-15 16:14:35,387 | INFO | ===================== GLOBAL WER ======================
+2026-01-15 16:14:35,387 | INFO | The number of files is 12
+2026-01-15 16:14:35,387 | INFO | WER: 65.17%
+2026-01-15 16:14:35,388 | INFO | =============================================================
