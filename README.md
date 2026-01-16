@@ -111,6 +111,11 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 --------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models
+#### Rhapsodie dataset
 <img src="figures/wer_rhap_plot.png" width="600">
+
+#### TAPAS dataset
 <img src="figures/wer_tapas_plot.png" width="600">
+
+#### Typaloc dataset
 <img src="figures/wer_typaloc_plot.png" width="600">
