@@ -45,6 +45,7 @@ def extract_metrics(log_path, output_csv):
 if __name__ == "__main__":
 
 
-    #for f in os.listdir("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs"):
-        #extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+f, "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/"+f.split(".")[0]+".csv")
-    extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/wer_typaloc_SLA_wav2vec.log","/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/wer_typaloc_SLA_wav2vec.csv")
+    for f in os.listdir("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs"):
+        if f.endswith(".log"):
+            extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+f, "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/"+f.split(".")[0]+".csv")
+    #extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/wer_typaloc_SLA_wav2vec.log","/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/wer_typaloc_SLA_wav2vec.csv")

@@ -128,3 +128,4 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
 #### Typaloc dataset
 <img src="figures/wer_typaloc_plot.png" width="600">
+<img src="figures/wer_typaloc_heatmap.png" width="600">
