@@ -54,7 +54,7 @@ With this method the original timestamp is preserved and we prevent over-segment
 
 | Datasets                       | Models                         | WER        |
 |--------------------------------|--------------------------------|------------|
-| TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr    | 24.63%     |
+| TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr    | **24.63%** |
 | TAPAS-FRAIS-non-verified       | asr-wav2vec2-commonvoice-fr    | **21.14%** |
 | TAPAS-FRAIS-verified           | whisper-medium                 | 59.81%     |
 | TAPAS-FRAIS-non-verified       | whisper-medium                 | 62.17%     |
