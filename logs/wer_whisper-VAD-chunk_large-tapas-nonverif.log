@@ -1,0 +1,2 @@
+2026-01-20 14:21:31,118 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
+2026-01-20 14:21:31,118 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended

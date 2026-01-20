@@ -64,7 +64,7 @@ def main(args):
     for tg,wav in tg_to_wav.items():
         wav_file = os.path.join(args.wav_data, wav)
         trans_file = os.path.join(args.ref_trans, tg)
-        if os.path.exists(wav_file):
+        if os.path.exists(wav_file) and os.path.exists(trans_file):
             number_files += 1
             logging.info(f" File duration: {librosa.get_duration(path=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:
@@ -90,7 +90,11 @@ def main(args):
                 chunks = vad_chunk_with_timestamps(wav)
                 logging.info("Number of chunks: %d", len(chunks))
                 results = whisper_transcribe_chunks(asr_model, wav, chunks)
-                words = get_textgrid_transcription_typaloc(trans_file)
+                if "Rhapsodie" in args.ref_trans:
+                    words = get_textgrid_transcription_rhap_chunk(trans_file)
+                else:
+                    words = get_textgrid_transcription_chunk(trans_file)
+
                 ref_transcriptions,pred_transcriptions=wer_chunk(results,words)
                 logger.info("-" * 30)
                 logger.info("-" * 30)

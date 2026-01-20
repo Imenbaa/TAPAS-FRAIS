@@ -76,7 +76,7 @@ def get_textgrid_transcription(tg_path):
 
     return transcription
 
-def get_textgrid_transcription_rhap(tg_path, tier_name):
+def get_textgrid_transcription_rhap(tg_path, tier_name="word"):
     tg = TextGrid.fromFile(tg_path)
 
     # Afficher les tiers disponibles (debug)
@@ -105,8 +105,38 @@ def get_textgrid_transcription_rhap(tg_path, tier_name):
     ]
 
     return " ".join(words)
+def get_textgrid_transcription_rhap_chunk(tg_path, tier_name="word"):
+    tg = TextGrid.fromFile(tg_path)
 
-def get_textgrid_transcription_typaloc(tg_path, tier_name="transcription"):
+    # Afficher les tiers disponibles (debug)
+    available_tiers = [t.name for t in tg.tiers]
+
+    # Chercher le bon tier
+    tier = None
+    for t in tg.tiers:
+        if t.name.strip().lower() == tier_name.strip().lower():
+            tier = t
+            break
+
+    if tier is None:
+        raise ValueError(
+            f"Tier '{tier_name}' introuvable. "
+            f"Tiers disponibles: {available_tiers}"
+        )
+
+    if not isinstance(tier, IntervalTier):
+        raise ValueError(f"Le tier '{tier.name}' n'est pas un IntervalTier")
+
+    words = []
+    for interval in tier.intervals:
+        if interval.mark.strip():
+            words.append(
+                (interval.mark.strip(),
+                 interval.minTime,
+                 interval.maxTime)
+            )
+    return words
+def get_textgrid_transcription_chunk(tg_path, tier_name="transcription"):
     tg = TextGrid.fromFile(tg_path)
     tier = None
     for t in tg.tiers:

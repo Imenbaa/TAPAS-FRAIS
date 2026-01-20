@@ -52,17 +52,18 @@ With this method the original timestamp is preserved and we prevent over-segment
 - Then, for each chunk, the audio is extracted directly from the original waveform using its timestamps and chunks are processed independently
 - For models with VAD and with chunking, the audio files were resampled to 16KHz
 
-| Datasets                       | Models                      | WER        |
-|--------------------------------|-----------------------------|------------|
-| TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr | 24.63%     |
-| TAPAS-FRAIS-verified (16k)     | asr-wav2vec2-commonvoice-fr | 24.41%     |
-| TAPAS-FRAIS-non-verified       | asr-wav2vec2-commonvoice-fr | **21.14%** |
-| TAPAS-FRAIS-non-verified (16k) | asr-wav2vec2-commonvoice-fr | **20.70%** |
-| TAPAS-FRAIS-verified           | whisper-medium              | 59.81%     |
-| TAPAS-FRAIS-non-verified       | whisper-medium              | 62.17%     |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD          | 62.39%     |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk    | 31.13%     |
-| TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk    | 34.44%     |
+| Datasets                       | Models                         | WER        |
+|--------------------------------|--------------------------------|------------|
+| TAPAS-FRAIS-verified           | asr-wav2vec2-commonvoice-fr    | 24.63%     |
+| TAPAS-FRAIS-non-verified       | asr-wav2vec2-commonvoice-fr    | **21.14%** |
+| TAPAS-FRAIS-verified           | whisper-medium                 | 59.81%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium                 | 62.17%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD             | 62.39%     |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk       | 31.13%     |
+| TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk       | 34.44%     |
+| TAPAS-FRAIS-verified           | whisper-Large-VAD-chunk        | 23.41%     |
+| TAPAS-FRAIS-non-verified       | whisper-Large-VAD-chunk        | 25.88%     |
+| TAPAS-FRAIS-non-verified       | whisper-Large-VAD(rouas)-chunk | 36.20%     |
   ---------------------------------------------------------------------------
 
 - Interpretation: With wav2vec the WER on non verified is always better than verified by human. But for whisper, the WER on verified is better than non verified, this could be explained by the fact that whisper has a closer transcriptions to human because it interprets speech.
@@ -87,6 +88,7 @@ With this method the original timestamp is preserved and we prevent over-segment
 | Rhapsodie                | Whisper-medium-VAD-chunk    | 50.79%     |
 | Rhapsodie                | Hmm_TDNN (ester)            | 35.05%     |
 | Rhapsodie                | Conformer (ester)           | **32.32%** |
+| Rhapsodie                | Whisper-large-VAD-chunk     | 45.73%     |
   ------------------------------------------------------------------
 Dans la version Rhapsodie corrected, il y a des fichiers wav qui ont été retirés. 
 
@@ -95,28 +97,28 @@ Rhapsodie(corrected) on asr-wav2vec2-commonvoice-fr WER=33.75%
 
 Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
-| Datasets          | Models                      | WER        |
-|-------------------|-----------------------------|------------| 
-| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | **38.67%** |
-| Typaloc (PARK-8)  | Whisper-medium              | 67.11%     |
-| Typaloc (PARK-8)  | whisper-medium-chunk        | 48.68%     |
-| Typaloc (PARK-8)  | whisper-large               | 58.01%     |
-| Typaloc (PARK-8)  | whisper-large-VAD-chunk     | 42.26%     |
-| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | 41.78%     |
-| Typaloc (CEREB-7) | Whisper-medium              | 67.93%     |
-| Typaloc (CEREB-7) | whisper-medium-chunk        | 42.80%     |
-| Typaloc (CEREB-7) | whisper-large               | 61.09%     |
-| Typaloc (CEREB-7) | whisper-large-VAD-chunk     | **39.41%** |
-| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr | 65.17%     |
-| Typaloc (SLA-12)  | Whisper-medium              | 68.06%     |
-| Typaloc (SLA-12)  | whisper-medium-chunk        | 48.76%     |
-| Typaloc (SLA-12)  | whisper-large               | 64.24%     |
-| Typaloc (SLA-12)  | whisper-large-VAD-chunk     | **46.03%** |
-| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | 18.46%     |
-| Typaloc (CTR-12)  | Whisper-medium              | 59.92%     |
-| Typaloc (CTR-12)  | whisper-medium-chunk        | 19.63%     |
-| Typaloc (CTR-12)  | whisper-large               | 60.03%     |
-| Typaloc (CTR-12)  | whisper-large-VAD-chunk     | **14.62%** |
+| Datasets          | Models                       | WER        |
+|-------------------|------------------------------|------------| 
+| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr  | **38.67%** |
+| Typaloc (PARK-8)  | Whisper-medium               | 67.11%     |
+| Typaloc (PARK-8)  | whisper-medium-VAD-chunk     | 48.68%     |
+| Typaloc (PARK-8)  | whisper-large                | 58.01%     |
+| Typaloc (PARK-8)  | whisper-large-VAD-chunk      | 42.26%     |
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr  | 41.78%     |
+| Typaloc (CEREB-7) | Whisper-medium               | 67.93%     |
+| Typaloc (CEREB-7) | whisper-medium-VAD-chunk     | 42.80%     |
+| Typaloc (CEREB-7) | whisper-large                | 61.09%     |
+| Typaloc (CEREB-7) | whisper-large-VAD-chunk      | **39.41%** |
+| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr  | 65.17%     |
+| Typaloc (SLA-12)  | Whisper-medium               | 68.06%     |
+| Typaloc (SLA-12)  | whisper-medium-VAD-chunk     | 48.76%     |
+| Typaloc (SLA-12)  | whisper-large                | 64.24%     |
+| Typaloc (SLA-12)  | whisper-large-VAD-chunk      | **46.03%** |
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr  | 18.46%     |
+| Typaloc (CTR-12)  | Whisper-medium               | 59.92%     |
+| Typaloc (CTR-12)  | whisper-medium-VAD-chunk     | 19.63%     |
+| Typaloc (CTR-12)  | whisper-large                | 60.03%     |
+| Typaloc (CTR-12)  | whisper-large-VAD-chunk      | **14.62%** |
 --------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models

@@ -1,4 +1,27 @@
 import torch
+import numpy as np
+from rVADfast import rVADfast
+
+def vad_to_speech_ts(vad_labels, vad_timestamps, sampling_rate):
+    speech_ts = []
+    start = None
+
+    for label, t in zip(vad_labels, vad_timestamps):
+        if label == 1 and start is None:
+            start = int(t * sampling_rate)
+
+        elif label == 0 and start is not None:
+            end = int(t * sampling_rate)
+            speech_ts.append({"start": start, "end": end})
+            start = None
+
+    if start is not None:
+        speech_ts.append({
+            "start": start,
+            "end": int(vad_timestamps[-1] * sampling_rate)
+        })
+
+    return speech_ts
 
 def vad_chunk_with_timestamps(
     wav,
@@ -10,15 +33,14 @@ def vad_chunk_with_timestamps(
     wav: torch.Tensor (1D, 16kHz)
     returns: list of dicts with start/end in ORIGINAL time
     """
-    vad_model, utils = torch.hub.load(repo_or_dir="snakers4/silero-vad", model="silero_vad", force_reload=False)
+    #vad_model, utils = torch.hub.load(repo_or_dir="snakers4/silero-vad", model="silero_vad", force_reload=False)
 
-    (get_speech_timestamps, save_audio, read_audio, VADIterator, collect_chunks) = utils
-    speech_ts = get_speech_timestamps(
-        wav,
-        vad_model,
-        sampling_rate=sampling_rate
-    )
-
+    #(get_speech_timestamps, save_audio, read_audio, VADIterator, collect_chunks) = utils
+    #speech_ts = get_speech_timestamps(wav,vad_model,sampling_rate=sampling_rate)
+    vad = rVADfast()
+    vad_labels, vad_timestamps = vad(wav, sampling_rate)
+    #speech_ts = get_speech_timestamps_rvad(wav,sampling_rate=sampling_rate)
+    speech_ts = vad_to_speech_ts(vad_labels, vad_timestamps, sampling_rate)
     chunks = []
 
     chunk_start = None
