@@ -7,3 +7,8 @@ data/
 pretrained_models/
 whisper_checkpoints/
 .idea
+src/utils/file_segmentation.py
+src/pretrained_models/whisper_checkpoints
+src/asr-whisper-medium-commonvoice-fr
+src/utils/wer_analysis.ipynb
+src/utils/.ipynb_checkpoints
