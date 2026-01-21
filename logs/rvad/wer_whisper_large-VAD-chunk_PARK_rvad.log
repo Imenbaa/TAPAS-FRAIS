@@ -1,0 +1,147 @@
+2026-01-21 16:29:29,110 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
+2026-01-21 16:29:29,110 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-21 16:29:31,788 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-21 16:29:31,788 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-21 16:29:32,187 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr.
+2026-01-21 16:29:32,187 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt'
+2026-01-21 16:29:32,187 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-21 16:29:32,187 | INFO | Loading pretrained files for: whisper
+2026-01-21 16:29:32,188 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-21 16:29:39,872 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-21 16:29:49,944 | INFO | Using rVAD model
+2026-01-21 16:29:52,020 | INFO | Number of chunks: 2
+2026-01-21 16:29:57,277 | INFO | Chunk: 0 | WER=86.585366 | S=0 D=64 I=7
+2026-01-21 16:29:57,280 | INFO | Chunk: 1 | WER=62.135922 | S=9 D=53 I=2
+2026-01-21 16:29:57,280 | INFO | ------------------------------
+2026-01-21 16:29:57,280 | INFO | ------------------------------
+2026-01-21 16:29:57,290 | INFO | File: CCM-001773-01_L01.wav | WER=72.972973 | S=9 D=117 I=9
+2026-01-21 16:29:57,290 | INFO | ------------------------------
+2026-01-21 16:29:57,291 | INFO |  File duration: 76.16145124716553 seconds
+2026-01-21 16:30:04,602 | INFO | Using rVAD model
+2026-01-21 16:30:07,618 | INFO | Number of chunks: 14
+2026-01-21 16:30:20,172 | INFO | Chunk: 0 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:30:20,173 | INFO | Chunk: 1 | WER=21.428571 | S=2 D=0 I=1
+2026-01-21 16:30:20,173 | INFO | Chunk: 2 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:30:20,173 | INFO | Chunk: 3 | WER=5.555556 | S=0 D=1 I=0
+2026-01-21 16:30:20,174 | INFO | Chunk: 4 | WER=16.666667 | S=2 D=0 I=0
+2026-01-21 16:30:20,174 | INFO | Chunk: 5 | WER=29.411765 | S=4 D=0 I=1
+2026-01-21 16:30:20,174 | INFO | Chunk: 6 | WER=46.153846 | S=5 D=0 I=1
+2026-01-21 16:30:20,175 | INFO | Chunk: 7 | WER=30.769231 | S=3 D=0 I=1
+2026-01-21 16:30:20,175 | INFO | Chunk: 8 | WER=33.333333 | S=1 D=0 I=0
+2026-01-21 16:30:20,175 | INFO | Chunk: 9 | WER=60.000000 | S=3 D=0 I=0
+2026-01-21 16:30:20,175 | INFO | Chunk: 10 | WER=50.000000 | S=6 D=1 I=0
+2026-01-21 16:30:20,176 | INFO | Chunk: 11 | WER=51.851852 | S=10 D=3 I=1
+2026-01-21 16:30:20,176 | INFO | Chunk: 12 | WER=66.666667 | S=4 D=0 I=0
+2026-01-21 16:30:20,176 | INFO | Chunk: 13 | WER=75.000000 | S=4 D=2 I=0
+2026-01-21 16:30:20,176 | INFO | ------------------------------
+2026-01-21 16:30:20,177 | INFO | ------------------------------
+2026-01-21 16:30:20,191 | INFO | File: CCM-003130-01_L01.wav | WER=31.428571 | S=43 D=6 I=6
+2026-01-21 16:30:20,191 | INFO | ------------------------------
+2026-01-21 16:30:20,191 | INFO |  File duration: 69.47410430839003 seconds
+2026-01-21 16:30:30,480 | INFO | Using rVAD model
+2026-01-21 16:30:33,273 | INFO | Number of chunks: 5
+2026-01-21 16:30:39,764 | INFO | Chunk: 0 | WER=74.418605 | S=4 D=60 I=0
+2026-01-21 16:30:39,764 | INFO | Chunk: 1 | WER=12.500000 | S=0 D=1 I=0
+2026-01-21 16:30:39,766 | INFO | Chunk: 2 | WER=62.162162 | S=9 D=36 I=1
+2026-01-21 16:30:39,766 | INFO | Chunk: 3 | WER=40.000000 | S=2 D=4 I=0
+2026-01-21 16:30:39,766 | INFO | Chunk: 4 | WER=66.666667 | S=5 D=1 I=0
+2026-01-21 16:30:39,767 | INFO | ------------------------------
+2026-01-21 16:30:39,767 | INFO | ------------------------------
+2026-01-21 16:30:39,776 | INFO | File: CCM-003148-01_L01.wav | WER=60.795455 | S=20 D=86 I=1
+2026-01-21 16:30:39,776 | INFO | ------------------------------
+2026-01-21 16:30:39,776 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-21 16:30:48,502 | INFO | Using rVAD model
+2026-01-21 16:30:51,019 | INFO | Number of chunks: 4
+2026-01-21 16:31:00,041 | INFO | Chunk: 0 | WER=31.707317 | S=4 D=9 I=0
+2026-01-21 16:31:00,043 | INFO | Chunk: 1 | WER=23.404255 | S=5 D=6 I=0
+2026-01-21 16:31:00,045 | INFO | Chunk: 2 | WER=62.886598 | S=14 D=45 I=2
+2026-01-21 16:31:00,046 | INFO | Chunk: 3 | WER=20.000000 | S=0 D=1 I=0
+2026-01-21 16:31:00,046 | INFO | ------------------------------
+2026-01-21 16:31:00,046 | INFO | ------------------------------
+2026-01-21 16:31:00,057 | INFO | File: CCM-003346-01_L01.wav | WER=39.766082 | S=22 D=43 I=3
+2026-01-21 16:31:00,057 | INFO | ------------------------------
+2026-01-21 16:31:00,057 | INFO |  File duration: 84.14911564625851 seconds
+2026-01-21 16:31:10,058 | INFO | Using rVAD model
+2026-01-21 16:31:13,452 | INFO | Number of chunks: 7
+2026-01-21 16:31:24,872 | INFO | Chunk: 0 | WER=12.500000 | S=0 D=1 I=0
+2026-01-21 16:31:24,872 | INFO | Chunk: 1 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:31:24,873 | INFO | Chunk: 2 | WER=21.621622 | S=5 D=2 I=1
+2026-01-21 16:31:24,874 | INFO | Chunk: 3 | WER=22.222222 | S=1 D=5 I=2
+2026-01-21 16:31:24,874 | INFO | Chunk: 4 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:31:24,875 | INFO | Chunk: 5 | WER=32.142857 | S=6 D=3 I=0
+2026-01-21 16:31:24,876 | INFO | Chunk: 6 | WER=14.634146 | S=4 D=2 I=0
+2026-01-21 16:31:24,876 | INFO | ------------------------------
+2026-01-21 16:31:24,876 | INFO | ------------------------------
+2026-01-21 16:31:24,891 | INFO | File: CCM-003557-01_L01.wav | WER=12.429379 | S=13 D=3 I=6
+2026-01-21 16:31:24,891 | INFO | ------------------------------
+2026-01-21 16:31:24,891 | INFO |  File duration: 124.83047619047619 seconds
+2026-01-21 16:31:36,643 | INFO | Using rVAD model
+2026-01-21 16:31:41,719 | INFO | Number of chunks: 27
+2026-01-21 16:31:56,505 | INFO | Chunk: 0 | WER=47.058824 | S=4 D=3 I=1
+2026-01-21 16:31:56,505 | INFO | Chunk: 1 | WER=50.000000 | S=1 D=0 I=0
+2026-01-21 16:31:56,505 | INFO | Chunk: 2 | WER=53.846154 | S=5 D=0 I=2
+2026-01-21 16:31:56,506 | INFO | Chunk: 3 | WER=33.333333 | S=2 D=1 I=0
+2026-01-21 16:31:56,506 | INFO | Chunk: 4 | WER=33.333333 | S=1 D=0 I=0
+2026-01-21 16:31:56,506 | INFO | Chunk: 5 | WER=33.333333 | S=2 D=2 I=0
+2026-01-21 16:31:56,506 | INFO | Chunk: 6 | WER=100.000000 | S=2 D=1 I=0
+2026-01-21 16:31:56,506 | INFO | Chunk: 7 | WER=100.000000 | S=2 D=1 I=0
+2026-01-21 16:31:56,507 | INFO | Chunk: 8 | WER=26.923077 | S=3 D=4 I=0
+2026-01-21 16:31:56,507 | INFO | Chunk: 9 | WER=42.857143 | S=2 D=0 I=1
+2026-01-21 16:31:56,507 | INFO | Chunk: 10 | WER=100.000000 | S=3 D=1 I=1
+2026-01-21 16:31:56,508 | INFO | Chunk: 11 | WER=25.000000 | S=2 D=0 I=0
+2026-01-21 16:31:56,508 | INFO | Chunk: 12 | WER=50.000000 | S=3 D=2 I=0
+2026-01-21 16:31:56,508 | INFO | Chunk: 13 | WER=100.000000 | S=1 D=2 I=0
+2026-01-21 16:31:56,508 | INFO | Chunk: 14 | WER=100.000000 | S=2 D=1 I=0
+2026-01-21 16:31:56,508 | INFO | Chunk: 15 | WER=100.000000 | S=1 D=0 I=0
+2026-01-21 16:31:56,508 | INFO | Chunk: 16 | WER=75.000000 | S=2 D=1 I=0
+2026-01-21 16:31:56,509 | INFO | Chunk: 17 | WER=100.000000 | S=1 D=0 I=0
+2026-01-21 16:31:56,509 | INFO | Chunk: 18 | WER=75.000000 | S=2 D=0 I=1
+2026-01-21 16:31:56,509 | INFO | Chunk: 19 | WER=40.000000 | S=2 D=0 I=0
+2026-01-21 16:31:56,509 | INFO | Chunk: 20 | WER=50.000000 | S=3 D=3 I=0
+2026-01-21 16:31:56,509 | INFO | Chunk: 21 | WER=200.000000 | S=1 D=0 I=1
+2026-01-21 16:31:56,510 | INFO | Chunk: 22 | WER=62.500000 | S=3 D=1 I=1
+2026-01-21 16:31:56,510 | INFO | Chunk: 23 | WER=33.333333 | S=1 D=0 I=0
+2026-01-21 16:31:56,510 | INFO | Chunk: 24 | WER=61.538462 | S=4 D=3 I=1
+2026-01-21 16:31:56,510 | INFO | Chunk: 25 | WER=42.857143 | S=1 D=0 I=2
+2026-01-21 16:31:56,511 | INFO | Chunk: 26 | WER=20.000000 | S=2 D=1 I=0
+2026-01-21 16:31:56,511 | INFO | ------------------------------
+2026-01-21 16:31:56,511 | INFO | ------------------------------
+2026-01-21 16:31:56,525 | INFO | File: CCM-003733-01_L01.wav | WER=48.214286 | S=47 D=10 I=24
+2026-01-21 16:31:56,525 | INFO | ------------------------------
+2026-01-21 16:31:56,525 | INFO |  File duration: 73.3750566893424 seconds
+2026-01-21 16:32:06,887 | INFO | Using rVAD model
+2026-01-21 16:32:09,787 | INFO | Number of chunks: 11
+2026-01-21 16:32:22,156 | INFO | Chunk: 0 | WER=6.250000 | S=1 D=1 I=0
+2026-01-21 16:32:22,157 | INFO | Chunk: 1 | WER=22.222222 | S=2 D=0 I=0
+2026-01-21 16:32:22,157 | INFO | Chunk: 2 | WER=16.666667 | S=2 D=0 I=0
+2026-01-21 16:32:22,157 | INFO | Chunk: 3 | WER=20.000000 | S=3 D=0 I=0
+2026-01-21 16:32:22,158 | INFO | Chunk: 4 | WER=9.090909 | S=0 D=1 I=1
+2026-01-21 16:32:22,158 | INFO | Chunk: 5 | WER=20.000000 | S=1 D=0 I=0
+2026-01-21 16:32:22,159 | INFO | Chunk: 6 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:32:22,159 | INFO | Chunk: 7 | WER=25.000000 | S=2 D=1 I=0
+2026-01-21 16:32:22,160 | INFO | Chunk: 8 | WER=18.750000 | S=1 D=2 I=0
+2026-01-21 16:32:22,160 | INFO | Chunk: 9 | WER=0.000000 | S=0 D=0 I=0
+2026-01-21 16:32:22,161 | INFO | Chunk: 10 | WER=6.896552 | S=1 D=1 I=0
+2026-01-21 16:32:22,161 | INFO | ------------------------------
+2026-01-21 16:32:22,161 | INFO | ------------------------------
+2026-01-21 16:32:22,176 | INFO | File: CCM-003734-01_L01.wav | WER=9.039548 | S=13 D=2 I=1
+2026-01-21 16:32:22,176 | INFO | ------------------------------
+2026-01-21 16:32:22,177 | INFO |  File duration: 68.89360544217688 seconds
+2026-01-21 16:32:29,079 | INFO | Using rVAD model
+2026-01-21 16:32:31,819 | INFO | Number of chunks: 8
+2026-01-21 16:32:44,162 | INFO | Chunk: 0 | WER=12.500000 | S=0 D=1 I=3
+2026-01-21 16:32:44,162 | INFO | Chunk: 1 | WER=30.000000 | S=2 D=1 I=0
+2026-01-21 16:32:44,162 | INFO | Chunk: 2 | WER=100.000000 | S=7 D=2 I=0
+2026-01-21 16:32:44,163 | INFO | Chunk: 3 | WER=34.146341 | S=6 D=8 I=0
+2026-01-21 16:32:44,163 | INFO | Chunk: 4 | WER=14.285714 | S=1 D=0 I=0
+2026-01-21 16:32:44,164 | INFO | Chunk: 5 | WER=14.285714 | S=4 D=1 I=0
+2026-01-21 16:32:44,165 | INFO | Chunk: 6 | WER=35.294118 | S=4 D=2 I=0
+2026-01-21 16:32:44,166 | INFO | Chunk: 7 | WER=42.857143 | S=8 D=8 I=2
+2026-01-21 16:32:44,166 | INFO | ------------------------------
+2026-01-21 16:32:44,166 | INFO | ------------------------------
+2026-01-21 16:32:44,180 | INFO | File: CCM-003848-01_L01.wav | WER=29.378531 | S=34 D=10 I=8
+2026-01-21 16:32:44,180 | INFO | ------------------------------
+2026-01-21 16:32:44,180 | INFO | ===================== GLOBAL WER ======================
+2026-01-21 16:32:44,180 | INFO | The number of files is 8
+2026-01-21 16:32:44,180 | INFO | WER: 38.00%
+2026-01-21 16:32:44,180 | INFO | =============================================================

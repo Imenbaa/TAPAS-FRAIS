@@ -1,22 +1,15 @@
 import argparse
 import logging
-import sys
 import os
 from speechbrain.inference.ASR import WhisperASR
 from speechbrain.inference.ASR import EncoderASR
-from speechbrain.pretrained import EncoderDecoderASR
-from speechbrain.utils.metric_stats import ErrorRateStats
-from textgrid import TextGrid
 from utils.read_transcription import *
 from utils.normalise_text import *
 from pathlib import Path
 from hyperpyyaml import load_hyperpyyaml
 import librosa
 import torch
-import soundfile as sf
-from transformers import Wav2Vec2Processor, Wav2Vec2ForCTC
 from utils.apply_vad import *
-from utils.resample16k import resample_dir
 from utils.list_files import list_files
 from utils.VAD_chunk import *
 from utils.wer_chunk import wer_chunk
@@ -32,7 +25,7 @@ parser.add_argument("--log_file", type=str,required=True, help="The logfile name
 
 args = parser.parse_args()
 
-log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+ args.log_file + ".log")
+log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/silero/"+ args.log_file + ".log")
 wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
 setup_logging(log_file)
 logger = logging.getLogger(__name__)
@@ -65,7 +58,7 @@ def main(args):
         trans_file = os.path.join(args.ref_trans, tg)
         if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid":
             number_files += 1
-            logging.info(f" File duration: {librosa.get_duration(path=wav_file)} seconds")
+            logging.info(f" File duration: {librosa.get_duration(filename=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:
                 ref_transcriptions = get_textgrid_transcription_rhap(trans_file)
             else:

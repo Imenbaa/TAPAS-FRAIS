@@ -1,0 +1,386 @@
+2026-01-21 17:03:01,592 | INFO | config file: /vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml
+2026-01-21 17:03:01,624 | INFO | Vocabulary size: 350
+2026-01-21 17:03:02,436 | INFO | Gradient checkpoint layers: []
+2026-01-21 17:03:04,559 | INFO | BatchBeamSearch implementation is selected.
+2026-01-21 17:03:04,562 | INFO | Beam_search: BatchBeamSearch(
+  (nn_dict): ModuleDict(
+    (decoder): TransformerDecoder(
+      (embed): Sequential(
+        (0): Embedding(350, 512)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (after_norm): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+      (output_layer): Linear(in_features=512, out_features=350, bias=True)
+      (decoders): MultiSequential(
+        (0): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (1): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (2): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (3): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (4): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (5): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+2026-01-21 17:03:04,562 | INFO | Decoding device=cuda, dtype=float32
+2026-01-21 17:03:04,563 | INFO | Text tokenizer: SentencepiecesTokenizer(model="/vol/experiments/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/bpe_unigram350/bpe.model")
+2026-01-21 17:03:04,563 | INFO |  File duration: 78.42133333333334 seconds
+2026-01-21 17:03:08,739 | INFO | speech length: 1010079
+2026-01-21 17:03:11,407 | INFO | decoder input length: 1577
+2026-01-21 17:03:11,407 | INFO | max output length: 1577
+2026-01-21 17:03:11,407 | INFO | min output length: 157
+2026-01-21 17:05:11,167 | INFO | end detected at 467
+2026-01-21 17:05:11,169 | INFO | -1485.15 * 0.5 = -742.58 for decoder
+2026-01-21 17:05:11,169 | INFO | -635.26 * 0.5 = -317.63 for ctc
+2026-01-21 17:05:11,169 | INFO | total log probability: -1060.21
+2026-01-21 17:05:11,169 | INFO | normalized log probability: -2.30
+2026-01-21 17:05:11,169 | INFO | total number of ended hypotheses: 162
+2026-01-21 17:05:11,175 | INFO | best hypo: ▁dans▁un▁petit▁mélange▁de▁mon▁la▁montagne▁il▁n'y▁un▁pauvre▁un▁cornonnier▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁apportent▁des▁chaussures▁à▁rien▁parer▁mais▁ils▁ne▁travaillent▁pas▁vite▁tous▁les▁soirs▁et▁ils▁manges▁tout▁seuls▁mais▁un▁tristement▁le▁soir▁et▁n'yrent▁devant▁nuit▁un▁grands▁temps▁de▁sonniers▁et▁d'un▁gêtres▁encours▁jamais▁je▁ne▁pourrai▁ni▁réparés▁je▁suis▁trompagés▁et▁trops▁malades▁après▁une▁nuits▁la▁rons▁horloges▁me▁dictins▁tictins▁un▁pauvre▁un▁vieux▁et▁tout▁dourgés▁sont▁hor▁en▁citant▁leurs▁lins▁houvre▁et▁un▁petits▁nutins▁sole▁sur▁le▁planchers▁là▁un▁pinstiques▁et▁nons▁un▁pletinques▁rins▁les▁étagèrent▁réparons▁les▁sonniers▁rencsants▁les▁linges▁dits▁tis▁réparons▁un▁gâton▁mais▁tons▁du▁guillant▁en▁platon▁change▁un▁vieux▁rides▁un▁'unctins▁humis▁sommes▁et▁de▁vaillants▁un▁petits▁nutins▁rencrenant▁dans▁la▁prins▁nules▁le▁lendeumain▁le▁pauvre▁un▁cornonniers▁s'émains▁he▁en▁juins▁qui▁en▁un▁préparés▁dans▁mon▁gâton▁qui▁non▁arranger▁la▁maison▁et▁un▁ticts▁dity▁ami▁horloges
+
+2026-01-21 17:05:11,196 | INFO | File: PHO-000024-01_L01.wav | WER=68.926554 | S=99 D=10 I=13
+2026-01-21 17:05:11,196 | INFO | ------------------------------
+2026-01-21 17:05:11,196 | INFO |  File duration: 217.77066666666667 seconds
+2026-01-21 17:05:22,565 | INFO | speech length: 2835840
+2026-01-21 17:05:22,952 | INFO | decoder input length: 4430
+2026-01-21 17:05:22,953 | INFO | max output length: 4430
+2026-01-21 17:05:22,953 | INFO | min output length: 443
+2026-01-21 17:10:04,904 | INFO | end detected at 450
+2026-01-21 17:10:04,904 | INFO | -1056.79 * 0.5 = -528.39 for decoder
+2026-01-21 17:10:04,905 | INFO | -1732.71 * 0.5 = -866.35 for ctc
+2026-01-21 17:10:04,905 | INFO | total log probability: -1394.75
+2026-01-21 17:10:04,905 | INFO | normalized log probability: -3.13
+2026-01-21 17:10:04,905 | INFO | total number of ended hypotheses: 160
+2026-01-21 17:10:04,910 | INFO | best hypo: ▁on▁peut▁se▁visager▁de▁la▁montagne▁et▁pourvoyer▁sur▁vieux▁et▁juscasser▁la▁joie▁te▁des▁choses▁arrête▁mais▁elles▁avait▁à▁vite▁les▁soifs▁et▁je▁s'assssiassias▁devait▁au▁betttins▁seuler▁de▁guaia▁jamais▁jeunes▁brait▁cher▁je▁supppager▁et▁cherès▁uit▁la▁brs▁en▁fette▁gaias▁vieux▁toujaictttends▁au▁sisseau▁le▁je▁sauve▁et▁de▁jetttttt▁chez▁la▁sa▁fe▁chers▁au▁s'apppe▁ta▁les▁chertttt▁les▁soller▁au▁cr▁le▁larâge▁de▁dis▁cherait▁un▁gartte▁maison▁de▁guit▁au▁fon▁change▁vieux▁et▁de▁jourttte▁de▁uiès▁les▁deux▁fettttte▁dans▁la▁fe▁de▁la▁la▁mains▁brs▁chevait▁au▁jours▁chers▁chers▁chers▁avait▁la▁mes▁chersctte▁de▁la▁viettttttttrallers▁cherollers▁cher▁cherololers▁cher▁cher▁cher▁cher▁cher▁cher▁cher▁cher▁cher▁cher▁cherolleules▁'s▁chers▁cher▁cher▁rollers▁cherollers▁'s▁rolleulesprs▁cher▁cher▁rs▁cherolleuplettes
+
+2026-01-21 17:10:04,925 | INFO | File: PHO-000566-01_L01.wav | WER=90.960452 | S=124 D=35 I=2
+2026-01-21 17:10:04,925 | INFO | ------------------------------
+2026-01-21 17:10:04,926 | INFO |  File duration: 142.57052154195011 seconds
+2026-01-21 17:10:13,572 | INFO | speech length: 1833759
+2026-01-21 17:10:13,734 | INFO | decoder input length: 2864
+2026-01-21 17:10:13,734 | INFO | max output length: 2864
+2026-01-21 17:10:13,734 | INFO | min output length: 286
+2026-01-21 17:13:44,734 | INFO | end detected at 477
+2026-01-21 17:13:44,736 | INFO | -1516.64 * 0.5 = -758.32 for decoder
+2026-01-21 17:13:44,736 | INFO | -683.92 * 0.5 = -341.96 for ctc
+2026-01-21 17:13:44,736 | INFO | total log probability: -1100.28
+2026-01-21 17:13:44,736 | INFO | normalized log probability: -2.34
+2026-01-21 17:13:44,736 | INFO | total number of ended hypotheses: 180
+2026-01-21 17:13:44,742 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁corps▁dernier▁du▁vieux▁et▁tout▁caisse▁le▁village▁i▁ne▁lui▁apporte▁que▁deux▁choses▁à▁réparaître▁mais▁il▁ne▁travaillent▁pas▁vite▁toujous▁les▁soins▁et▁une▁marche▁tout▁seule▁mais▁un▁territins▁r▁soit▁il▁y▁a▁devant▁nous▁un▁grande▁temps▁de▁charniers▁et▁de▁guerttes▁à▁recournes▁jamais▁je▁ne▁pourrai▁le▁réparraître▁je▁suis▁troppagés▁et▁trope▁la▁malade▁près▁de▁nuit▁la▁morttte▁un▁âges▁et▁des▁taques▁'ttes▁le▁pauvre▁beut▁tout▁de▁gups▁âgés▁'endantettôtte▁l'hors▁lâge▁s'ourre▁et▁deux▁petit▁nues▁'a▁chaudent▁sur▁le▁blanches▁la▁saupés▁l'autre▁'ape▁d'agne▁avant▁jeunes▁les▁'hétachés▁repain▁on▁de▁sonniers▁repose▁dans▁le▁lâge▁nutiques▁près▁par▁un▁gâteau▁meton▁'unis▁un▁plafon▁change▁ces▁vieux▁hideaume▁ajoutte▁de▁tarques▁min'huit▁sommes▁les▁deux▁vaillage▁un▁peutte▁renant▁dans▁la▁brin▁d'une▁le▁lendeumain▁du▁pauvre▁pronniers▁'és▁eilles▁hôme▁chemois▁qui▁apparait▁ce▁beau▁gâtteau▁'in'on▁arrange▁la▁maison▁dis▁inctte▁d'un▁de▁la▁bon▁larage
+
+2026-01-21 17:13:44,759 | INFO | File: PHO-000814-01_L01.wav | WER=67.796610 | S=97 D=7 I=16
+2026-01-21 17:13:44,760 | INFO | ------------------------------
+2026-01-21 17:13:44,760 | INFO |  File duration: 97.96266666666666 seconds
+2026-01-21 17:13:49,929 | INFO | speech length: 1255199
+2026-01-21 17:13:50,008 | INFO | decoder input length: 1960
+2026-01-21 17:13:50,008 | INFO | max output length: 1960
+2026-01-21 17:13:50,008 | INFO | min output length: 196
+2026-01-21 17:15:18,447 | INFO | end detected at 380
+2026-01-21 17:15:18,449 | INFO | -1048.84 * 0.5 = -524.42 for decoder
+2026-01-21 17:15:18,449 | INFO | -542.73 * 0.5 = -271.37 for ctc
+2026-01-21 17:15:18,449 | INFO | total log probability: -795.79
+2026-01-21 17:15:18,450 | INFO | normalized log probability: -2.13
+2026-01-21 17:15:18,450 | INFO | total number of ended hypotheses: 182
+2026-01-21 17:15:18,454 | INFO | best hypo: ▁il▁ne▁le▁désappartenait▁dans▁un▁petit▁soldat▁de▁la▁montagne▁et▁devient▁un▁pauvre▁cordonnier▁de▁vieux▁étoucate▁les▁vieillageois▁leur▁rapport▁de▁jours▁rêves▁réparaits▁mais▁ne▁rabaints▁pas▁vite▁tous▁les▁joints▁elle▁ne▁mangeaux▁doux▁d'un▁bien▁très▁tonnant▁ce▁soints▁éleyant▁devant▁nous▁en▁grodains▁de▁zoults▁et▁de▁grêtres▁à▁rencontres▁jamais▁je▁ne▁pourrais▁la▁réparer▁'és▁trop▁âgés▁et▁dront▁blades▁près▁de▁lui▁la▁gros▁horloges▁vers▁détas▁d'uns▁le▁pauvre▁feuds▁des▁gots▁deux▁endants▁aux▁étts▁'uns▁leurves▁rins▁et▁de▁bous▁d'uns▁autres▁sur▁la▁blanchets▁leurs▁abés▁diecs▁lons▁dans▁un▁be▁d'aincs▁ronant▁les▁étts▁réparons▁les▁journés▁au▁repousant▁leurs▁ende▁dits▁par▁un▁brons▁un▁gâteaudant▁de▁gués▁au▁blafons▁jeune▁ons▁vieux▁radieauds▁ajous▁d'argues
+
+2026-01-21 17:15:18,466 | INFO | File: PHO-001070-01_L01.wav | WER=75.362319 | S=87 D=9 I=8
+2026-01-21 17:15:18,466 | INFO | ------------------------------
+2026-01-21 17:15:18,467 | INFO |  File duration: 80.43392290249433 seconds
+2026-01-21 17:15:23,076 | INFO | speech length: 1124960
+2026-01-21 17:15:23,150 | INFO | decoder input length: 1757
+2026-01-21 17:15:23,150 | INFO | max output length: 1757
+2026-01-21 17:15:23,150 | INFO | min output length: 175
+2026-01-21 17:16:55,276 | INFO | end detected at 449
+2026-01-21 17:16:55,277 | INFO | -1462.63 * 0.5 = -731.31 for decoder
+2026-01-21 17:16:55,277 | INFO | -493.28 * 0.5 = -246.64 for ctc
+2026-01-21 17:16:55,277 | INFO | total log probability: -977.95
+2026-01-21 17:16:55,277 | INFO | normalized log probability: -2.21
+2026-01-21 17:16:55,277 | INFO | total number of ended hypotheses: 170
+2026-01-21 17:16:55,282 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁plus▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁apportaient▁des▁chaussures▁à▁réparer▁et▁ils▁ne▁travaillent▁pas▁vite▁tous▁les▁soirs▁et▁mangent▁tout▁seuls▁bien▁tristeement▁ce▁soir▁et▁il▁y▁a▁devant▁lui▁un▁gros▁tas▁et▁souliers▁et▁de▁guâtres▁à▁repoudre▁jamais▁je▁ne▁pourrai▁les▁réparer▁je▁suis▁troppâchés▁et▁trop▁de▁malades▁près▁de▁lui▁la▁grosses▁horloges▁fais▁taques▁ticts▁le▁pauvre▁vieux▁tout▁ourgés▁et▁s'orttôt▁l'horloge▁s'ouvre▁et▁deux▁petits▁lutins▁sautent▁sur▁le▁planchers▁l'un▁la▁paie▁le▁tics▁l'autres▁'pe▁taques▁ranchant▁les▁étagèrent▁réparant▁les▁sourits▁recusant▁le▁lâge▁dit▁il▁préparant▁un▁gâteau▁mettant▁du▁gudes▁au▁plafon▁change▁tout▁ces▁vieux▁rideau▁ajous▁te▁taques▁minuson▁les▁deux▁vaillents▁et▁petits▁'utains▁renent▁dans▁la▁pendules▁le▁lentende▁lmains▁le▁pauvre▁de▁cordonniers▁s'auveilles▁os▁joua▁qui▁apparaient▁ce▁beau▁gâteau▁qui▁donc▁arrnché▁la▁maison▁tictac▁taques▁dit▁la▁vie▁horloge
+
+2026-01-21 17:16:55,298 | INFO | File: PHO-001329-01_L01.wav | WER=43.502825 | S=60 D=9 I=8
+2026-01-21 17:16:55,299 | INFO | ------------------------------
+2026-01-21 17:16:55,299 | INFO |  File duration: 93.78133333333334 seconds
+2026-01-21 17:16:59,784 | INFO | speech length: 1230240
+2026-01-21 17:16:59,868 | INFO | decoder input length: 1921
+2026-01-21 17:16:59,868 | INFO | max output length: 1921
+2026-01-21 17:16:59,868 | INFO | min output length: 192
+2026-01-21 17:18:09,711 | INFO | end detected at 301
+2026-01-21 17:18:09,713 | INFO | -902.90 * 0.5 = -451.45 for decoder
+2026-01-21 17:18:09,713 | INFO | -376.27 * 0.5 = -188.13 for ctc
+2026-01-21 17:18:09,713 | INFO | total log probability: -639.58
+2026-01-21 17:18:09,713 | INFO | normalized log probability: -2.18
+2026-01-21 17:18:09,713 | INFO | total number of ended hypotheses: 167
+2026-01-21 17:18:09,716 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁montagne▁il▁est▁un▁pauvre▁cordonnier▁du▁vieux▁tout▁cassé▁les▁villageois▁de▁la▁porte▁de▁chaussure▁réparés▁mais▁ils▁n'apparaient▁pas▁vite▁tous▁les▁soirs▁de▁manches▁durs▁seuls▁bien▁trestant▁ce▁soient▁il▁y▁av▁devant▁lui▁un▁gros▁têtres▁soulier▁et▁des▁gués▁coudre▁jamais▁je▁ne▁pour▁les▁réparer▁je▁suis▁troppppagés▁et▁troplades▁près▁de▁la▁la▁gupe▁sans▁lâches▁et▁'és▁tacs▁ta▁le▁pauvre▁vieux▁tout▁douragers▁s'en▁dorttôt▁dans▁leurs▁los▁et▁deux▁petits▁lotins▁sautent▁sur▁le▁planchers▁l'un▁pla▁s'appellent▁tics▁l'autre▁s'appellent▁tak▁'ange▁dans▁les▁étagés▁et▁répendent▁les▁soulier▁recouchant▁le▁lins
+
+2026-01-21 17:18:09,726 | INFO | File: PHO-001473-01_L01.wav | WER=52.100840 | S=51 D=7 I=4
+2026-01-21 17:18:09,726 | INFO | ------------------------------
+2026-01-21 17:18:09,727 | INFO |  File duration: 116.65066666666667 seconds
+2026-01-21 17:18:15,453 | INFO | speech length: 1479359
+2026-01-21 17:18:15,563 | INFO | decoder input length: 2310
+2026-01-21 17:18:15,563 | INFO | max output length: 2310
+2026-01-21 17:18:15,563 | INFO | min output length: 231
+2026-01-21 17:20:16,050 | INFO | end detected at 438
+2026-01-21 17:20:16,052 | INFO | -1489.16 * 0.5 = -744.58 for decoder
+2026-01-21 17:20:16,052 | INFO | -554.72 * 0.5 = -277.36 for ctc
+2026-01-21 17:20:16,052 | INFO | total log probability: -1021.95
+2026-01-21 17:20:16,052 | INFO | normalized log probability: -2.37
+2026-01-21 17:20:16,052 | INFO | total number of ended hypotheses: 172
+2026-01-21 17:20:16,057 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁et▁tout▁vieux▁tout▁cassé▁les▁villageois▁lui▁apportent▁des▁chaussures▁à▁réparer▁mais▁il▁ne▁travaillent▁pas▁vite▁tous▁les▁soirs▁et▁mange▁tout▁seuls▁et▁trement▁ce▁soir▁elle▁a▁devant▁lui▁un▁gros▁temps▁de▁soliers▁et▁des▁gêttes▁à▁recours▁jamais▁jeune▁pour▁les▁rer▁par▁les▁viésuites▁troppagers▁et▁trope▁en▁malades▁près▁à▁lui▁la▁grosse▁horéloges▁fés▁d'un▁d'in▁le▁pauvre▁vieux▁tourragés▁'endrettôt▁l'horéloges▁et▁deux▁petits▁lunes▁d'un▁'au▁sur▁le▁blanchers▁l'un▁imppétiques▁l'autre▁à▁belles▁d'a▁rangeant▁les▁étagers▁réparant▁les▁virs▁repousant▁le▁linge▁d'un▁tics▁près▁par▁moins▁un▁gâtteau▁metant▁de▁guillaume▁au▁plafonds▁jeangeens▁et▁vieux▁rirrideau▁jouttes▁la▁venuits▁les▁deux▁vaillons▁partins▁d'un▁à▁renant▁dans▁la▁pend'une▁le▁lenderain▁le▁pauvre▁gordonniers▁vieilles▁hôme▁joie▁et▁à▁préparait▁ce▁beau▁gâtteaume▁qui▁donc▁garrger▁la▁maison▁d'un▁d'un▁vieux
+
+2026-01-21 17:20:16,075 | INFO | File: PHO-001499-01_L01.wav | WER=56.818182 | S=74 D=15 I=11
+2026-01-21 17:20:16,075 | INFO | ------------------------------
+2026-01-21 17:20:16,076 | INFO |  File duration: 165.20533333333333 seconds
+2026-01-21 17:20:24,375 | INFO | speech length: 2318880
+2026-01-21 17:20:24,595 | INFO | decoder input length: 3622
+2026-01-21 17:20:24,595 | INFO | max output length: 3622
+2026-01-21 17:20:24,595 | INFO | min output length: 362
+2026-01-21 17:23:33,604 | INFO | end detected at 443
+2026-01-21 17:23:33,605 | INFO | -1314.18 * 0.5 = -657.09 for decoder
+2026-01-21 17:23:33,605 | INFO | -753.11 * 0.5 = -376.55 for ctc
+2026-01-21 17:23:33,605 | INFO | total log probability: -1033.64
+2026-01-21 17:23:33,605 | INFO | normalized log probability: -2.37
+2026-01-21 17:23:33,606 | INFO | total number of ended hypotheses: 135
+2026-01-21 17:23:33,610 | INFO | best hypo: ▁dans▁un▁villa▁de▁la▁montagne▁et▁un▁beau▁gars▁denis▁tu▁veux▁et▁tu▁gas▁les▁villages▁jours▁euas▁pour▁des▁choses▁sur▁réparerait▁mais▁il▁ne▁gravait▁pas▁vite▁tour▁les▁soit▁et▁humains▁tous▁bien▁rirent▁ce▁soit▁il▁y▁a▁devant▁lui▁un▁gros▁tains▁de▁rits▁de▁rêttes▁à▁recours▁jeunes▁je▁ne▁pour▁les▁rêts▁je▁suis▁tropages▁et▁toup▁à▁la▁toiailles▁de▁lis▁la▁grosses▁horloges▁vers▁déjous▁le▁bons▁veut▁tout▁devourager▁'ans▁endetttôts▁'hors▁là▁sous▁et▁deux▁petits▁lut▁d'a▁sos▁de▁sur▁le▁brâges▁'un▁'apettes▁l'autre▁s'apppe▁taques▁'angein▁les▁étagerait▁réprent▁les▁os▁les▁repose▁le▁là▁dis▁'ésprait▁pas▁un▁gâtteaumettant▁du▁gés▁au▁bragerger▁un▁change▁'érurs▁ideau▁jouttes▁'a▁mais▁nuit▁nés▁de▁vaillant▁plus▁l'unes▁onnonnant▁dans▁la▁pende▁le▁nom▁de▁le▁pauvre▁gordonniers▁évait▁au▁je▁vois▁'apprait▁par▁eau▁'au▁rait▁pas▁les▁beaucttes▁toup▁dans▁un▁anger▁la▁médictte▁de▁lavait▁ors
+
+2026-01-21 17:23:33,626 | INFO | File: PHO-001522-01_L01.wav | WER=72.254335 | S=102 D=14 I=9
+2026-01-21 17:23:33,626 | INFO | ------------------------------
+2026-01-21 17:23:33,627 | INFO |  File duration: 89.088 seconds
+2026-01-21 17:23:38,249 | INFO | speech length: 1113440
+2026-01-21 17:23:38,323 | INFO | decoder input length: 1739
+2026-01-21 17:23:38,323 | INFO | max output length: 1739
+2026-01-21 17:23:38,323 | INFO | min output length: 173
+2026-01-21 17:24:56,685 | INFO | end detected at 374
+2026-01-21 17:24:56,686 | INFO | -1110.92 * 0.5 = -555.46 for decoder
+2026-01-21 17:24:56,686 | INFO | -592.50 * 0.5 = -296.25 for ctc
+2026-01-21 17:24:56,686 | INFO | total log probability: -851.71
+2026-01-21 17:24:56,686 | INFO | normalized log probability: -2.33
+2026-01-21 17:24:56,686 | INFO | total number of ended hypotheses: 114
+2026-01-21 17:24:56,691 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁bretagne▁il▁y▁a▁un▁pauvre▁corps▁du▁tout▁vieux▁tout▁classé▁les▁villageois▁et▁de▁la▁poche▁sera▁réparaît▁mais▁de▁taille▁par▁tous▁les▁soirs▁les▁manches▁seules▁bêtestants▁ce▁soirs▁et▁devant▁un▁gros▁tainsués▁et▁de▁guettes▁au▁couptes▁jamais▁je▁ne▁poins▁pas▁je▁suis▁hors▁bâgés▁et▁tropas▁pas▁de▁gous▁pas▁de▁hule▁de▁la▁gros▁sos▁fais▁tie▁têttes▁toupe▁vieux▁tous▁les▁corgés▁sont▁aussitôts▁saués▁de▁tas▁saute▁de▁poches▁nas▁apppets▁toute▁la▁petite▁rongons▁éttes▁répe▁sur▁le▁haut▁que▁ons▁de▁là▁et▁de▁papains▁en▁gâtes▁bêtons▁du▁gués▁au▁plafonds▁angeaux▁ces▁vieux▁ris▁eaux▁ajous▁mins▁et▁de▁villages▁et▁de▁tains▁ronds▁pour▁lendemble▁pauvre▁cordettes▁hos▁joies▁'a▁papailles▁et▁de▁ce▁bous▁ette▁qui▁rger▁la▁mais▁ticttes
+
+2026-01-21 17:24:56,704 | INFO | File: PHO-001594-01_L01.wav | WER=77.108434 | S=98 D=27 I=3
+2026-01-21 17:24:56,704 | INFO | ------------------------------
+2026-01-21 17:24:56,705 | INFO |  File duration: 85.35655328798185 seconds
+2026-01-21 17:25:01,577 | INFO | speech length: 1122560
+2026-01-21 17:25:01,651 | INFO | decoder input length: 1753
+2026-01-21 17:25:01,652 | INFO | max output length: 1753
+2026-01-21 17:25:01,652 | INFO | min output length: 175
+2026-01-21 17:26:33,197 | INFO | end detected at 441
+2026-01-21 17:26:33,198 | INFO | -1448.52 * 0.5 = -724.26 for decoder
+2026-01-21 17:26:33,198 | INFO | -717.93 * 0.5 = -358.96 for ctc
+2026-01-21 17:26:33,198 | INFO | total log probability: -1083.23
+2026-01-21 17:26:33,198 | INFO | normalized log probability: -2.50
+2026-01-21 17:26:33,198 | INFO | total number of ended hypotheses: 150
+2026-01-21 17:26:33,203 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁tu▁vieux▁et▁toucas▁les▁villages▁vols▁lui▁apportent▁des▁os▁à▁réparer▁mais▁il▁ne▁travaille▁pas▁vient▁tous▁les▁soirs▁imons▁toute▁très▁bients▁amment▁cette▁soi▁vides▁devants▁à▁grottes▁de▁sonniers▁et▁de▁têtes▁dans▁la▁regours▁jamais▁d'une▁bole▁répés▁'és▁tropés▁trope▁blades▁réduis▁la▁grosses▁hors▁gros▁vers▁ticttes▁le▁pauvre▁vieux▁tourradés▁'ors▁ottôts▁l'ors▁'ouvre▁et▁deux▁petits▁du▁tains▁sauds▁sur▁le▁perrochés▁l'uns▁sa▁balcs▁l'autre▁à▁sa▁bettes▁ons▁jours▁les▁ets▁'hèrent▁à▁la▁barons▁les▁hudés▁rectant▁le▁lin▁dit▁il▁préparons▁'un▁granteaux▁'étons▁dits▁au▁plafonds▁angeau▁des▁vieux▁rideau▁ajout▁minuits▁les▁deux▁idés▁et▁dits▁lutants▁la▁renants▁'on▁ne▁répeues▁le▁lendein▁le▁pauvreaux▁cordonniers▁'érait▁hoù▁'a▁qui▁apparés▁le▁beau▁gâtteaux▁qui▁'au▁garante▁la▁maison▁tye▁tacle
+
+2026-01-21 17:26:33,217 | INFO | File: PHO-001670-01_L01.wav | WER=68.361582 | S=82 D=30 I=9
+2026-01-21 17:26:33,217 | INFO | ------------------------------
+2026-01-21 17:26:33,218 | INFO |  File duration: 129.2887074829932 seconds
+2026-01-21 17:26:40,729 | INFO | speech length: 1741600
+2026-01-21 17:26:40,858 | INFO | decoder input length: 2720
+2026-01-21 17:26:40,858 | INFO | max output length: 2720
+2026-01-21 17:26:40,858 | INFO | min output length: 272
+2026-01-21 17:29:05,044 | INFO | end detected at 450
+2026-01-21 17:29:05,045 | INFO | -1192.14 * 0.5 = -596.07 for decoder
+2026-01-21 17:29:05,045 | INFO | -938.19 * 0.5 = -469.09 for ctc
+2026-01-21 17:29:05,045 | INFO | total log probability: -1065.16
+2026-01-21 17:29:05,045 | INFO | normalized log probability: -2.40
+2026-01-21 17:29:05,045 | INFO | total number of ended hypotheses: 118
+2026-01-21 17:29:05,050 | INFO | best hypo: ▁dans▁un▁petit▁ménage▁de▁la▁montagne▁vient▁un▁beau▁ordonnant▁et▁tout▁cachant▁vers▁la▁joie▁et▁la▁force▁les▁échangeurs▁rêva▁mais▁j's▁'avais▁ruins▁tous▁les▁soirs▁tous▁jeunes▁mains▁testements▁un▁mains▁que▁les▁soifs▁un▁mange▁tous▁un▁naints▁nons▁ce▁soix▁et▁un▁'ors▁'és▁un▁grots▁tâtonnés▁et▁de▁'ains▁avons▁jamais▁jeune▁fois▁la▁mains▁le▁jeunes▁'ommagers▁tombembas▁ât▁de▁la▁cherent▁mais▁'ins▁thés▁là▁ne▁vont▁le▁je▁ne▁voiger▁chant▁chez▁'au▁la▁los▁ons▁un▁hommes▁jeunes▁'ins▁change▁lavant▁'uns▁'amain▁'és▁os▁jamains▁'as▁jous▁âmes▁réprent▁les▁chomes▁revoults▁'as▁rits▁mêmes▁barons▁'enant▁mais▁'ons▁hués▁en▁marins▁changeons▁'ains▁'unions▁avant▁nains▁'unis▁jeunes▁nains▁le▁vaillants▁'as▁'a▁en▁âmes▁'uns▁endeumain▁de▁vends▁un▁annés▁chemains▁ojous▁'és▁un▁frais▁maingement▁'ans▁hons▁à▁la▁maison▁qui▁'as▁'a▁la▁'arrait▁en▁ans
+
+2026-01-21 17:29:05,065 | INFO | File: PHO-001836-01_L01.wav | WER=88.636364 | S=126 D=26 I=4
+2026-01-21 17:29:05,065 | INFO | ------------------------------
+2026-01-21 17:29:05,066 | INFO |  File duration: 67.15210884353742 seconds
+2026-01-21 17:29:09,004 | INFO | speech length: 845760
+2026-01-21 17:29:09,056 | INFO | decoder input length: 1321
+2026-01-21 17:29:09,056 | INFO | max output length: 1321
+2026-01-21 17:29:09,056 | INFO | min output length: 132
+2026-01-21 17:30:14,723 | INFO | end detected at 417
+2026-01-21 17:30:14,724 | INFO | -1128.96 * 0.5 = -564.48 for decoder
+2026-01-21 17:30:14,724 | INFO | -578.57 * 0.5 = -289.28 for ctc
+2026-01-21 17:30:14,724 | INFO | total log probability: -853.77
+2026-01-21 17:30:14,724 | INFO | normalized log probability: -2.08
+2026-01-21 17:30:14,724 | INFO | total number of ended hypotheses: 152
+2026-01-21 17:30:14,729 | INFO | best hypo: ▁dans▁un▁petit▁village▁dans▁un▁petit▁nuage▁de▁la▁montagne▁il▁n'y▁a▁un▁pauvre▁cornuit▁tout▁vieux▁à▁tout▁cassage▁croisa▁un▁ami▁le▁ménagement▁lui▁apportant▁de▁chaussure▁à▁réparer▁mais▁ils▁ne▁trahit▁pas▁vite▁tous▁les▁soirs▁et▁ils▁mange▁sur▁tout▁seulent▁mais▁bien▁trments▁soir▁et▁n'ayant▁devant▁un▁contant▁d'un▁soliers▁et▁d'un▁d'être▁à▁mancourdre▁jamais▁je▁n'un▁pourrai▁rpage▁tropprgés▁et▁trop▁malade▁près▁d'un▁nuit▁et▁d'un▁conconnage▁fe▁tictttacle▁n'uns▁omenons▁toutouragers▁sonore▁mais▁aussitt▁l'hor▁lloges'audre▁et▁n'un▁'obttintint▁sautes▁sur▁le▁planchers▁l'un▁ape▁l'autre▁s'appe▁d'aka▁ranchant▁les▁attachers▁réparons▁les▁sogniers▁qu'un▁corons▁de▁l'un▁rengnant▁le▁linges▁nictiques▁prêtres▁préparons▁un▁gâtons▁metant▁du▁guy▁au▁plafons▁ange▁un▁prs▁rins▁ajoupe▁taques▁mais▁nuit▁et▁seules▁les▁deux▁villants▁prins▁rentre▁dans▁la▁prs
+
+2026-01-21 17:30:14,743 | INFO | File: PHO-307175-01_L01.wav | WER=72.000000 | S=76 D=11 I=21
+2026-01-21 17:30:14,743 | INFO | ------------------------------
+2026-01-21 17:30:14,743 | INFO | ===================== GLOBAL WER ======================
+2026-01-21 17:30:14,743 | INFO | The number of files is 12
+2026-01-21 17:30:14,743 | INFO | WER: 69.49%
+2026-01-21 17:30:14,743 | INFO | =============================================================

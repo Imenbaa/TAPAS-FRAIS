@@ -1,0 +1,11 @@
+2026-01-21 16:12:02,239 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/hyperparams.yaml'
+2026-01-21 16:12:02,239 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-21 16:12:03,878 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-21 16:12:03,879 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-21 16:12:04,011 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr.
+2026-01-21 16:12:04,011 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt'
+2026-01-21 16:12:04,011 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-21 16:12:04,011 | INFO | Loading pretrained files for: whisper
+2026-01-21 16:12:04,011 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-21 16:12:08,546 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-21 16:12:18,148 | INFO | Number of chunks: 2
