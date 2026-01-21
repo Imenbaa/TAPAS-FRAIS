@@ -31,3 +31,14 @@ def normalization(text):
     text = re.sub(r"\s+", " ", text).strip()
 
     return text.split(" ")
+def remove_words(trans):
+
+    #respiration
+    #externe
+    #exterieur
+    words = trans.split()
+
+    clean_words = [w for w in words if not ("*" in w and w.count("*") >= 2)]
+
+    res = " ".join(clean_words)
+    return res

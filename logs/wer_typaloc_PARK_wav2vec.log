@@ -1,55 +1,47 @@
-2026-01-15 15:18:08,462 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
-2026-01-15 15:18:08,463 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
-2026-01-15 15:18:08,496 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
-2026-01-15 15:18:09,496 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
-2026-01-15 15:18:09,506 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
-2026-01-15 15:18:09,507 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
-2026-01-15 15:18:09,507 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
-2026-01-15 15:18:09,507 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
-2026-01-15 15:18:09,507 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
-2026-01-15 15:18:09,507 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
-2026-01-15 15:18:09,507 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
-2026-01-15 15:18:09,507 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
-2026-01-15 15:18:09,507 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
-2026-01-15 15:18:09,507 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
-2026-01-15 15:18:09,507 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
-2026-01-15 15:18:12,780 | INFO |  File duration: 84.14911564625851 seconds
-2026-01-15 15:18:14,232 | INFO | Created a temporary directory at /tmp/tmp0wozspga
-2026-01-15 15:18:14,233 | INFO | Writing /tmp/tmp0wozspga/_remote_module_non_scriptable.py
-2026-01-15 15:18:14,509 | DEBUG | Registered checkpoint save hook for save
-2026-01-15 15:18:14,509 | DEBUG | Registered checkpoint load hook for load_if_possible
-2026-01-15 15:18:14,523 | INFO | File: CCM-003734-01_L01 | WER=25.263158 | S=30 D=16 I=2
-2026-01-15 15:18:14,524 | INFO | ------------------------------
-2026-01-15 15:18:14,524 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003733-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:14,524 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003148-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:14,524 | INFO |  File duration: 76.16145124716553 seconds
-2026-01-15 15:18:14,772 | INFO | File: CCM-003734-01_L01 | WER=45.197740 | S=47 D=32 I=1
-2026-01-15 15:18:14,772 | INFO | ------------------------------
-2026-01-15 15:18:14,772 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003848-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:14,772 | INFO |  File duration: 51.82693877551021 seconds
-2026-01-15 15:18:14,912 | INFO | File: CCM-003734-01_L01 | WER=35.028249 | S=35 D=19 I=8
-2026-01-15 15:18:14,912 | INFO | ------------------------------
-2026-01-15 15:18:14,912 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003734-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:14,913 | INFO |  File duration: 124.83047619047619 seconds
-2026-01-15 15:18:15,435 | INFO | File: CCM-003734-01_L01 | WER=61.421320 | S=76 D=43 I=2
-2026-01-15 15:18:15,435 | INFO | ------------------------------
-2026-01-15 15:18:15,436 | INFO |  File duration: 68.89360544217688 seconds
-2026-01-15 15:18:15,608 | INFO | File: CCM-003734-01_L01 | WER=47.395833 | S=52 D=34 I=5
-2026-01-15 15:18:15,608 | INFO | ------------------------------
-2026-01-15 15:18:15,608 | INFO |  File duration: 69.47410430839003 seconds
-2026-01-15 15:18:15,820 | INFO | File: CCM-003734-01_L01 | WER=37.566138 | S=40 D=30 I=1
-2026-01-15 15:18:15,820 | INFO | ------------------------------
-2026-01-15 15:18:15,820 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003346-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:15,820 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003557-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:15,821 | INFO |  File duration: 63.15827664399093 seconds
-2026-01-15 15:18:15,999 | INFO | File: CCM-003734-01_L01 | WER=35.978836 | S=35 D=32 I=1
-2026-01-15 15:18:15,999 | INFO | ------------------------------
-2026-01-15 15:18:15,999 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-001773-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:15,999 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003130-01_L01_pr_analyse.wav does not exist
-2026-01-15 15:18:16,000 | INFO |  File duration: 73.3750566893424 seconds
-2026-01-15 15:18:16,191 | INFO | File: CCM-003734-01_L01 | WER=21.546961 | S=28 D=11 I=0
-2026-01-15 15:18:16,191 | INFO | ------------------------------
-2026-01-15 15:18:16,191 | INFO | ===================== GLOBAL WER ======================
-2026-01-15 15:18:16,191 | INFO | The number of files is 8
-2026-01-15 15:18:16,191 | INFO | WER: 38.67%
-2026-01-15 15:18:16,192 | INFO | =============================================================
+2026-01-21 11:44:38,904 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-21 11:44:38,904 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-21 11:44:38,935 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-21 11:44:39,563 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-21 11:44:39,575 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-21 11:44:39,575 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-21 11:44:39,575 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-21 11:44:39,575 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-21 11:44:39,575 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-21 11:44:39,575 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-21 11:44:39,575 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-21 11:44:39,575 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-21 11:44:39,575 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-21 11:44:39,575 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-21 11:44:39,575 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-21 11:44:42,371 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-21 11:44:43,752 | INFO | Created a temporary directory at /tmp/tmp_chwpfsm
+2026-01-21 11:44:43,753 | INFO | Writing /tmp/tmp_chwpfsm/_remote_module_non_scriptable.py
+2026-01-21 11:44:43,911 | DEBUG | Registered checkpoint save hook for save
+2026-01-21 11:44:43,911 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-21 11:44:43,925 | INFO | File: CCM-001773-01_L01.wav | WER=35.028249 | S=35 D=19 I=8
+2026-01-21 11:44:43,925 | INFO | ------------------------------
+2026-01-21 11:44:43,942 | INFO |  File duration: 76.16145124716553 seconds
+2026-01-21 11:44:44,243 | INFO | File: CCM-003130-01_L01.wav | WER=44.571429 | S=47 D=30 I=1
+2026-01-21 11:44:44,243 | INFO | ------------------------------
+2026-01-21 11:44:44,244 | INFO |  File duration: 69.47410430839003 seconds
+2026-01-21 11:44:44,486 | INFO | File: CCM-003148-01_L01.wav | WER=34.285714 | S=39 D=18 I=3
+2026-01-21 11:44:44,486 | INFO | ------------------------------
+2026-01-21 11:44:44,487 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-21 11:44:44,687 | INFO | File: CCM-003346-01_L01.wav | WER=29.824561 | S=34 D=15 I=2
+2026-01-21 11:44:44,687 | INFO | ------------------------------
+2026-01-21 11:44:44,692 | INFO |  File duration: 84.14911564625851 seconds
+2026-01-21 11:44:45,011 | INFO | File: CCM-003557-01_L01.wav | WER=20.903955 | S=28 D=5 I=4
+2026-01-21 11:44:45,011 | INFO | ------------------------------
+2026-01-21 11:44:45,026 | INFO |  File duration: 124.83047619047619 seconds
+2026-01-21 11:44:45,618 | INFO | File: CCM-003733-01_L01.wav | WER=59.523810 | S=74 D=19 I=7
+2026-01-21 11:44:45,618 | INFO | ------------------------------
+2026-01-21 11:44:45,641 | INFO |  File duration: 73.3750566893424 seconds
+2026-01-21 11:44:45,873 | INFO | File: CCM-003734-01_L01.wav | WER=20.338983 | S=27 D=8 I=1
+2026-01-21 11:44:45,873 | INFO | ------------------------------
+2026-01-21 11:44:45,873 | INFO |  File duration: 68.89360544217688 seconds
+2026-01-21 11:44:46,065 | INFO | File: CCM-003848-01_L01.wav | WER=44.632768 | S=51 D=21 I=7
+2026-01-21 11:44:46,066 | INFO | ------------------------------
+2026-01-21 11:44:46,066 | INFO | ===================== GLOBAL WER ======================
+2026-01-21 11:44:46,066 | INFO | The number of files is 8
+2026-01-21 11:44:46,066 | INFO | WER: 36.14%
+2026-01-21 11:44:46,066 | INFO | =============================================================

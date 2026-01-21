@@ -8,7 +8,7 @@ from speechbrain.pretrained import EncoderDecoderASR
 from speechbrain.utils.metric_stats import ErrorRateStats
 from textgrid import TextGrid
 from utils.read_transcription import *
-from utils.normalise_text import normalization
+from utils.normalise_text import *
 from pathlib import Path
 from hyperpyyaml import load_hyperpyyaml
 import librosa
@@ -63,7 +63,7 @@ def main(args):
     for tg,wav in tg_to_wav.items():
         wav_file = os.path.join(args.wav_data, wav)
         trans_file = os.path.join(args.ref_trans, tg)
-        if os.path.exists(wav_file) and os.path.exists(trans_file):
+        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid":
             number_files += 1
             logging.info(f" File duration: {librosa.get_duration(path=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:
@@ -95,8 +95,11 @@ def main(args):
                     words = get_textgrid_transcription_chunk(trans_file)
 
                 ref_transcriptions,pred_transcriptions=wer_chunk(results,words)
+
                 logger.info("-" * 30)
                 logger.info("-" * 30)
+            print(f"Reference transcription: {ref_transcriptions}")
+            ref_transcriptions = remove_words(ref_transcriptions)
             print(normalization(pred_transcriptions))
             print(normalization(ref_transcriptions))
             # -------------------------------- WER per file   -------------------------------

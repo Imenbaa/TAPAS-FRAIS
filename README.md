@@ -99,26 +99,35 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
 | Datasets          | Models                       | WER        |
 |-------------------|------------------------------|------------| 
-| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr  | **38.67%** |
-| Typaloc (PARK-8)  | Whisper-medium               | 67.11%     |
-| Typaloc (PARK-8)  | whisper-medium-VAD-chunk     | 48.68%     |
-| Typaloc (PARK-8)  | whisper-large                | 58.01%     |
-| Typaloc (PARK-8)  | whisper-large-VAD-chunk      | 42.26%     |
-| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr  | 41.78%     |
-| Typaloc (CEREB-7) | Whisper-medium               | 67.93%     |
-| Typaloc (CEREB-7) | whisper-medium-VAD-chunk     | 42.80%     |
-| Typaloc (CEREB-7) | whisper-large                | 61.09%     |
-| Typaloc (CEREB-7) | whisper-large-VAD-chunk      | **39.41%** |
-| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr  | 65.17%     |
-| Typaloc (SLA-12)  | Whisper-medium               | 68.06%     |
+| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr  | **36.14%** |
+| Typaloc (PARK-8)  | Whisper-medium               | 65.59%     |
+| Typaloc (PARK-8)  | whisper-medium-VAD-chunk     | 46.04%     |
+| Typaloc (PARK-8)  | whisper-large                | 55.85%     |
+| Typaloc (PARK-8)  | whisper-large-VAD-chunk      | 38.13%     |
+
+| Datasets          | Models                       | WER        |
+|-------------------|------------------------------|------------| 
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr  | 38.89%     |
+| Typaloc (CEREB-7) | Whisper-medium               | 65.30%     |
+| Typaloc (CEREB-7) | whisper-medium-VAD-chunk     | 37.07%     |
+| Typaloc (CEREB-7) | whisper-large                | 57.91%     |
+| Typaloc (CEREB-7) | whisper-large-VAD-chunk      | **33.59%** |
+
+| Datasets          | Models                       | WER        |
+|-------------------|------------------------------|------------| 
+| Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr  | 62.79%     |
+| Typaloc (SLA-12)  | Whisper-medium               | 65.08%     |
 | Typaloc (SLA-12)  | whisper-medium-VAD-chunk     | 48.76%     |
-| Typaloc (SLA-12)  | whisper-large                | 64.24%     |
-| Typaloc (SLA-12)  | whisper-large-VAD-chunk      | **46.03%** |
-| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr  | 18.46%     |
-| Typaloc (CTR-12)  | Whisper-medium               | 59.92%     |
+| Typaloc (SLA-12)  | whisper-large                | 61.38%     |
+| Typaloc (SLA-12)  | whisper-large-VAD-chunk      | **37.72%** |
+
+| Datasets          | Models                       | WER        |
+|-------------------|------------------------------|------------| 
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr  | 18.64%     |
+| Typaloc (CTR-12)  | Whisper-medium               | 60.18%     |
 | Typaloc (CTR-12)  | whisper-medium-VAD-chunk     | 19.63%     |
-| Typaloc (CTR-12)  | whisper-large                | 60.03%     |
-| Typaloc (CTR-12)  | whisper-large-VAD-chunk      | **14.62%** |
+| Typaloc (CTR-12)  | whisper-large                | 60.21%     |
+| Typaloc (CTR-12)  | whisper-large-VAD-chunk      | **13.52%** |
 --------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models
@@ -131,3 +140,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 #### Typaloc dataset
 <img src="figures/wer_typaloc_plot.png" width="600">
 <img src="figures/wer_typaloc_heatmap.png" width="600">
+
+Remarques: Typaloc CEREB: CCM-002710-01_L01.TextGrid la transcription est décalé au début, elle n'est pas fiable et elle contient le mot "respiration"
+'a', 'jeimais', 'je', 'ne', 'jenase', 'pas', 'nonp', 'premiere', 'rencontre' ce n'est pas mis dans la trasncription ref mais il y a ces mots dans l'audio
+il y a des mots bisarre comme: prov9, kutyrje,l9,s2l9pla,za,ze,z9z, [su=qui] [su],  (les) [su=villageois] viZ@Zwa [su],[su=lutins] detE [su], *syRl@plaSe*

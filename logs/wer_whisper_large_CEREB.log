@@ -1,34 +1,35 @@
-2026-01-16 15:15:01,693 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
-2026-01-16 15:15:01,694 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
-2026-01-16 15:16:01,259 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
-2026-01-16 15:16:01,260 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
-2026-01-16 15:16:04,155 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr.
-2026-01-16 15:16:04,155 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt'
-2026-01-16 15:16:04,155 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
-2026-01-16 15:16:04,155 | INFO | Loading pretrained files for: whisper
-2026-01-16 15:16:04,156 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
-2026-01-16 15:16:39,884 | INFO |  File duration: 121.48680272108844 seconds
-2026-01-16 15:16:46,389 | INFO | File: CCM-002710-01_L01.wav | WER=85.929648 | S=34 D=134 I=3
-2026-01-16 15:16:46,390 | INFO | ------------------------------
-2026-01-16 15:16:46,410 | INFO |  File duration: 127.0595918367347 seconds
-2026-01-16 15:16:53,525 | INFO | File: CCM-003094-01_L01.wav | WER=57.446809 | S=24 D=84 I=0
-2026-01-16 15:16:53,525 | INFO | ------------------------------
-2026-01-16 15:16:53,540 | INFO |  File duration: 91.39374149659864 seconds
-2026-01-16 15:17:00,697 | INFO | File: CCM-003110-01_L01.wav | WER=49.456522 | S=16 D=75 I=0
-2026-01-16 15:17:00,697 | INFO | ------------------------------
-2026-01-16 15:17:00,718 | INFO |  File duration: 122.32272108843537 seconds
-2026-01-16 15:17:09,677 | INFO | File: CCM-003493-01_L01.wav | WER=42.786070 | S=20 D=63 I=3
-2026-01-16 15:17:09,677 | INFO | ------------------------------
-2026-01-16 15:17:09,677 | INFO |  File duration: 142.47764172335602 seconds
-2026-01-16 15:17:17,390 | INFO | File: CCM-003998-01_L01.wav | WER=49.473684 | S=26 D=67 I=1
-2026-01-16 15:17:17,390 | INFO | ------------------------------
-2026-01-16 15:17:17,403 | INFO |  File duration: 94.87673469387755 seconds
-2026-01-16 15:17:21,986 | INFO | File: CCM-004523-01_L01.wav | WER=68.361582 | S=15 D=106 I=0
-2026-01-16 15:17:21,987 | INFO | ------------------------------
-2026-01-16 15:17:21,987 | INFO |  File duration: 74.86113378684807 seconds
-2026-01-16 15:17:26,333 | INFO | File: CCM-004538-01_L01.wav | WER=74.146341 | S=16 D=133 I=3
-2026-01-16 15:17:26,334 | INFO | ------------------------------
-2026-01-16 15:17:26,334 | INFO | ===================== GLOBAL WER ======================
-2026-01-16 15:17:26,334 | INFO | The number of files is 7
-2026-01-16 15:17:26,334 | INFO | WER: 61.09%
-2026-01-16 15:17:26,334 | INFO | =============================================================
+2026-01-21 11:28:48,565 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/hyperparams.yaml'
+2026-01-21 11:28:48,565 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-21 11:29:38,399 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-21 11:29:38,400 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-21 11:29:38,797 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr.
+2026-01-21 11:29:38,797 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt'
+2026-01-21 11:29:38,797 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-21 11:29:38,797 | INFO | Loading pretrained files for: whisper
+2026-01-21 11:29:38,797 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-large-v2-commonvoice-fr/whisper.ckpt
+2026-01-21 11:30:20,987 | INFO |  File duration: 121.48680272108844 seconds
+2026-01-21 11:30:28,011 | INFO | File: CCM-002710-01_L01.wav | WER=84.000000 | S=34 D=110 I=3
+2026-01-21 11:30:28,012 | INFO | ------------------------------
+2026-01-21 11:30:28,012 | INFO |  File duration: 127.0595918367347 seconds
+2026-01-21 11:30:35,739 | INFO | File: CCM-003094-01_L01.wav | WER=54.285714 | S=24 D=71 I=0
+2026-01-21 11:30:35,739 | INFO | ------------------------------
+2026-01-21 11:30:35,739 | INFO |  File duration: 91.39374149659864 seconds
+2026-01-21 11:30:43,019 | INFO | File: CCM-003110-01_L01.wav | WER=45.930233 | S=16 D=63 I=0
+2026-01-21 11:30:43,019 | INFO | ------------------------------
+2026-01-21 11:30:43,020 | INFO |  File duration: 122.32272108843537 seconds
+2026-01-21 11:30:52,290 | INFO | File: CCM-003493-01_L01.wav | WER=35.955056 | S=21 D=40 I=3
+2026-01-21 11:30:52,290 | INFO | ------------------------------
+2026-01-21 11:30:52,291 | INFO |  File duration: 142.47764172335602 seconds
+2026-01-21 11:30:59,968 | INFO | File: CCM-003998-01_L01.wav | WER=47.727273 | S=22 D=57 I=5
+2026-01-21 11:30:59,968 | INFO | ------------------------------
+2026-01-21 11:30:59,968 | INFO |  File duration: 94.87673469387755 seconds
+2026-01-21 11:31:04,844 | INFO | File: CCM-004523-01_L01.wav | WER=67.251462 | S=15 D=100 I=0
+2026-01-21 11:31:04,844 | INFO | ------------------------------
+2026-01-21 11:31:04,844 | INFO |  File duration: 74.86113378684807 seconds
+2026-01-21 11:31:09,490 | INFO | File: CCM-004538-01_L01.wav | WER=70.224719 | S=16 D=106 I=3
+2026-01-21 11:31:09,490 | INFO | ------------------------------
+2026-01-21 11:31:09,490 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB/CCM-004773-01_L01.wav does not exist
+2026-01-21 11:31:09,490 | INFO | ===================== GLOBAL WER ======================
+2026-01-21 11:31:09,490 | INFO | The number of files is 7
+2026-01-21 11:31:09,490 | INFO | WER: 57.91%
+2026-01-21 11:31:09,491 | INFO | =============================================================
