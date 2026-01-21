@@ -72,11 +72,11 @@ With this method the original timestamp is preserved and we prevent over-segment
 
 
 
-| Datasets             | Models                  | WER Rouas | WER    |
-|----------------------|-------------------------|-----------|--------|
-| TAPAS-FRAIS-verified | HMM-TDNN (ester)        | 30.9%     | 27.95% |
-| TAPAS-FRAIS-verified | Conformer (ester)       | 34.7%     | 34.09% |
-| TAPAS-FRAIS-verified | Conformer (commonvoice) | 29%       | 26.97% |
+| Datasets             | Models                  | WER Rouas (rVAD) | WER (with Normalization) |
+|----------------------|-------------------------|------------------|--------------------------|
+| TAPAS-FRAIS-verified | HMM-TDNN (ester)        | 30.9%            | 27.95%                   |
+| TAPAS-FRAIS-verified | Conformer (ester)       | 34.7%            | 34.09%                   |
+| TAPAS-FRAIS-verified | Conformer (commonvoice) | 29%              | 26.97%                   |
   ----------------------------------------------------------------------------
 
 

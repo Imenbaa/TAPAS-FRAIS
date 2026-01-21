@@ -28,7 +28,6 @@ parser = argparse.ArgumentParser(description="Evaluate multiple ASR models on fr
 parser.add_argument("--model", type=str,choices = models ,required= True, help="The ASR model")
 parser.add_argument("--wav_data", type=str,required=True, help="The path to the wav files")
 parser.add_argument("--ref_trans", type=str,required=True, help="The reference transcription")
-#parser.add_argument("--wav_16k", type=str,required=True, help="folder or resampled data to 16k")
 parser.add_argument("--log_file", type=str,required=True, help="The logfile name")
 
 args = parser.parse_args()

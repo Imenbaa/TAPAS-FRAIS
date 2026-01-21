@@ -56,7 +56,7 @@ def vad_chunk_with_timestamps(
 
         pause = seg_start - chunk_end
 
-        # ❗ règle 1 : pause courte → on fusionne
+        # pause courte → on fusionne
         if pause <= max_pause_duration:
             # mais on respecte la durée max
             if seg_end - chunk_start <= max_chunk_duration:
@@ -69,7 +69,7 @@ def vad_chunk_with_timestamps(
                 chunk_start = seg_start
                 chunk_end = seg_end
 
-        # ❗ règle 2 : pause longue → nouvelle unité
+        # pause longue → nouvelle unité
         else:
             chunks.append({
                 "start": chunk_start,

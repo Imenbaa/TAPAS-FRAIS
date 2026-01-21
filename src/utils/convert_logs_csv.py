@@ -28,7 +28,7 @@ def extract_metrics(log_path, output_csv):
                 })
 
     if not rows:
-        print("⚠️ No matching lines found in the log.")
+        print(" No matching lines found in the log.")
         return
 
     with open(output_csv, "w", newline="", encoding="utf-8") as csvfile:

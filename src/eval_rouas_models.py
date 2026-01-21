@@ -27,7 +27,7 @@ logging.basicConfig(
     format="%(asctime)s | %(levelname)s | %(message)s",
     handlers=[
         logging.FileHandler(log_file, mode="w"),
-        logging.StreamHandler(),  # remove if you want file-only
+        logging.StreamHandler(),
     ],
 )
 logger = logging.getLogger(__name__)
