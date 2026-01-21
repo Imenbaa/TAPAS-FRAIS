@@ -117,7 +117,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 |-------------------|------------------------------|------------| 
 | Typaloc (SLA-12)  | asr-wav2vec2-commonvoice-fr  | 62.79%     |
 | Typaloc (SLA-12)  | Whisper-medium               | 65.08%     |
-| Typaloc (SLA-12)  | whisper-medium-VAD-chunk     | 48.76%     |
+| Typaloc (SLA-12)  | whisper-medium-VAD-chunk     | 41.96%     |
 | Typaloc (SLA-12)  | whisper-large                | 61.38%     |
 | Typaloc (SLA-12)  | whisper-large-VAD-chunk      | **37.72%** |
 
@@ -125,7 +125,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 |-------------------|------------------------------|------------| 
 | Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr  | 18.64%     |
 | Typaloc (CTR-12)  | Whisper-medium               | 60.18%     |
-| Typaloc (CTR-12)  | whisper-medium-VAD-chunk     | 19.63%     |
+| Typaloc (CTR-12)  | whisper-medium-VAD-chunk     | 20.09%     |
 | Typaloc (CTR-12)  | whisper-large                | 60.21%     |
 | Typaloc (CTR-12)  | whisper-large-VAD-chunk      | **13.52%** |
 --------------------------------------------------------------
