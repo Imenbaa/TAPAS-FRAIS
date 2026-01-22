@@ -19,6 +19,7 @@ parser.add_argument('--wav_data', help='Path to the input WAV file or folder')
 parser.add_argument("--ref_trans", type=str,required=True, help="The reference transcription")
 parser.add_argument('--config', default='/vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml', help='Path to the ASR config file (default: asr_config.yml)')
 parser.add_argument('--model', default='/vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR.pth', help='Path to the ASR model file (default: asr.pth)')
+parser.add_argument("--vad", type=str,required=True, help="The logfile name")
 parser.add_argument("--log_file", type=str,required=True, help="The logfile name")
 
 args = parser.parse_args()
@@ -46,7 +47,10 @@ def main(args):
             else:
                 ref_transcriptions = get_textgrid_transcription_tapas(trans_file)
             # load audio+apply silero VAD
-            audio_np=apply_rvad_return_audio(wav_file)
+            if args.vad=="rvad":
+                audio_np=apply_rvad_return_audio(wav_file)
+            else:
+                audio_np=apply_silero_vad_return_audio(wav_file)
             results = speech2text(speech=audio_np)
             nbests = [text for text, token, token_int, hyp in results]
             pred_transcriptions = nbests[0] if nbests is not None and len(nbests) > 0 else ""

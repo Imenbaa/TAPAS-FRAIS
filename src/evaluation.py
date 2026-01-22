@@ -25,7 +25,7 @@ parser.add_argument("--log_file", type=str,required=True, help="The logfile name
 
 args = parser.parse_args()
 
-log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/silero/"+ args.log_file + ".log")
+log_file = Path("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+ args.log_file + ".log")
 wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
 setup_logging(log_file)
 logger = logging.getLogger(__name__)
@@ -53,6 +53,7 @@ def main(args):
     tg_to_wav = list_files(args.ref_trans)
     print(tg_to_wav.keys(),len(tg_to_wav.values()))
 
+    dict_pathologies={"SLA":[],"PARK|CEREB":[],"CTRL":[]}
     for tg,wav in tg_to_wav.items():
         wav_file = os.path.join(args.wav_data, wav)
         trans_file = os.path.join(args.ref_trans, tg)
@@ -61,6 +62,8 @@ def main(args):
             logging.info(f" File duration: {librosa.get_duration(filename=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:
                 ref_transcriptions = get_textgrid_transcription_rhap(trans_file)
+            elif "spont" in args.ref_trans:
+                ref_transcriptions = extract_words_text(trans_file)
             else:
                 ref_transcriptions = get_textgrid_transcription_tapas(trans_file)
 
@@ -98,6 +101,14 @@ def main(args):
             # -------------------------------- WER per file   -------------------------------
             # --------------------------------------------------------------------------------
             WER = wer_segment(wav_file,ref_transcriptions,pred_transcriptions)
+            if "spont" in args.ref_trans:
+                if wav_file.split("/")[-1].startswith("AEX") or wav_file.split("/")[-1].startswith("BEX"):
+                    dict_pathologies["CTRL"].append(WER)
+                if wav_file.split("/")[-1].startswith("PHO"):
+                    dict_pathologies["SLA"].append(WER)
+                if wav_file.split("/")[-1].startswith("CCM"):
+                    dict_pathologies["PARK|CEREB"].append(WER)
+                logging.info(dict_pathologies)
             WERs.append(WER)
 
         else:
@@ -109,6 +120,10 @@ def main(args):
     logger.info(f"The number of files is {number_files}")
     logger.info("WER: %.2f%%", sum(WERs)/len(WERs))
     logger.info("=============================================================")
-
+    if "spont" in args.ref_trans:
+        WER_path={}
+        for k in dict_pathologies:
+            WER_path[k]=sum(dict_pathologies[k])/len(dict_pathologies[k])
+        logging.info(WER_path)
 if __name__ == "__main__":
     main(args)

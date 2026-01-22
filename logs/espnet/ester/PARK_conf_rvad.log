@@ -1,0 +1,2141 @@
+2026-01-22 17:56:14,957 | INFO | config file: /home/rouas/experiments/SpeechRecognition/saved_models/espnet2-conformer-FR/asr_conformer_config.yaml
+2026-01-22 17:56:14,975 | INFO | Vocabulary size: 47
+2026-01-22 17:56:15,540 | INFO | Gradient checkpoint layers: []
+2026-01-22 17:56:17,488 | INFO | BatchBeamSearch implementation is selected.
+2026-01-22 17:56:17,492 | INFO | Beam_search: BatchBeamSearch(
+  (nn_dict): ModuleDict(
+    (decoder): TransformerDecoder(
+      (embed): Sequential(
+        (0): Embedding(47, 512)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (after_norm): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+      (output_layer): Linear(in_features=512, out_features=47, bias=True)
+      (decoders): MultiSequential(
+        (0): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (1): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (2): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (3): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (4): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (5): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+2026-01-22 17:56:17,492 | INFO | Decoding device=cuda, dtype=float32
+2026-01-22 17:56:17,493 | INFO | Text tokenizer: CharTokenizer(space_symbol="<space>"non_linguistic_symbols="set()"nonsplit_symbols="set()")
+2026-01-22 17:56:17,494 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-22 17:56:21,380 | INFO | speech length: 44641
+2026-01-22 17:56:23,165 | INFO | decoder input length: 69
+2026-01-22 17:56:23,165 | INFO | max output length: 69
+2026-01-22 17:56:23,165 | INFO | min output length: 6
+2026-01-22 17:56:24,805 | INFO | end detected at 58
+2026-01-22 17:56:24,806 | INFO | -10.68 * 0.5 =  -5.34 for decoder
+2026-01-22 17:56:24,806 | INFO |  -8.22 * 0.5 =  -4.11 for ctc
+2026-01-22 17:56:24,807 | INFO | total log probability: -9.45
+2026-01-22 17:56:24,807 | INFO | normalized log probability: -0.19
+2026-01-22 17:56:24,807 | INFO | total number of ended hypotheses: 208
+2026-01-22 17:56:24,807 | INFO | best hypo: deux<space>vaillants<space>petits<space>luttins<space>moi<space>j'en<space>me<space>raconte
+
+2026-01-22 17:56:24,809 | INFO | speech length: 67681
+2026-01-22 17:56:24,837 | INFO | decoder input length: 105
+2026-01-22 17:56:24,837 | INFO | max output length: 105
+2026-01-22 17:56:24,837 | INFO | min output length: 10
+2026-01-22 17:56:27,596 | INFO | end detected at 94
+2026-01-22 17:56:27,597 | INFO | -13.58 * 0.5 =  -6.79 for decoder
+2026-01-22 17:56:27,597 | INFO |  -4.21 * 0.5 =  -2.11 for ctc
+2026-01-22 17:56:27,597 | INFO | total log probability: -8.90
+2026-01-22 17:56:27,597 | INFO | normalized log probability: -0.10
+2026-01-22 17:56:27,597 | INFO | total number of ended hypotheses: 174
+2026-01-22 17:56:27,598 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>la<space>montagne<space>il<space>y<space>a<space>un<space>pau<space>recordinier<space>tout<space>vieux<space>et<space>tout<space>café
+
+2026-01-22 17:56:27,600 | INFO | speech length: 33601
+2026-01-22 17:56:27,629 | INFO | decoder input length: 52
+2026-01-22 17:56:27,629 | INFO | max output length: 52
+2026-01-22 17:56:27,629 | INFO | min output length: 5
+2026-01-22 17:56:28,921 | INFO | adding <eos> in the last position in the loop
+2026-01-22 17:56:28,928 | INFO | no hypothesis. Finish decoding.
+2026-01-22 17:56:28,928 | INFO | -17.22 * 0.5 =  -8.61 for decoder
+2026-01-22 17:56:28,928 | INFO | -33.36 * 0.5 = -16.68 for ctc
+2026-01-22 17:56:28,928 | INFO | total log probability: -25.29
+2026-01-22 17:56:28,928 | INFO | normalized log probability: -0.55
+2026-01-22 17:56:28,929 | INFO | total number of ended hypotheses: 105
+2026-01-22 17:56:28,929 | INFO | best hypo: le<space>villageois<space>lui<space>apporte<space>des<space>chausà<space>réparer
+
+2026-01-22 17:56:28,931 | INFO | speech length: 57921
+2026-01-22 17:56:28,959 | INFO | decoder input length: 90
+2026-01-22 17:56:28,959 | INFO | max output length: 90
+2026-01-22 17:56:28,959 | INFO | min output length: 9
+2026-01-22 17:56:31,472 | INFO | adding <eos> in the last position in the loop
+2026-01-22 17:56:31,479 | INFO | no hypothesis. Finish decoding.
+2026-01-22 17:56:31,480 | INFO |  -9.17 * 0.5 =  -4.58 for decoder
+2026-01-22 17:56:31,480 | INFO |  -1.47 * 0.5 =  -0.74 for ctc
+2026-01-22 17:56:31,480 | INFO | total log probability: -5.32
+2026-01-22 17:56:31,480 | INFO | normalized log probability: -0.06
+2026-01-22 17:56:31,480 | INFO | total number of ended hypotheses: 152
+2026-01-22 17:56:31,481 | INFO | best hypo: mais<space>ils<space>ne<space>travaillent<space>pas<space>vite<space>tous<space>les<space>soirs<space>ils<space>mangent<space>tout<space>seul<space>bien<space>ristement
+
+2026-01-22 17:56:31,483 | INFO | speech length: 32161
+2026-01-22 17:56:31,512 | INFO | decoder input length: 49
+2026-01-22 17:56:31,512 | INFO | max output length: 49
+2026-01-22 17:56:31,512 | INFO | min output length: 4
+2026-01-22 17:56:32,346 | INFO | end detected at 31
+2026-01-22 17:56:32,347 | INFO |  -2.12 * 0.5 =  -1.06 for decoder
+2026-01-22 17:56:32,347 | INFO |  -0.03 * 0.5 =  -0.02 for ctc
+2026-01-22 17:56:32,347 | INFO | total log probability: -1.08
+2026-01-22 17:56:32,347 | INFO | normalized log probability: -0.04
+2026-01-22 17:56:32,347 | INFO | total number of ended hypotheses: 141
+2026-01-22 17:56:32,347 | INFO | best hypo: ce<space>soir<space>il<space>y<space>a<space>devant<space>lui
+
+2026-01-22 17:56:32,349 | INFO | speech length: 61921
+2026-01-22 17:56:32,377 | INFO | decoder input length: 96
+2026-01-22 17:56:32,377 | INFO | max output length: 96
+2026-01-22 17:56:32,377 | INFO | min output length: 9
+2026-01-22 17:56:34,818 | INFO | end detected at 85
+2026-01-22 17:56:34,820 | INFO | -12.05 * 0.5 =  -6.02 for decoder
+2026-01-22 17:56:34,820 | INFO | -11.56 * 0.5 =  -5.78 for ctc
+2026-01-22 17:56:34,820 | INFO | total log probability: -11.81
+2026-01-22 17:56:34,820 | INFO | normalized log probability: -0.15
+2026-01-22 17:56:34,820 | INFO | total number of ended hypotheses: 193
+2026-01-22 17:56:34,821 | INFO | best hypo: un<space>gros<space>tas<space>de<space>souliers<space>de<space>guette<space>à<space>lcoudre<space>jamais<space>je<space>ne<space>pourrais<space>les<space>réparer
+
+2026-01-22 17:56:34,823 | INFO | speech length: 39841
+2026-01-22 17:56:34,852 | INFO | decoder input length: 61
+2026-01-22 17:56:34,852 | INFO | max output length: 61
+2026-01-22 17:56:34,852 | INFO | min output length: 6
+2026-01-22 17:56:36,134 | INFO | end detected at 47
+2026-01-22 17:56:36,136 | INFO |  -8.39 * 0.5 =  -4.20 for decoder
+2026-01-22 17:56:36,136 | INFO |  -6.45 * 0.5 =  -3.23 for ctc
+2026-01-22 17:56:36,136 | INFO | total log probability: -7.42
+2026-01-22 17:56:36,136 | INFO | normalized log probability: -0.20
+2026-01-22 17:56:36,137 | INFO | total number of ended hypotheses: 226
+2026-01-22 17:56:36,137 | INFO | best hypo: ce<space>citropage<space>être<space>malade<space>près<space>de<space>lui
+
+2026-01-22 17:56:36,139 | INFO | speech length: 66241
+2026-01-22 17:56:36,168 | INFO | decoder input length: 103
+2026-01-22 17:56:36,168 | INFO | max output length: 103
+2026-01-22 17:56:36,168 | INFO | min output length: 10
+2026-01-22 17:56:38,670 | INFO | end detected at 85
+2026-01-22 17:56:38,671 | INFO | -16.15 * 0.5 =  -8.08 for decoder
+2026-01-22 17:56:38,671 | INFO | -25.31 * 0.5 = -12.65 for ctc
+2026-01-22 17:56:38,671 | INFO | total log probability: -20.73
+2026-01-22 17:56:38,671 | INFO | normalized log probability: -0.26
+2026-01-22 17:56:38,671 | INFO | total number of ended hypotheses: 176
+2026-01-22 17:56:38,672 | INFO | best hypo: la<space>gossoloche<space>fait<space>diktat<space>spiktacle<space>le<space>pauvre<space>vieux<space>tout<space>découragisse<space>en<space>dehors
+
+2026-01-22 17:56:38,674 | INFO | speech length: 48321
+2026-01-22 17:56:38,703 | INFO | decoder input length: 75
+2026-01-22 17:56:38,703 | INFO | max output length: 75
+2026-01-22 17:56:38,703 | INFO | min output length: 7
+2026-01-22 17:56:40,687 | INFO | adding <eos> in the last position in the loop
+2026-01-22 17:56:40,694 | INFO | no hypothesis. Finish decoding.
+2026-01-22 17:56:40,694 | INFO | -19.01 * 0.5 =  -9.51 for decoder
+2026-01-22 17:56:40,694 | INFO | -27.94 * 0.5 = -13.97 for ctc
+2026-01-22 17:56:40,694 | INFO | total log probability: -23.48
+2026-01-22 17:56:40,695 | INFO | normalized log probability: -0.34
+2026-01-22 17:56:40,695 | INFO | total number of ended hypotheses: 119
+2026-01-22 17:56:40,695 | INFO | best hypo: aussitôt<space>dans<space>l'ange<space>s'ouvre<space>et<space>deux<space>petits<space>vitinsaux<space>sur<space>le<space>blanché
+
+2026-01-22 17:56:40,697 | INFO | speech length: 79521
+2026-01-22 17:56:40,727 | INFO | decoder input length: 123
+2026-01-22 17:56:40,727 | INFO | max output length: 123
+2026-01-22 17:56:40,727 | INFO | min output length: 12
+2026-01-22 17:56:44,244 | INFO | end detected at 114
+2026-01-22 17:56:44,245 | INFO | -32.36 * 0.5 = -16.18 for decoder
+2026-01-22 17:56:44,245 | INFO | -46.41 * 0.5 = -23.21 for ctc
+2026-01-22 17:56:44,245 | INFO | total log probability: -39.39
+2026-01-22 17:56:44,245 | INFO | normalized log probability: -0.38
+2026-01-22 17:56:44,245 | INFO | total number of ended hypotheses: 205
+2026-01-22 17:56:44,246 | INFO | best hypo: l'un<space>s'appeltique<space>l'autre<space>s'apelle<space>tac<space>rangeons<space>les<space>étagères<space>réparons<space>le<space>sourier<space>recousons<space>le<space>lingiti
+
+2026-01-22 17:56:44,248 | INFO | speech length: 56801
+2026-01-22 17:56:44,277 | INFO | decoder input length: 88
+2026-01-22 17:56:44,277 | INFO | max output length: 88
+2026-01-22 17:56:44,277 | INFO | min output length: 8
+2026-01-22 17:56:46,695 | INFO | end detected at 83
+2026-01-22 17:56:46,696 | INFO | -16.47 * 0.5 =  -8.23 for decoder
+2026-01-22 17:56:46,696 | INFO | -27.01 * 0.5 = -13.51 for ctc
+2026-01-22 17:56:46,696 | INFO | total log probability: -21.74
+2026-01-22 17:56:46,696 | INFO | normalized log probability: -0.29
+2026-01-22 17:56:46,696 | INFO | total number of ended hypotheses: 216
+2026-01-22 17:56:46,697 | INFO | best hypo: réparons<space>zagato<space>méthoduquie<space>au<space>plateau<space>changeons<space>ses<space>vieries<space>de<space>washipta
+
+2026-01-22 17:56:46,700 | INFO | speech length: 50721
+2026-01-22 17:56:46,732 | INFO | decoder input length: 78
+2026-01-22 17:56:46,732 | INFO | max output length: 78
+2026-01-22 17:56:46,732 | INFO | min output length: 7
+2026-01-22 17:56:48,889 | INFO | end detected at 74
+2026-01-22 17:56:48,891 | INFO |  -9.62 * 0.5 =  -4.81 for decoder
+2026-01-22 17:56:48,891 | INFO | -30.89 * 0.5 = -15.44 for ctc
+2026-01-22 17:56:48,891 | INFO | total log probability: -20.25
+2026-01-22 17:56:48,891 | INFO | normalized log probability: -0.29
+2026-01-22 17:56:48,891 | INFO | total number of ended hypotheses: 185
+2026-01-22 17:56:48,892 | INFO | best hypo: minuit<space>sonnes<space>et<space>deux<space>baillons<space>petits<space>lutins<space>rangés<space>dans<space>la<space>pendule
+
+2026-01-22 17:56:48,894 | INFO | speech length: 39521
+2026-01-22 17:56:48,920 | INFO | decoder input length: 61
+2026-01-22 17:56:48,920 | INFO | max output length: 61
+2026-01-22 17:56:48,920 | INFO | min output length: 6
+2026-01-22 17:56:50,473 | INFO | end detected at 58
+2026-01-22 17:56:50,474 | INFO | -12.66 * 0.5 =  -6.33 for decoder
+2026-01-22 17:56:50,474 | INFO | -11.20 * 0.5 =  -5.60 for ctc
+2026-01-22 17:56:50,474 | INFO | total log probability: -11.93
+2026-01-22 17:56:50,474 | INFO | normalized log probability: -0.23
+2026-01-22 17:56:50,474 | INFO | total number of ended hypotheses: 193
+2026-01-22 17:56:50,475 | INFO | best hypo: le<space>lendemain<space>le<space>pour<space>recordonner<space>s'éveille<space>au<space>joie
+
+2026-01-22 17:56:50,477 | INFO | speech length: 42081
+2026-01-22 17:56:50,506 | INFO | decoder input length: 65
+2026-01-22 17:56:50,506 | INFO | max output length: 65
+2026-01-22 17:56:50,506 | INFO | min output length: 6
+2026-01-22 17:56:52,395 | INFO | end detected at 63
+2026-01-22 17:56:52,397 | INFO |  -9.71 * 0.5 =  -4.86 for decoder
+2026-01-22 17:56:52,397 | INFO |  -9.50 * 0.5 =  -4.75 for ctc
+2026-01-22 17:56:52,397 | INFO | total log probability: -9.61
+2026-01-22 17:56:52,397 | INFO | normalized log probability: -0.17
+2026-01-22 17:56:52,397 | INFO | total number of ended hypotheses: 203
+2026-01-22 17:56:52,398 | INFO | best hypo: qui<space>a<space>préparé<space>ce<space>bougateau<space>qui<space>donc<space>arrangé<space>la<space>maison
+
+2026-01-22 17:56:52,399 | INFO | speech length: 28801
+2026-01-22 17:56:52,428 | INFO | decoder input length: 44
+2026-01-22 17:56:52,428 | INFO | max output length: 44
+2026-01-22 17:56:52,428 | INFO | min output length: 4
+2026-01-22 17:56:53,406 | INFO | end detected at 37
+2026-01-22 17:56:53,408 | INFO | -14.21 * 0.5 =  -7.10 for decoder
+2026-01-22 17:56:53,408 | INFO |  -6.71 * 0.5 =  -3.36 for ctc
+2026-01-22 17:56:53,408 | INFO | total log probability: -10.46
+2026-01-22 17:56:53,408 | INFO | normalized log probability: -0.35
+2026-01-22 17:56:53,408 | INFO | total number of ended hypotheses: 215
+2026-01-22 17:56:53,409 | INFO | best hypo: tique<space>tactique<space>ta<space>guéviologe
+
+2026-01-22 17:56:53,416 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-22 17:56:53,419 | DEBUG | Registered checkpoint save hook for _speechbrain_save
+2026-01-22 17:56:53,419 | DEBUG | Registered checkpoint load hook for _speechbrain_load
+2026-01-22 17:56:53,419 | DEBUG | Registered checkpoint save hook for save
+2026-01-22 17:56:53,419 | DEBUG | Registered checkpoint load hook for load
+2026-01-22 17:56:53,611 | INFO | Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-01-22 17:56:53,611 | INFO | Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-01-22 17:56:53,612 | DEBUG | Registered checkpoint save hook for _save
+2026-01-22 17:56:53,612 | DEBUG | Registered checkpoint load hook for _recover
+2026-01-22 17:56:53,624 | INFO | File: CCM-001773-01_L01.wav | WER=47.457627 | S=52 D=22 I=10
+2026-01-22 17:56:53,624 | INFO | ------------------------------
+2026-01-22 17:56:53,624 | INFO |  File duration: 76.16145124716553 seconds
+2026-01-22 17:56:58,536 | INFO | speech length: 34401
+2026-01-22 17:56:58,566 | INFO | decoder input length: 53
+2026-01-22 17:56:58,567 | INFO | max output length: 53
+2026-01-22 17:56:58,567 | INFO | min output length: 5
+2026-01-22 17:56:59,742 | INFO | end detected at 42
+2026-01-22 17:56:59,743 | INFO |  -3.01 * 0.5 =  -1.50 for decoder
+2026-01-22 17:56:59,743 | INFO |  -0.00 * 0.5 =  -0.00 for ctc
+2026-01-22 17:56:59,743 | INFO | total log probability: -1.50
+2026-01-22 17:56:59,743 | INFO | normalized log probability: -0.04
+2026-01-22 17:56:59,743 | INFO | total number of ended hypotheses: 145
+2026-01-22 17:56:59,743 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>la<space>montagne
+
+2026-01-22 17:56:59,746 | INFO | speech length: 52001
+2026-01-22 17:56:59,776 | INFO | decoder input length: 80
+2026-01-22 17:56:59,777 | INFO | max output length: 80
+2026-01-22 17:56:59,777 | INFO | min output length: 8
+2026-01-22 17:57:01,499 | INFO | end detected at 57
+2026-01-22 17:57:01,500 | INFO |  -4.94 * 0.5 =  -2.47 for decoder
+2026-01-22 17:57:01,500 | INFO | -15.85 * 0.5 =  -7.93 for ctc
+2026-01-22 17:57:01,501 | INFO | total log probability: -10.40
+2026-01-22 17:57:01,501 | INFO | normalized log probability: -0.21
+2026-01-22 17:57:01,501 | INFO | total number of ended hypotheses: 210
+2026-01-22 17:57:01,501 | INFO | best hypo: il<space>y<space>a<space>un<space>provocant<space>de<space>nuit<space>tout<space>est<space>tout<space>caché
+
+2026-01-22 17:57:01,503 | INFO | speech length: 70561
+2026-01-22 17:57:01,533 | INFO | decoder input length: 109
+2026-01-22 17:57:01,533 | INFO | max output length: 109
+2026-01-22 17:57:01,533 | INFO | min output length: 10
+2026-01-22 17:57:04,192 | INFO | end detected at 86
+2026-01-22 17:57:04,194 | INFO | -10.42 * 0.5 =  -5.21 for decoder
+2026-01-22 17:57:04,194 | INFO | -13.49 * 0.5 =  -6.75 for ctc
+2026-01-22 17:57:04,194 | INFO | total log probability: -11.95
+2026-01-22 17:57:04,194 | INFO | normalized log probability: -0.15
+2026-01-22 17:57:04,194 | INFO | total number of ended hypotheses: 211
+2026-01-22 17:57:04,195 | INFO | best hypo: le<space>village<space>voit<space>lui<space>apporte<space>des<space>chaussures<space>à<space>réparer<space>mais<space>il<space>travaille<space>pas<space>lui
+
+2026-01-22 17:57:04,197 | INFO | speech length: 54561
+2026-01-22 17:57:04,226 | INFO | decoder input length: 84
+2026-01-22 17:57:04,226 | INFO | max output length: 84
+2026-01-22 17:57:04,226 | INFO | min output length: 8
+2026-01-22 17:57:05,953 | INFO | end detected at 58
+2026-01-22 17:57:05,954 | INFO |  -6.16 * 0.5 =  -3.08 for decoder
+2026-01-22 17:57:05,954 | INFO |  -2.52 * 0.5 =  -1.26 for ctc
+2026-01-22 17:57:05,954 | INFO | total log probability: -4.34
+2026-01-22 17:57:05,954 | INFO | normalized log probability: -0.08
+2026-01-22 17:57:05,954 | INFO | total number of ended hypotheses: 165
+2026-01-22 17:57:05,955 | INFO | best hypo: tous<space>les<space>soirs<space>ils<space>mangent<space>tout<space>seuls<space>bien<space>testement
+
+2026-01-22 17:57:05,956 | INFO | speech length: 86241
+2026-01-22 17:57:05,986 | INFO | decoder input length: 134
+2026-01-22 17:57:05,986 | INFO | max output length: 134
+2026-01-22 17:57:05,986 | INFO | min output length: 13
+2026-01-22 17:57:08,653 | INFO | end detected at 78
+2026-01-22 17:57:08,655 | INFO |  -8.79 * 0.5 =  -4.39 for decoder
+2026-01-22 17:57:08,655 | INFO | -13.66 * 0.5 =  -6.83 for ctc
+2026-01-22 17:57:08,655 | INFO | total log probability: -11.23
+2026-01-22 17:57:08,655 | INFO | normalized log probability: -0.16
+2026-01-22 17:57:08,655 | INFO | total number of ended hypotheses: 227
+2026-01-22 17:57:08,656 | INFO | best hypo: ce<space>soir<space>il<space>a<space>il<space>y<space>a<space>devant<space>lui<space>un<space>haut<space>tas<space>de<space>choliers<space>et<space>de<space>guettes
+
+2026-01-22 17:57:08,658 | INFO | speech length: 56321
+2026-01-22 17:57:08,687 | INFO | decoder input length: 87
+2026-01-22 17:57:08,687 | INFO | max output length: 87
+2026-01-22 17:57:08,687 | INFO | min output length: 8
+2026-01-22 17:57:10,299 | INFO | end detected at 53
+2026-01-22 17:57:10,300 | INFO |  -7.81 * 0.5 =  -3.90 for decoder
+2026-01-22 17:57:10,300 | INFO | -10.57 * 0.5 =  -5.29 for ctc
+2026-01-22 17:57:10,300 | INFO | total log probability: -9.19
+2026-01-22 17:57:10,300 | INFO | normalized log probability: -0.20
+2026-01-22 17:57:10,300 | INFO | total number of ended hypotheses: 183
+2026-01-22 17:57:10,301 | INFO | best hypo: oh<space>écoute<space>jamais<space>je<space>ne<space>pourrais<space>les<space>réparer
+
+2026-01-22 17:57:10,303 | INFO | speech length: 89441
+2026-01-22 17:57:10,333 | INFO | decoder input length: 139
+2026-01-22 17:57:10,333 | INFO | max output length: 139
+2026-01-22 17:57:10,333 | INFO | min output length: 13
+2026-01-22 17:57:13,310 | INFO | end detected at 87
+2026-01-22 17:57:13,312 | INFO | -16.92 * 0.5 =  -8.46 for decoder
+2026-01-22 17:57:13,312 | INFO | -26.86 * 0.5 = -13.43 for ctc
+2026-01-22 17:57:13,312 | INFO | total log probability: -21.89
+2026-01-22 17:57:13,312 | INFO | normalized log probability: -0.27
+2026-01-22 17:57:13,312 | INFO | total number of ended hypotheses: 198
+2026-01-22 17:57:13,313 | INFO | best hypo: tu<space>trois<space>pas<space>vue<space>et<space>trop<space>malade<space>près<space>de<space>lui<space>la<space>grossolo<space>fait<space>tik<space>ta<space>petite<space>tac
+
+2026-01-22 17:57:13,315 | INFO | speech length: 34721
+2026-01-22 17:57:13,343 | INFO | decoder input length: 53
+2026-01-22 17:57:13,343 | INFO | max output length: 53
+2026-01-22 17:57:13,343 | INFO | min output length: 5
+2026-01-22 17:57:14,685 | INFO | end detected at 50
+2026-01-22 17:57:14,687 | INFO |  -6.20 * 0.5 =  -3.10 for decoder
+2026-01-22 17:57:14,687 | INFO | -15.11 * 0.5 =  -7.55 for ctc
+2026-01-22 17:57:14,687 | INFO | total log probability: -10.65
+2026-01-22 17:57:14,687 | INFO | normalized log probability: -0.26
+2026-01-22 17:57:14,687 | INFO | total number of ended hypotheses: 220
+2026-01-22 17:57:14,688 | INFO | best hypo: au<space>au<space>vieux<space>tous<space>les<space>corées<space>sont<space>dehors
+
+2026-01-22 17:57:14,690 | INFO | speech length: 73761
+2026-01-22 17:57:14,719 | INFO | decoder input length: 114
+2026-01-22 17:57:14,719 | INFO | max output length: 114
+2026-01-22 17:57:14,719 | INFO | min output length: 11
+2026-01-22 17:57:17,113 | INFO | end detected at 74
+2026-01-22 17:57:17,114 | INFO | -10.93 * 0.5 =  -5.46 for decoder
+2026-01-22 17:57:17,114 | INFO | -16.87 * 0.5 =  -8.44 for ctc
+2026-01-22 17:57:17,114 | INFO | total log probability: -13.90
+2026-01-22 17:57:17,114 | INFO | normalized log probability: -0.20
+2026-01-22 17:57:17,114 | INFO | total number of ended hypotheses: 193
+2026-01-22 17:57:17,115 | INFO | best hypo: aussitôt<space>leur<space>leve<space>souvent<space>et<space>deux<space>petits<space>lutins<space>sur<space>jeux<space>plancher
+
+2026-01-22 17:57:17,117 | INFO | speech length: 33441
+2026-01-22 17:57:17,145 | INFO | decoder input length: 51
+2026-01-22 17:57:17,146 | INFO | max output length: 51
+2026-01-22 17:57:17,146 | INFO | min output length: 5
+2026-01-22 17:57:18,381 | INFO | end detected at 45
+2026-01-22 17:57:18,383 | INFO |  -8.66 * 0.5 =  -4.33 for decoder
+2026-01-22 17:57:18,383 | INFO | -13.15 * 0.5 =  -6.58 for ctc
+2026-01-22 17:57:18,383 | INFO | total log probability: -10.91
+2026-01-22 17:57:18,383 | INFO | normalized log probability: -0.32
+2026-01-22 17:57:18,383 | INFO | total number of ended hypotheses: 220
+2026-01-22 17:57:18,384 | INFO | best hypo: on<space>s'appelle<space>tikio<space>s'appelle<space>tak
+
+2026-01-22 17:57:18,386 | INFO | speech length: 58721
+2026-01-22 17:57:18,414 | INFO | decoder input length: 91
+2026-01-22 17:57:18,414 | INFO | max output length: 91
+2026-01-22 17:57:18,414 | INFO | min output length: 9
+2026-01-22 17:57:20,137 | INFO | end detected at 55
+2026-01-22 17:57:20,139 | INFO | -14.41 * 0.5 =  -7.21 for decoder
+2026-01-22 17:57:20,139 | INFO | -25.26 * 0.5 = -12.63 for ctc
+2026-01-22 17:57:20,139 | INFO | total log probability: -19.84
+2026-01-22 17:57:20,139 | INFO | normalized log probability: -0.44
+2026-01-22 17:57:20,139 | INFO | total number of ended hypotheses: 198
+2026-01-22 17:57:20,140 | INFO | best hypo: on<space>on<space>les<space>ait<space>agir<space>les<space>parents<space>les<space>choliers
+
+2026-01-22 17:57:20,142 | INFO | speech length: 32161
+2026-01-22 17:57:20,167 | INFO | decoder input length: 49
+2026-01-22 17:57:20,167 | INFO | max output length: 49
+2026-01-22 17:57:20,167 | INFO | min output length: 4
+2026-01-22 17:57:21,199 | INFO | end detected at 37
+2026-01-22 17:57:21,201 | INFO |  -2.79 * 0.5 =  -1.39 for decoder
+2026-01-22 17:57:21,201 | INFO |  -4.70 * 0.5 =  -2.35 for ctc
+2026-01-22 17:57:21,201 | INFO | total log probability: -3.74
+2026-01-22 17:57:21,201 | INFO | normalized log probability: -0.12
+2026-01-22 17:57:21,201 | INFO | total number of ended hypotheses: 179
+2026-01-22 17:57:21,202 | INFO | best hypo: recousant<space>la<space>langue<space>d'éthique
+
+2026-01-22 17:57:21,203 | INFO | speech length: 87521
+2026-01-22 17:57:21,232 | INFO | decoder input length: 136
+2026-01-22 17:57:21,233 | INFO | max output length: 136
+2026-01-22 17:57:21,233 | INFO | min output length: 13
+2026-01-22 17:57:24,223 | INFO | end detected at 80
+2026-01-22 17:57:24,225 | INFO | -20.74 * 0.5 = -10.37 for decoder
+2026-01-22 17:57:24,225 | INFO | -33.04 * 0.5 = -16.52 for ctc
+2026-01-22 17:57:24,225 | INFO | total log probability: -26.89
+2026-01-22 17:57:24,225 | INFO | normalized log probability: -0.41
+2026-01-22 17:57:24,225 | INFO | total number of ended hypotheses: 228
+2026-01-22 17:57:24,226 | INFO | best hypo: pas<space>par<space>un<space>bateau<space>mais<space>tendu<space>qui<space>au<space>blafond<space>je<space>suis<space>ridio<space>avuta
+
+2026-01-22 17:57:24,228 | INFO | speech length: 34881
+2026-01-22 17:57:24,258 | INFO | decoder input length: 54
+2026-01-22 17:57:24,258 | INFO | max output length: 54
+2026-01-22 17:57:24,258 | INFO | min output length: 5
+2026-01-22 17:57:25,368 | INFO | end detected at 35
+2026-01-22 17:57:25,369 | INFO |  -5.34 * 0.5 =  -2.67 for decoder
+2026-01-22 17:57:25,369 | INFO |  -7.63 * 0.5 =  -3.81 for ctc
+2026-01-22 17:57:25,369 | INFO | total log probability: -6.48
+2026-01-22 17:57:25,370 | INFO | normalized log probability: -0.22
+2026-01-22 17:57:25,370 | INFO | total number of ended hypotheses: 194
+2026-01-22 17:57:25,370 | INFO | best hypo: minuit<space>se<space>ne<space>ni<space>de<space>vaillant
+
+2026-01-22 17:57:25,373 | INFO | speech length: 43681
+2026-01-22 17:57:25,402 | INFO | decoder input length: 67
+2026-01-22 17:57:25,402 | INFO | max output length: 67
+2026-01-22 17:57:25,402 | INFO | min output length: 6
+2026-01-22 17:57:26,988 | INFO | end detected at 50
+2026-01-22 17:57:26,990 | INFO |  -5.65 * 0.5 =  -2.82 for decoder
+2026-01-22 17:57:26,990 | INFO | -10.94 * 0.5 =  -5.47 for ctc
+2026-01-22 17:57:26,990 | INFO | total log probability: -8.29
+2026-01-22 17:57:26,990 | INFO | normalized log probability: -0.20
+2026-01-22 17:57:26,990 | INFO | total number of ended hypotheses: 212
+2026-01-22 17:57:26,990 | INFO | best hypo: tu<space>tiens<space>en<space>toujours<space>le<space>dans<space>la<space>pendule
+
+2026-01-22 17:57:26,997 | INFO | speech length: 34241
+2026-01-22 17:57:27,023 | INFO | decoder input length: 53
+2026-01-22 17:57:27,023 | INFO | max output length: 53
+2026-01-22 17:57:27,023 | INFO | min output length: 5
+2026-01-22 17:57:28,353 | INFO | end detected at 48
+2026-01-22 17:57:28,354 | INFO | -15.24 * 0.5 =  -7.62 for decoder
+2026-01-22 17:57:28,355 | INFO | -29.08 * 0.5 = -14.54 for ctc
+2026-01-22 17:57:28,355 | INFO | total log probability: -22.16
+2026-01-22 17:57:28,355 | INFO | normalized log probability: -0.58
+2026-01-22 17:57:28,355 | INFO | total number of ended hypotheses: 199
+2026-01-22 17:57:28,355 | INFO | best hypo: on<space>ne<space>me<space>le<space>p<space>aucorde<space>ni<space>i<space>se<space>veille
+
+2026-01-22 17:57:28,357 | INFO | speech length: 50881
+2026-01-22 17:57:28,386 | INFO | decoder input length: 79
+2026-01-22 17:57:28,386 | INFO | max output length: 79
+2026-01-22 17:57:28,386 | INFO | min output length: 7
+2026-01-22 17:57:29,835 | INFO | end detected at 48
+2026-01-22 17:57:29,836 | INFO | -10.95 * 0.5 =  -5.47 for decoder
+2026-01-22 17:57:29,836 | INFO | -12.97 * 0.5 =  -6.49 for ctc
+2026-01-22 17:57:29,837 | INFO | total log probability: -11.96
+2026-01-22 17:57:29,837 | INFO | normalized log probability: -0.31
+2026-01-22 17:57:29,837 | INFO | total number of ended hypotheses: 233
+2026-01-22 17:57:29,837 | INFO | best hypo: on<space>voit<space>oui<space>après<space>par<space>i<space>ce<space>mot<space>à<space>tout
+
+2026-01-22 17:57:29,839 | INFO | speech length: 74721
+2026-01-22 17:57:29,868 | INFO | decoder input length: 116
+2026-01-22 17:57:29,868 | INFO | max output length: 116
+2026-01-22 17:57:29,869 | INFO | min output length: 11
+2026-01-22 17:57:32,661 | INFO | end detected at 89
+2026-01-22 17:57:32,662 | INFO | -21.27 * 0.5 = -10.64 for decoder
+2026-01-22 17:57:32,663 | INFO | -41.20 * 0.5 = -20.60 for ctc
+2026-01-22 17:57:32,663 | INFO | total log probability: -31.23
+2026-01-22 17:57:32,663 | INFO | normalized log probability: -0.40
+2026-01-22 17:57:32,663 | INFO | total number of ended hypotheses: 186
+2026-01-22 17:57:32,664 | INFO | best hypo: il<space>y<space>a<space>d'autres<space>gands<space>jeux<space>à<space>la<space>maison<space>j'étais<space>un<space>petit<space>tac<space>qui<space>avait<space>horloge
+
+2026-01-22 17:57:32,680 | INFO | File: CCM-003130-01_L01.wav | WER=68.571429 | S=89 D=9 I=22
+2026-01-22 17:57:32,680 | INFO | ------------------------------
+2026-01-22 17:57:32,680 | INFO |  File duration: 69.47410430839003 seconds
+2026-01-22 17:57:37,079 | INFO | speech length: 112001
+2026-01-22 17:57:37,109 | INFO | decoder input length: 174
+2026-01-22 17:57:37,110 | INFO | max output length: 174
+2026-01-22 17:57:37,110 | INFO | min output length: 17
+2026-01-22 17:57:41,252 | INFO | end detected at 115
+2026-01-22 17:57:41,253 | INFO | -11.42 * 0.5 =  -5.71 for decoder
+2026-01-22 17:57:41,254 | INFO | -15.06 * 0.5 =  -7.53 for ctc
+2026-01-22 17:57:41,254 | INFO | total log probability: -13.24
+2026-01-22 17:57:41,254 | INFO | normalized log probability: -0.12
+2026-01-22 17:57:41,254 | INFO | total number of ended hypotheses: 204
+2026-01-22 17:57:41,255 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>la<space>montagne<space>il<space>y<space>a<space>un<space>pauvre<space>cordonnier<space>tout<space>vieux<space>et<space>tout<space>cassé<space>du<space>visage<space>joas
+
+2026-01-22 17:57:41,262 | INFO | speech length: 69121
+2026-01-22 17:57:41,294 | INFO | decoder input length: 107
+2026-01-22 17:57:41,294 | INFO | max output length: 107
+2026-01-22 17:57:41,294 | INFO | min output length: 10
+2026-01-22 17:57:43,943 | INFO | end detected at 81
+2026-01-22 17:57:43,945 | INFO |  -9.31 * 0.5 =  -4.65 for decoder
+2026-01-22 17:57:43,945 | INFO |  -7.37 * 0.5 =  -3.68 for ctc
+2026-01-22 17:57:43,945 | INFO | total log probability: -8.34
+2026-01-22 17:57:43,945 | INFO | normalized log probability: -0.11
+2026-01-22 17:57:43,945 | INFO | total number of ended hypotheses: 194
+2026-01-22 17:57:43,946 | INFO | best hypo: il<space>lui<space>apporte<space>euh<space>des<space>chaussures<space>et<space>réparées<space>mais<space>une<space>un<space>vaille<space>pas<space>vite
+
+2026-01-22 17:57:43,948 | INFO | speech length: 64161
+2026-01-22 17:57:43,978 | INFO | decoder input length: 99
+2026-01-22 17:57:43,978 | INFO | max output length: 99
+2026-01-22 17:57:43,978 | INFO | min output length: 9
+2026-01-22 17:57:46,563 | INFO | end detected at 84
+2026-01-22 17:57:46,564 | INFO |  -7.24 * 0.5 =  -3.62 for decoder
+2026-01-22 17:57:46,564 | INFO |  -2.14 * 0.5 =  -1.07 for ctc
+2026-01-22 17:57:46,565 | INFO | total log probability: -4.69
+2026-01-22 17:57:46,565 | INFO | normalized log probability: -0.06
+2026-01-22 17:57:46,565 | INFO | total number of ended hypotheses: 174
+2026-01-22 17:57:46,566 | INFO | best hypo: tous<space>les<space>soirs<space>i<space>manchent<space>tout<space>seul<space>bien<space>tristement<space>ce<space>soir<space>il<space>y<space>a<space>devant<space>lui
+
+2026-01-22 17:57:46,568 | INFO | speech length: 52001
+2026-01-22 17:57:46,592 | INFO | decoder input length: 80
+2026-01-22 17:57:46,592 | INFO | max output length: 80
+2026-01-22 17:57:46,592 | INFO | min output length: 8
+2026-01-22 17:57:48,151 | INFO | end detected at 52
+2026-01-22 17:57:48,153 | INFO |  -7.01 * 0.5 =  -3.51 for decoder
+2026-01-22 17:57:48,153 | INFO |  -9.26 * 0.5 =  -4.63 for ctc
+2026-01-22 17:57:48,153 | INFO | total log probability: -8.14
+2026-01-22 17:57:48,153 | INFO | normalized log probability: -0.18
+2026-01-22 17:57:48,153 | INFO | total number of ended hypotheses: 209
+2026-01-22 17:57:48,154 | INFO | best hypo: un<space>gros<space>tas<space>de<space>subli<space>et<space>de<space>guette<space>a<space>recoudre
+
+2026-01-22 17:57:48,156 | INFO | speech length: 61921
+2026-01-22 17:57:48,181 | INFO | decoder input length: 96
+2026-01-22 17:57:48,182 | INFO | max output length: 96
+2026-01-22 17:57:48,182 | INFO | min output length: 9
+2026-01-22 17:57:50,377 | INFO | end detected at 73
+2026-01-22 17:57:50,378 | INFO |  -6.67 * 0.5 =  -3.33 for decoder
+2026-01-22 17:57:50,378 | INFO |  -1.26 * 0.5 =  -0.63 for ctc
+2026-01-22 17:57:50,378 | INFO | total log probability: -3.96
+2026-01-22 17:57:50,378 | INFO | normalized log probability: -0.06
+2026-01-22 17:57:50,378 | INFO | total number of ended hypotheses: 187
+2026-01-22 17:57:50,379 | INFO | best hypo: jamais<space>je<space>ne<space>pourrais<space>les<space>réparer<space>je<space>suis<space>trop<space>âgé<space>et<space>trop<space>malade
+
+2026-01-22 17:57:50,381 | INFO | speech length: 59201
+2026-01-22 17:57:50,412 | INFO | decoder input length: 92
+2026-01-22 17:57:50,412 | INFO | max output length: 92
+2026-01-22 17:57:50,412 | INFO | min output length: 9
+2026-01-22 17:57:52,265 | INFO | end detected at 54
+2026-01-22 17:57:52,267 | INFO |  -5.53 * 0.5 =  -2.76 for decoder
+2026-01-22 17:57:52,267 | INFO | -11.63 * 0.5 =  -5.82 for ctc
+2026-01-22 17:57:52,267 | INFO | total log probability: -8.58
+2026-01-22 17:57:52,267 | INFO | normalized log probability: -0.18
+2026-01-22 17:57:52,267 | INFO | total number of ended hypotheses: 218
+2026-01-22 17:57:52,268 | INFO | best hypo: près<space>de<space>lui<space>la<space>grosse<space>sur<space>le<space>chevet<space>étiquetac
+
+2026-01-22 17:57:52,271 | INFO | speech length: 48801
+2026-01-22 17:57:52,299 | INFO | decoder input length: 75
+2026-01-22 17:57:52,299 | INFO | max output length: 75
+2026-01-22 17:57:52,299 | INFO | min output length: 7
+2026-01-22 17:57:54,112 | INFO | end detected at 50
+2026-01-22 17:57:54,114 | INFO |  -4.52 * 0.5 =  -2.26 for decoder
+2026-01-22 17:57:54,114 | INFO |  -4.08 * 0.5 =  -2.04 for ctc
+2026-01-22 17:57:54,114 | INFO | total log probability: -4.30
+2026-01-22 17:57:54,114 | INFO | normalized log probability: -0.10
+2026-01-22 17:57:54,114 | INFO | total number of ended hypotheses: 215
+2026-01-22 17:57:54,114 | INFO | best hypo: le<space>pauvre<space>vieux<space>tout<space>est<space>couragé<space>sans<space>dor
+
+2026-01-22 17:57:54,116 | INFO | speech length: 60961
+2026-01-22 17:57:54,147 | INFO | decoder input length: 94
+2026-01-22 17:57:54,147 | INFO | max output length: 94
+2026-01-22 17:57:54,147 | INFO | min output length: 9
+2026-01-22 17:57:56,178 | INFO | end detected at 67
+2026-01-22 17:57:56,179 | INFO |  -6.63 * 0.5 =  -3.32 for decoder
+2026-01-22 17:57:56,180 | INFO |  -8.61 * 0.5 =  -4.31 for ctc
+2026-01-22 17:57:56,180 | INFO | total log probability: -7.62
+2026-01-22 17:57:56,180 | INFO | normalized log probability: -0.12
+2026-01-22 17:57:56,180 | INFO | total number of ended hypotheses: 168
+2026-01-22 17:57:56,180 | INFO | best hypo: aussitôt<space>l'horloge<space>s'ouvre<space>de<space>petits<space>détests<space>sur<space>le<space>placher
+
+2026-01-22 17:57:56,183 | INFO | speech length: 107041
+2026-01-22 17:57:56,213 | INFO | decoder input length: 166
+2026-01-22 17:57:56,213 | INFO | max output length: 166
+2026-01-22 17:57:56,213 | INFO | min output length: 16
+2026-01-22 17:58:00,226 | INFO | end detected at 114
+2026-01-22 17:58:00,227 | INFO | -10.08 * 0.5 =  -5.04 for decoder
+2026-01-22 17:58:00,228 | INFO | -14.37 * 0.5 =  -7.18 for ctc
+2026-01-22 17:58:00,228 | INFO | total log probability: -12.22
+2026-01-22 17:58:00,228 | INFO | normalized log probability: -0.11
+2026-01-22 17:58:00,228 | INFO | total number of ended hypotheses: 190
+2026-01-22 17:58:00,229 | INFO | best hypo: sur<space>le<space>plancher<space>l'un<space>s'appelle<space>ticket<space>l'autre<space>s'appelle<space>tac<space>arrangeant<space>les<space>étagères<space>et<space>parents<space>les<space>souliers
+
+2026-01-22 17:58:00,231 | INFO | speech length: 69601
+2026-01-22 17:58:00,261 | INFO | decoder input length: 108
+2026-01-22 17:58:00,261 | INFO | max output length: 108
+2026-01-22 17:58:00,261 | INFO | min output length: 10
+2026-01-22 17:58:02,315 | INFO | end detected at 65
+2026-01-22 17:58:02,316 | INFO |  -6.21 * 0.5 =  -3.10 for decoder
+2026-01-22 17:58:02,316 | INFO |  -9.34 * 0.5 =  -4.67 for ctc
+2026-01-22 17:58:02,316 | INFO | total log probability: -7.78
+2026-01-22 17:58:02,316 | INFO | normalized log probability: -0.13
+2026-01-22 17:58:02,316 | INFO | total number of ended hypotheses: 189
+2026-01-22 17:58:02,317 | INFO | best hypo: en<space>cousant<space>le<space>linge<space>d'éthique<space>préparant<space>le<space>un<space>gâteau<space>béton
+
+2026-01-22 17:58:02,319 | INFO | speech length: 52641
+2026-01-22 17:58:02,347 | INFO | decoder input length: 81
+2026-01-22 17:58:02,347 | INFO | max output length: 81
+2026-01-22 17:58:02,347 | INFO | min output length: 8
+2026-01-22 17:58:04,292 | INFO | end detected at 67
+2026-01-22 17:58:04,294 | INFO |  -7.54 * 0.5 =  -3.77 for decoder
+2026-01-22 17:58:04,294 | INFO | -15.06 * 0.5 =  -7.53 for ctc
+2026-01-22 17:58:04,294 | INFO | total log probability: -11.30
+2026-01-22 17:58:04,294 | INFO | normalized log probability: -0.21
+2026-01-22 17:58:04,294 | INFO | total number of ended hypotheses: 255
+2026-01-22 17:58:04,295 | INFO | best hypo: du<space>guy<space>au<space>plafond<space>changeant<space>ses<space>vieux<space>et<space>dois<space>je<space>tac
+
+2026-01-22 17:58:04,297 | INFO | speech length: 63841
+2026-01-22 17:58:04,329 | INFO | decoder input length: 99
+2026-01-22 17:58:04,329 | INFO | max output length: 99
+2026-01-22 17:58:04,329 | INFO | min output length: 9
+2026-01-22 17:58:06,181 | INFO | end detected at 52
+2026-01-22 17:58:06,183 | INFO |  -9.42 * 0.5 =  -4.71 for decoder
+2026-01-22 17:58:06,183 | INFO |  -9.89 * 0.5 =  -4.95 for ctc
+2026-01-22 17:58:06,183 | INFO | total log probability: -9.65
+2026-01-22 17:58:06,183 | INFO | normalized log probability: -0.21
+2026-01-22 17:58:06,183 | INFO | total number of ended hypotheses: 193
+2026-01-22 17:58:06,184 | INFO | best hypo: unisson<space>des<space>deux<space>vaille<space>un<space>petit<space>utar<space>entre
+
+2026-01-22 17:58:06,186 | INFO | speech length: 54881
+2026-01-22 17:58:06,214 | INFO | decoder input length: 85
+2026-01-22 17:58:06,214 | INFO | max output length: 85
+2026-01-22 17:58:06,214 | INFO | min output length: 8
+2026-01-22 17:58:08,280 | INFO | end detected at 66
+2026-01-22 17:58:08,282 | INFO | -15.33 * 0.5 =  -7.66 for decoder
+2026-01-22 17:58:08,282 | INFO | -13.33 * 0.5 =  -6.67 for ctc
+2026-01-22 17:58:08,282 | INFO | total log probability: -14.33
+2026-01-22 17:58:08,282 | INFO | normalized log probability: -0.26
+2026-01-22 17:58:08,282 | INFO | total number of ended hypotheses: 232
+2026-01-22 17:58:08,283 | INFO | best hypo: dans<space>la<space>pendue<space>le<space>temps<space>neu<space>le<space>pauvre<space>corps<space>denis<space>cvi
+
+2026-01-22 17:58:08,287 | INFO | speech length: 63841
+2026-01-22 17:58:08,312 | INFO | decoder input length: 99
+2026-01-22 17:58:08,312 | INFO | max output length: 99
+2026-01-22 17:58:08,312 | INFO | min output length: 9
+2026-01-22 17:58:10,686 | INFO | end detected at 69
+2026-01-22 17:58:10,687 | INFO |  -9.68 * 0.5 =  -4.84 for decoder
+2026-01-22 17:58:10,688 | INFO |  -9.21 * 0.5 =  -4.60 for ctc
+2026-01-22 17:58:10,688 | INFO | total log probability: -9.44
+2026-01-22 17:58:10,688 | INFO | normalized log probability: -0.15
+2026-01-22 17:58:10,688 | INFO | total number of ended hypotheses: 188
+2026-01-22 17:58:10,689 | INFO | best hypo: joue<space>à<space>qui<space>a<space>préparé<space>ce<space>poguetteau<space>qui<space>donc<space>arrangé<space>la<space>maison
+
+2026-01-22 17:58:10,691 | INFO | speech length: 50402
+2026-01-22 17:58:10,719 | INFO | decoder input length: 78
+2026-01-22 17:58:10,719 | INFO | max output length: 78
+2026-01-22 17:58:10,719 | INFO | min output length: 7
+2026-01-22 17:58:12,102 | INFO | end detected at 46
+2026-01-22 17:58:12,103 | INFO |  -9.71 * 0.5 =  -4.86 for decoder
+2026-01-22 17:58:12,103 | INFO |  -9.74 * 0.5 =  -4.87 for ctc
+2026-01-22 17:58:12,103 | INFO | total log probability: -9.73
+2026-01-22 17:58:12,103 | INFO | normalized log probability: -0.25
+2026-01-22 17:58:12,103 | INFO | total number of ended hypotheses: 181
+2026-01-22 17:58:12,104 | INFO | best hypo: tiki<space>taque<space>tiktak<space>dit<space>la<space>vieille<space>rôle
+
+2026-01-22 17:58:12,120 | INFO | File: CCM-003148-01_L01.wav | WER=41.142857 | S=55 D=5 I=12
+2026-01-22 17:58:12,120 | INFO | ------------------------------
+2026-01-22 17:58:12,120 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-22 17:58:16,134 | INFO | speech length: 35521
+2026-01-22 17:58:16,163 | INFO | decoder input length: 55
+2026-01-22 17:58:16,163 | INFO | max output length: 55
+2026-01-22 17:58:16,163 | INFO | min output length: 5
+2026-01-22 17:58:17,338 | INFO | end detected at 42
+2026-01-22 17:58:17,339 | INFO |  -7.46 * 0.5 =  -3.73 for decoder
+2026-01-22 17:58:17,339 | INFO |  -2.24 * 0.5 =  -1.12 for ctc
+2026-01-22 17:58:17,339 | INFO | total log probability: -4.85
+2026-01-22 17:58:17,339 | INFO | normalized log probability: -0.13
+2026-01-22 17:58:17,339 | INFO | total number of ended hypotheses: 163
+2026-01-22 17:58:17,340 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>à<space>montagne
+
+2026-01-22 17:58:17,341 | INFO | speech length: 39521
+2026-01-22 17:58:17,365 | INFO | decoder input length: 61
+2026-01-22 17:58:17,365 | INFO | max output length: 61
+2026-01-22 17:58:17,365 | INFO | min output length: 6
+2026-01-22 17:58:18,626 | INFO | end detected at 44
+2026-01-22 17:58:18,627 | INFO |  -3.24 * 0.5 =  -1.62 for decoder
+2026-01-22 17:58:18,627 | INFO |  -2.85 * 0.5 =  -1.43 for ctc
+2026-01-22 17:58:18,627 | INFO | total log probability: -3.05
+2026-01-22 17:58:18,627 | INFO | normalized log probability: -0.08
+2026-01-22 17:58:18,627 | INFO | total number of ended hypotheses: 172
+2026-01-22 17:58:18,628 | INFO | best hypo: un<space>cordonné<space>tout<space>vieux<space>et<space>tout<space>cassé
+
+2026-01-22 17:58:18,629 | INFO | speech length: 99201
+2026-01-22 17:58:18,659 | INFO | decoder input length: 154
+2026-01-22 17:58:18,659 | INFO | max output length: 154
+2026-01-22 17:58:18,659 | INFO | min output length: 15
+2026-01-22 17:58:22,662 | INFO | end detected at 120
+2026-01-22 17:58:22,663 | INFO | -11.73 * 0.5 =  -5.87 for decoder
+2026-01-22 17:58:22,663 | INFO |  -7.35 * 0.5 =  -3.67 for ctc
+2026-01-22 17:58:22,663 | INFO | total log probability: -9.54
+2026-01-22 17:58:22,663 | INFO | normalized log probability: -0.08
+2026-01-22 17:58:22,663 | INFO | total number of ended hypotheses: 189
+2026-01-22 17:58:22,664 | INFO | best hypo: les<space>villageois<space>lus<space>le<space>supportent<space>des<space>choses<space>supportent<space>des<space>chaussures<space>à<space>réparer<space>mais<space>ils<space>ne<space>travaillent<space>pas<space>vite
+
+2026-01-22 17:58:22,666 | INFO | speech length: 59361
+2026-01-22 17:58:22,692 | INFO | decoder input length: 92
+2026-01-22 17:58:22,692 | INFO | max output length: 92
+2026-01-22 17:58:22,693 | INFO | min output length: 9
+2026-01-22 17:58:24,537 | INFO | end detected at 59
+2026-01-22 17:58:24,538 | INFO |  -5.01 * 0.5 =  -2.50 for decoder
+2026-01-22 17:58:24,538 | INFO |  -0.99 * 0.5 =  -0.49 for ctc
+2026-01-22 17:58:24,538 | INFO | total log probability: -3.00
+2026-01-22 17:58:24,538 | INFO | normalized log probability: -0.06
+2026-01-22 17:58:24,538 | INFO | total number of ended hypotheses: 172
+2026-01-22 17:58:24,539 | INFO | best hypo: tous<space>les<space>soirs<space>ils<space>mangent<space>tout<space>seul<space>bien<space>tristement
+
+2026-01-22 17:58:24,541 | INFO | speech length: 50401
+2026-01-22 17:58:24,567 | INFO | decoder input length: 78
+2026-01-22 17:58:24,567 | INFO | max output length: 78
+2026-01-22 17:58:24,568 | INFO | min output length: 7
+2026-01-22 17:58:26,780 | INFO | end detected at 62
+2026-01-22 17:58:26,781 | INFO |  -7.92 * 0.5 =  -3.96 for decoder
+2026-01-22 17:58:26,782 | INFO | -10.56 * 0.5 =  -5.28 for ctc
+2026-01-22 17:58:26,782 | INFO | total log probability: -9.24
+2026-01-22 17:58:26,782 | INFO | normalized log probability: -0.17
+2026-01-22 17:58:26,782 | INFO | total number of ended hypotheses: 195
+2026-01-22 17:58:26,782 | INFO | best hypo: ce<space>soir<space>il<space>a<space>devant<space>lui<space>un<space>gros<space>top<space>soulier<space>degatakou
+
+2026-01-22 17:58:26,789 | INFO | speech length: 51041
+2026-01-22 17:58:26,815 | INFO | decoder input length: 79
+2026-01-22 17:58:26,816 | INFO | max output length: 79
+2026-01-22 17:58:26,816 | INFO | min output length: 7
+2026-01-22 17:58:28,815 | INFO | end detected at 67
+2026-01-22 17:58:28,816 | INFO |  -6.94 * 0.5 =  -3.47 for decoder
+2026-01-22 17:58:28,816 | INFO |  -0.33 * 0.5 =  -0.16 for ctc
+2026-01-22 17:58:28,816 | INFO | total log probability: -3.64
+2026-01-22 17:58:28,816 | INFO | normalized log probability: -0.06
+2026-01-22 17:58:28,816 | INFO | total number of ended hypotheses: 171
+2026-01-22 17:58:28,817 | INFO | best hypo: jamais<space>je<space>pourrais<space>les<space>réparer<space>je<space>suis<space>trop<space>pogé<space>trop<space>malade
+
+2026-01-22 17:58:28,819 | INFO | speech length: 83361
+2026-01-22 17:58:28,849 | INFO | decoder input length: 129
+2026-01-22 17:58:28,849 | INFO | max output length: 129
+2026-01-22 17:58:28,849 | INFO | min output length: 12
+2026-01-22 17:58:32,039 | INFO | end detected at 100
+2026-01-22 17:58:32,040 | INFO | -10.23 * 0.5 =  -5.12 for decoder
+2026-01-22 17:58:32,040 | INFO | -14.63 * 0.5 =  -7.32 for ctc
+2026-01-22 17:58:32,040 | INFO | total log probability: -12.43
+2026-01-22 17:58:32,040 | INFO | normalized log probability: -0.13
+2026-01-22 17:58:32,040 | INFO | total number of ended hypotheses: 188
+2026-01-22 17:58:32,041 | INFO | best hypo: près<space>de<space>lui<space>la<space>grosse<space>horloge<space>fait<space>kiktak<space>diktat<space>le<space>pauvre<space>vieux<space>tout<space>découragé<space>s'en<space>dehors
+
+2026-01-22 17:58:32,043 | INFO | speech length: 54721
+2026-01-22 17:58:32,070 | INFO | decoder input length: 85
+2026-01-22 17:58:32,070 | INFO | max output length: 85
+2026-01-22 17:58:32,070 | INFO | min output length: 8
+2026-01-22 17:58:34,482 | INFO | end detected at 78
+2026-01-22 17:58:34,483 | INFO |  -6.88 * 0.5 =  -3.44 for decoder
+2026-01-22 17:58:34,483 | INFO | -15.35 * 0.5 =  -7.68 for ctc
+2026-01-22 17:58:34,483 | INFO | total log probability: -11.11
+2026-01-22 17:58:34,484 | INFO | normalized log probability: -0.15
+2026-01-22 17:58:34,484 | INFO | total number of ended hypotheses: 216
+2026-01-22 17:58:34,485 | INFO | best hypo: aussitôt<space>l'horloge<space>sauve<space>et<space>deux<space>petits<space>lutins<space>sautent<space>sur<space>le<space>plancher
+
+2026-01-22 17:58:34,487 | INFO | speech length: 36001
+2026-01-22 17:58:34,514 | INFO | decoder input length: 55
+2026-01-22 17:58:34,514 | INFO | max output length: 55
+2026-01-22 17:58:34,514 | INFO | min output length: 5
+2026-01-22 17:58:35,816 | INFO | end detected at 47
+2026-01-22 17:58:35,817 | INFO |  -5.28 * 0.5 =  -2.64 for decoder
+2026-01-22 17:58:35,817 | INFO | -13.74 * 0.5 =  -6.87 for ctc
+2026-01-22 17:58:35,817 | INFO | total log probability: -9.51
+2026-01-22 17:58:35,817 | INFO | normalized log probability: -0.23
+2026-01-22 17:58:35,817 | INFO | total number of ended hypotheses: 192
+2026-01-22 17:58:35,818 | INFO | best hypo: l'un<space>s'appelle<space>tee<space>claude<space>s'appelle<space>tac
+
+2026-01-22 17:58:35,819 | INFO | speech length: 40321
+2026-01-22 17:58:35,850 | INFO | decoder input length: 62
+2026-01-22 17:58:35,850 | INFO | max output length: 62
+2026-01-22 17:58:35,850 | INFO | min output length: 6
+2026-01-22 17:58:37,413 | INFO | end detected at 52
+2026-01-22 17:58:37,414 | INFO |  -6.03 * 0.5 =  -3.01 for decoder
+2026-01-22 17:58:37,414 | INFO | -13.80 * 0.5 =  -6.90 for ctc
+2026-01-22 17:58:37,414 | INFO | total log probability: -9.91
+2026-01-22 17:58:37,414 | INFO | normalized log probability: -0.21
+2026-01-22 17:58:37,414 | INFO | total number of ended hypotheses: 171
+2026-01-22 17:58:37,415 | INFO | best hypo: rangeant<space>les<space>étagères<space>et<space>pas<space>on<space>les<space>souillait
+
+2026-01-22 17:58:37,417 | INFO | speech length: 76161
+2026-01-22 17:58:37,446 | INFO | decoder input length: 118
+2026-01-22 17:58:37,446 | INFO | max output length: 118
+2026-01-22 17:58:37,446 | INFO | min output length: 11
+2026-01-22 17:58:39,953 | INFO | end detected at 78
+2026-01-22 17:58:39,955 | INFO | -10.66 * 0.5 =  -5.33 for decoder
+2026-01-22 17:58:39,955 | INFO | -15.41 * 0.5 =  -7.70 for ctc
+2026-01-22 17:58:39,955 | INFO | total log probability: -13.03
+2026-01-22 17:58:39,955 | INFO | normalized log probability: -0.19
+2026-01-22 17:58:39,955 | INFO | total number of ended hypotheses: 204
+2026-01-22 17:58:39,956 | INFO | best hypo: recousant<space>le<space>linge<space>diki<space>préparant<space>un<space>gâteau<space>m'étendu<space>guy<space>au<space>plafond
+
+2026-01-22 17:58:39,958 | INFO | speech length: 36961
+2026-01-22 17:58:39,986 | INFO | decoder input length: 57
+2026-01-22 17:58:39,986 | INFO | max output length: 57
+2026-01-22 17:58:39,987 | INFO | min output length: 5
+2026-01-22 17:58:41,249 | INFO | end detected at 46
+2026-01-22 17:58:41,250 | INFO |  -4.37 * 0.5 =  -2.18 for decoder
+2026-01-22 17:58:41,250 | INFO |  -4.02 * 0.5 =  -2.01 for ctc
+2026-01-22 17:58:41,250 | INFO | total log probability: -4.19
+2026-01-22 17:58:41,250 | INFO | normalized log probability: -0.10
+2026-01-22 17:58:41,250 | INFO | total number of ended hypotheses: 196
+2026-01-22 17:58:41,251 | INFO | best hypo: changeant<space>ses<space>vieux<space>rideaux<space>ajoute<space>taxe
+
+2026-01-22 17:58:41,253 | INFO | speech length: 41761
+2026-01-22 17:58:41,284 | INFO | decoder input length: 64
+2026-01-22 17:58:41,284 | INFO | max output length: 64
+2026-01-22 17:58:41,284 | INFO | min output length: 6
+2026-01-22 17:58:42,892 | INFO | end detected at 53
+2026-01-22 17:58:42,893 | INFO |  -7.87 * 0.5 =  -3.93 for decoder
+2026-01-22 17:58:42,893 | INFO |  -5.55 * 0.5 =  -2.77 for ctc
+2026-01-22 17:58:42,893 | INFO | total log probability: -6.71
+2026-01-22 17:58:42,893 | INFO | normalized log probability: -0.15
+2026-01-22 17:58:42,893 | INFO | total number of ended hypotheses: 204
+2026-01-22 17:58:42,894 | INFO | best hypo: minuisonne<space>les<space>deux<space>vailles<space>en<space>petits<space>lutins
+
+2026-01-22 17:58:42,896 | INFO | speech length: 52801
+2026-01-22 17:58:42,925 | INFO | decoder input length: 82
+2026-01-22 17:58:42,925 | INFO | max output length: 82
+2026-01-22 17:58:42,925 | INFO | min output length: 8
+2026-01-22 17:58:44,749 | INFO | end detected at 62
+2026-01-22 17:58:44,751 | INFO |  -7.37 * 0.5 =  -3.68 for decoder
+2026-01-22 17:58:44,751 | INFO |  -5.88 * 0.5 =  -2.94 for ctc
+2026-01-22 17:58:44,751 | INFO | total log probability: -6.62
+2026-01-22 17:58:44,751 | INFO | normalized log probability: -0.12
+2026-01-22 17:58:44,751 | INFO | total number of ended hypotheses: 210
+2026-01-22 17:58:44,752 | INFO | best hypo: rentrent<space>dans<space>la<space>pendure<space>le<space>lendemain<space>le<space>pauvre<space>qui<space>a
+
+2026-01-22 17:58:44,754 | INFO | speech length: 62881
+2026-01-22 17:58:44,782 | INFO | decoder input length: 97
+2026-01-22 17:58:44,782 | INFO | max output length: 97
+2026-01-22 17:58:44,782 | INFO | min output length: 9
+2026-01-22 17:58:46,758 | INFO | end detected at 64
+2026-01-22 17:58:46,760 | INFO |  -7.47 * 0.5 =  -3.74 for decoder
+2026-01-22 17:58:46,760 | INFO |  -5.41 * 0.5 =  -2.70 for ctc
+2026-01-22 17:58:46,760 | INFO | total log probability: -6.44
+2026-01-22 17:58:46,760 | INFO | normalized log probability: -0.11
+2026-01-22 17:58:46,760 | INFO | total number of ended hypotheses: 201
+2026-01-22 17:58:46,761 | INFO | best hypo: cordonné<space>s'éveille<space>au<space>joie<space>qui<space>a<space>préparé<space>ce<space>beau<space>câteau
+
+2026-01-22 17:58:46,763 | INFO | speech length: 51521
+2026-01-22 17:58:46,790 | INFO | decoder input length: 80
+2026-01-22 17:58:46,790 | INFO | max output length: 80
+2026-01-22 17:58:46,790 | INFO | min output length: 8
+2026-01-22 17:58:48,457 | INFO | end detected at 56
+2026-01-22 17:58:48,459 | INFO | -11.29 * 0.5 =  -5.64 for decoder
+2026-01-22 17:58:48,459 | INFO | -15.09 * 0.5 =  -7.54 for ctc
+2026-01-22 17:58:48,459 | INFO | total log probability: -13.19
+2026-01-22 17:58:48,459 | INFO | normalized log probability: -0.28
+2026-01-22 17:58:48,459 | INFO | total number of ended hypotheses: 232
+2026-01-22 17:58:48,459 | INFO | best hypo: qui<space>donc<space>arrangeait<space>la<space>maison<space>tiktat<space>tittaque
+
+2026-01-22 17:58:48,461 | INFO | speech length: 19681
+2026-01-22 17:58:48,492 | INFO | decoder input length: 30
+2026-01-22 17:58:48,492 | INFO | max output length: 30
+2026-01-22 17:58:48,492 | INFO | min output length: 3
+2026-01-22 17:58:49,317 | INFO | adding <eos> in the last position in the loop
+2026-01-22 17:58:49,326 | INFO | end detected at 29
+2026-01-22 17:58:49,327 | INFO |  -1.86 * 0.5 =  -0.93 for decoder
+2026-01-22 17:58:49,327 | INFO |  -3.17 * 0.5 =  -1.59 for ctc
+2026-01-22 17:58:49,327 | INFO | total log probability: -2.52
+2026-01-22 17:58:49,327 | INFO | normalized log probability: -0.10
+2026-01-22 17:58:49,327 | INFO | total number of ended hypotheses: 182
+2026-01-22 17:58:49,328 | INFO | best hypo: dit<space>la<space>vieille<space>horloge
+
+2026-01-22 17:58:49,344 | INFO | File: CCM-003346-01_L01.wav | WER=36.842105 | S=40 D=14 I=9
+2026-01-22 17:58:49,344 | INFO | ------------------------------
+2026-01-22 17:58:49,344 | INFO |  File duration: 84.14911564625851 seconds
+2026-01-22 17:58:54,961 | INFO | speech length: 79201
+2026-01-22 17:58:54,989 | INFO | decoder input length: 123
+2026-01-22 17:58:54,989 | INFO | max output length: 123
+2026-01-22 17:58:54,989 | INFO | min output length: 12
+2026-01-22 17:58:57,612 | INFO | end detected at 71
+2026-01-22 17:58:57,614 | INFO |  -5.42 * 0.5 =  -2.71 for decoder
+2026-01-22 17:58:57,614 | INFO |  -0.23 * 0.5 =  -0.12 for ctc
+2026-01-22 17:58:57,614 | INFO | total log probability: -2.83
+2026-01-22 17:58:57,614 | INFO | normalized log probability: -0.04
+2026-01-22 17:58:57,614 | INFO | total number of ended hypotheses: 175
+2026-01-22 17:58:57,615 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>la<space>montagne<space>il<space>y<space>a<space>un<space>pauvre<space>cordonnier
+
+2026-01-22 17:58:57,616 | INFO | speech length: 69761
+2026-01-22 17:58:57,644 | INFO | decoder input length: 108
+2026-01-22 17:58:57,644 | INFO | max output length: 108
+2026-01-22 17:58:57,644 | INFO | min output length: 10
+2026-01-22 17:59:00,114 | INFO | end detected at 75
+2026-01-22 17:59:00,115 | INFO |  -6.44 * 0.5 =  -3.22 for decoder
+2026-01-22 17:59:00,115 | INFO |  -2.75 * 0.5 =  -1.37 for ctc
+2026-01-22 17:59:00,116 | INFO | total log probability: -4.59
+2026-01-22 17:59:00,116 | INFO | normalized log probability: -0.06
+2026-01-22 17:59:00,116 | INFO | total number of ended hypotheses: 162
+2026-01-22 17:59:00,117 | INFO | best hypo: tout<space>vieux<space>est<space>tout<space>cassé<space>les<space>villageois<space>lui<space>apportent<space>des<space>chaussures
+
+2026-01-22 17:59:00,118 | INFO | speech length: 45761
+2026-01-22 17:59:00,147 | INFO | decoder input length: 71
+2026-01-22 17:59:00,147 | INFO | max output length: 71
+2026-01-22 17:59:00,147 | INFO | min output length: 7
+2026-01-22 17:59:01,651 | INFO | end detected at 51
+2026-01-22 17:59:01,652 | INFO |  -3.64 * 0.5 =  -1.82 for decoder
+2026-01-22 17:59:01,652 | INFO |  -2.88 * 0.5 =  -1.44 for ctc
+2026-01-22 17:59:01,653 | INFO | total log probability: -3.26
+2026-01-22 17:59:01,653 | INFO | normalized log probability: -0.07
+2026-01-22 17:59:01,653 | INFO | total number of ended hypotheses: 196
+2026-01-22 17:59:01,653 | INFO | best hypo: à<space>réparer<space>mais<space>il<space>ne<space>travaille<space>pas<space>huit<space>ans
+
+2026-01-22 17:59:01,657 | INFO | speech length: 33921
+2026-01-22 17:59:01,686 | INFO | decoder input length: 52
+2026-01-22 17:59:01,686 | INFO | max output length: 52
+2026-01-22 17:59:01,686 | INFO | min output length: 5
+2026-01-22 17:59:03,053 | INFO | end detected at 46
+2026-01-22 17:59:03,054 | INFO |  -3.95 * 0.5 =  -1.97 for decoder
+2026-01-22 17:59:03,054 | INFO |  -1.05 * 0.5 =  -0.53 for ctc
+2026-01-22 17:59:03,054 | INFO | total log probability: -2.50
+2026-01-22 17:59:03,054 | INFO | normalized log probability: -0.06
+2026-01-22 17:59:03,054 | INFO | total number of ended hypotheses: 184
+2026-01-22 17:59:03,055 | INFO | best hypo: tous<space>les<space>soirs<space>et<space>ils<space>mangent<space>tout<space>seul
+
+2026-01-22 17:59:03,057 | INFO | speech length: 60801
+2026-01-22 17:59:03,083 | INFO | decoder input length: 94
+2026-01-22 17:59:03,083 | INFO | max output length: 94
+2026-01-22 17:59:03,083 | INFO | min output length: 9
+2026-01-22 17:59:04,617 | INFO | end detected at 49
+2026-01-22 17:59:04,618 | INFO |  -3.72 * 0.5 =  -1.86 for decoder
+2026-01-22 17:59:04,618 | INFO |  -2.13 * 0.5 =  -1.06 for ctc
+2026-01-22 17:59:04,618 | INFO | total log probability: -2.92
+2026-01-22 17:59:04,618 | INFO | normalized log probability: -0.07
+2026-01-22 17:59:04,618 | INFO | total number of ended hypotheses: 170
+2026-01-22 17:59:04,619 | INFO | best hypo: bien<space>tristement<space>ce<space>soir<space>il<space>y<space>a<space>devant<space>lui
+
+2026-01-22 17:59:04,620 | INFO | speech length: 47361
+2026-01-22 17:59:04,649 | INFO | decoder input length: 73
+2026-01-22 17:59:04,649 | INFO | max output length: 73
+2026-01-22 17:59:04,649 | INFO | min output length: 7
+2026-01-22 17:59:06,276 | INFO | end detected at 57
+2026-01-22 17:59:06,278 | INFO |  -4.49 * 0.5 =  -2.24 for decoder
+2026-01-22 17:59:06,278 | INFO |  -5.24 * 0.5 =  -2.62 for ctc
+2026-01-22 17:59:06,278 | INFO | total log probability: -4.86
+2026-01-22 17:59:06,278 | INFO | normalized log probability: -0.09
+2026-01-22 17:59:06,278 | INFO | total number of ended hypotheses: 189
+2026-01-22 17:59:06,279 | INFO | best hypo: un<space>gros<space>tas<space>de<space>souliers<space>et<space>de<space>guettes<space>a<space>recommandé
+
+2026-01-22 17:59:06,296 | INFO | speech length: 62401
+2026-01-22 17:59:06,323 | INFO | decoder input length: 97
+2026-01-22 17:59:06,323 | INFO | max output length: 97
+2026-01-22 17:59:06,324 | INFO | min output length: 9
+2026-01-22 17:59:08,242 | INFO | end detected at 60
+2026-01-22 17:59:08,243 | INFO |  -8.99 * 0.5 =  -4.50 for decoder
+2026-01-22 17:59:08,243 | INFO |  -6.41 * 0.5 =  -3.20 for ctc
+2026-01-22 17:59:08,243 | INFO | total log probability: -7.70
+2026-01-22 17:59:08,244 | INFO | normalized log probability: -0.14
+2026-01-22 17:59:08,244 | INFO | total number of ended hypotheses: 183
+2026-01-22 17:59:08,244 | INFO | best hypo: non<space>ah<space>on<space>recoudra<space>jamais<space>je<space>ne<space>pourrais<space>les<space>réparer
+
+2026-01-22 17:59:08,246 | INFO | speech length: 35841
+2026-01-22 17:59:08,272 | INFO | decoder input length: 55
+2026-01-22 17:59:08,272 | INFO | max output length: 55
+2026-01-22 17:59:08,272 | INFO | min output length: 5
+2026-01-22 17:59:09,303 | INFO | end detected at 37
+2026-01-22 17:59:09,304 | INFO |  -2.58 * 0.5 =  -1.29 for decoder
+2026-01-22 17:59:09,304 | INFO |  -0.01 * 0.5 =  -0.01 for ctc
+2026-01-22 17:59:09,304 | INFO | total log probability: -1.30
+2026-01-22 17:59:09,304 | INFO | normalized log probability: -0.04
+2026-01-22 17:59:09,304 | INFO | total number of ended hypotheses: 140
+2026-01-22 17:59:09,304 | INFO | best hypo: je<space>suis<space>trop<space>âgé<space>et<space>trop<space>malade
+
+2026-01-22 17:59:09,306 | INFO | speech length: 69762
+2026-01-22 17:59:09,330 | INFO | decoder input length: 108
+2026-01-22 17:59:09,330 | INFO | max output length: 108
+2026-01-22 17:59:09,330 | INFO | min output length: 10
+2026-01-22 17:59:11,507 | INFO | end detected at 68
+2026-01-22 17:59:11,508 | INFO |  -8.91 * 0.5 =  -4.45 for decoder
+2026-01-22 17:59:11,508 | INFO | -20.92 * 0.5 = -10.46 for ctc
+2026-01-22 17:59:11,508 | INFO | total log probability: -14.92
+2026-01-22 17:59:11,508 | INFO | normalized log probability: -0.25
+2026-01-22 17:59:11,508 | INFO | total number of ended hypotheses: 207
+2026-01-22 17:59:11,509 | INFO | best hypo: près<space>de<space>lui<space>le<space>grosse<space>la<space>grosse<space>orloge<space>fait<space>diktat<space>diktat
+
+2026-01-22 17:59:11,511 | INFO | speech length: 57281
+2026-01-22 17:59:11,540 | INFO | decoder input length: 89
+2026-01-22 17:59:11,540 | INFO | max output length: 89
+2026-01-22 17:59:11,540 | INFO | min output length: 8
+2026-01-22 17:59:13,346 | INFO | end detected at 57
+2026-01-22 17:59:13,348 | INFO |  -9.09 * 0.5 =  -4.55 for decoder
+2026-01-22 17:59:13,348 | INFO |  -9.11 * 0.5 =  -4.55 for ctc
+2026-01-22 17:59:13,348 | INFO | total log probability: -9.10
+2026-01-22 17:59:13,348 | INFO | normalized log probability: -0.18
+2026-01-22 17:59:13,348 | INFO | total number of ended hypotheses: 201
+2026-01-22 17:59:13,349 | INFO | best hypo: le<space>pro<space>le<space>pauvre<space>lieu<space>tout<space>découragé<space>sans<space>deurant
+
+2026-01-22 17:59:13,351 | INFO | speech length: 32001
+2026-01-22 17:59:13,379 | INFO | decoder input length: 49
+2026-01-22 17:59:13,379 | INFO | max output length: 49
+2026-01-22 17:59:13,379 | INFO | min output length: 4
+2026-01-22 17:59:14,424 | INFO | end detected at 34
+2026-01-22 17:59:14,426 | INFO |  -2.22 * 0.5 =  -1.11 for decoder
+2026-01-22 17:59:14,426 | INFO |  -1.44 * 0.5 =  -0.72 for ctc
+2026-01-22 17:59:14,426 | INFO | total log probability: -1.83
+2026-01-22 17:59:14,426 | INFO | normalized log probability: -0.07
+2026-01-22 17:59:14,426 | INFO | total number of ended hypotheses: 187
+2026-01-22 17:59:14,427 | INFO | best hypo: aussitôt<space>l'horloge<space>s'ouvre
+
+2026-01-22 17:59:14,429 | INFO | speech length: 42721
+2026-01-22 17:59:14,461 | INFO | decoder input length: 66
+2026-01-22 17:59:14,461 | INFO | max output length: 66
+2026-01-22 17:59:14,461 | INFO | min output length: 6
+2026-01-22 17:59:16,019 | INFO | end detected at 54
+2026-01-22 17:59:16,020 | INFO |  -4.14 * 0.5 =  -2.07 for decoder
+2026-01-22 17:59:16,020 | INFO |  -0.91 * 0.5 =  -0.46 for ctc
+2026-01-22 17:59:16,020 | INFO | total log probability: -2.53
+2026-01-22 17:59:16,020 | INFO | normalized log probability: -0.05
+2026-01-22 17:59:16,020 | INFO | total number of ended hypotheses: 170
+2026-01-22 17:59:16,021 | INFO | best hypo: et<space>deux<space>petits<space>lutins<space>s'autrent<space>sur<space>le<space>plancher
+
+2026-01-22 17:59:16,023 | INFO | speech length: 48801
+2026-01-22 17:59:16,047 | INFO | decoder input length: 75
+2026-01-22 17:59:16,047 | INFO | max output length: 75
+2026-01-22 17:59:16,047 | INFO | min output length: 7
+2026-01-22 17:59:17,504 | INFO | end detected at 49
+2026-01-22 17:59:17,505 | INFO |  -9.64 * 0.5 =  -4.82 for decoder
+2026-01-22 17:59:17,506 | INFO |  -7.42 * 0.5 =  -3.71 for ctc
+2026-01-22 17:59:17,506 | INFO | total log probability: -8.53
+2026-01-22 17:59:17,506 | INFO | normalized log probability: -0.21
+2026-01-22 17:59:17,506 | INFO | total number of ended hypotheses: 214
+2026-01-22 17:59:17,506 | INFO | best hypo: là<space>s'appelle<space>tick<space>l'autre<space>s'appelle<space>toc
+
+2026-01-22 17:59:17,508 | INFO | speech length: 54561
+2026-01-22 17:59:17,533 | INFO | decoder input length: 84
+2026-01-22 17:59:17,533 | INFO | max output length: 84
+2026-01-22 17:59:17,533 | INFO | min output length: 8
+2026-01-22 17:59:19,305 | INFO | end detected at 56
+2026-01-22 17:59:19,306 | INFO |  -9.52 * 0.5 =  -4.76 for decoder
+2026-01-22 17:59:19,306 | INFO |  -5.44 * 0.5 =  -2.72 for ctc
+2026-01-22 17:59:19,306 | INFO | total log probability: -7.48
+2026-01-22 17:59:19,306 | INFO | normalized log probability: -0.15
+2026-01-22 17:59:19,306 | INFO | total number of ended hypotheses: 181
+2026-01-22 17:59:19,307 | INFO | best hypo: rangeant<space>on<space>les<space>est<space>agérant<space>réparer<space>les<space>souliers
+
+2026-01-22 17:59:19,309 | INFO | speech length: 38241
+2026-01-22 17:59:19,340 | INFO | decoder input length: 59
+2026-01-22 17:59:19,340 | INFO | max output length: 59
+2026-01-22 17:59:19,340 | INFO | min output length: 5
+2026-01-22 17:59:20,412 | INFO | end detected at 34
+2026-01-22 17:59:20,413 | INFO |  -5.34 * 0.5 =  -2.67 for decoder
+2026-01-22 17:59:20,413 | INFO |  -2.62 * 0.5 =  -1.31 for ctc
+2026-01-22 17:59:20,413 | INFO | total log probability: -3.98
+2026-01-22 17:59:20,413 | INFO | normalized log probability: -0.14
+2026-01-22 17:59:20,413 | INFO | total number of ended hypotheses: 173
+2026-01-22 17:59:20,413 | INFO | best hypo: recousant<space>le<space>linge<space>luthique
+
+2026-01-22 17:59:20,415 | INFO | speech length: 41601
+2026-01-22 17:59:20,443 | INFO | decoder input length: 64
+2026-01-22 17:59:20,443 | INFO | max output length: 64
+2026-01-22 17:59:20,443 | INFO | min output length: 6
+2026-01-22 17:59:21,715 | INFO | end detected at 41
+2026-01-22 17:59:21,716 | INFO |  -5.36 * 0.5 =  -2.68 for decoder
+2026-01-22 17:59:21,716 | INFO |  -7.76 * 0.5 =  -3.88 for ctc
+2026-01-22 17:59:21,716 | INFO | total log probability: -6.56
+2026-01-22 17:59:21,716 | INFO | normalized log probability: -0.19
+2026-01-22 17:59:21,716 | INFO | total number of ended hypotheses: 173
+2026-01-22 17:59:21,716 | INFO | best hypo: prépare<space>un<space>un<space>préparant<space>un<space>gâteau
+
+2026-01-22 17:59:21,718 | INFO | speech length: 49601
+2026-01-22 17:59:21,747 | INFO | decoder input length: 77
+2026-01-22 17:59:21,747 | INFO | max output length: 77
+2026-01-22 17:59:21,748 | INFO | min output length: 7
+2026-01-22 17:59:23,098 | INFO | end detected at 44
+2026-01-22 17:59:23,100 | INFO |  -6.47 * 0.5 =  -3.24 for decoder
+2026-01-22 17:59:23,100 | INFO |  -3.46 * 0.5 =  -1.73 for ctc
+2026-01-22 17:59:23,100 | INFO | total log probability: -4.97
+2026-01-22 17:59:23,100 | INFO | normalized log probability: -0.13
+2026-01-22 17:59:23,100 | INFO | total number of ended hypotheses: 200
+2026-01-22 17:59:23,100 | INFO | best hypo: mettons<space>du<space>guy<space>au<space>plafond<space>changeons
+
+2026-01-22 17:59:23,105 | INFO | speech length: 34241
+2026-01-22 17:59:23,130 | INFO | decoder input length: 53
+2026-01-22 17:59:23,130 | INFO | max output length: 53
+2026-01-22 17:59:23,130 | INFO | min output length: 5
+2026-01-22 17:59:24,196 | INFO | end detected at 37
+2026-01-22 17:59:24,198 | INFO |  -3.37 * 0.5 =  -1.68 for decoder
+2026-01-22 17:59:24,198 | INFO |  -6.63 * 0.5 =  -3.31 for ctc
+2026-01-22 17:59:24,198 | INFO | total log probability: -5.00
+2026-01-22 17:59:24,198 | INFO | normalized log probability: -0.17
+2026-01-22 17:59:24,198 | INFO | total number of ended hypotheses: 204
+2026-01-22 17:59:24,199 | INFO | best hypo: ces<space>vieux<space>rideaux<space>ajoute<space>tac
+
+2026-01-22 17:59:24,201 | INFO | speech length: 58241
+2026-01-22 17:59:24,227 | INFO | decoder input length: 90
+2026-01-22 17:59:24,227 | INFO | max output length: 90
+2026-01-22 17:59:24,227 | INFO | min output length: 9
+2026-01-22 17:59:26,162 | INFO | end detected at 61
+2026-01-22 17:59:26,164 | INFO |  -7.34 * 0.5 =  -3.67 for decoder
+2026-01-22 17:59:26,164 | INFO |  -8.79 * 0.5 =  -4.40 for ctc
+2026-01-22 17:59:26,164 | INFO | total log probability: -8.06
+2026-01-22 17:59:26,164 | INFO | normalized log probability: -0.15
+2026-01-22 17:59:26,164 | INFO | total number of ended hypotheses: 186
+2026-01-22 17:59:26,165 | INFO | best hypo: minuit<space>et<space>saune<space>les<space>devoyants<space>petits<space>vutins<space>rentrent
+
+2026-01-22 17:59:26,167 | INFO | speech length: 67361
+2026-01-22 17:59:26,211 | INFO | decoder input length: 104
+2026-01-22 17:59:26,212 | INFO | max output length: 104
+2026-01-22 17:59:26,212 | INFO | min output length: 10
+2026-01-22 17:59:28,750 | INFO | end detected at 67
+2026-01-22 17:59:28,752 | INFO |  -9.65 * 0.5 =  -4.83 for decoder
+2026-01-22 17:59:28,752 | INFO |  -6.14 * 0.5 =  -3.07 for ctc
+2026-01-22 17:59:28,752 | INFO | total log probability: -7.90
+2026-01-22 17:59:28,752 | INFO | normalized log probability: -0.14
+2026-01-22 17:59:28,752 | INFO | total number of ended hypotheses: 216
+2026-01-22 17:59:28,753 | INFO | best hypo: dans<space>la<space>pendule<space>le<space>lendemain<space>le<space>pau<space>recordonné<space>s'éveille
+
+2026-01-22 17:59:28,756 | INFO | speech length: 44481
+2026-01-22 17:59:28,782 | INFO | decoder input length: 69
+2026-01-22 17:59:28,782 | INFO | max output length: 69
+2026-01-22 17:59:28,782 | INFO | min output length: 6
+2026-01-22 17:59:30,150 | INFO | end detected at 47
+2026-01-22 17:59:30,151 | INFO |  -4.18 * 0.5 =  -2.09 for decoder
+2026-01-22 17:59:30,157 | INFO |  -1.60 * 0.5 =  -0.80 for ctc
+2026-01-22 17:59:30,157 | INFO | total log probability: -2.89
+2026-01-22 17:59:30,157 | INFO | normalized log probability: -0.07
+2026-01-22 17:59:30,157 | INFO | total number of ended hypotheses: 178
+2026-01-22 17:59:30,158 | INFO | best hypo: aux<space>joueurs<space>qui<space>a<space>préparé<space>ce<space>beau<space>bateau
+
+2026-01-22 17:59:30,159 | INFO | speech length: 32801
+2026-01-22 17:59:30,188 | INFO | decoder input length: 50
+2026-01-22 17:59:30,188 | INFO | max output length: 50
+2026-01-22 17:59:30,188 | INFO | min output length: 5
+2026-01-22 17:59:31,318 | INFO | end detected at 41
+2026-01-22 17:59:31,319 | INFO |  -4.00 * 0.5 =  -2.00 for decoder
+2026-01-22 17:59:31,319 | INFO |  -4.23 * 0.5 =  -2.12 for ctc
+2026-01-22 17:59:31,319 | INFO | total log probability: -4.12
+2026-01-22 17:59:31,319 | INFO | normalized log probability: -0.12
+2026-01-22 17:59:31,319 | INFO | total number of ended hypotheses: 190
+2026-01-22 17:59:31,320 | INFO | best hypo: qui<space>est<space>donc<space>arrangé<space>ta<space>la<space>maison
+
+2026-01-22 17:59:31,321 | INFO | speech length: 48001
+2026-01-22 17:59:31,350 | INFO | decoder input length: 74
+2026-01-22 17:59:31,350 | INFO | max output length: 74
+2026-01-22 17:59:31,350 | INFO | min output length: 7
+2026-01-22 17:59:32,630 | INFO | end detected at 43
+2026-01-22 17:59:32,631 | INFO |  -5.70 * 0.5 =  -2.85 for decoder
+2026-01-22 17:59:32,631 | INFO |  -8.33 * 0.5 =  -4.16 for ctc
+2026-01-22 17:59:32,631 | INFO | total log probability: -7.01
+2026-01-22 17:59:32,631 | INFO | normalized log probability: -0.18
+2026-01-22 17:59:32,631 | INFO | total number of ended hypotheses: 170
+2026-01-22 17:59:32,631 | INFO | best hypo: tiktak<space>tiktat<space>dit<space>la<space>vieille<space>horloge
+
+2026-01-22 17:59:32,648 | INFO | File: CCM-003557-01_L01.wav | WER=32.768362 | S=39 D=4 I=15
+2026-01-22 17:59:32,648 | INFO | ------------------------------
+2026-01-22 17:59:32,648 | INFO |  File duration: 124.83047619047619 seconds
+2026-01-22 17:59:40,884 | INFO | speech length: 51201
+2026-01-22 17:59:40,911 | INFO | decoder input length: 79
+2026-01-22 17:59:40,912 | INFO | max output length: 79
+2026-01-22 17:59:40,912 | INFO | min output length: 7
+2026-01-22 17:59:42,890 | INFO | end detected at 62
+2026-01-22 17:59:42,891 | INFO |  -5.73 * 0.5 =  -2.86 for decoder
+2026-01-22 17:59:42,892 | INFO |  -1.15 * 0.5 =  -0.57 for ctc
+2026-01-22 17:59:42,892 | INFO | total log probability: -3.44
+2026-01-22 17:59:42,892 | INFO | normalized log probability: -0.06
+2026-01-22 17:59:42,892 | INFO | total number of ended hypotheses: 176
+2026-01-22 17:59:42,892 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>montagne<space>de<space>la<space>montagne<space>il<space>y<space>a
+
+2026-01-22 17:59:42,895 | INFO | speech length: 38721
+2026-01-22 17:59:42,926 | INFO | decoder input length: 60
+2026-01-22 17:59:42,926 | INFO | max output length: 60
+2026-01-22 17:59:42,926 | INFO | min output length: 6
+2026-01-22 17:59:43,988 | INFO | end detected at 36
+2026-01-22 17:59:43,989 | INFO |  -3.53 * 0.5 =  -1.76 for decoder
+2026-01-22 17:59:43,989 | INFO |  -3.67 * 0.5 =  -1.84 for ctc
+2026-01-22 17:59:43,989 | INFO | total log probability: -3.60
+2026-01-22 17:59:43,989 | INFO | normalized log probability: -0.12
+2026-01-22 17:59:43,989 | INFO | total number of ended hypotheses: 186
+2026-01-22 17:59:43,990 | INFO | best hypo: un<space>pauvre<space>cordonné<space>qui<space>veut
+
+2026-01-22 17:59:43,992 | INFO | speech length: 79201
+2026-01-22 17:59:44,017 | INFO | decoder input length: 123
+2026-01-22 17:59:44,017 | INFO | max output length: 123
+2026-01-22 17:59:44,017 | INFO | min output length: 12
+2026-01-22 17:59:46,371 | INFO | end detected at 71
+2026-01-22 17:59:46,372 | INFO | -10.00 * 0.5 =  -5.00 for decoder
+2026-01-22 17:59:46,373 | INFO | -20.51 * 0.5 = -10.25 for ctc
+2026-01-22 17:59:46,373 | INFO | total log probability: -15.25
+2026-01-22 17:59:46,373 | INFO | normalized log probability: -0.25
+2026-01-22 17:59:46,373 | INFO | total number of ended hypotheses: 218
+2026-01-22 17:59:46,373 | INFO | best hypo: tout<space>qu'on<space>sait<space>le<space>villageois<space>lui<space>apporte<space>euh<space>des<space>chaussures
+
+2026-01-22 17:59:46,375 | INFO | speech length: 41601
+2026-01-22 17:59:46,400 | INFO | decoder input length: 64
+2026-01-22 17:59:46,400 | INFO | max output length: 64
+2026-01-22 17:59:46,400 | INFO | min output length: 6
+2026-01-22 17:59:47,873 | INFO | end detected at 53
+2026-01-22 17:59:47,875 | INFO |  -8.80 * 0.5 =  -4.40 for decoder
+2026-01-22 17:59:47,875 | INFO | -19.30 * 0.5 =  -9.65 for ctc
+2026-01-22 17:59:47,875 | INFO | total log probability: -14.05
+2026-01-22 17:59:47,875 | INFO | normalized log probability: -0.31
+2026-01-22 17:59:47,875 | INFO | total number of ended hypotheses: 219
+2026-01-22 17:59:47,876 | INFO | best hypo: ah<space>oui<space>pas<space>oui<space>mais<space>il<space>travaille<space>pas<space>au<space>vite
+
+2026-01-22 17:59:47,878 | INFO | speech length: 42401
+2026-01-22 17:59:47,905 | INFO | decoder input length: 65
+2026-01-22 17:59:47,905 | INFO | max output length: 65
+2026-01-22 17:59:47,905 | INFO | min output length: 6
+2026-01-22 17:59:49,234 | INFO | end detected at 44
+2026-01-22 17:59:49,235 | INFO |  -3.28 * 0.5 =  -1.64 for decoder
+2026-01-22 17:59:49,235 | INFO |  -1.88 * 0.5 =  -0.94 for ctc
+2026-01-22 17:59:49,235 | INFO | total log probability: -2.58
+2026-01-22 17:59:49,235 | INFO | normalized log probability: -0.07
+2026-01-22 17:59:49,235 | INFO | total number of ended hypotheses: 201
+2026-01-22 17:59:49,236 | INFO | best hypo: tous<space>les<space>soirs<space>ils<space>mangent<space>tout<space>seul
+
+2026-01-22 17:59:49,238 | INFO | speech length: 68161
+2026-01-22 17:59:49,268 | INFO | decoder input length: 106
+2026-01-22 17:59:49,268 | INFO | max output length: 106
+2026-01-22 17:59:49,268 | INFO | min output length: 10
+2026-01-22 17:59:50,499 | INFO | end detected at 36
+2026-01-22 17:59:50,502 | INFO |  -5.51 * 0.5 =  -2.75 for decoder
+2026-01-22 17:59:50,502 | INFO |  -6.56 * 0.5 =  -3.28 for ctc
+2026-01-22 17:59:50,502 | INFO | total log probability: -6.03
+2026-01-22 17:59:50,502 | INFO | normalized log probability: -0.22
+2026-01-22 17:59:50,502 | INFO | total number of ended hypotheses: 232
+2026-01-22 17:59:50,502 | INFO | best hypo: y<space>a<space>intestamment<space>ça<space>soit<space>i
+
+2026-01-22 17:59:50,504 | INFO | speech length: 46401
+2026-01-22 17:59:50,534 | INFO | decoder input length: 72
+2026-01-22 17:59:50,534 | INFO | max output length: 72
+2026-01-22 17:59:50,534 | INFO | min output length: 7
+2026-01-22 17:59:51,415 | INFO | end detected at 29
+2026-01-22 17:59:51,416 | INFO |  -6.05 * 0.5 =  -3.03 for decoder
+2026-01-22 17:59:51,416 | INFO |  -2.17 * 0.5 =  -1.08 for ctc
+2026-01-22 17:59:51,416 | INFO | total log probability: -4.11
+2026-01-22 17:59:51,416 | INFO | normalized log probability: -0.18
+2026-01-22 17:59:51,416 | INFO | total number of ended hypotheses: 179
+2026-01-22 17:59:51,417 | INFO | best hypo: il<space>a<space>devant<space>lui<space>un<space>go
+
+2026-01-22 17:59:51,418 | INFO | speech length: 41601
+2026-01-22 17:59:51,443 | INFO | decoder input length: 64
+2026-01-22 17:59:51,443 | INFO | max output length: 64
+2026-01-22 17:59:51,443 | INFO | min output length: 6
+2026-01-22 17:59:52,527 | INFO | end detected at 37
+2026-01-22 17:59:52,528 | INFO |  -4.84 * 0.5 =  -2.42 for decoder
+2026-01-22 17:59:52,528 | INFO | -10.70 * 0.5 =  -5.35 for ctc
+2026-01-22 17:59:52,528 | INFO | total log probability: -7.77
+2026-01-22 17:59:52,528 | INFO | normalized log probability: -0.24
+2026-01-22 17:59:52,528 | INFO | total number of ended hypotheses: 167
+2026-01-22 17:59:52,529 | INFO | best hypo: tort<space>de<space>quoi<space>de<space>sous<space>le<space>dit<space>et
+
+2026-01-22 17:59:52,530 | INFO | speech length: 63201
+2026-01-22 17:59:52,559 | INFO | decoder input length: 98
+2026-01-22 17:59:52,559 | INFO | max output length: 98
+2026-01-22 17:59:52,559 | INFO | min output length: 9
+2026-01-22 17:59:53,487 | INFO | end detected at 27
+2026-01-22 17:59:53,488 | INFO |  -9.54 * 0.5 =  -4.77 for decoder
+2026-01-22 17:59:53,488 | INFO |  -6.64 * 0.5 =  -3.32 for ctc
+2026-01-22 17:59:53,488 | INFO | total log probability: -8.09
+2026-01-22 17:59:53,488 | INFO | normalized log probability: -0.40
+2026-01-22 17:59:53,488 | INFO | total number of ended hypotheses: 187
+2026-01-22 17:59:53,488 | INFO | best hypo: de<space>fait<space><space>à<space>récoute
+
+2026-01-22 17:59:53,491 | INFO | speech length: 80321
+2026-01-22 17:59:53,520 | INFO | decoder input length: 125
+2026-01-22 17:59:53,520 | INFO | max output length: 125
+2026-01-22 17:59:53,521 | INFO | min output length: 12
+2026-01-22 17:59:55,590 | INFO | end detected at 61
+2026-01-22 17:59:55,592 | INFO |  -8.10 * 0.5 =  -4.05 for decoder
+2026-01-22 17:59:55,592 | INFO | -11.84 * 0.5 =  -5.92 for ctc
+2026-01-22 17:59:55,592 | INFO | total log probability: -9.97
+2026-01-22 17:59:55,592 | INFO | normalized log probability: -0.19
+2026-01-22 17:59:55,592 | INFO | total number of ended hypotheses: 222
+2026-01-22 17:59:55,592 | INFO | best hypo: jamais<space>je<space>ne<space>pourrais<space>les<space>ré<space>réparer<space>je<space>suis<space>orangé
+
+2026-01-22 17:59:55,595 | INFO | speech length: 57281
+2026-01-22 17:59:55,619 | INFO | decoder input length: 89
+2026-01-22 17:59:55,619 | INFO | max output length: 89
+2026-01-22 17:59:55,619 | INFO | min output length: 8
+2026-01-22 17:59:57,344 | INFO | end detected at 57
+2026-01-22 17:59:57,346 | INFO | -11.97 * 0.5 =  -5.99 for decoder
+2026-01-22 17:59:57,346 | INFO | -20.55 * 0.5 = -10.27 for ctc
+2026-01-22 17:59:57,346 | INFO | total log probability: -16.26
+2026-01-22 17:59:57,346 | INFO | normalized log probability: -0.39
+2026-01-22 17:59:57,346 | INFO | total number of ended hypotheses: 205
+2026-01-22 17:59:57,347 | INFO | best hypo: est<space>très<space>malade<space>près<space>de<space>lui<space>agos<space>le<space>fait
+
+2026-01-22 17:59:57,349 | INFO | speech length: 60641
+2026-01-22 17:59:57,377 | INFO | decoder input length: 94
+2026-01-22 17:59:57,377 | INFO | max output length: 94
+2026-01-22 17:59:57,377 | INFO | min output length: 9
+2026-01-22 17:59:58,750 | INFO | end detected at 43
+2026-01-22 17:59:58,751 | INFO |  -6.60 * 0.5 =  -3.30 for decoder
+2026-01-22 17:59:58,751 | INFO | -13.05 * 0.5 =  -6.52 for ctc
+2026-01-22 17:59:58,751 | INFO | total log probability: -9.82
+2026-01-22 17:59:58,751 | INFO | normalized log probability: -0.27
+2026-01-22 17:59:58,751 | INFO | total number of ended hypotheses: 213
+2026-01-22 17:59:58,752 | INFO | best hypo: des<space>tacts<space>et<space>tacts<space>le<space>pauvre<space>vieux
+
+2026-01-22 17:59:58,754 | INFO | speech length: 64481
+2026-01-22 17:59:58,783 | INFO | decoder input length: 100
+2026-01-22 17:59:58,783 | INFO | max output length: 100
+2026-01-22 17:59:58,783 | INFO | min output length: 10
+2026-01-22 18:00:00,779 | INFO | end detected at 62
+2026-01-22 18:00:00,781 | INFO |  -8.27 * 0.5 =  -4.14 for decoder
+2026-01-22 18:00:00,781 | INFO | -12.28 * 0.5 =  -6.14 for ctc
+2026-01-22 18:00:00,781 | INFO | total log probability: -10.28
+2026-01-22 18:00:00,781 | INFO | normalized log probability: -0.19
+2026-01-22 18:00:00,781 | INFO | total number of ended hypotheses: 237
+2026-01-22 18:00:00,782 | INFO | best hypo: tout<space>décourager<space>sans<space>drôle<space>aussitôt<space>l'argent<space>s'ouvre
+
+2026-01-22 18:00:00,784 | INFO | speech length: 34561
+2026-01-22 18:00:00,808 | INFO | decoder input length: 53
+2026-01-22 18:00:00,808 | INFO | max output length: 53
+2026-01-22 18:00:00,808 | INFO | min output length: 5
+2026-01-22 18:00:01,999 | INFO | end detected at 39
+2026-01-22 18:00:02,001 | INFO |  -7.16 * 0.5 =  -3.58 for decoder
+2026-01-22 18:00:02,001 | INFO |  -2.30 * 0.5 =  -1.15 for ctc
+2026-01-22 18:00:02,001 | INFO | total log probability: -4.73
+2026-01-22 18:00:02,001 | INFO | normalized log probability: -0.14
+2026-01-22 18:00:02,001 | INFO | total number of ended hypotheses: 198
+2026-01-22 18:00:02,002 | INFO | best hypo: les<space>deux<space>petits<space>luttins<space>et<space>saut
+
+2026-01-22 18:00:02,004 | INFO | speech length: 57601
+2026-01-22 18:00:02,032 | INFO | decoder input length: 89
+2026-01-22 18:00:02,032 | INFO | max output length: 89
+2026-01-22 18:00:02,032 | INFO | min output length: 8
+2026-01-22 18:00:03,645 | INFO | end detected at 47
+2026-01-22 18:00:03,646 | INFO |  -7.09 * 0.5 =  -3.55 for decoder
+2026-01-22 18:00:03,646 | INFO |  -9.23 * 0.5 =  -4.62 for ctc
+2026-01-22 18:00:03,646 | INFO | total log probability: -8.16
+2026-01-22 18:00:03,646 | INFO | normalized log probability: -0.21
+2026-01-22 18:00:03,646 | INFO | total number of ended hypotheses: 210
+2026-01-22 18:00:03,646 | INFO | best hypo: sur<space>le<space>plancher<space>l'un<space>ça<space>s'appelle<space>tic
+
+2026-01-22 18:00:03,648 | INFO | speech length: 54240
+2026-01-22 18:00:03,675 | INFO | decoder input length: 84
+2026-01-22 18:00:03,676 | INFO | max output length: 84
+2026-01-22 18:00:03,676 | INFO | min output length: 8
+2026-01-22 18:00:04,747 | INFO | end detected at 34
+2026-01-22 18:00:04,749 | INFO |  -5.76 * 0.5 =  -2.88 for decoder
+2026-01-22 18:00:04,749 | INFO |  -7.91 * 0.5 =  -3.95 for ctc
+2026-01-22 18:00:04,749 | INFO | total log probability: -6.84
+2026-01-22 18:00:04,749 | INFO | normalized log probability: -0.25
+2026-01-22 18:00:04,749 | INFO | total number of ended hypotheses: 195
+2026-01-22 18:00:04,749 | INFO | best hypo: oh<space>s'appelle<space>tac<space>mangeons
+
+2026-01-22 18:00:04,751 | INFO | speech length: 62241
+2026-01-22 18:00:04,778 | INFO | decoder input length: 96
+2026-01-22 18:00:04,778 | INFO | max output length: 96
+2026-01-22 18:00:04,778 | INFO | min output length: 9
+2026-01-22 18:00:05,951 | INFO | end detected at 36
+2026-01-22 18:00:05,952 | INFO |  -6.88 * 0.5 =  -3.44 for decoder
+2026-01-22 18:00:05,953 | INFO |  -6.37 * 0.5 =  -3.19 for ctc
+2026-01-22 18:00:05,953 | INFO | total log probability: -6.62
+2026-01-22 18:00:05,953 | INFO | normalized log probability: -0.23
+2026-01-22 18:00:05,953 | INFO | total number of ended hypotheses: 195
+2026-01-22 18:00:05,953 | INFO | best hypo: les<space>étrangers<space>en<space>les<space>enions
+
+2026-01-22 18:00:05,955 | INFO | speech length: 47841
+2026-01-22 18:00:05,982 | INFO | decoder input length: 74
+2026-01-22 18:00:05,982 | INFO | max output length: 74
+2026-01-22 18:00:05,982 | INFO | min output length: 7
+2026-01-22 18:00:07,038 | INFO | end detected at 35
+2026-01-22 18:00:07,040 | INFO |  -8.76 * 0.5 =  -4.38 for decoder
+2026-01-22 18:00:07,040 | INFO | -12.91 * 0.5 =  -6.46 for ctc
+2026-01-22 18:00:07,040 | INFO | total log probability: -10.84
+2026-01-22 18:00:07,040 | INFO | normalized log probability: -0.45
+2026-01-22 18:00:07,040 | INFO | total number of ended hypotheses: 218
+2026-01-22 18:00:07,040 | INFO | best hypo: exagénérons<space>les<space>oliers
+
+2026-01-22 18:00:07,042 | INFO | speech length: 58401
+2026-01-22 18:00:07,067 | INFO | decoder input length: 90
+2026-01-22 18:00:07,067 | INFO | max output length: 90
+2026-01-22 18:00:07,067 | INFO | min output length: 9
+2026-01-22 18:00:08,232 | INFO | end detected at 36
+2026-01-22 18:00:08,234 | INFO |  -6.27 * 0.5 =  -3.14 for decoder
+2026-01-22 18:00:08,234 | INFO | -17.95 * 0.5 =  -8.97 for ctc
+2026-01-22 18:00:08,234 | INFO | total log probability: -12.11
+2026-01-22 18:00:08,234 | INFO | normalized log probability: -0.47
+2026-01-22 18:00:08,234 | INFO | total number of ended hypotheses: 235
+2026-01-22 18:00:08,234 | INFO | best hypo: recoulant<space>le<space>lait<space>de<space>tic
+
+2026-01-22 18:00:08,236 | INFO | speech length: 40001
+2026-01-22 18:00:08,262 | INFO | decoder input length: 62
+2026-01-22 18:00:08,262 | INFO | max output length: 62
+2026-01-22 18:00:08,262 | INFO | min output length: 6
+2026-01-22 18:00:09,351 | INFO | end detected at 37
+2026-01-22 18:00:09,353 | INFO |  -7.83 * 0.5 =  -3.92 for decoder
+2026-01-22 18:00:09,353 | INFO |  -7.53 * 0.5 =  -3.77 for ctc
+2026-01-22 18:00:09,353 | INFO | total log probability: -7.68
+2026-01-22 18:00:09,353 | INFO | normalized log probability: -0.30
+2026-01-22 18:00:09,353 | INFO | total number of ended hypotheses: 272
+2026-01-22 18:00:09,354 | INFO | best hypo: mes<space>parents<space>un<space>gotto<space>met
+
+2026-01-22 18:00:09,356 | INFO | speech length: 42241
+2026-01-22 18:00:09,381 | INFO | decoder input length: 65
+2026-01-22 18:00:09,381 | INFO | max output length: 65
+2026-01-22 18:00:09,381 | INFO | min output length: 6
+2026-01-22 18:00:10,071 | INFO | end detected at 22
+2026-01-22 18:00:10,072 | INFO |  -3.49 * 0.5 =  -1.74 for decoder
+2026-01-22 18:00:10,072 | INFO |  -9.99 * 0.5 =  -4.99 for ctc
+2026-01-22 18:00:10,072 | INFO | total log probability: -6.74
+2026-01-22 18:00:10,072 | INFO | normalized log probability: -0.52
+2026-01-22 18:00:10,072 | INFO | total number of ended hypotheses: 212
+2026-01-22 18:00:10,073 | INFO | best hypo: mettant<space>lui
+
+2026-01-22 18:00:10,075 | INFO | speech length: 49921
+2026-01-22 18:00:10,100 | INFO | decoder input length: 77
+2026-01-22 18:00:10,100 | INFO | max output length: 77
+2026-01-22 18:00:10,100 | INFO | min output length: 7
+2026-01-22 18:00:11,413 | INFO | end detected at 44
+2026-01-22 18:00:11,414 | INFO |  -4.59 * 0.5 =  -2.29 for decoder
+2026-01-22 18:00:11,414 | INFO |  -3.12 * 0.5 =  -1.56 for ctc
+2026-01-22 18:00:11,414 | INFO | total log probability: -3.85
+2026-01-22 18:00:11,414 | INFO | normalized log probability: -0.10
+2026-01-22 18:00:11,414 | INFO | total number of ended hypotheses: 174
+2026-01-22 18:00:11,415 | INFO | best hypo: au<space>plafond<space>mengeant<space>ses<space>vieux<space>riseaux
+
+2026-01-22 18:00:11,416 | INFO | speech length: 40161
+2026-01-22 18:00:11,442 | INFO | decoder input length: 62
+2026-01-22 18:00:11,442 | INFO | max output length: 62
+2026-01-22 18:00:11,442 | INFO | min output length: 6
+2026-01-22 18:00:12,189 | INFO | end detected at 25
+2026-01-22 18:00:12,190 | INFO |  -3.34 * 0.5 =  -1.67 for decoder
+2026-01-22 18:00:12,190 | INFO | -10.94 * 0.5 =  -5.47 for ctc
+2026-01-22 18:00:12,190 | INFO | total log probability: -7.14
+2026-01-22 18:00:12,190 | INFO | normalized log probability: -0.36
+2026-01-22 18:00:12,190 | INFO | total number of ended hypotheses: 180
+2026-01-22 18:00:12,191 | INFO | best hypo: à<space>l'autoque<space>minute
+
+2026-01-22 18:00:12,192 | INFO | speech length: 66561
+2026-01-22 18:00:12,219 | INFO | decoder input length: 103
+2026-01-22 18:00:12,219 | INFO | max output length: 103
+2026-01-22 18:00:12,219 | INFO | min output length: 10
+2026-01-22 18:00:14,000 | INFO | end detected at 53
+2026-01-22 18:00:14,001 | INFO |  -4.85 * 0.5 =  -2.43 for decoder
+2026-01-22 18:00:14,001 | INFO |  -5.00 * 0.5 =  -2.50 for ctc
+2026-01-22 18:00:14,001 | INFO | total log probability: -4.93
+2026-01-22 18:00:14,001 | INFO | normalized log probability: -0.11
+2026-01-22 18:00:14,001 | INFO | total number of ended hypotheses: 185
+2026-01-22 18:00:14,002 | INFO | best hypo: nous<space>sommes<space>les<space>deux<space>vaillants<space>petits<space>lutins
+
+2026-01-22 18:00:14,004 | INFO | speech length: 55681
+2026-01-22 18:00:14,033 | INFO | decoder input length: 86
+2026-01-22 18:00:14,033 | INFO | max output length: 86
+2026-01-22 18:00:14,033 | INFO | min output length: 8
+2026-01-22 18:00:14,997 | INFO | end detected at 28
+2026-01-22 18:00:14,998 | INFO |  -2.23 * 0.5 =  -1.12 for decoder
+2026-01-22 18:00:14,998 | INFO |  -5.09 * 0.5 =  -2.55 for ctc
+2026-01-22 18:00:14,998 | INFO | total log probability: -3.66
+2026-01-22 18:00:14,998 | INFO | normalized log probability: -0.16
+2026-01-22 18:00:14,999 | INFO | total number of ended hypotheses: 171
+2026-01-22 18:00:14,999 | INFO | best hypo: entre<space>dans<space>la<space>bandule
+
+2026-01-22 18:00:15,001 | INFO | speech length: 39841
+2026-01-22 18:00:15,025 | INFO | decoder input length: 61
+2026-01-22 18:00:15,025 | INFO | max output length: 61
+2026-01-22 18:00:15,025 | INFO | min output length: 6
+2026-01-22 18:00:16,123 | INFO | end detected at 38
+2026-01-22 18:00:16,124 | INFO |  -4.05 * 0.5 =  -2.02 for decoder
+2026-01-22 18:00:16,124 | INFO | -19.76 * 0.5 =  -9.88 for ctc
+2026-01-22 18:00:16,124 | INFO | total log probability: -11.90
+2026-01-22 18:00:16,124 | INFO | normalized log probability: -0.50
+2026-01-22 18:00:16,124 | INFO | total number of ended hypotheses: 202
+2026-01-22 18:00:16,125 | INFO | best hypo: le<space>lendemain<space>la<space>pauvre
+
+2026-01-22 18:00:16,127 | INFO | speech length: 56161
+2026-01-22 18:00:16,153 | INFO | decoder input length: 87
+2026-01-22 18:00:16,153 | INFO | max output length: 87
+2026-01-22 18:00:16,153 | INFO | min output length: 8
+2026-01-22 18:00:17,967 | INFO | end detected at 61
+2026-01-22 18:00:17,968 | INFO | -11.57 * 0.5 =  -5.78 for decoder
+2026-01-22 18:00:17,968 | INFO | -17.77 * 0.5 =  -8.89 for ctc
+2026-01-22 18:00:17,968 | INFO | total log probability: -14.67
+2026-01-22 18:00:17,968 | INFO | normalized log probability: -0.26
+2026-01-22 18:00:17,968 | INFO | total number of ended hypotheses: 173
+2026-01-22 18:00:17,969 | INFO | best hypo: ça<space>peut<space>vous<space>vous<space>donner<space>à<space>sa<space>veille<space>on<space>va<space>choir<space>aussi
+
+2026-01-22 18:00:17,971 | INFO | speech length: 36961
+2026-01-22 18:00:17,996 | INFO | decoder input length: 57
+2026-01-22 18:00:17,996 | INFO | max output length: 57
+2026-01-22 18:00:17,996 | INFO | min output length: 5
+2026-01-22 18:00:18,658 | INFO | end detected at 20
+2026-01-22 18:00:18,659 | INFO |  -1.90 * 0.5 =  -0.95 for decoder
+2026-01-22 18:00:18,659 | INFO |  -0.67 * 0.5 =  -0.34 for ctc
+2026-01-22 18:00:18,659 | INFO | total log probability: -1.28
+2026-01-22 18:00:18,659 | INFO | normalized log probability: -0.09
+2026-01-22 18:00:18,659 | INFO | total number of ended hypotheses: 166
+2026-01-22 18:00:18,660 | INFO | best hypo: qui<space>a<space>réparé
+
+2026-01-22 18:00:18,662 | INFO | speech length: 38081
+2026-01-22 18:00:18,687 | INFO | decoder input length: 59
+2026-01-22 18:00:18,688 | INFO | max output length: 59
+2026-01-22 18:00:18,688 | INFO | min output length: 5
+2026-01-22 18:00:20,025 | INFO | end detected at 43
+2026-01-22 18:00:20,027 | INFO |  -7.50 * 0.5 =  -3.75 for decoder
+2026-01-22 18:00:20,027 | INFO |  -8.01 * 0.5 =  -4.01 for ctc
+2026-01-22 18:00:20,027 | INFO | total log probability: -7.76
+2026-01-22 18:00:20,027 | INFO | normalized log probability: -0.23
+2026-01-22 18:00:20,027 | INFO | total number of ended hypotheses: 204
+2026-01-22 18:00:20,028 | INFO | best hypo: c'est<space>beaucoup<space>ce<space>beau<space>grand<space>eau
+
+2026-01-22 18:00:20,031 | INFO | speech length: 52161
+2026-01-22 18:00:20,058 | INFO | decoder input length: 81
+2026-01-22 18:00:20,058 | INFO | max output length: 81
+2026-01-22 18:00:20,059 | INFO | min output length: 8
+2026-01-22 18:00:21,221 | INFO | end detected at 36
+2026-01-22 18:00:21,222 | INFO |  -4.44 * 0.5 =  -2.22 for decoder
+2026-01-22 18:00:21,222 | INFO |  -2.61 * 0.5 =  -1.30 for ctc
+2026-01-22 18:00:21,222 | INFO | total log probability: -3.52
+2026-01-22 18:00:21,222 | INFO | normalized log probability: -0.12
+2026-01-22 18:00:21,222 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:00:21,223 | INFO | best hypo: qui<space>donc<space>a<space>enjeu<space>à<space>la<space>maison
+
+2026-01-22 18:00:21,229 | INFO | speech length: 36321
+2026-01-22 18:00:21,261 | INFO | decoder input length: 56
+2026-01-22 18:00:21,261 | INFO | max output length: 56
+2026-01-22 18:00:21,261 | INFO | min output length: 5
+2026-01-22 18:00:22,046 | INFO | end detected at 24
+2026-01-22 18:00:22,047 | INFO |  -4.10 * 0.5 =  -2.05 for decoder
+2026-01-22 18:00:22,047 | INFO |  -8.45 * 0.5 =  -4.22 for ctc
+2026-01-22 18:00:22,047 | INFO | total log probability: -6.27
+2026-01-22 18:00:22,047 | INFO | normalized log probability: -0.35
+2026-01-22 18:00:22,047 | INFO | total number of ended hypotheses: 161
+2026-01-22 18:00:22,048 | INFO | best hypo: tita<space>kita<space>dit<space>il
+
+2026-01-22 18:00:22,049 | INFO | speech length: 18241
+2026-01-22 18:00:22,087 | INFO | decoder input length: 28
+2026-01-22 18:00:22,087 | INFO | max output length: 28
+2026-01-22 18:00:22,087 | INFO | min output length: 2
+2026-01-22 18:00:22,778 | INFO | end detected at 25
+2026-01-22 18:00:22,779 | INFO |  -1.63 * 0.5 =  -0.81 for decoder
+2026-01-22 18:00:22,779 | INFO |  -5.08 * 0.5 =  -2.54 for ctc
+2026-01-22 18:00:22,779 | INFO | total log probability: -3.35
+2026-01-22 18:00:22,779 | INFO | normalized log probability: -0.19
+2026-01-22 18:00:22,779 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:00:22,780 | INFO | best hypo: un<space>vieil<space>horloge
+
+2026-01-22 18:00:22,798 | INFO | File: CCM-003733-01_L01.wav | WER=67.261905 | S=64 D=6 I=43
+2026-01-22 18:00:22,798 | INFO | ------------------------------
+2026-01-22 18:00:22,799 | INFO |  File duration: 73.3750566893424 seconds
+2026-01-22 18:00:27,613 | INFO | speech length: 34721
+2026-01-22 18:00:27,638 | INFO | decoder input length: 53
+2026-01-22 18:00:27,638 | INFO | max output length: 53
+2026-01-22 18:00:27,638 | INFO | min output length: 5
+2026-01-22 18:00:28,797 | INFO | end detected at 42
+2026-01-22 18:00:28,798 | INFO |  -3.01 * 0.5 =  -1.50 for decoder
+2026-01-22 18:00:28,798 | INFO |  -0.00 * 0.5 =  -0.00 for ctc
+2026-01-22 18:00:28,798 | INFO | total log probability: -1.50
+2026-01-22 18:00:28,798 | INFO | normalized log probability: -0.04
+2026-01-22 18:00:28,798 | INFO | total number of ended hypotheses: 141
+2026-01-22 18:00:28,799 | INFO | best hypo: dans<space>un<space>petit<space>village<space>de<space>la<space>montagne
+
+2026-01-22 18:00:28,801 | INFO | speech length: 53441
+2026-01-22 18:00:28,829 | INFO | decoder input length: 83
+2026-01-22 18:00:28,829 | INFO | max output length: 83
+2026-01-22 18:00:28,829 | INFO | min output length: 8
+2026-01-22 18:00:30,712 | INFO | end detected at 64
+2026-01-22 18:00:30,714 | INFO |  -6.87 * 0.5 =  -3.44 for decoder
+2026-01-22 18:00:30,714 | INFO |  -6.77 * 0.5 =  -3.39 for ctc
+2026-01-22 18:00:30,714 | INFO | total log probability: -6.82
+2026-01-22 18:00:30,714 | INFO | normalized log probability: -0.12
+2026-01-22 18:00:30,714 | INFO | total number of ended hypotheses: 233
+2026-01-22 18:00:30,715 | INFO | best hypo: il<space>y<space>a<space>un<space>pauvre<space>cordonnier<space>tout<space>vieux<space>est<space>tout<space>corsé
+
+2026-01-22 18:00:30,717 | INFO | speech length: 72001
+2026-01-22 18:00:30,746 | INFO | decoder input length: 112
+2026-01-22 18:00:30,746 | INFO | max output length: 112
+2026-01-22 18:00:30,746 | INFO | min output length: 11
+2026-01-22 18:00:33,842 | INFO | end detected at 90
+2026-01-22 18:00:33,843 | INFO |  -8.58 * 0.5 =  -4.29 for decoder
+2026-01-22 18:00:33,843 | INFO |  -1.97 * 0.5 =  -0.99 for ctc
+2026-01-22 18:00:33,843 | INFO | total log probability: -5.27
+2026-01-22 18:00:33,843 | INFO | normalized log probability: -0.06
+2026-01-22 18:00:33,843 | INFO | total number of ended hypotheses: 176
+2026-01-22 18:00:33,844 | INFO | best hypo: les<space>villageois<space>lui<space>apportent<space>des<space>chaussures<space>à<space>réparer<space>mais<space>ils<space>ne<space>traillent<space>pas<space>vite
+
+2026-01-22 18:00:33,846 | INFO | speech length: 42081
+2026-01-22 18:00:33,870 | INFO | decoder input length: 65
+2026-01-22 18:00:33,870 | INFO | max output length: 65
+2026-01-22 18:00:33,870 | INFO | min output length: 6
+2026-01-22 18:00:35,505 | INFO | end detected at 59
+2026-01-22 18:00:35,506 | INFO |  -5.30 * 0.5 =  -2.65 for decoder
+2026-01-22 18:00:35,506 | INFO |  -0.97 * 0.5 =  -0.48 for ctc
+2026-01-22 18:00:35,506 | INFO | total log probability: -3.13
+2026-01-22 18:00:35,506 | INFO | normalized log probability: -0.06
+2026-01-22 18:00:35,506 | INFO | total number of ended hypotheses: 165
+2026-01-22 18:00:35,507 | INFO | best hypo: tous<space>les<space>soirs<space>ils<space>mangent<space>tout<space>seul<space>bien<space>tristement
+
+2026-01-22 18:00:35,509 | INFO | speech length: 56641
+2026-01-22 18:00:35,535 | INFO | decoder input length: 88
+2026-01-22 18:00:35,536 | INFO | max output length: 88
+2026-01-22 18:00:35,536 | INFO | min output length: 8
+2026-01-22 18:00:37,323 | INFO | end detected at 59
+2026-01-22 18:00:37,326 | INFO |  -6.71 * 0.5 =  -3.36 for decoder
+2026-01-22 18:00:37,326 | INFO |  -4.96 * 0.5 =  -2.48 for ctc
+2026-01-22 18:00:37,326 | INFO | total log probability: -5.84
+2026-01-22 18:00:37,326 | INFO | normalized log probability: -0.11
+2026-01-22 18:00:37,326 | INFO | total number of ended hypotheses: 208
+2026-01-22 18:00:37,326 | INFO | best hypo: ce<space>soir<space>il<space>y<space>a<space>devant<space>lui<space>un<space>gros<space>temps<space>de<space>soulier
+
+2026-01-22 18:00:37,328 | INFO | speech length: 75521
+2026-01-22 18:00:37,358 | INFO | decoder input length: 117
+2026-01-22 18:00:37,358 | INFO | max output length: 117
+2026-01-22 18:00:37,358 | INFO | min output length: 11
+2026-01-22 18:00:40,117 | INFO | end detected at 85
+2026-01-22 18:00:40,119 | INFO |  -8.33 * 0.5 =  -4.17 for decoder
+2026-01-22 18:00:40,119 | INFO |  -5.70 * 0.5 =  -2.85 for ctc
+2026-01-22 18:00:40,119 | INFO | total log probability: -7.02
+2026-01-22 18:00:40,119 | INFO | normalized log probability: -0.09
+2026-01-22 18:00:40,119 | INFO | total number of ended hypotheses: 193
+2026-01-22 18:00:40,120 | INFO | best hypo: et<space>de<space>guette<space>un<space>recours<space>non<space>jamais<space>je<space>ne<space>pourrais<space>les<space>réparer<space>je<space>suis<space>trop<space>âgé
+
+2026-01-22 18:00:40,125 | INFO | speech length: 63521
+2026-01-22 18:00:40,153 | INFO | decoder input length: 98
+2026-01-22 18:00:40,153 | INFO | max output length: 98
+2026-01-22 18:00:40,153 | INFO | min output length: 9
+2026-01-22 18:00:42,204 | INFO | end detected at 64
+2026-01-22 18:00:42,207 | INFO |  -6.86 * 0.5 =  -3.43 for decoder
+2026-01-22 18:00:42,207 | INFO |  -7.99 * 0.5 =  -4.00 for ctc
+2026-01-22 18:00:42,207 | INFO | total log probability: -7.42
+2026-01-22 18:00:42,207 | INFO | normalized log probability: -0.13
+2026-01-22 18:00:42,207 | INFO | total number of ended hypotheses: 224
+2026-01-22 18:00:42,208 | INFO | best hypo: est<space>trop<space>malade<space>près<space>de<space>lui<space>la<space>la<space>grosse<space>orlo<space>suetticte
+
+2026-01-22 18:00:42,210 | INFO | speech length: 55681
+2026-01-22 18:00:42,234 | INFO | decoder input length: 86
+2026-01-22 18:00:42,234 | INFO | max output length: 86
+2026-01-22 18:00:42,234 | INFO | min output length: 8
+2026-01-22 18:00:43,905 | INFO | end detected at 56
+2026-01-22 18:00:43,906 | INFO |  -9.62 * 0.5 =  -4.81 for decoder
+2026-01-22 18:00:43,906 | INFO |  -4.42 * 0.5 =  -2.21 for ctc
+2026-01-22 18:00:43,906 | INFO | total log probability: -7.02
+2026-01-22 18:00:43,906 | INFO | normalized log probability: -0.14
+2026-01-22 18:00:43,906 | INFO | total number of ended hypotheses: 185
+2026-01-22 18:00:43,907 | INFO | best hypo: tiktac<space>le<space>pauvre<space>vie<space>et<space>tout<space>découragé<space>sans<space>dort
+
+2026-01-22 18:00:43,909 | INFO | speech length: 78081
+2026-01-22 18:00:43,938 | INFO | decoder input length: 121
+2026-01-22 18:00:43,938 | INFO | max output length: 121
+2026-01-22 18:00:43,938 | INFO | min output length: 12
+2026-01-22 18:00:46,574 | INFO | end detected at 81
+2026-01-22 18:00:46,575 | INFO | -11.14 * 0.5 =  -5.57 for decoder
+2026-01-22 18:00:46,575 | INFO |  -6.26 * 0.5 =  -3.13 for ctc
+2026-01-22 18:00:46,575 | INFO | total log probability: -8.70
+2026-01-22 18:00:46,575 | INFO | normalized log probability: -0.12
+2026-01-22 18:00:46,575 | INFO | total number of ended hypotheses: 188
+2026-01-22 18:00:46,576 | INFO | best hypo: aussitôt<space>l'horloge<space>s'ouvent<space>et<space>deux<space>petits<space>lutins<space>sautent<space>sur<space>le<space>plancher
+
+2026-01-22 18:00:46,581 | INFO | speech length: 40161
+2026-01-22 18:00:46,610 | INFO | decoder input length: 62
+2026-01-22 18:00:46,610 | INFO | max output length: 62
+2026-01-22 18:00:46,610 | INFO | min output length: 6
+2026-01-22 18:00:47,902 | INFO | end detected at 46
+2026-01-22 18:00:47,903 | INFO |  -4.80 * 0.5 =  -2.40 for decoder
+2026-01-22 18:00:47,903 | INFO |  -7.31 * 0.5 =  -3.66 for ctc
+2026-01-22 18:00:47,903 | INFO | total log probability: -6.06
+2026-01-22 18:00:47,903 | INFO | normalized log probability: -0.15
+2026-01-22 18:00:47,903 | INFO | total number of ended hypotheses: 180
+2026-01-22 18:00:47,904 | INFO | best hypo: ça<space>s'appelle<space>pic<space>l'autre<space>s'appelle<space>tac
+
+2026-01-22 18:00:47,905 | INFO | speech length: 47841
+2026-01-22 18:00:47,930 | INFO | decoder input length: 74
+2026-01-22 18:00:47,930 | INFO | max output length: 74
+2026-01-22 18:00:47,930 | INFO | min output length: 7
+2026-01-22 18:00:49,350 | INFO | end detected at 49
+2026-01-22 18:00:49,351 | INFO |  -4.02 * 0.5 =  -2.01 for decoder
+2026-01-22 18:00:49,351 | INFO |  -3.17 * 0.5 =  -1.58 for ctc
+2026-01-22 18:00:49,351 | INFO | total log probability: -3.59
+2026-01-22 18:00:49,351 | INFO | normalized log probability: -0.08
+2026-01-22 18:00:49,351 | INFO | total number of ended hypotheses: 150
+2026-01-22 18:00:49,351 | INFO | best hypo: rangeons<space>les<space>étagères<space>réparons<space>les<space>souliers
+
+2026-01-22 18:00:49,353 | INFO | speech length: 40001
+2026-01-22 18:00:49,378 | INFO | decoder input length: 62
+2026-01-22 18:00:49,378 | INFO | max output length: 62
+2026-01-22 18:00:49,378 | INFO | min output length: 6
+2026-01-22 18:00:50,473 | INFO | end detected at 38
+2026-01-22 18:00:50,474 | INFO |  -4.07 * 0.5 =  -2.03 for decoder
+2026-01-22 18:00:50,474 | INFO |  -3.29 * 0.5 =  -1.64 for ctc
+2026-01-22 18:00:50,474 | INFO | total log probability: -3.68
+2026-01-22 18:00:50,474 | INFO | normalized log probability: -0.11
+2026-01-22 18:00:50,474 | INFO | total number of ended hypotheses: 188
+2026-01-22 18:00:50,475 | INFO | best hypo: recousons<space>la<space>le<space>linge<space>dythique
+
+2026-01-22 18:00:50,477 | INFO | speech length: 60961
+2026-01-22 18:00:50,501 | INFO | decoder input length: 94
+2026-01-22 18:00:50,501 | INFO | max output length: 94
+2026-01-22 18:00:50,501 | INFO | min output length: 9
+2026-01-22 18:00:52,423 | INFO | end detected at 63
+2026-01-22 18:00:52,424 | INFO |  -8.36 * 0.5 =  -4.18 for decoder
+2026-01-22 18:00:52,424 | INFO |  -9.29 * 0.5 =  -4.64 for ctc
+2026-01-22 18:00:52,424 | INFO | total log probability: -8.82
+2026-01-22 18:00:52,424 | INFO | normalized log probability: -0.15
+2026-01-22 18:00:52,424 | INFO | total number of ended hypotheses: 193
+2026-01-22 18:00:52,425 | INFO | best hypo: préparant<space>un<space>gâteau<space>mettant<space>du<space>guy<space>au<space>plafond<space>changeons
+
+2026-01-22 18:00:52,427 | INFO | speech length: 38881
+2026-01-22 18:00:52,453 | INFO | decoder input length: 60
+2026-01-22 18:00:52,453 | INFO | max output length: 60
+2026-01-22 18:00:52,453 | INFO | min output length: 6
+2026-01-22 18:00:53,711 | INFO | end detected at 45
+2026-01-22 18:00:53,712 | INFO |  -3.56 * 0.5 =  -1.78 for decoder
+2026-01-22 18:00:53,712 | INFO |  -0.98 * 0.5 =  -0.49 for ctc
+2026-01-22 18:00:53,712 | INFO | total log probability: -2.27
+2026-01-22 18:00:53,712 | INFO | normalized log probability: -0.06
+2026-01-22 18:00:53,712 | INFO | total number of ended hypotheses: 166
+2026-01-22 18:00:53,713 | INFO | best hypo: changeons<space>ses<space>vieux<space>rideaux<space>ajoute<space>tac
+
+2026-01-22 18:00:53,715 | INFO | speech length: 63361
+2026-01-22 18:00:53,741 | INFO | decoder input length: 98
+2026-01-22 18:00:53,741 | INFO | max output length: 98
+2026-01-22 18:00:53,741 | INFO | min output length: 9
+2026-01-22 18:00:56,118 | INFO | end detected at 80
+2026-01-22 18:00:56,120 | INFO |  -9.33 * 0.5 =  -4.67 for decoder
+2026-01-22 18:00:56,120 | INFO | -16.19 * 0.5 =  -8.10 for ctc
+2026-01-22 18:00:56,120 | INFO | total log probability: -12.76
+2026-01-22 18:00:56,120 | INFO | normalized log probability: -0.18
+2026-01-22 18:00:56,120 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:00:56,121 | INFO | best hypo: minuit<space>sonne<space>les<space>deux<space>vaillants<space>petits<space>lutins<space>ventent<space>dans<space>la<space>pandule
+
+2026-01-22 18:00:56,123 | INFO | speech length: 52481
+2026-01-22 18:00:56,148 | INFO | decoder input length: 81
+2026-01-22 18:00:56,149 | INFO | max output length: 81
+2026-01-22 18:00:56,149 | INFO | min output length: 8
+2026-01-22 18:00:58,103 | INFO | end detected at 68
+2026-01-22 18:00:58,105 | INFO |  -7.56 * 0.5 =  -3.78 for decoder
+2026-01-22 18:00:58,105 | INFO |  -8.26 * 0.5 =  -4.13 for ctc
+2026-01-22 18:00:58,105 | INFO | total log probability: -7.91
+2026-01-22 18:00:58,105 | INFO | normalized log probability: -0.13
+2026-01-22 18:00:58,105 | INFO | total number of ended hypotheses: 221
+2026-01-22 18:00:58,106 | INFO | best hypo: le<space>lendemain<space>le<space>pauvre<space>accord<space>gagnait<space>s'éveille<space>ou<space>au<space>joie
+
+2026-01-22 18:00:58,108 | INFO | speech length: 54561
+2026-01-22 18:00:58,132 | INFO | decoder input length: 84
+2026-01-22 18:00:58,132 | INFO | max output length: 84
+2026-01-22 18:00:58,132 | INFO | min output length: 8
+2026-01-22 18:01:00,190 | INFO | end detected at 66
+2026-01-22 18:01:00,191 | INFO |  -5.21 * 0.5 =  -2.61 for decoder
+2026-01-22 18:01:00,191 | INFO |  -7.26 * 0.5 =  -3.63 for ctc
+2026-01-22 18:01:00,191 | INFO | total log probability: -6.24
+2026-01-22 18:01:00,191 | INFO | normalized log probability: -0.10
+2026-01-22 18:01:00,191 | INFO | total number of ended hypotheses: 166
+2026-01-22 18:01:00,192 | INFO | best hypo: qui<space>a<space>préparé<space>ce<space>beau<space>gâteau<space>qui<space>est<space>donc<space>à<space>ranger<space>la<space>maison
+
+2026-01-22 18:01:00,193 | INFO | speech length: 37281
+2026-01-22 18:01:00,220 | INFO | decoder input length: 57
+2026-01-22 18:01:00,221 | INFO | max output length: 57
+2026-01-22 18:01:00,221 | INFO | min output length: 5
+2026-01-22 18:01:01,464 | INFO | end detected at 45
+2026-01-22 18:01:01,466 | INFO |  -7.07 * 0.5 =  -3.54 for decoder
+2026-01-22 18:01:01,466 | INFO | -11.29 * 0.5 =  -5.65 for ctc
+2026-01-22 18:01:01,466 | INFO | total log probability: -9.18
+2026-01-22 18:01:01,466 | INFO | normalized log probability: -0.24
+2026-01-22 18:01:01,466 | INFO | total number of ended hypotheses: 185
+2026-01-22 18:01:01,466 | INFO | best hypo: tiktak<space>tiktak<space>dit<space>la<space>vieille<space>horlogie
+
+2026-01-22 18:01:01,483 | INFO | File: CCM-003734-01_L01.wav | WER=28.248588 | S=35 D=7 I=8
+2026-01-22 18:01:01,483 | INFO | ------------------------------
+2026-01-22 18:01:01,483 | INFO |  File duration: 68.89360544217688 seconds
+2026-01-22 18:01:05,836 | INFO | speech length: 44641
+2026-01-22 18:01:05,861 | INFO | decoder input length: 69
+2026-01-22 18:01:05,862 | INFO | max output length: 69
+2026-01-22 18:01:05,862 | INFO | min output length: 6
+2026-01-22 18:01:07,610 | INFO | end detected at 63
+2026-01-22 18:01:07,611 | INFO |  -4.96 * 0.5 =  -2.48 for decoder
+2026-01-22 18:01:07,611 | INFO |  -3.85 * 0.5 =  -1.92 for ctc
+2026-01-22 18:01:07,611 | INFO | total log probability: -4.40
+2026-01-22 18:01:07,611 | INFO | normalized log probability: -0.07
+2026-01-22 18:01:07,611 | INFO | total number of ended hypotheses: 164
+2026-01-22 18:01:07,612 | INFO | best hypo: quand<space>on<space>les<space>raconte<space>dans<space>un<space>petit<space>village<space>de<space>la<space>montagne
+
+2026-01-22 18:01:07,614 | INFO | speech length: 42721
+2026-01-22 18:01:07,637 | INFO | decoder input length: 66
+2026-01-22 18:01:07,638 | INFO | max output length: 66
+2026-01-22 18:01:07,638 | INFO | min output length: 6
+2026-01-22 18:01:09,327 | INFO | end detected at 61
+2026-01-22 18:01:09,328 | INFO |  -9.86 * 0.5 =  -4.93 for decoder
+2026-01-22 18:01:09,328 | INFO | -18.14 * 0.5 =  -9.07 for ctc
+2026-01-22 18:01:09,328 | INFO | total log probability: -14.00
+2026-01-22 18:01:09,328 | INFO | normalized log probability: -0.26
+2026-01-22 18:01:09,328 | INFO | total number of ended hypotheses: 203
+2026-01-22 18:01:09,329 | INFO | best hypo: il<space>y<space>a<space>un<space>pauvre<space>cordonnier<space>tout<space>vieux<space>et<space>tout<space>cassé
+
+2026-01-22 18:01:09,331 | INFO | speech length: 48161
+2026-01-22 18:01:09,357 | INFO | decoder input length: 74
+2026-01-22 18:01:09,357 | INFO | max output length: 74
+2026-01-22 18:01:09,357 | INFO | min output length: 7
+2026-01-22 18:01:11,078 | INFO | end detected at 61
+2026-01-22 18:01:11,079 | INFO |  -5.06 * 0.5 =  -2.53 for decoder
+2026-01-22 18:01:11,079 | INFO |  -6.55 * 0.5 =  -3.28 for ctc
+2026-01-22 18:01:11,080 | INFO | total log probability: -5.81
+2026-01-22 18:01:11,080 | INFO | normalized log probability: -0.11
+2026-01-22 18:01:11,080 | INFO | total number of ended hypotheses: 188
+2026-01-22 18:01:11,080 | INFO | best hypo: les<space>villageois<space>lui<space>apportent<space>des<space>chaussures<space>à<space>réparer
+
+2026-01-22 18:01:11,082 | INFO | speech length: 42241
+2026-01-22 18:01:11,106 | INFO | decoder input length: 65
+2026-01-22 18:01:11,106 | INFO | max output length: 65
+2026-01-22 18:01:11,106 | INFO | min output length: 6
+2026-01-22 18:01:12,264 | INFO | end detected at 40
+2026-01-22 18:01:12,265 | INFO |  -3.72 * 0.5 =  -1.86 for decoder
+2026-01-22 18:01:12,265 | INFO |  -4.06 * 0.5 =  -2.03 for ctc
+2026-01-22 18:01:12,265 | INFO | total log probability: -3.89
+2026-01-22 18:01:12,265 | INFO | normalized log probability: -0.11
+2026-01-22 18:01:12,265 | INFO | total number of ended hypotheses: 175
+2026-01-22 18:01:12,265 | INFO | best hypo: mais<space>ils<space>ne<space>travaillent<space>pas<space>vite
+
+2026-01-22 18:01:12,267 | INFO | speech length: 47361
+2026-01-22 18:01:12,291 | INFO | decoder input length: 73
+2026-01-22 18:01:12,291 | INFO | max output length: 73
+2026-01-22 18:01:12,291 | INFO | min output length: 7
+2026-01-22 18:01:13,749 | INFO | end detected at 50
+2026-01-22 18:01:13,751 | INFO |  -4.95 * 0.5 =  -2.47 for decoder
+2026-01-22 18:01:13,751 | INFO |  -4.61 * 0.5 =  -2.30 for ctc
+2026-01-22 18:01:13,751 | INFO | total log probability: -4.78
+2026-01-22 18:01:13,751 | INFO | normalized log probability: -0.12
+2026-01-22 18:01:13,751 | INFO | total number of ended hypotheses: 216
+2026-01-22 18:01:13,752 | INFO | best hypo: tous<space>les<space>soirs<space>i<space>mangent<space>tout<space>seul<space>bien
+
+2026-01-22 18:01:13,753 | INFO | speech length: 123841
+2026-01-22 18:01:13,781 | INFO | decoder input length: 193
+2026-01-22 18:01:13,781 | INFO | max output length: 193
+2026-01-22 18:01:13,781 | INFO | min output length: 19
+2026-01-22 18:01:16,819 | INFO | end detected at 77
+2026-01-22 18:01:16,820 | INFO | -22.58 * 0.5 = -11.29 for decoder
+2026-01-22 18:01:16,820 | INFO | -52.38 * 0.5 = -26.19 for ctc
+2026-01-22 18:01:16,820 | INFO | total log probability: -37.48
+2026-01-22 18:01:16,820 | INFO | normalized log probability: -0.58
+2026-01-22 18:01:16,820 | INFO | total number of ended hypotheses: 61
+2026-01-22 18:01:16,821 | INFO | best hypo: justement<space>c'était<space>oui<space>c'était<space>une<space>histon<space>d'éclairage<space>j'ai<space>voilà
+
+2026-01-22 18:01:16,822 | INFO | speech length: 49121
+2026-01-22 18:01:16,851 | INFO | decoder input length: 76
+2026-01-22 18:01:16,851 | INFO | max output length: 76
+2026-01-22 18:01:16,851 | INFO | min output length: 7
+2026-01-22 18:01:18,854 | INFO | adding <eos> in the last position in the loop
+2026-01-22 18:01:18,861 | INFO | no hypothesis. Finish decoding.
+2026-01-22 18:01:18,862 | INFO | -11.18 * 0.5 =  -5.59 for decoder
+2026-01-22 18:01:18,862 | INFO | -29.43 * 0.5 = -14.71 for ctc
+2026-01-22 18:01:18,862 | INFO | total log probability: -20.30
+2026-01-22 18:01:18,862 | INFO | normalized log probability: -0.29
+2026-01-22 18:01:18,862 | INFO | total number of ended hypotheses: 139
+2026-01-22 18:01:18,863 | INFO | best hypo: ce<space>soir<space>y<space>a<space>devant<space>lui<space>un<space>grand<space>théâtre<space>soudi<space>et<space>des<space>guêtes<space>à<space>recours
+
+2026-01-22 18:01:18,865 | INFO | speech length: 54561
+2026-01-22 18:01:18,889 | INFO | decoder input length: 84
+2026-01-22 18:01:18,889 | INFO | max output length: 84
+2026-01-22 18:01:18,889 | INFO | min output length: 8
+2026-01-22 18:01:20,919 | INFO | end detected at 71
+2026-01-22 18:01:20,921 | INFO |  -7.08 * 0.5 =  -3.54 for decoder
+2026-01-22 18:01:20,921 | INFO | -11.76 * 0.5 =  -5.88 for ctc
+2026-01-22 18:01:20,921 | INFO | total log probability: -9.42
+2026-01-22 18:01:20,921 | INFO | normalized log probability: -0.15
+2026-01-22 18:01:20,921 | INFO | total number of ended hypotheses: 205
+2026-01-22 18:01:20,922 | INFO | best hypo: jamais<space>je<space>ne<space>pourrais<space>réparer<space>je<space>suis<space>trop<space>âge<space>et<space>trop<space>malade
+
+2026-01-22 18:01:20,924 | INFO | speech length: 36641
+2026-01-22 18:01:20,951 | INFO | decoder input length: 56
+2026-01-22 18:01:20,951 | INFO | max output length: 56
+2026-01-22 18:01:20,951 | INFO | min output length: 5
+2026-01-22 18:01:22,289 | INFO | end detected at 49
+2026-01-22 18:01:22,290 | INFO |  -4.34 * 0.5 =  -2.17 for decoder
+2026-01-22 18:01:22,290 | INFO | -14.55 * 0.5 =  -7.27 for ctc
+2026-01-22 18:01:22,290 | INFO | total log probability: -9.44
+2026-01-22 18:01:22,290 | INFO | normalized log probability: -0.22
+2026-01-22 18:01:22,290 | INFO | total number of ended hypotheses: 204
+2026-01-22 18:01:22,290 | INFO | best hypo: près<space>de<space>lui<space>la<space>grosse<space>horloge<space>fait<space>diktat
+
+2026-01-22 18:01:22,292 | INFO | speech length: 32961
+2026-01-22 18:01:22,319 | INFO | decoder input length: 51
+2026-01-22 18:01:22,319 | INFO | max output length: 51
+2026-01-22 18:01:22,319 | INFO | min output length: 5
+2026-01-22 18:01:23,651 | INFO | adding <eos> in the last position in the loop
+2026-01-22 18:01:23,659 | INFO | no hypothesis. Finish decoding.
+2026-01-22 18:01:23,660 | INFO |  -9.05 * 0.5 =  -4.52 for decoder
+2026-01-22 18:01:23,660 | INFO | -20.64 * 0.5 = -10.32 for ctc
+2026-01-22 18:01:23,660 | INFO | total log probability: -14.84
+2026-01-22 18:01:23,660 | INFO | normalized log probability: -0.33
+2026-01-22 18:01:23,660 | INFO | total number of ended hypotheses: 188
+2026-01-22 18:01:23,661 | INFO | best hypo: c'est<space>pour<space>vos<space>yeux<space>tout<space>découragé<space>s'endort
+
+2026-01-22 18:01:23,663 | INFO | speech length: 38241
+2026-01-22 18:01:23,687 | INFO | decoder input length: 59
+2026-01-22 18:01:23,687 | INFO | max output length: 59
+2026-01-22 18:01:23,687 | INFO | min output length: 5
+2026-01-22 18:01:25,246 | INFO | end detected at 57
+2026-01-22 18:01:25,247 | INFO |  -9.55 * 0.5 =  -4.78 for decoder
+2026-01-22 18:01:25,248 | INFO | -16.84 * 0.5 =  -8.42 for ctc
+2026-01-22 18:01:25,248 | INFO | total log probability: -13.20
+2026-01-22 18:01:25,248 | INFO | normalized log probability: -0.26
+2026-01-22 18:01:25,248 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:01:25,248 | INFO | best hypo: aussitôt<space>leur<space>linge<space>s'ouvre<space>était<space>un<space>petit<space>lutin
+
+2026-01-22 18:01:25,250 | INFO | speech length: 41441
+2026-01-22 18:01:25,277 | INFO | decoder input length: 64
+2026-01-22 18:01:25,277 | INFO | max output length: 64
+2026-01-22 18:01:25,277 | INFO | min output length: 6
+2026-01-22 18:01:26,586 | INFO | end detected at 46
+2026-01-22 18:01:26,587 | INFO |  -6.23 * 0.5 =  -3.12 for decoder
+2026-01-22 18:01:26,587 | INFO | -13.32 * 0.5 =  -6.66 for ctc
+2026-01-22 18:01:26,587 | INFO | total log probability: -9.77
+2026-01-22 18:01:26,587 | INFO | normalized log probability: -0.26
+2026-01-22 18:01:26,587 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:01:26,588 | INFO | best hypo: saute<space>sur<space>le<space>planché<space>là<space>sympathique
+
+2026-01-22 18:01:26,590 | INFO | speech length: 72001
+2026-01-22 18:01:26,614 | INFO | decoder input length: 112
+2026-01-22 18:01:26,614 | INFO | max output length: 112
+2026-01-22 18:01:26,614 | INFO | min output length: 11
+2026-01-22 18:01:29,618 | INFO | end detected at 95
+2026-01-22 18:01:29,619 | INFO | -17.96 * 0.5 =  -8.98 for decoder
+2026-01-22 18:01:29,619 | INFO | -28.05 * 0.5 = -14.03 for ctc
+2026-01-22 18:01:29,619 | INFO | total log probability: -23.01
+2026-01-22 18:01:29,619 | INFO | normalized log probability: -0.27
+2026-01-22 18:01:29,619 | INFO | total number of ended hypotheses: 186
+2026-01-22 18:01:29,620 | INFO | best hypo: autre<space>s'appelle<space>tack<space>on<space>joue<space>les<space>étagères<space>les<space>parents<space>les<space>souillait<space>au<space>rue<space>où<space>l'âge
+
+2026-01-22 18:01:29,622 | INFO | speech length: 49441
+2026-01-22 18:01:29,650 | INFO | decoder input length: 76
+2026-01-22 18:01:29,650 | INFO | max output length: 76
+2026-01-22 18:01:29,650 | INFO | min output length: 7
+2026-01-22 18:01:31,293 | INFO | end detected at 57
+2026-01-22 18:01:31,294 | INFO | -10.69 * 0.5 =  -5.35 for decoder
+2026-01-22 18:01:31,294 | INFO | -16.25 * 0.5 =  -8.13 for ctc
+2026-01-22 18:01:31,295 | INFO | total log probability: -13.47
+2026-01-22 18:01:31,295 | INFO | normalized log probability: -0.28
+2026-01-22 18:01:31,295 | INFO | total number of ended hypotheses: 207
+2026-01-22 18:01:31,295 | INFO | best hypo: le<space>cytique<space>préparant<space>je<space>prépare<space>dans<space>un<space>gâteau
+
+2026-01-22 18:01:31,297 | INFO | speech length: 47041
+2026-01-22 18:01:31,324 | INFO | decoder input length: 73
+2026-01-22 18:01:31,324 | INFO | max output length: 73
+2026-01-22 18:01:31,324 | INFO | min output length: 7
+2026-01-22 18:01:33,082 | INFO | end detected at 62
+2026-01-22 18:01:33,084 | INFO | -11.75 * 0.5 =  -5.88 for decoder
+2026-01-22 18:01:33,084 | INFO | -13.89 * 0.5 =  -6.94 for ctc
+2026-01-22 18:01:33,084 | INFO | total log probability: -12.82
+2026-01-22 18:01:33,084 | INFO | normalized log probability: -0.24
+2026-01-22 18:01:33,084 | INFO | total number of ended hypotheses: 196
+2026-01-22 18:01:33,085 | INFO | best hypo: bateau<space>du<space>guiople<space>avant<space>changeant<space>sa<space>vierrie<space>d'orage
+
+2026-01-22 18:01:33,086 | INFO | speech length: 40801
+2026-01-22 18:01:33,115 | INFO | decoder input length: 63
+2026-01-22 18:01:33,115 | INFO | max output length: 63
+2026-01-22 18:01:33,115 | INFO | min output length: 6
+2026-01-22 18:01:34,117 | INFO | end detected at 34
+2026-01-22 18:01:34,119 | INFO |  -8.57 * 0.5 =  -4.28 for decoder
+2026-01-22 18:01:34,119 | INFO |  -9.15 * 0.5 =  -4.57 for ctc
+2026-01-22 18:01:34,119 | INFO | total log probability: -8.86
+2026-01-22 18:01:34,119 | INFO | normalized log probability: -0.34
+2026-01-22 18:01:34,119 | INFO | total number of ended hypotheses: 219
+2026-01-22 18:01:34,119 | INFO | best hypo: tac<space>mit<space>mais<space>nuit<space>sommes
+
+2026-01-22 18:01:34,121 | INFO | speech length: 37441
+2026-01-22 18:01:34,149 | INFO | decoder input length: 58
+2026-01-22 18:01:34,149 | INFO | max output length: 58
+2026-01-22 18:01:34,149 | INFO | min output length: 5
+2026-01-22 18:01:35,675 | INFO | end detected at 56
+2026-01-22 18:01:35,676 | INFO | -10.43 * 0.5 =  -5.22 for decoder
+2026-01-22 18:01:35,676 | INFO | -33.39 * 0.5 = -16.69 for ctc
+2026-01-22 18:01:35,676 | INFO | total log probability: -21.91
+2026-01-22 18:01:35,677 | INFO | normalized log probability: -0.46
+2026-01-22 18:01:35,677 | INFO | total number of ended hypotheses: 209
+2026-01-22 18:01:35,677 | INFO | best hypo: et<space>de<space>vaillant<space>petit<space>lutter<space>entre<space>bien<space>attendu
+
+2026-01-22 18:01:35,679 | INFO | speech length: 33761
+2026-01-22 18:01:35,704 | INFO | decoder input length: 52
+2026-01-22 18:01:35,704 | INFO | max output length: 52
+2026-01-22 18:01:35,704 | INFO | min output length: 5
+2026-01-22 18:01:36,677 | INFO | end detected at 35
+2026-01-22 18:01:36,678 | INFO |  -9.68 * 0.5 =  -4.84 for decoder
+2026-01-22 18:01:36,678 | INFO | -25.13 * 0.5 = -12.57 for ctc
+2026-01-22 18:01:36,678 | INFO | total log probability: -17.40
+2026-01-22 18:01:36,678 | INFO | normalized log probability: -0.92
+2026-01-22 18:01:36,678 | INFO | total number of ended hypotheses: 82
+2026-01-22 18:01:36,679 | INFO | best hypo: là<space>le<space>port<space>encore
+
+2026-01-22 18:01:36,680 | INFO | speech length: 44640
+2026-01-22 18:01:36,704 | INFO | decoder input length: 69
+2026-01-22 18:01:36,704 | INFO | max output length: 69
+2026-01-22 18:01:36,704 | INFO | min output length: 6
+2026-01-22 18:01:38,034 | INFO | end detected at 46
+2026-01-22 18:01:38,035 | INFO |  -7.95 * 0.5 =  -3.97 for decoder
+2026-01-22 18:01:38,035 | INFO |  -1.20 * 0.5 =  -0.60 for ctc
+2026-01-22 18:01:38,035 | INFO | total log probability: -4.57
+2026-01-22 18:01:38,035 | INFO | normalized log probability: -0.11
+2026-01-22 18:01:38,035 | INFO | total number of ended hypotheses: 180
+2026-01-22 18:01:38,036 | INFO | best hypo: au<space>joie<space>qui<space>a<space>préparé<space>ce<space>beau<space>au<space>gâteau
+
+2026-01-22 18:01:38,037 | INFO | speech length: 63361
+2026-01-22 18:01:38,061 | INFO | decoder input length: 98
+2026-01-22 18:01:38,061 | INFO | max output length: 98
+2026-01-22 18:01:38,061 | INFO | min output length: 9
+2026-01-22 18:01:40,223 | INFO | end detected at 72
+2026-01-22 18:01:40,224 | INFO | -15.18 * 0.5 =  -7.59 for decoder
+2026-01-22 18:01:40,224 | INFO | -13.28 * 0.5 =  -6.64 for ctc
+2026-01-22 18:01:40,224 | INFO | total log probability: -14.23
+2026-01-22 18:01:40,224 | INFO | normalized log probability: -0.22
+2026-01-22 18:01:40,224 | INFO | total number of ended hypotheses: 189
+2026-01-22 18:01:40,225 | INFO | best hypo: qui<space>donc<space>arrangé<space>la<space>maison<space>diktat<space>distact<space>et<space>la<space>vieille<space>horreur
+
+2026-01-22 18:01:40,241 | INFO | File: CCM-003848-01_L01.wav | WER=58.192090 | S=73 D=10 I=20
+2026-01-22 18:01:40,241 | INFO | ------------------------------
+2026-01-22 18:01:40,241 | INFO | ===================== GLOBAL WER ======================
+2026-01-22 18:01:40,241 | INFO | The number of files is 8
+2026-01-22 18:01:40,241 | INFO | WER: 47.56%
+2026-01-22 18:01:40,241 | INFO | =============================================================

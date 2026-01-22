@@ -94,26 +94,26 @@ def apply_silero_vad_return_audio(
         np.ndarray or torch.Tensor: concatenated speech audio
     """
     # Load Silero VAD
-    #model, utils = torch.hub.load(
-        #repo_or_dir="snakers4/silero-vad",
-        #model="silero_vad",
-        #trust_repo=True
-    #)
+    model, utils = torch.hub.load(
+        repo_or_dir="snakers4/silero-vad",
+        model="silero_vad",
+        trust_repo=True
+    )
 
-    #(get_speech_timestamps,
-    # save_audio,
-     #read_audio,
-     #VADIterator,
-     #collect_chunks) = utils
+    (get_speech_timestamps,
+     save_audio,
+     read_audio,
+     VADIterator,
+     collect_chunks) = utils
     # Load audio (mono, float32)
     wav,sr = read_audio_16k(wav_path)
     audio = torch.from_numpy(wav)
     # Get speech timestamps
-    #speech_timestamps = get_speech_timestamps(
-       # audio,
-       # model,
-       # sampling_rate=16000
-    #)
+    speech_timestamps = get_speech_timestamps(
+        audio,
+        model,
+        sampling_rate=16000
+    )
 
 
     if len(speech_timestamps) == 0:

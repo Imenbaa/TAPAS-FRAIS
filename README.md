@@ -59,10 +59,10 @@ With this method the original timestamp is preserved and we prevent over-segment
 | TAPAS-FRAIS-verified           | whisper-medium                | 59.81%       | /         |
 | TAPAS-FRAIS-non-verified       | whisper-medium                | 62.17%       | /         |
 | TAPAS-FRAIS-verified           | whisper-medium-VAD            | 62.39%       |           |
-| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk      | 31.13%       |           |
+| TAPAS-FRAIS-verified           | whisper-medium-VAD-chunk      | 31.13%       | 31.64%    |
 | TAPAS-FRAIS-non-verified       | whisper-medium-VAD-chunk      | 34.44%       |           |
-| TAPAS-FRAIS-verified           | whisper-Large-VAD-chunk       | 23.41%       |           |
-| TAPAS-FRAIS-non-verified       | whisper-Large-VAD-chunk       | 25.88%       |  36.20%   | 
+| TAPAS-FRAIS-verified           | whisper-Large-VAD-chunk       | 23.41%       | 24.79%    |
+| TAPAS-FRAIS-non-verified       | whisper-Large-VAD-chunk       | 25.88%       | 36.20%    | 
 ---------------------------------------------------------------------------------------------
 
 - Interpretation: With wav2vec the WER on non verified is always better than verified by human. But for whisper, the WER on verified is better than non verified, this could be explained by the fact that whisper has a closer transcriptions to human because it interprets speech.
@@ -71,11 +71,11 @@ With this method the original timestamp is preserved and we prevent over-segment
 
 
 
-| Datasets             | Models                  | WER Rouas   | WER (rVAD) (with Normalization) | WER (Silero) |
-|----------------------|-------------------------|-------------|---------------------------------|--------------|
-| TAPAS-FRAIS-verified | HMM-TDNN (ester)        | 30.9%       | 27.95%                          |              |
-| TAPAS-FRAIS-verified | Conformer (ester)       | 34.7%       | 34.09%                          |              |
-| TAPAS-FRAIS-verified | Conformer (commonvoice) | 29%         | 26.97%                          |              |
+| Datasets             | Models            | WER rVad-NONnormaliz | WER (rVAD) | WER (Silero) |
+|----------------------|-------------------|----------------------|------------|--------------|
+| TAPAS-FRAIS-verified | HMM-TDNN (ester)  | 30.9%                | 27.95%     | %            |
+| TAPAS-FRAIS-verified | Conformer (ester) | 34.7%                | 34.09%     | 24.79%       |
+| TAPAS-FRAIS-verified | Conformer (cv)    | 29%                  | 26.97%     | **24.26%**   |
   ----------------------------------------------------------------------------------------------------------------
 
 
@@ -84,10 +84,11 @@ With this method the original timestamp is preserved and we prevent over-segment
 |--------------------------|-----------------------------|-------------|------------|
 | Rhapsodie                | asr-wav2vec2-commonvoice-fr | 36.99%      | /          |
 | Rhapsodie                | Whisper-medium              | 67.05%      | /          |
-| Rhapsodie                | Whisper-medium-VAD-chunk    | 50.79%      |            |
-| Rhapsodie                | Hmm_TDNN (ester)            |             | 35.05%     |
-| Rhapsodie                | Conformer (ester)           |             | **32.32%** |
-| Rhapsodie                | Whisper-large-VAD-chunk     | 45.73%      |            |
+| Rhapsodie                | Whisper-medium-VAD-chunk    | 50.79%      | 48.24%     |
+| Rhapsodie                | Hmm_TDNN (ester)            | %           | 35.05%     |
+| Rhapsodie                | Conformer (ester)           | %           | **22.32%** |
+| Rhapsodie                | Conformer (CV)              | 31.13%      | 29.77% |
+| Rhapsodie                | Whisper-large-VAD-chunk     | 45.73%      | 43.29%     |
   ------------------------------------------------------------------
 Dans la version Rhapsodie corrected, il y a des fichiers wav qui ont été retirés. 
 
@@ -96,21 +97,24 @@ Rhapsodie(corrected) on asr-wav2vec2-commonvoice-fr WER=33.75%
 
 Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
-| Datasets          | Models                       | WER(sileroVAD) | WER (rVAD) |
-|-------------------|------------------------------|---------------|------------|
-| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr  | **36.14%**    | /          |
-| Typaloc (PARK-8)  | Whisper-medium               | 65.59%        | /          |
-| Typaloc (PARK-8)  | whisper-medium-VAD-chunk     | 46.37%        | 45.91%     |
-| Typaloc (PARK-8)  | whisper-large                | 55.85%        | /          |
-| Typaloc (PARK-8)  | whisper-large-VAD-chunk      | 40.37%        | 38.00%     |
+| Datasets          | Models                      | WER(sileroVAD) | WER (rVAD) |
+|-------------------|-----------------------------|----------------|------------|
+| Typaloc (PARK-8)  | asr-wav2vec2-commonvoice-fr | **36.14%**     | /          |
+| Typaloc (PARK-8)  | Whisper-medium              | 65.59%         | /          |
+| Typaloc (PARK-8)  | whisper-medium-VAD-chunk    | 46.37%         | 45.91%     |
+| Typaloc (PARK-8)  | whisper-large               | 55.85%         | /          |
+| Typaloc (PARK-8)  | whisper-large-VAD-chunk     | 40.37%         | 38.00%     |
+| Typaloc (PARK-8)  | Conformer (cv)              | 31.78%         | 32.60%     |
+| Typaloc (PARK-8)  | Conformer (ester)           | 48.63%         | 47.56%     |
 
-| Datasets          | Models                       | WER(sileroVAD) | WER (rVAD) |
-|-------------------|------------------------------|----------------|------------| 
-| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr  | 38.89%         | /          |
-| Typaloc (CEREB-7) | Whisper-medium               | 65.30%         | /          |
-| Typaloc (CEREB-7) | whisper-medium-VAD-chunk     | 39.72%         | 38.34%     |
-| Typaloc (CEREB-7) | whisper-large                | 57.91%         | /          |
-| Typaloc (CEREB-7) | whisper-large-VAD-chunk      | 36.08%         | **34.57%** |
+| Datasets          | Models                      | WER(sileroVAD) | WER (rVAD) |
+|-------------------|-----------------------------|----------------|------------| 
+| Typaloc (CEREB-7) | asr-wav2vec2-commonvoice-fr | 38.89%         | /          |
+| Typaloc (CEREB-7) | Whisper-medium              | 65.30%         | /          |
+| Typaloc (CEREB-7) | whisper-medium-VAD-chunk    | 39.72%         | 38.34%     |
+| Typaloc (CEREB-7) | whisper-large               | 57.91%         | /          |
+| Typaloc (CEREB-7) | whisper-large-VAD-chunk     | 36.08%         | **34.57%** |
+| Typaloc (CEREB-7) | Conformer(cv)               |  38.07%        | 36.34%     |
 
 | Datasets          | Models                      | WER (sileroVAD) | WER (rVAD) |
 |-------------------|-----------------------------|-----------------|------------| 
@@ -119,15 +123,18 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (SLA-12)  | whisper-medium-VAD-chunk    | 45.35%          | 42.95%     |
 | Typaloc (SLA-12)  | whisper-large               | 61.38%          | /          |
 | Typaloc (SLA-12)  | whisper-large-VAD-chunk     | 39.57%          | **38.29%** |
-| Typaloc (SLA-12)  | Conformer(cv)               | 69.31%          | 69.49%     |
+| Typaloc (SLA-12)  | Conformer (cv)              | 54.10%          | 53.85%     |
+| Typaloc (SLA-12)  | Conformer(ester)            | 71.48%          | 72.25%     |
 
-| Datasets          | Models                       | WER (SileroVAD) | WER (rVAD) |
-|-------------------|------------------------------|-----------------|------------|
-| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr  | 18.64%          | /          |
-| Typaloc (CTR-12)  | Whisper-medium               | 60.18%          | /          |
-| Typaloc (CTR-12)  | whisper-medium-VAD-chunk     | 20.53%          | 19.85%     |
-| Typaloc (CTR-12)  | whisper-large                | 60.21%          | /          |
-| Typaloc (CTR-12)  | whisper-large-VAD-chunk      | 14.54%          | **13.46%** |
+
+| Datasets          | Models                      | WER (SileroVAD) | WER (rVAD) |
+|-------------------|-----------------------------|-----------------|-----------|
+| Typaloc (CTR-12)  | asr-wav2vec2-commonvoice-fr | 18.64%          | /         |
+| Typaloc (CTR-12)  | Whisper-medium              | 60.18%          | /         |
+| Typaloc (CTR-12)  | whisper-medium-VAD-chunk    | 20.53%          | 19.85%    |
+| Typaloc (CTR-12)  | whisper-large               | 60.21%          | /         |
+| Typaloc (CTR-12)  | whisper-large-VAD-chunk     | 14.54%          | **13.46%** |
+| Typaloc (CTR-12)  | Conformer(cv)                | %               | %    |
 --------------------------------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models

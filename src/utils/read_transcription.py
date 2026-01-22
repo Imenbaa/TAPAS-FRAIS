@@ -224,3 +224,59 @@ def read_transcription_text_from_textgrid(tg_path):
 
     return " ".join(best_labels)
 
+import re
+
+import re
+
+def clean_text(text):
+    # enlever IDs type gpd_555 / gpf_568
+    text = re.sub(r"\b[gG]p[df]_\d+\b", "", text)
+
+    # garder le mot dans [mot, tag]
+    text = re.sub(r"\[([^\],]+),[^\]]+\]", r"\1", text)
+
+    # supprimer annotations (R), (@), etc.
+    text = re.sub(r"\([^)]*\)", "", text)
+
+    # supprimer rires
+    text = re.sub(r"\*+[^*]+\*+", "", text)
+
+    # ❗ supprimer contenu phonétique entre $
+    text = re.sub(r"\$[^$]+\$", "", text)
+
+    # ❗ supprimer tokens phonétiques isolés (aa kk jj etc.)
+    text = re.sub(r"\b[a-z]{1,2}\b", "", text)
+
+    # ❗ supprimer #a
+    text = re.sub(r"#\w+", "", text)
+
+    # normaliser espaces
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
+
+
+def extract_words_text(textgrid_path):
+    words = []
+
+    with open(textgrid_path, "r", encoding="utf-16") as f:
+        for line in f:
+            line = line.strip()
+
+            if not line.startswith("text ="):
+                continue
+
+            text = line.split("=", 1)[1].strip().strip('"')
+
+            # ignorer silences
+            if text == "#" or not text:
+                continue
+
+            text = clean_text(text)
+
+            if text:
+                words.extend(text.split())
+
+    return " ".join(words)
+
+
