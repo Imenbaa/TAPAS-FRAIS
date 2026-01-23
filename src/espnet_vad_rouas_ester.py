@@ -79,30 +79,58 @@ def vad_collector(sample_rate, frame_duration_ms, vad, frames, padding_duration_
     if segments:
         yield b''.join([f.bytes for f in segments])
 
-def merge_small_segments(df_speech_labels) :
-    seuil = 2 # 15seconds minimum
+def merge_small_segments(df_speech_labels):
+    seuil = 2  # keep as requested
+
     i = 0
-    while i < df_speech_labels.shape[0] - 1 :
-        if (df_speech_labels.iloc[i,1] - df_speech_labels.iloc[i,0]) < seuil :
-            df_speech_labels.iloc[i,1] = df_speech_labels.iloc[i+1,1]
-            df_speech_labels.drop(index=df_speech_labels.iloc[i+1].name, axis = 0, inplace = True)
-        else :
-            i = i+1
+    df_speech_labels = df_speech_labels.reset_index(drop=True)
+
+    while i < df_speech_labels.shape[0] - 1:
+        start_i = df_speech_labels.iloc[i, 0]
+        end_i   = df_speech_labels.iloc[i, 1]
+
+        if (end_i - start_i) < seuil:
+            # merge with next
+            df_speech_labels.iloc[i, 1] = df_speech_labels.iloc[i + 1, 1]
+            df_speech_labels.drop(index=i + 1, inplace=True)
+            df_speech_labels.reset_index(drop=True, inplace=True)
+
+            # DO NOT increment i → keep merging until duration >= seuil
+        else:
+            i += 1
+
     return df_speech_labels
 
 
+
 def inferSegment(waveform, sample_rate, vad_timestamps) :
+    MIN_DUR = 0.3
     begin = int(vad_timestamps.start * sample_rate)
     end = int(vad_timestamps.end * sample_rate)
-    waveform = waveform[begin:end+1]
 
-    results = speech2text(speech = waveform)
+    # safety checks
+    if end <= begin:
+        return ""
+
+    if (end - begin) < int(MIN_DUR * sample_rate):
+        return ""
+
+    segment = waveform[begin:end]
+
+    try:
+        results = speech2text(speech=segment)
+    except Exception:
+        return ""
+
     nbests = [text for text, token, token_int, hyp in results]
-    text = nbests[0] if nbests is not None and len(nbests) > 0 else ""
-    return text+" "
+    text = nbests[0] if nbests else ""
+
+    return text + " "
+
 
 def computeOneFile(args,wav_file) :
     # si l'output est un fichier ou un dossier
+
     if args.vad =="rvad":
         res_file = args.output+wav_file.split("/")[-1].split(".")[0]+".trn"
     else:

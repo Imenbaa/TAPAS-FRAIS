@@ -1,5 +1,5 @@
 #python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" --ref_trans "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/typaloc/" --vad silero --log_file CEREB_conf_silero
-python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" --ref_trans "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/typaloc/" --vad rvad --log_file CEREB_conf_rvad
+#python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" --ref_trans "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-CEREB" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/typaloc/" --vad rvad --log_file CEREB_conf_rvad
 
 #python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL" --ref_trans "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/typaloc/" --vad silero --log_file CTRL_conf_silero
 #python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL" --ref_trans "/vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/typaloc/" --vad rvad --log_file CTRL_conf_rvad
@@ -15,3 +15,9 @@ python -m espnet_vad_rouas_ester --i "/vol/corpora/TAPAS_FRAIS/Data_partagees_Pa
 
 #python -m espnet_vad_rouas_ester --i "/vol/corpora/Rhapsodie/wav16k_corrected" --ref_trans "/vol/corpora/Rhapsodie/TextGrids-fev2013" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/rhap/" --vad rvad --log_file rhap_conf_rvad
 #python -m espnet_vad_rouas_ester --i "/vol/corpora/Rhapsodie/wav16k_corrected" --ref_trans "/vol/corpora/Rhapsodie/TextGrids-fev2013" -o "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/transcriptions/ester/rhap/" --vad silero --log_file rhap_conf_silero
+
+
+
+python -m eval_hmm_tdnn --wav_data "/vol/corpora/Rhapsodie/wav16k_corrected" --ref_trans "/vol/corpora/Rhapsodie/TextGrids-fev2013" --log_file hmm_tdnn_rhap
+
+

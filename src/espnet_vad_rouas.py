@@ -96,14 +96,27 @@ def merge_small_segments(df_speech_labels) :
 
 
 def inferSegment(waveform, sample_rate, vad_timestamps) :
+    MIN_DUR = 0.3
     begin = int(vad_timestamps.start * sample_rate)
     end = int(vad_timestamps.end * sample_rate)
-    waveform = waveform[begin:end+1]
 
-    results = speech2text(speech = waveform)
+    # safety checks
+    if end <= begin:
+        return ""
+
+    if (end - begin) < int(MIN_DUR * sample_rate):
+        return ""
+
+    segment = waveform[begin:end]
+
+    try:
+        results = speech2text(speech=segment)
+    except Exception:
+        return ""
     nbests = [text for text, token, token_int, hyp in results]
-    text = nbests[0] if nbests is not None and len(nbests) > 0 else ""
-    return text+" "
+    text = nbests[0] if nbests else ""
+
+    return text + " "
 
 def computeOneFile(args,wav_file) :
     # si l'output est un fichier ou un dossier
