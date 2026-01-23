@@ -113,14 +113,14 @@ def computeOneFile(args,wav_file) :
 
         # read header only
         info = sf.info(wav_file)
-
+        print(info)
         # already correct → skip
         if info.samplerate == target_sr and info.channels == 1:
             print(f"= Already {target_sr} Hz → skipped")
 
         waveform_vad, sr = audiofile.read(wav_file)
         if waveform_vad.ndim > 1:
-            waveform_vad = np.mean(waveform_vad, axis=1)
+            waveform_vad = np.mean(waveform_vad, axis=0)
 
         # resample
         waveform_vad = librosa.resample(
@@ -182,7 +182,7 @@ def main():
     for tg, wav in tg_to_wav.items():
         wav_file = os.path.join(args.input, wav)
         trans_file = os.path.join(args.ref_trans, tg)
-        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg != "CCM-004773-01_L01.TextGrid":
+        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg != "CCM-004773-01_L01.TextGrid" and wav !="CCM-004773-01_L01.wav":
             number_files += 1
             logging.info(f" File duration: {librosa.get_duration(filename=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:

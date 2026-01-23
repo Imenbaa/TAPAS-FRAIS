@@ -86,9 +86,10 @@ With this method the original timestamp is preserved and we prevent over-segment
 | Rhapsodie                | Whisper-medium              | 67.05%      | /          |
 | Rhapsodie                | Whisper-medium-VAD-chunk    | 50.79%      | 48.24%     |
 | Rhapsodie                | Hmm_TDNN (ester)            | %           | 35.05%     |
-| Rhapsodie                | Conformer (ester)           | %           | **22.32%** |
-| Rhapsodie                | Conformer (CV)              | 31.13%      | 29.77% |
+| Rhapsodie                | Conformer (ester)           | **21.85%**  | 22.32%     |
+| Rhapsodie                | Conformer (CV)              | 31.13%      | 29.77%     |
 | Rhapsodie                | Whisper-large-VAD-chunk     | 45.73%      | 43.29%     |
+| Rhapsodie                | HMM-TDNN                    | %      | %     |
   ------------------------------------------------------------------
 Dans la version Rhapsodie corrected, il y a des fichiers wav qui ont été retirés. 
 
@@ -106,6 +107,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (PARK-8)  | whisper-large-VAD-chunk     | 40.37%         | 38.00%     |
 | Typaloc (PARK-8)  | Conformer (cv)              | 31.78%         | 32.60%     |
 | Typaloc (PARK-8)  | Conformer (ester)           | 48.63%         | 47.56%     |
+| Typaloc (PARK-8)  | HMM-TDNN                    | %              | %     |
 
 | Datasets          | Models                      | WER(sileroVAD) | WER (rVAD) |
 |-------------------|-----------------------------|----------------|------------| 
@@ -115,6 +117,8 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (CEREB-7) | whisper-large               | 57.91%         | /          |
 | Typaloc (CEREB-7) | whisper-large-VAD-chunk     | 36.08%         | **34.57%** |
 | Typaloc (CEREB-7) | Conformer(cv)               |  38.07%        | 36.34%     |
+| Typaloc (CEREB-7) | Conformer(ester)            |  48.51%        | 46.05%     |
+| Typaloc (CEREB-7) | HMM-TDNN                    |  %        | %     |
 
 | Datasets          | Models                      | WER (sileroVAD) | WER (rVAD) |
 |-------------------|-----------------------------|-----------------|------------| 
@@ -125,6 +129,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (SLA-12)  | whisper-large-VAD-chunk     | 39.57%          | **38.29%** |
 | Typaloc (SLA-12)  | Conformer (cv)              | 54.10%          | 53.85%     |
 | Typaloc (SLA-12)  | Conformer(ester)            | 71.48%          | 72.25%     |
+| Typaloc (SLA-12)  | HMM-TDNN                    | %          | %     |
 
 
 | Datasets          | Models                      | WER (SileroVAD) | WER (rVAD) |
@@ -133,8 +138,11 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 | Typaloc (CTR-12)  | Whisper-medium              | 60.18%          | /         |
 | Typaloc (CTR-12)  | whisper-medium-VAD-chunk    | 20.53%          | 19.85%    |
 | Typaloc (CTR-12)  | whisper-large               | 60.21%          | /         |
-| Typaloc (CTR-12)  | whisper-large-VAD-chunk     | 14.54%          | **13.46%** |
-| Typaloc (CTR-12)  | Conformer(cv)                | %               | %    |
+| Typaloc (CTR-12)  | whisper-large-VAD-chunk     | 14.54%          | **13.46%**|
+| Typaloc (CTR-12)  | Conformer(cv)               | 15.01%          | 15.86%    |
+| Typaloc (CTR-12)  | Conformer(ester)            | 18.69%          | 20.72%    |
+| Typaloc (CTR-12)  | HMM-TDNN                    | %               | %    |
+
 --------------------------------------------------------------------------------------
 
 ### WER Analysis for datasets across ASR models

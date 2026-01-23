@@ -57,7 +57,7 @@ def main(args):
     for tg,wav in tg_to_wav.items():
         wav_file = os.path.join(args.wav_data, wav)
         trans_file = os.path.join(args.ref_trans, tg)
-        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid":
+        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid" and wav !="CCM-004773-01_L01.wav":
             number_files += 1
             logging.info(f" File duration: {librosa.get_duration(filename=wav_file)} seconds")
             if "Rhapsodie" in args.ref_trans:

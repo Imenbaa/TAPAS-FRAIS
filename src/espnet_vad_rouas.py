@@ -117,14 +117,15 @@ def computeOneFile(args,wav_file) :
 
         # read header only
         info = sf.info(wav_file)
-
+        print(info)
         # already correct → skip
         if info.samplerate == target_sr and info.channels == 1:
             print(f"= Already {target_sr} Hz → skipped")
 
         waveform_vad, sr = audiofile.read(wav_file)
+        logger.info(waveform_vad.shape)
         if waveform_vad.ndim > 1:
-            waveform_vad = np.mean(waveform_vad, axis=1)
+            waveform_vad = np.mean(waveform_vad, axis=0)
         logger.info(waveform_vad.shape)
         # resample
         waveform_vad = librosa.resample(waveform_vad.astype(np.float32),orig_sr=sr,target_sr=16000)

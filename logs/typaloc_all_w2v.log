@@ -1,80 +1,80 @@
-2026-01-22 16:08:53,523 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
-2026-01-22 16:08:53,524 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
-2026-01-22 16:08:53,557 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
-2026-01-22 16:09:14,033 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
-2026-01-22 16:09:14,069 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
-2026-01-22 16:09:14,069 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
-2026-01-22 16:09:14,069 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
-2026-01-22 16:09:14,069 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
-2026-01-22 16:09:14,069 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
-2026-01-22 16:09:14,069 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
-2026-01-22 16:09:14,069 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
-2026-01-22 16:09:14,069 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
-2026-01-22 16:09:14,069 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
-2026-01-22 16:09:14,069 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
-2026-01-22 16:09:14,069 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
-2026-01-22 16:09:24,955 | INFO |  File duration: 105.9572 seconds
-2026-01-22 16:09:26,352 | INFO | Created a temporary directory at /tmp/tmpbwuactor
-2026-01-22 16:09:26,352 | INFO | Writing /tmp/tmpbwuactor/_remote_module_non_scriptable.py
-2026-01-22 16:09:26,760 | DEBUG | Registered checkpoint save hook for save
-2026-01-22 16:09:26,760 | DEBUG | Registered checkpoint load hook for load_if_possible
-2026-01-22 16:09:26,838 | INFO | File: AEX-CAB000-01_P01.wav | WER=82.862524 | S=113 D=260 I=67
-2026-01-22 16:09:26,838 | INFO | ------------------------------
-2026-01-22 16:09:26,838 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965]}
-2026-01-22 16:09:26,855 | INFO |  File duration: 190.0183 seconds
-2026-01-22 16:09:28,136 | INFO | File: AEX-CAB000-01_P02.wav | WER=88.496732 | S=261 D=322 I=94
-2026-01-22 16:09:28,136 | INFO | ------------------------------
-2026-01-22 16:09:28,136 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379]}
-2026-01-22 16:09:28,137 | INFO |  File duration: 121.74545 seconds
-2026-01-22 16:09:28,922 | INFO | File: AEX-CAC000-01_P01.wav | WER=88.709677 | S=126 D=297 I=72
-2026-01-22 16:09:28,922 | INFO | ------------------------------
-2026-01-22 16:09:28,922 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483]}
-2026-01-22 16:09:28,938 | INFO |  File duration: 117.87935 seconds
-2026-01-22 16:09:29,667 | INFO | File: AEX-CAC000-01_P02.wav | WER=86.089645 | S=148 D=362 I=47
-2026-01-22 16:09:29,668 | INFO | ------------------------------
-2026-01-22 16:09:29,668 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756]}
-2026-01-22 16:09:29,668 | INFO |  File duration: 83.0 seconds
-2026-01-22 16:09:30,072 | INFO | File: AEX-CAC000-01_P03.wav | WER=79.365079 | S=90 D=225 I=35
-2026-01-22 16:09:30,072 | INFO | ------------------------------
-2026-01-22 16:09:30,072 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937]}
-2026-01-22 16:09:30,073 | INFO |  File duration: 127.3026 seconds
-2026-01-22 16:09:30,727 | INFO | File: AEX-CAG000-01_P01.wav | WER=91.122278 | S=249 D=272 I=23
-2026-01-22 16:09:30,727 | INFO | ------------------------------
-2026-01-22 16:09:30,727 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143]}
-2026-01-22 16:09:30,737 | INFO |  File duration: 183.1297 seconds
-2026-01-22 16:09:31,981 | INFO | File: AEX-CAG000-01_P02.wav | WER=87.018256 | S=257 D=527 I=74
-2026-01-22 16:09:31,981 | INFO | ------------------------------
-2026-01-22 16:09:31,981 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933]}
-2026-01-22 16:09:31,982 | INFO |  File duration: 53.4329 seconds
-2026-01-22 16:09:32,183 | INFO | File: AEX-CLJ000-01_P01.wav | WER=83.225806 | S=85 D=146 I=27
-2026-01-22 16:09:32,183 | INFO | ------------------------------
-2026-01-22 16:09:32,183 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129]}
-2026-01-22 16:09:32,183 | INFO |  File duration: 60.4287 seconds
-2026-01-22 16:09:32,417 | INFO | File: AEX-CLJ000-01_P02.wav | WER=80.116959 | S=59 D=179 I=36
-2026-01-22 16:09:32,417 | INFO | ------------------------------
-2026-01-22 16:09:32,417 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749]}
-2026-01-22 16:09:32,418 | INFO |  File duration: 95.69365 seconds
-2026-01-22 16:09:32,844 | INFO | File: AEX-CLJ000-01_P03.wav | WER=85.770751 | S=119 D=251 I=64
-2026-01-22 16:09:32,844 | INFO | ------------------------------
-2026-01-22 16:09:32,844 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423]}
-2026-01-22 16:09:32,844 | INFO |  File duration: 94.51805 seconds
-2026-01-22 16:09:33,313 | INFO | File: AEX-CLJ000-01_P04.wav | WER=82.772277 | S=109 D=263 I=46
-2026-01-22 16:09:33,313 | INFO | ------------------------------
-2026-01-22 16:09:33,313 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277]}
-2026-01-22 16:09:33,314 | INFO |  File duration: 271.62 seconds
-2026-01-22 16:09:36,769 | INFO | File: AEX-CML000-01_P01.wav | WER=81.191432 | S=281 D=781 I=151
-2026-01-22 16:09:36,769 | INFO | ------------------------------
-2026-01-22 16:09:36,769 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167]}
-2026-01-22 16:09:36,770 | INFO |  File duration: 42.34435 seconds
-2026-01-22 16:09:36,903 | INFO | File: AEX-CML000-01_P02.wav | WER=79.411765 | S=44 D=119 I=26
-2026-01-22 16:09:36,903 | INFO | ------------------------------
-2026-01-22 16:09:36,903 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235]}
-2026-01-22 16:09:36,904 | INFO |  File duration: 146.4575 seconds
-2026-01-22 16:09:37,914 | INFO | File: AEX-CSR000-01_P01.wav | WER=81.195335 | S=131 D=374 I=52
-2026-01-22 16:09:37,914 | INFO | ------------------------------
-2026-01-22 16:09:37,914 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235, 81.19533527696792]}
-2026-01-22 16:09:37,914 | INFO |  File duration: 152.6945 seconds
-2026-01-22 16:09:39,013 | INFO | File: AEX-CSR000-01_P02.wav | WER=83.469945 | S=142 D=389 I=80
-2026-01-22 16:09:39,013 | INFO | ------------------------------
-2026-01-22 16:09:39,013 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235, 81.19533527696792, 83.46994535519126]}
-2026-01-22 16:09:39,014 | INFO |  File duration: 848.6196825396826 seconds
+2026-01-23 09:41:21,193 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-23 09:41:21,194 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-23 09:41:21,229 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-23 09:41:26,618 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-23 09:41:26,631 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-23 09:41:26,631 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-23 09:41:26,631 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-23 09:41:26,631 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-23 09:41:26,631 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-23 09:41:26,631 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-23 09:41:26,631 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-23 09:41:26,631 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-23 09:41:26,631 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-23 09:41:26,631 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-23 09:41:26,631 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-23 09:41:29,421 | INFO |  File duration: 105.9572 seconds
+2026-01-23 09:41:31,558 | INFO | Created a temporary directory at /tmp/tmp2mcq11ie
+2026-01-23 09:41:31,559 | INFO | Writing /tmp/tmp2mcq11ie/_remote_module_non_scriptable.py
+2026-01-23 09:41:32,036 | DEBUG | Registered checkpoint save hook for save
+2026-01-23 09:41:32,036 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-23 09:41:32,113 | INFO | File: AEX-CAB000-01_P01.wav | WER=82.862524 | S=113 D=260 I=67
+2026-01-23 09:41:32,113 | INFO | ------------------------------
+2026-01-23 09:41:32,113 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965]}
+2026-01-23 09:41:32,114 | INFO |  File duration: 190.0183 seconds
+2026-01-23 09:41:33,045 | INFO | File: AEX-CAB000-01_P02.wav | WER=88.496732 | S=261 D=322 I=94
+2026-01-23 09:41:33,045 | INFO | ------------------------------
+2026-01-23 09:41:33,045 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379]}
+2026-01-23 09:41:33,045 | INFO |  File duration: 121.74545 seconds
+2026-01-23 09:41:33,595 | INFO | File: AEX-CAC000-01_P01.wav | WER=88.709677 | S=126 D=297 I=72
+2026-01-23 09:41:33,596 | INFO | ------------------------------
+2026-01-23 09:41:33,596 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483]}
+2026-01-23 09:41:33,596 | INFO |  File duration: 117.87935 seconds
+2026-01-23 09:41:34,142 | INFO | File: AEX-CAC000-01_P02.wav | WER=86.089645 | S=148 D=362 I=47
+2026-01-23 09:41:34,142 | INFO | ------------------------------
+2026-01-23 09:41:34,142 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756]}
+2026-01-23 09:41:34,143 | INFO |  File duration: 83.0 seconds
+2026-01-23 09:41:34,442 | INFO | File: AEX-CAC000-01_P03.wav | WER=79.365079 | S=90 D=225 I=35
+2026-01-23 09:41:34,443 | INFO | ------------------------------
+2026-01-23 09:41:34,443 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937]}
+2026-01-23 09:41:34,443 | INFO |  File duration: 127.3026 seconds
+2026-01-23 09:41:34,918 | INFO | File: AEX-CAG000-01_P01.wav | WER=91.122278 | S=249 D=272 I=23
+2026-01-23 09:41:34,918 | INFO | ------------------------------
+2026-01-23 09:41:34,918 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143]}
+2026-01-23 09:41:34,919 | INFO |  File duration: 183.1297 seconds
+2026-01-23 09:41:35,850 | INFO | File: AEX-CAG000-01_P02.wav | WER=87.018256 | S=257 D=527 I=74
+2026-01-23 09:41:35,850 | INFO | ------------------------------
+2026-01-23 09:41:35,851 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933]}
+2026-01-23 09:41:35,851 | INFO |  File duration: 53.4329 seconds
+2026-01-23 09:41:36,008 | INFO | File: AEX-CLJ000-01_P01.wav | WER=83.225806 | S=85 D=146 I=27
+2026-01-23 09:41:36,008 | INFO | ------------------------------
+2026-01-23 09:41:36,008 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129]}
+2026-01-23 09:41:36,008 | INFO |  File duration: 60.4287 seconds
+2026-01-23 09:41:36,188 | INFO | File: AEX-CLJ000-01_P02.wav | WER=80.116959 | S=59 D=179 I=36
+2026-01-23 09:41:36,188 | INFO | ------------------------------
+2026-01-23 09:41:36,188 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749]}
+2026-01-23 09:41:36,188 | INFO |  File duration: 95.69365 seconds
+2026-01-23 09:41:36,503 | INFO | File: AEX-CLJ000-01_P03.wav | WER=85.770751 | S=119 D=251 I=64
+2026-01-23 09:41:36,503 | INFO | ------------------------------
+2026-01-23 09:41:36,504 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423]}
+2026-01-23 09:41:36,504 | INFO |  File duration: 94.51805 seconds
+2026-01-23 09:41:36,864 | INFO | File: AEX-CLJ000-01_P04.wav | WER=82.772277 | S=109 D=263 I=46
+2026-01-23 09:41:36,864 | INFO | ------------------------------
+2026-01-23 09:41:36,864 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277]}
+2026-01-23 09:41:36,865 | INFO |  File duration: 271.62 seconds
+2026-01-23 09:41:39,472 | INFO | File: AEX-CML000-01_P01.wav | WER=81.191432 | S=281 D=781 I=151
+2026-01-23 09:41:39,472 | INFO | ------------------------------
+2026-01-23 09:41:39,472 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167]}
+2026-01-23 09:41:39,472 | INFO |  File duration: 42.34435 seconds
+2026-01-23 09:41:39,569 | INFO | File: AEX-CML000-01_P02.wav | WER=79.411765 | S=44 D=119 I=26
+2026-01-23 09:41:39,569 | INFO | ------------------------------
+2026-01-23 09:41:39,569 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235]}
+2026-01-23 09:41:39,569 | INFO |  File duration: 146.4575 seconds
+2026-01-23 09:41:40,316 | INFO | File: AEX-CSR000-01_P01.wav | WER=81.195335 | S=131 D=374 I=52
+2026-01-23 09:41:40,317 | INFO | ------------------------------
+2026-01-23 09:41:40,317 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235, 81.19533527696792]}
+2026-01-23 09:41:40,317 | INFO |  File duration: 152.6945 seconds
+2026-01-23 09:41:41,132 | INFO | File: AEX-CSR000-01_P02.wav | WER=83.469945 | S=142 D=389 I=80
+2026-01-23 09:41:41,132 | INFO | ------------------------------
+2026-01-23 09:41:41,132 | INFO | {'SLA': [], 'PARK|CEREB': [], 'CTRL': [82.86252354048965, 88.49673202614379, 88.70967741935483, 86.08964451313756, 79.36507936507937, 91.12227805695143, 87.0182555780933, 83.2258064516129, 80.11695906432749, 85.7707509881423, 82.77227722772277, 81.19143239625167, 79.41176470588235, 81.19533527696792, 83.46994535519126]}
+2026-01-23 09:41:41,132 | INFO |  File duration: 848.6196825396826 seconds

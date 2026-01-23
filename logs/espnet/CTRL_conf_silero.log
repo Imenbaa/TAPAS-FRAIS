@@ -1,8 +1,8 @@
-2026-01-22 22:26:52,045 | INFO | config file: /home/rouas/experiments/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml
-2026-01-22 22:26:52,073 | INFO | Vocabulary size: 350
-2026-01-22 22:26:52,638 | INFO | Gradient checkpoint layers: []
-2026-01-22 22:26:55,014 | INFO | BatchBeamSearch implementation is selected.
-2026-01-22 22:26:55,017 | INFO | Beam_search: BatchBeamSearch(
+2026-01-23 10:19:12,519 | INFO | config file: /home/rouas/experiments/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml
+2026-01-23 10:19:12,551 | INFO | Vocabulary size: 350
+2026-01-23 10:19:13,325 | INFO | Gradient checkpoint layers: []
+2026-01-23 10:19:15,275 | INFO | BatchBeamSearch implementation is selected.
+2026-01-23 10:19:15,279 | INFO | Beam_search: BatchBeamSearch(
   (nn_dict): ModuleDict(
     (decoder): TransformerDecoder(
       (embed): Sequential(
@@ -198,136 +198,118 @@
     )
   )
 )
-2026-01-22 22:26:55,017 | INFO | Decoding device=cuda, dtype=float32
-2026-01-22 22:26:55,018 | INFO | Text tokenizer: SentencepiecesTokenizer(model="/vol/experiments/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/bpe_unigram350/bpe.model")
-2026-01-22 22:26:55,019 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAB000-02_L01.wav
-2026-01-22 22:26:55,019 | INFO |  File duration: 68.39650793650793 seconds
-2026-01-22 22:26:55,029 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
-2026-01-22 22:26:55,031 | DEBUG | Registered checkpoint save hook for _speechbrain_save
-2026-01-22 22:26:55,031 | DEBUG | Registered checkpoint load hook for _speechbrain_load
-2026-01-22 22:26:55,032 | DEBUG | Registered checkpoint save hook for save
-2026-01-22 22:26:55,032 | DEBUG | Registered checkpoint load hook for load
-2026-01-22 22:26:55,231 | INFO | Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
-2026-01-22 22:26:55,231 | INFO | Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
-2026-01-22 22:26:55,232 | DEBUG | Registered checkpoint save hook for _save
-2026-01-22 22:26:55,232 | DEBUG | Registered checkpoint load hook for _recover
-2026-01-22 22:26:55,245 | INFO | File: AEX-CAB000-02_L01.wav | WER=9.604520 | S=15 D=2 I=0
-2026-01-22 22:26:55,245 | INFO | ------------------------------
-2026-01-22 22:26:55,245 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAB000-02_L01_pr_analyse.wav
-2026-01-22 22:26:55,245 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAC000-02_L01.wav
-2026-01-22 22:26:55,245 | INFO |  File duration: 71.22968253968254 seconds
-2026-01-22 22:26:55,261 | INFO | File: AEX-CAC000-02_L01.wav | WER=13.636364 | S=9 D=1 I=14
-2026-01-22 22:26:55,261 | INFO | ------------------------------
-2026-01-22 22:26:55,261 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAC000-02_L01_pr_analyse.wav
-2026-01-22 22:26:55,261 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAG000-01_L01.wav
-2026-01-22 22:26:55,261 | INFO |  File duration: 70.09696145124717 seconds
-2026-01-22 22:26:55,276 | INFO | File: AEX-CAG000-01_L01.wav | WER=11.363636 | S=14 D=1 I=5
-2026-01-22 22:26:55,276 | INFO | ------------------------------
-2026-01-22 22:26:55,276 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAG000-01_L01_pr_analyse.wav
-2026-01-22 22:26:55,277 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CLJ000-02_L01.wav
-2026-01-22 22:26:55,277 | INFO |  File duration: 75.73018140589569 seconds
-2026-01-22 22:26:55,293 | INFO | File: AEX-CLJ000-02_L01.wav | WER=26.704545 | S=17 D=5 I=25
-2026-01-22 22:26:55,293 | INFO | ------------------------------
-2026-01-22 22:26:55,293 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CLJ000-02_L01_pr_analyse.wav
-2026-01-22 22:26:55,293 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CML000-01_L01.wav
-2026-01-22 22:26:55,293 | INFO |  File duration: 58.55369614512472 seconds
-2026-01-22 22:26:55,308 | INFO | File: AEX-CML000-01_L01.wav | WER=8.522727 | S=10 D=2 I=3
-2026-01-22 22:26:55,308 | INFO | ------------------------------
-2026-01-22 22:26:55,308 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CML000-01_L01_pr_analyse.wav
-2026-01-22 22:26:55,308 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CSR000-01_L01.wav
-2026-01-22 22:26:55,308 | INFO |  File duration: 76.21907029478459 seconds
-2026-01-22 22:26:55,323 | INFO | File: AEX-CSR000-01_L01.wav | WER=14.689266 | S=18 D=6 I=2
-2026-01-22 22:26:55,323 | INFO | ------------------------------
-2026-01-22 22:26:55,323 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CSR000-01_L01_pr_analyse.wav
-2026-01-22 22:26:55,323 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CDB000-01_L01.wav
-2026-01-22 22:26:55,323 | INFO |  File duration: 86.34117913832199 seconds
-2026-01-22 22:26:55,330 | INFO | (1903823,)
-2026-01-22 22:27:01,032 | INFO | speech length: 63681
-2026-01-22 22:27:04,188 | INFO | speech length: 62721
-2026-01-22 22:27:07,524 | INFO | speech length: 46721
-2026-01-22 22:27:10,598 | INFO | speech length: 50881
-2026-01-22 22:27:13,411 | INFO | speech length: 111681
-2026-01-22 22:27:19,160 | INFO | speech length: 58881
-2026-01-22 22:27:22,062 | INFO | speech length: 34881
-2026-01-22 22:27:24,613 | INFO | speech length: 38081
-2026-01-22 22:27:27,661 | INFO | speech length: 79041
-2026-01-22 22:27:31,763 | INFO | speech length: 78401
-2026-01-22 22:27:36,443 | INFO | speech length: 48321
-2026-01-22 22:27:40,019 | INFO | speech length: 44161
-2026-01-22 22:27:43,086 | INFO | speech length: 64961
-2026-01-22 22:27:46,366 | INFO | speech length: 49921
-2026-01-22 22:27:50,379 | INFO | speech length: 46081
-2026-01-22 22:27:52,729 | INFO | speech length: 49921
-2026-01-22 22:27:55,878 | INFO | speech length: 47681
-2026-01-22 22:27:58,671 | INFO | speech length: 53441
-2026-01-22 22:28:01,468 | INFO | speech length: 63681
-2026-01-22 22:28:04,039 | INFO | speech length: 27201
-2026-01-22 22:28:06,210 | INFO | File: BEX-CDB000-01_L01.wav | WER=9.604520 | S=14 D=1 I=2
-2026-01-22 22:28:06,210 | INFO | ------------------------------
-2026-01-22 22:28:06,210 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CDB000-01_L01_pr_analyse.wav
-2026-01-22 22:28:06,210 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CEB000-01_L01.wav
-2026-01-22 22:28:06,210 | INFO |  File duration: 72.99619047619048 seconds
-2026-01-22 22:28:06,223 | INFO | (3219132,)
-2026-01-22 22:28:10,366 | INFO | speech length: 105921
-2026-01-22 22:28:16,425 | INFO | speech length: 49601
-2026-01-22 22:28:19,638 | INFO | speech length: 46081
-2026-01-22 22:28:22,536 | INFO | speech length: 107201
-2026-01-22 22:28:29,699 | INFO | speech length: 32641
-2026-01-22 22:28:31,874 | INFO | speech length: 76801
-2026-01-22 22:28:37,443 | INFO | speech length: 40641
-2026-01-22 22:28:39,754 | INFO | speech length: 45121
-2026-01-22 22:28:42,600 | INFO | speech length: 88641
-2026-01-22 22:28:48,532 | INFO | speech length: 111361
-2026-01-22 22:28:56,044 | INFO | speech length: 46401
-2026-01-22 22:28:59,634 | INFO | speech length: 43201
-2026-01-22 22:29:02,986 | INFO | speech length: 71361
-2026-01-22 22:29:06,849 | INFO | speech length: 59521
-2026-01-22 22:29:09,913 | INFO | speech length: 58241
-2026-01-22 22:29:13,101 | INFO | speech length: 49281
-2026-01-22 22:29:15,943 | INFO | File: BEX-CEB000-01_L01.wav | WER=19.886364 | S=26 D=3 I=6
-2026-01-22 22:29:15,943 | INFO | ------------------------------
-2026-01-22 22:29:15,943 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CEB000-01_L01_pr_analyse.wav
-2026-01-22 22:29:15,943 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CHE000-01_L01.wav
-2026-01-22 22:29:15,943 | INFO |  File duration: 60.74340136054422 seconds
-2026-01-22 22:29:15,954 | INFO | (2678784,)
-2026-01-22 22:29:19,556 | INFO | speech length: 128001
-2026-01-22 22:29:29,530 | INFO | speech length: 40001
-2026-01-22 22:29:33,122 | INFO | speech length: 58561
-2026-01-22 22:29:38,548 | INFO | speech length: 64961
-2026-01-22 22:29:43,467 | INFO | speech length: 64641
-2026-01-22 22:29:48,294 | INFO | speech length: 47361
-2026-01-22 22:29:51,436 | INFO | speech length: 85121
-2026-01-22 22:30:00,182 | INFO | speech length: 53761
-2026-01-22 22:30:04,775 | INFO | speech length: 40001
-2026-01-22 22:30:07,388 | INFO | speech length: 51201
-2026-01-22 22:30:12,885 | INFO | speech length: 100481
-2026-01-22 22:30:20,547 | INFO | speech length: 98881
-2026-01-22 22:30:28,209 | INFO | File: BEX-CHE000-01_L01.wav | WER=15.819209 | S=19 D=8 I=1
-2026-01-22 22:30:28,209 | INFO | ------------------------------
-2026-01-22 22:30:28,209 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CHE000-01_L01_pr_analyse.wav
-2026-01-22 22:30:28,209 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CKN000-01_L01.wav
-2026-01-22 22:30:28,209 | INFO |  File duration: 77.60358276643991 seconds
-2026-01-22 22:30:28,217 | INFO | (1711159,)
-2026-01-22 22:30:31,758 | INFO | speech length: 125761
-2026-01-22 22:30:38,663 | INFO | speech length: 40961
-2026-01-22 22:30:42,213 | INFO | speech length: 82561
-2026-01-22 22:30:47,377 | INFO | speech length: 75521
-2026-01-22 22:30:53,182 | INFO | speech length: 32001
-2026-01-22 22:30:55,662 | INFO | speech length: 34241
-2026-01-22 22:30:58,613 | INFO | speech length: 39361
-2026-01-22 22:31:02,407 | INFO | speech length: 67201
-2026-01-22 22:31:07,109 | INFO | speech length: 72321
-2026-01-22 22:31:12,531 | INFO | speech length: 54401
-2026-01-22 22:31:16,934 | INFO | speech length: 66241
-2026-01-22 22:31:22,446 | INFO | speech length: 77441
-2026-01-22 22:31:29,652 | INFO | speech length: 80641
-2026-01-22 22:31:34,267 | INFO | speech length: 38401
-2026-01-22 22:31:37,734 | INFO | speech length: 56001
-2026-01-22 22:31:41,079 | INFO | speech length: 66561
-2026-01-22 22:31:44,737 | INFO | speech length: 23041
-2026-01-22 22:31:46,634 | INFO | File: BEX-CKN000-01_L01.wav | WER=10.734463 | S=15 D=2 I=2
-2026-01-22 22:31:46,634 | INFO | ------------------------------
-2026-01-22 22:31:46,634 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CKN000-01_L01_pr_analyse.wav
-2026-01-22 22:31:46,634 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CMB000-01_L01.wav
-2026-01-22 22:31:46,634 | INFO |  File duration: 80.38402083333334 seconds
-2026-01-22 22:31:46,724 | INFO | (2,)
+2026-01-23 10:19:15,279 | INFO | Decoding device=cuda, dtype=float32
+2026-01-23 10:19:15,280 | INFO | Text tokenizer: SentencepiecesTokenizer(model="/vol/experiments/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/bpe_unigram350/bpe.model")
+2026-01-23 10:19:15,280 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAB000-02_L01.wav
+2026-01-23 10:19:15,280 | INFO |  File duration: 68.39650793650793 seconds
+2026-01-23 10:19:15,289 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-23 10:19:15,292 | DEBUG | Registered checkpoint save hook for _speechbrain_save
+2026-01-23 10:19:15,292 | DEBUG | Registered checkpoint load hook for _speechbrain_load
+2026-01-23 10:19:15,292 | DEBUG | Registered checkpoint save hook for save
+2026-01-23 10:19:15,292 | DEBUG | Registered checkpoint load hook for load
+2026-01-23 10:19:15,501 | INFO | Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-01-23 10:19:15,501 | INFO | Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-01-23 10:19:15,502 | DEBUG | Registered checkpoint save hook for _save
+2026-01-23 10:19:15,502 | DEBUG | Registered checkpoint load hook for _recover
+2026-01-23 10:19:15,515 | INFO | File: AEX-CAB000-02_L01.wav | WER=9.604520 | S=15 D=2 I=0
+2026-01-23 10:19:15,515 | INFO | ------------------------------
+2026-01-23 10:19:15,515 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAB000-02_L01_pr_analyse.wav
+2026-01-23 10:19:15,515 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAC000-02_L01.wav
+2026-01-23 10:19:15,515 | INFO |  File duration: 71.22968253968254 seconds
+2026-01-23 10:19:15,532 | INFO | File: AEX-CAC000-02_L01.wav | WER=13.636364 | S=9 D=1 I=14
+2026-01-23 10:19:15,532 | INFO | ------------------------------
+2026-01-23 10:19:15,532 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAC000-02_L01_pr_analyse.wav
+2026-01-23 10:19:15,532 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAG000-01_L01.wav
+2026-01-23 10:19:15,533 | INFO |  File duration: 70.09696145124717 seconds
+2026-01-23 10:19:15,548 | INFO | File: AEX-CAG000-01_L01.wav | WER=11.363636 | S=14 D=1 I=5
+2026-01-23 10:19:15,548 | INFO | ------------------------------
+2026-01-23 10:19:15,548 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CAG000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,548 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CLJ000-02_L01.wav
+2026-01-23 10:19:15,549 | INFO |  File duration: 75.73018140589569 seconds
+2026-01-23 10:19:15,565 | INFO | File: AEX-CLJ000-02_L01.wav | WER=26.704545 | S=17 D=5 I=25
+2026-01-23 10:19:15,566 | INFO | ------------------------------
+2026-01-23 10:19:15,566 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CLJ000-02_L01_pr_analyse.wav
+2026-01-23 10:19:15,566 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CML000-01_L01.wav
+2026-01-23 10:19:15,566 | INFO |  File duration: 58.55369614512472 seconds
+2026-01-23 10:19:15,581 | INFO | File: AEX-CML000-01_L01.wav | WER=8.522727 | S=10 D=2 I=3
+2026-01-23 10:19:15,581 | INFO | ------------------------------
+2026-01-23 10:19:15,581 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CML000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,581 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CSR000-01_L01.wav
+2026-01-23 10:19:15,582 | INFO |  File duration: 76.21907029478459 seconds
+2026-01-23 10:19:15,596 | INFO | File: AEX-CSR000-01_L01.wav | WER=14.689266 | S=18 D=6 I=2
+2026-01-23 10:19:15,597 | INFO | ------------------------------
+2026-01-23 10:19:15,597 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/AEX-CSR000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,597 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CDB000-01_L01.wav
+2026-01-23 10:19:15,597 | INFO |  File duration: 86.34117913832199 seconds
+2026-01-23 10:19:15,612 | INFO | File: BEX-CDB000-01_L01.wav | WER=9.604520 | S=14 D=1 I=2
+2026-01-23 10:19:15,612 | INFO | ------------------------------
+2026-01-23 10:19:15,613 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CDB000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,613 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CEB000-01_L01.wav
+2026-01-23 10:19:15,613 | INFO |  File duration: 72.99619047619048 seconds
+2026-01-23 10:19:15,628 | INFO | File: BEX-CEB000-01_L01.wav | WER=19.886364 | S=26 D=3 I=6
+2026-01-23 10:19:15,629 | INFO | ------------------------------
+2026-01-23 10:19:15,629 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CEB000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,629 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CHE000-01_L01.wav
+2026-01-23 10:19:15,629 | INFO |  File duration: 60.74340136054422 seconds
+2026-01-23 10:19:15,643 | INFO | File: BEX-CHE000-01_L01.wav | WER=15.819209 | S=19 D=8 I=1
+2026-01-23 10:19:15,643 | INFO | ------------------------------
+2026-01-23 10:19:15,643 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CHE000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,643 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CKN000-01_L01.wav
+2026-01-23 10:19:15,643 | INFO |  File duration: 77.60358276643991 seconds
+2026-01-23 10:19:15,659 | INFO | File: BEX-CKN000-01_L01.wav | WER=10.734463 | S=15 D=2 I=2
+2026-01-23 10:19:15,659 | INFO | ------------------------------
+2026-01-23 10:19:15,659 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CKN000-01_L01_pr_analyse.wav
+2026-01-23 10:19:15,659 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CMB000-01_L01.wav
+2026-01-23 10:19:15,659 | INFO |  File duration: 80.38402083333334 seconds
+2026-01-23 10:19:15,681 | INFO | (2, 3858433)
+2026-01-23 10:19:15,736 | INFO | (3858433,)
+2026-01-23 10:19:20,957 | INFO | speech length: 92481
+2026-01-23 10:19:22,802 | INFO | speech length: 90241
+2026-01-23 10:19:24,380 | INFO | speech length: 79041
+2026-01-23 10:19:25,915 | INFO | speech length: 76481
+2026-01-23 10:19:27,631 | INFO | speech length: 83521
+2026-01-23 10:19:29,198 | INFO | speech length: 42561
+2026-01-23 10:19:30,214 | INFO | speech length: 59521
+2026-01-23 10:19:31,431 | INFO | speech length: 73281
+2026-01-23 10:19:33,022 | INFO | speech length: 51201
+2026-01-23 10:19:34,022 | INFO | speech length: 70401
+2026-01-23 10:19:35,496 | INFO | speech length: 76801
+2026-01-23 10:19:36,996 | INFO | speech length: 33921
+2026-01-23 10:19:37,790 | INFO | speech length: 37761
+2026-01-23 10:19:38,232 | INFO | speech length: 53120
+2026-01-23 10:19:39,242 | INFO | speech length: 41601
+2026-01-23 10:19:40,188 | INFO | speech length: 39681
+2026-01-23 10:19:40,796 | INFO | speech length: 37121
+2026-01-23 10:19:41,499 | INFO | speech length: 79361
+2026-01-23 10:19:42,926 | INFO | File: BEX-CMB000-01_L01.wav | WER=19.209040 | S=20 D=9 I=5
+2026-01-23 10:19:42,926 | INFO | ------------------------------
+2026-01-23 10:19:42,926 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CMB000-01_L01_pr_analyse.wav
+2026-01-23 10:19:42,926 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CNKN00-01_L01.wav
+2026-01-23 10:19:42,927 | INFO |  File duration: 77.83328798185941 seconds
+2026-01-23 10:19:43,005 | INFO | (3432448,)
+2026-01-23 10:19:43,005 | INFO | (3432448,)
+2026-01-23 10:19:46,378 | INFO | speech length: 68801
+2026-01-23 10:19:47,281 | INFO | speech length: 47681
+2026-01-23 10:19:48,248 | INFO | speech length: 62081
+2026-01-23 10:19:49,551 | INFO | speech length: 42241
+2026-01-23 10:19:50,489 | INFO | speech length: 72641
+2026-01-23 10:19:52,161 | INFO | speech length: 33921
+2026-01-23 10:19:52,799 | INFO | speech length: 38401
+2026-01-23 10:19:53,559 | INFO | speech length: 42561
+2026-01-23 10:19:54,326 | INFO | speech length: 65601
+2026-01-23 10:19:55,776 | INFO | speech length: 73601
+2026-01-23 10:19:57,255 | INFO | speech length: 108161
+2026-01-23 10:19:59,957 | INFO | speech length: 56961
+2026-01-23 10:20:01,549 | INFO | speech length: 44801
+2026-01-23 10:20:02,264 | INFO | speech length: 49921
+2026-01-23 10:20:03,190 | INFO | speech length: 42561
+2026-01-23 10:20:03,935 | INFO | speech length: 52801
+2026-01-23 10:20:04,905 | INFO | speech length: 58241
+2026-01-23 10:20:06,004 | INFO | speech length: 54401
+2026-01-23 10:20:06,995 | INFO | File: BEX-CNKN00-01_L01.wav | WER=20.338983 | S=21 D=8 I=7
+2026-01-23 10:20:06,995 | INFO | ------------------------------
+2026-01-23 10:20:06,995 | INFO | /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-CTRL/BEX-CNKN00-01_L01_pr_analyse.wav
+2026-01-23 10:20:06,995 | INFO | ===================== GLOBAL WER ======================
+2026-01-23 10:20:06,996 | INFO | The number of files is 12
+2026-01-23 10:20:06,996 | INFO | WER: 15.01%
+2026-01-23 10:20:06,996 | INFO | =============================================================
