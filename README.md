@@ -157,11 +157,11 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
 <img src="figures/del_rhap.png" width="600">
 
-<img src="figures/sub_euh.png" width="600">
+<img src="figures/subs_euh.png" width="600">
 <img src="figures/sub_euh_W2v2.png" width="600">
 <img src="figures/sub_euh_hmm_tdnn.png" width="600">
 <img src="figures/sub_euh_Whisper.png" width="600">
-<img src="figures/sub_euh_Whisper_large.png" width="600">
+<img src="figures/sub_euh_Whisper-large.png" width="600">
 <img src="figures/sub_euh_Conformer(cv).png" width="600">
 <img src="figures/sub_euh_Conformer(ester).png" width="600">
 
