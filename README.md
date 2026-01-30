@@ -155,12 +155,24 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 #### Rhapsodie dataset
 <img src="figures/wer_rhap_plot.png" width="600">
 
+<img src="figures/del_rhap.png" width="600">
+
+<img src="figures/sub_euh.png" width="600">
+<img src="figures/sub_euh_W2v2.png" width="600">
+<img src="figures/sub_euh_hmm_tdnn.png" width="600">
+<img src="figures/sub_euh_Whisper.png" width="600">
+<img src="figures/sub_euh_Whisper_large.png" width="600">
+<img src="figures/sub_euh_Conformer(cv).png" width="600">
+<img src="figures/sub_euh_Conformer(ester).png" width="600">
+
+
 #### TAPAS dataset
 <img src="figures/wer_tapas_plot.png" width="600">
 
 #### Typaloc dataset
 <img src="figures/wer_typaloc_plot.png" width="600">
 <img src="figures/typaloc_heatmap_normalized_group.png" width="600">
+
 
 Remarques: Typaloc CEREB: CCM-002710-01_L01.TextGrid la transcription est décalé au début, elle n'est pas fiable et elle contient le mot "respiration"
 'a', 'jeimais', 'je', 'ne', 'jenase', 'pas', 'nonp', 'premiere', 'rencontre' ce n'est pas mis dans la trasncription ref mais il y a ces mots dans l'audio
