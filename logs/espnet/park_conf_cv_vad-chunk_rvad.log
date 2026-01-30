@@ -1,0 +1,1277 @@
+2026-01-27 15:04:44,107 | INFO | config file: /vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml
+2026-01-27 15:04:44,139 | INFO | Vocabulary size: 350
+2026-01-27 15:04:44,721 | INFO | Gradient checkpoint layers: []
+2026-01-27 15:04:46,939 | INFO | BatchBeamSearch implementation is selected.
+2026-01-27 15:04:46,943 | INFO | Beam_search: BatchBeamSearch(
+  (nn_dict): ModuleDict(
+    (decoder): TransformerDecoder(
+      (embed): Sequential(
+        (0): Embedding(350, 512)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (after_norm): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+      (output_layer): Linear(in_features=512, out_features=350, bias=True)
+      (decoders): MultiSequential(
+        (0): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (1): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (2): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (3): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (4): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (5): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+2026-01-27 15:04:46,944 | INFO | Decoding device=cuda, dtype=float32
+2026-01-27 15:04:46,944 | INFO | Text tokenizer: SentencepiecesTokenizer(model="/vol/experiments/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/bpe_unigram350/bpe.model")
+2026-01-27 15:04:46,945 | INFO |  File duration: 51.82693877551021 seconds
+2026-01-27 15:04:48,885 | INFO | Using rVAD model
+2026-01-27 15:04:51,317 | INFO | speech length: 383680
+2026-01-27 15:04:53,391 | INFO | decoder input length: 599
+2026-01-27 15:04:53,392 | INFO | max output length: 599
+2026-01-27 15:04:53,392 | INFO | min output length: 59
+2026-01-27 15:05:11,256 | INFO | end detected at 193
+2026-01-27 15:05:11,258 | INFO | -535.42 * 0.5 = -267.71 for decoder
+2026-01-27 15:05:11,258 | INFO | -199.66 * 0.5 = -99.83 for ctc
+2026-01-27 15:05:11,258 | INFO | total log probability: -367.54
+2026-01-27 15:05:11,258 | INFO | normalized log probability: -1.98
+2026-01-27 15:05:11,258 | INFO | total number of ended hypotheses: 196
+2026-01-27 15:05:11,260 | INFO | best hypo: ▁deux▁vaillants▁petits▁lutins▁grand'mère▁raconte▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁tour▁vieux▁et▁tout▁cassé▁les▁villageois▁et▁lui▁apportent▁des▁chausss▁à▁réparers▁mais▁je▁ne▁travaillent▁pas▁vites▁tous▁les▁soirs▁il▁manges▁tout▁seuls▁et▁tristement▁ce▁soirs▁il▁y▁a▁devant▁tout▁un▁gros▁tainsou▁souliers▁et▁guette▁à▁le▁coudre▁jamais▁je▁ne▁pourrai▁les▁réparer▁je▁suis▁troppagé▁étant▁malade▁près▁et▁de▁la▁gros▁lochev
+
+2026-01-27 15:05:11,264 | INFO | speech length: 421600
+2026-01-27 15:05:11,298 | INFO | decoder input length: 658
+2026-01-27 15:05:11,298 | INFO | max output length: 658
+2026-01-27 15:05:11,298 | INFO | min output length: 65
+2026-01-27 15:05:36,013 | INFO | end detected at 257
+2026-01-27 15:05:36,015 | INFO | -725.35 * 0.5 = -362.67 for decoder
+2026-01-27 15:05:36,015 | INFO | -331.27 * 0.5 = -165.63 for ctc
+2026-01-27 15:05:36,015 | INFO | total log probability: -528.31
+2026-01-27 15:05:36,015 | INFO | normalized log probability: -2.12
+2026-01-27 15:05:36,015 | INFO | total number of ended hypotheses: 190
+2026-01-27 15:05:36,018 | INFO | best hypo: ▁le▁pauvre▁vieux▁tout▁découragé▁s'endort▁aussitôt▁l'horloge▁s'ouvre▁et▁deux▁petits▁lutinceaux▁sur▁le▁plancher▁l'un▁sa▁beltique▁l'autre▁appelle▁tacque▁rangeant▁les▁étagères▁réparrant▁les▁ouvliers▁et▁le▁corons▁linges▁d'autique▁répparons▁à▁gâtteaux▁thogés▁au▁plafons▁changeant▁ses▁viorit▁d'au▁rejoupt▁tacle▁huit▁sonnes▁et▁les▁deux▁vaillant▁au▁luitains▁renchent▁dans▁la▁pendule▁et▁le▁lendeumain▁le▁provosant▁d'onnier▁s'auveille▁hojouy▁qui▁appa▁les▁ce▁bonds▁gâteaud▁qui▁doncque▁arranger▁la▁maison▁tict▁tict▁glaviologe
+
+2026-01-27 15:05:36,030 | INFO | Chunk: 0 | WER=46.341463 | S=18 D=10 I=10
+2026-01-27 15:05:36,035 | INFO | Chunk: 1 | WER=64.077670 | S=43 D=19 I=4
+2026-01-27 15:05:36,035 | INFO | ['deux', 'vaillants', 'petits', 'lutins', 'grand', 'mere', 'raconte', 'dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tour', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'et', 'lui', 'apportent', 'des', 'chausss', 'a', 'reparers', 'mais', 'je', 'ne', 'travaillent', 'pas', 'vites', 'tous', 'les', 'soirs', 'il', 'manges', 'tout', 'seuls', 'et', 'tristement', 'ce', 'soirs', 'il', 'y', 'a', 'devant', 'tout', 'un', 'gros', 'tainsou', 'souliers', 'et', 'guette', 'a', 'le', 'coudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'troppage', 'etant', 'malade', 'pres', 'et', 'de', 'la', 'gros', 'lochev', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutinceaux', 'sur', 'le', 'plancher', 'l', 'un', 'sa', 'beltique', 'l', 'autre', 'appelle', 'tacque', 'rangeant', 'les', 'etageres', 'reparrant', 'les', 'ouvliers', 'et', 'le', 'corons', 'linges', 'd', 'autique', 'repparons', 'a', 'gatteaux', 'thoges', 'au', 'plafons', 'changeant', 'ses', 'viorit', 'd', 'au', 'rejoupt', 'tacle', 'huit', 'sonnes', 'et', 'les', 'deux', 'vaillant', 'au', 'luitains', 'renchent', 'dans', 'la', 'pendule', 'et', 'le', 'lendeumain', 'le', 'provosant', 'd', 'onnier', 's', 'auveille', 'hojouy', 'qui', 'appa', 'les', 'ce', 'bonds', 'gateaud', 'qui', 'doncque', 'arranger', 'la', 'maison', 'tict', 'tict', 'glaviologe']
+2026-01-27 15:05:36,036 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:05:36,051 | INFO | File: CCM-001773-01_L01.wav | WER=56.216216 | S=61 D=29 I=14
+2026-01-27 15:05:36,051 | INFO | ------------------------------
+2026-01-27 15:05:36,051 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-001773-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:05:36,051 | INFO |  File duration: 76.16145124716553 seconds
+2026-01-27 15:05:38,072 | INFO | Using rVAD model
+2026-01-27 15:05:41,965 | INFO | speech length: 91360
+2026-01-27 15:05:42,010 | INFO | decoder input length: 142
+2026-01-27 15:05:42,010 | INFO | max output length: 142
+2026-01-27 15:05:42,010 | INFO | min output length: 14
+2026-01-27 15:05:44,017 | INFO | end detected at 42
+2026-01-27 15:05:44,018 | INFO |  -5.03 * 0.5 =  -2.52 for decoder
+2026-01-27 15:05:44,019 | INFO |  -7.14 * 0.5 =  -3.57 for ctc
+2026-01-27 15:05:44,019 | INFO | total log probability: -6.08
+2026-01-27 15:05:44,019 | INFO | normalized log probability: -0.16
+2026-01-27 15:05:44,019 | INFO | total number of ended hypotheses: 168
+2026-01-27 15:05:44,019 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁tout▁vieux▁et▁tous▁caché
+
+2026-01-27 15:05:44,021 | INFO | speech length: 70720
+2026-01-27 15:05:44,054 | INFO | decoder input length: 110
+2026-01-27 15:05:44,054 | INFO | max output length: 110
+2026-01-27 15:05:44,054 | INFO | min output length: 11
+2026-01-27 15:05:45,442 | INFO | end detected at 35
+2026-01-27 15:05:45,443 | INFO |  -2.39 * 0.5 =  -1.19 for decoder
+2026-01-27 15:05:45,443 | INFO |  -2.83 * 0.5 =  -1.41 for ctc
+2026-01-27 15:05:45,443 | INFO | total log probability: -2.61
+2026-01-27 15:05:45,443 | INFO | normalized log probability: -0.09
+2026-01-27 15:05:45,443 | INFO | total number of ended hypotheses: 160
+2026-01-27 15:05:45,444 | INFO | best hypo: ▁villageois▁lui▁apporte▁des▁chaussures▁à▁réparer▁mais▁il▁ne▁travaille▁pas▁vite
+
+2026-01-27 15:05:45,446 | INFO | speech length: 54720
+2026-01-27 15:05:45,478 | INFO | decoder input length: 85
+2026-01-27 15:05:45,478 | INFO | max output length: 85
+2026-01-27 15:05:45,478 | INFO | min output length: 8
+2026-01-27 15:05:46,476 | INFO | end detected at 28
+2026-01-27 15:05:46,477 | INFO |  -1.94 * 0.5 =  -0.97 for decoder
+2026-01-27 15:05:46,477 | INFO |  -5.01 * 0.5 =  -2.51 for ctc
+2026-01-27 15:05:46,477 | INFO | total log probability: -3.47
+2026-01-27 15:05:46,477 | INFO | normalized log probability: -0.16
+2026-01-27 15:05:46,477 | INFO | total number of ended hypotheses: 157
+2026-01-27 15:05:46,477 | INFO | best hypo: ▁tous▁les▁soirs▁il▁mange▁tout▁seul▁bien▁tristement
+
+2026-01-27 15:05:46,479 | INFO | speech length: 101440
+2026-01-27 15:05:46,509 | INFO | decoder input length: 158
+2026-01-27 15:05:46,509 | INFO | max output length: 158
+2026-01-27 15:05:46,509 | INFO | min output length: 15
+2026-01-27 15:05:48,600 | INFO | end detected at 45
+2026-01-27 15:05:48,602 | INFO | -17.60 * 0.5 =  -8.80 for decoder
+2026-01-27 15:05:48,602 | INFO | -11.55 * 0.5 =  -5.77 for ctc
+2026-01-27 15:05:48,602 | INFO | total log probability: -14.57
+2026-01-27 15:05:48,602 | INFO | normalized log probability: -0.40
+2026-01-27 15:05:48,602 | INFO | total number of ended hypotheses: 185
+2026-01-27 15:05:48,603 | INFO | best hypo: ▁ce▁soir▁il▁il▁y▁a▁devant▁lui▁un▁gros▁tas▁de▁souliers▁et▁de▁y▁être▁à▁recourdre
+
+2026-01-27 15:05:48,605 | INFO | speech length: 69280
+2026-01-27 15:05:48,638 | INFO | decoder input length: 107
+2026-01-27 15:05:48,638 | INFO | max output length: 107
+2026-01-27 15:05:48,638 | INFO | min output length: 10
+2026-01-27 15:05:50,228 | INFO | end detected at 38
+2026-01-27 15:05:50,229 | INFO |  -5.29 * 0.5 =  -2.65 for decoder
+2026-01-27 15:05:50,230 | INFO |  -5.66 * 0.5 =  -2.83 for ctc
+2026-01-27 15:05:50,230 | INFO | total log probability: -5.48
+2026-01-27 15:05:50,230 | INFO | normalized log probability: -0.16
+2026-01-27 15:05:50,230 | INFO | total number of ended hypotheses: 169
+2026-01-27 15:05:50,230 | INFO | best hypo: ▁jamais▁je▁ne▁pourrais▁le▁réparer▁j'ai▁trop▁pâgé▁et▁trop▁malade
+
+2026-01-27 15:05:50,232 | INFO | speech length: 90880
+2026-01-27 15:05:50,270 | INFO | decoder input length: 141
+2026-01-27 15:05:50,270 | INFO | max output length: 141
+2026-01-27 15:05:50,270 | INFO | min output length: 14
+2026-01-27 15:05:52,153 | INFO | end detected at 44
+2026-01-27 15:05:52,155 | INFO | -12.18 * 0.5 =  -6.09 for decoder
+2026-01-27 15:05:52,156 | INFO | -24.54 * 0.5 = -12.27 for ctc
+2026-01-27 15:05:52,156 | INFO | total log probability: -18.36
+2026-01-27 15:05:52,156 | INFO | normalized log probability: -0.47
+2026-01-27 15:05:52,156 | INFO | total number of ended hypotheses: 179
+2026-01-27 15:05:52,156 | INFO | best hypo: ▁près▁de▁lui▁la▁grosse▁charlotte▁fait▁tout▁à▁petit▁tack▁pour▁voir▁vieux▁tout▁décrocher▁son▁dort
+
+2026-01-27 15:05:52,159 | INFO | speech length: 73920
+2026-01-27 15:05:52,202 | INFO | decoder input length: 115
+2026-01-27 15:05:52,202 | INFO | max output length: 115
+2026-01-27 15:05:52,202 | INFO | min output length: 11
+2026-01-27 15:05:53,913 | INFO | end detected at 39
+2026-01-27 15:05:53,915 | INFO |  -3.59 * 0.5 =  -1.80 for decoder
+2026-01-27 15:05:53,915 | INFO |  -7.23 * 0.5 =  -3.62 for ctc
+2026-01-27 15:05:53,915 | INFO | total log probability: -5.41
+2026-01-27 15:05:53,915 | INFO | normalized log probability: -0.15
+2026-01-27 15:05:53,915 | INFO | total number of ended hypotheses: 151
+2026-01-27 15:05:53,916 | INFO | best hypo: ▁aussitôt▁l'horloge▁s'ouvre▁les▁deux▁petits▁lutins▁sautent▁sur▁le▁plancher
+
+2026-01-27 15:05:53,918 | INFO | speech length: 63840
+2026-01-27 15:05:53,951 | INFO | decoder input length: 99
+2026-01-27 15:05:53,951 | INFO | max output length: 99
+2026-01-27 15:05:53,951 | INFO | min output length: 9
+2026-01-27 15:05:55,479 | INFO | end detected at 38
+2026-01-27 15:05:55,481 | INFO | -10.14 * 0.5 =  -5.07 for decoder
+2026-01-27 15:05:55,481 | INFO | -22.65 * 0.5 = -11.32 for ctc
+2026-01-27 15:05:55,481 | INFO | total log probability: -16.40
+2026-01-27 15:05:55,481 | INFO | normalized log probability: -0.59
+2026-01-27 15:05:55,481 | INFO | total number of ended hypotheses: 220
+2026-01-27 15:05:55,482 | INFO | best hypo: ▁la▁chapelle▁tique▁s'appelle▁tac▁rendant▁le▁tête▁à▁vert
+
+2026-01-27 15:05:55,484 | INFO | speech length: 24000
+2026-01-27 15:05:55,520 | INFO | decoder input length: 37
+2026-01-27 15:05:55,520 | INFO | max output length: 37
+2026-01-27 15:05:55,520 | INFO | min output length: 3
+2026-01-27 15:05:56,075 | INFO | end detected at 16
+2026-01-27 15:05:56,077 | INFO |  -0.92 * 0.5 =  -0.46 for decoder
+2026-01-27 15:05:56,077 | INFO |  -0.18 * 0.5 =  -0.09 for ctc
+2026-01-27 15:05:56,077 | INFO | total log probability: -0.55
+2026-01-27 15:05:56,077 | INFO | normalized log probability: -0.05
+2026-01-27 15:05:56,077 | INFO | total number of ended hypotheses: 140
+2026-01-27 15:05:56,077 | INFO | best hypo: ▁réparons▁les▁souliers
+
+2026-01-27 15:05:56,079 | INFO | speech length: 32320
+2026-01-27 15:05:56,110 | INFO | decoder input length: 50
+2026-01-27 15:05:56,110 | INFO | max output length: 50
+2026-01-27 15:05:56,110 | INFO | min output length: 5
+2026-01-27 15:05:56,813 | INFO | end detected at 20
+2026-01-27 15:05:56,815 | INFO |  -1.75 * 0.5 =  -0.88 for decoder
+2026-01-27 15:05:56,815 | INFO |  -8.02 * 0.5 =  -4.01 for ctc
+2026-01-27 15:05:56,815 | INFO | total log probability: -4.89
+2026-01-27 15:05:56,815 | INFO | normalized log probability: -0.33
+2026-01-27 15:05:56,815 | INFO | total number of ended hypotheses: 173
+2026-01-27 15:05:56,815 | INFO | best hypo: ▁recouchons▁la▁linge▁dit▁il
+
+2026-01-27 15:05:56,817 | INFO | speech length: 87680
+2026-01-27 15:05:56,875 | INFO | decoder input length: 136
+2026-01-27 15:05:56,875 | INFO | max output length: 136
+2026-01-27 15:05:56,875 | INFO | min output length: 13
+2026-01-27 15:05:59,115 | INFO | end detected at 48
+2026-01-27 15:05:59,116 | INFO | -12.15 * 0.5 =  -6.08 for decoder
+2026-01-27 15:05:59,116 | INFO | -21.56 * 0.5 = -10.78 for ctc
+2026-01-27 15:05:59,116 | INFO | total log probability: -16.86
+2026-01-27 15:05:59,116 | INFO | normalized log probability: -0.41
+2026-01-27 15:05:59,116 | INFO | total number of ended hypotheses: 202
+2026-01-27 15:05:59,117 | INFO | best hypo: ▁papa▁un▁gâteau▁métendu▁gui▁au▁plafond▁faisant▁ces▁vieux▁rideaux▁à▁vol▁tack
+
+2026-01-27 15:05:59,119 | INFO | speech length: 180960
+2026-01-27 15:05:59,154 | INFO | decoder input length: 282
+2026-01-27 15:05:59,154 | INFO | max output length: 282
+2026-01-27 15:05:59,154 | INFO | min output length: 28
+2026-01-27 15:06:03,385 | INFO | end detected at 70
+2026-01-27 15:06:03,386 | INFO | -42.15 * 0.5 = -21.08 for decoder
+2026-01-27 15:06:03,386 | INFO | -21.84 * 0.5 = -10.92 for ctc
+2026-01-27 15:06:03,386 | INFO | total log probability: -32.00
+2026-01-27 15:06:03,386 | INFO | normalized log probability: -0.49
+2026-01-27 15:06:03,386 | INFO | total number of ended hypotheses: 166
+2026-01-27 15:06:03,387 | INFO | best hypo: ▁minuit▁sonne▁dit▁le▁vaillant▁petit▁lucien▁entre▁dans▁la▁dans▁la▁pendule▁lendemain▁le▁pauvre▁denier▁s'éveille▁ô▁vois▁oui▁à▁préparer▁ce▁beau▁gâteau
+
+2026-01-27 15:06:03,389 | INFO | speech length: 26400
+2026-01-27 15:06:03,426 | INFO | decoder input length: 40
+2026-01-27 15:06:03,426 | INFO | max output length: 40
+2026-01-27 15:06:03,426 | INFO | min output length: 4
+2026-01-27 15:06:04,012 | INFO | end detected at 17
+2026-01-27 15:06:04,014 | INFO |  -4.42 * 0.5 =  -2.21 for decoder
+2026-01-27 15:06:04,014 | INFO |  -5.32 * 0.5 =  -2.66 for ctc
+2026-01-27 15:06:04,014 | INFO | total log probability: -4.87
+2026-01-27 15:06:04,014 | INFO | normalized log probability: -0.44
+2026-01-27 15:06:04,014 | INFO | total number of ended hypotheses: 185
+2026-01-27 15:06:04,014 | INFO | best hypo: ▁qui▁a▁donc▁conçu▁la▁maison
+
+2026-01-27 15:06:04,016 | INFO | speech length: 30080
+2026-01-27 15:06:04,048 | INFO | decoder input length: 46
+2026-01-27 15:06:04,048 | INFO | max output length: 46
+2026-01-27 15:06:04,048 | INFO | min output length: 4
+2026-01-27 15:06:04,982 | INFO | end detected at 28
+2026-01-27 15:06:04,984 | INFO |  -3.50 * 0.5 =  -1.75 for decoder
+2026-01-27 15:06:04,984 | INFO |  -6.76 * 0.5 =  -3.38 for ctc
+2026-01-27 15:06:04,984 | INFO | total log probability: -5.13
+2026-01-27 15:06:04,984 | INFO | normalized log probability: -0.23
+2026-01-27 15:06:04,984 | INFO | total number of ended hypotheses: 193
+2026-01-27 15:06:04,985 | INFO | best hypo: ▁c'est▁un▁spectacle▁de▁la▁meilleure▁loi
+
+2026-01-27 15:06:04,992 | INFO | Chunk: 0 | WER=11.111111 | S=2 D=0 I=0
+2026-01-27 15:06:04,993 | INFO | Chunk: 1 | WER=14.285714 | S=1 D=1 I=0
+2026-01-27 15:06:04,993 | INFO | Chunk: 2 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:06:04,993 | INFO | Chunk: 3 | WER=22.222222 | S=3 D=0 I=1
+2026-01-27 15:06:04,994 | INFO | Chunk: 4 | WER=41.666667 | S=4 D=0 I=1
+2026-01-27 15:06:04,994 | INFO | Chunk: 5 | WER=58.823529 | S=9 D=0 I=1
+2026-01-27 15:06:04,995 | INFO | Chunk: 6 | WER=7.692308 | S=1 D=0 I=0
+2026-01-27 15:06:04,995 | INFO | Chunk: 7 | WER=92.307692 | S=6 D=4 I=2
+2026-01-27 15:06:04,995 | INFO | Chunk: 8 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:06:04,995 | INFO | Chunk: 9 | WER=60.000000 | S=3 D=0 I=0
+2026-01-27 15:06:04,995 | INFO | Chunk: 10 | WER=50.000000 | S=5 D=1 I=1
+2026-01-27 15:06:04,996 | INFO | Chunk: 11 | WER=37.037037 | S=10 D=0 I=0
+2026-01-27 15:06:04,996 | INFO | Chunk: 12 | WER=16.666667 | S=1 D=0 I=0
+2026-01-27 15:06:04,997 | INFO | Chunk: 13 | WER=87.500000 | S=7 D=0 I=0
+2026-01-27 15:06:04,997 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tous', 'cache', 'villageois', 'lui', 'apporte', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'y', 'etre', 'a', 'recourdre', 'jamais', 'je', 'ne', 'pourrais', 'le', 'reparer', 'j', 'ai', 'trop', 'page', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'charlotte', 'fait', 'tout', 'a', 'petit', 'tack', 'pour', 'voir', 'vieux', 'tout', 'decrocher', 'son', 'dort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'les', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'la', 'chapelle', 'tique', 's', 'appelle', 'tac', 'rendant', 'le', 'tete', 'a', 'vert', 'reparons', 'les', 'souliers', 'recouchons', 'la', 'linge', 'dit', 'il', 'papa', 'un', 'gateau', 'metendu', 'gui', 'au', 'plafond', 'faisant', 'ces', 'vieux', 'rideaux', 'a', 'vol', 'tack', 'minuit', 'sonne', 'dit', 'le', 'vaillant', 'petit', 'lucien', 'entre', 'dans', 'la', 'dans', 'la', 'pendule', 'lendemain', 'le', 'pauvre', 'denier', 's', 'eveille', 'o', 'vois', 'oui', 'a', 'preparer', 'ce', 'beau', 'gateau', 'qui', 'a', 'donc', 'concu', 'la', 'maison', 'c', 'est', 'un', 'spectacle', 'de', 'la', 'meilleure', 'loi']
+2026-01-27 15:06:04,998 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'dans', 'la', 'pendule', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'wi', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:06:05,012 | INFO | File: CCM-003130-01_L01.wav | WER=37.142857 | S=51 D=6 I=8
+2026-01-27 15:06:05,012 | INFO | ------------------------------
+2026-01-27 15:06:05,012 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003130-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:06:05,013 | INFO |  File duration: 69.47410430839003 seconds
+2026-01-27 15:06:06,839 | INFO | Using rVAD model
+2026-01-27 15:06:10,300 | INFO | speech length: 438080
+2026-01-27 15:06:10,339 | INFO | decoder input length: 684
+2026-01-27 15:06:10,339 | INFO | max output length: 684
+2026-01-27 15:06:10,339 | INFO | min output length: 68
+2026-01-27 15:06:29,608 | INFO | end detected at 185
+2026-01-27 15:06:29,610 | INFO | -522.28 * 0.5 = -261.14 for decoder
+2026-01-27 15:06:29,610 | INFO | -154.42 * 0.5 = -77.21 for ctc
+2026-01-27 15:06:29,610 | INFO | total log probability: -338.35
+2026-01-27 15:06:29,611 | INFO | normalized log probability: -1.92
+2026-01-27 15:06:29,611 | INFO | total number of ended hypotheses: 190
+2026-01-27 15:06:29,613 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁tout▁vieux▁et▁tout▁cassé▁les▁villageoises▁lui▁apportent▁des▁chaussures▁à▁réparer▁mais▁il▁ne▁travaille▁pas▁vite▁tous▁les▁soirs▁et▁mangent▁tout▁seuls▁bien▁tristement▁ce▁soir▁il▁y▁ay▁devant▁vous▁un▁gros▁taque▁de▁sulliers▁et▁de▁guettes▁à▁recoudre▁jamais▁je▁ne▁pourrai▁les▁réparer▁je▁suis▁trop▁âgés▁et▁tropets▁malade▁prèques▁et▁de▁lui▁la▁grosse▁héloct
+
+2026-01-27 15:06:29,615 | INFO | speech length: 48960
+2026-01-27 15:06:29,653 | INFO | decoder input length: 76
+2026-01-27 15:06:29,653 | INFO | max output length: 76
+2026-01-27 15:06:29,653 | INFO | min output length: 7
+2026-01-27 15:06:30,618 | INFO | end detected at 24
+2026-01-27 15:06:30,620 | INFO |  -1.37 * 0.5 =  -0.69 for decoder
+2026-01-27 15:06:30,620 | INFO |  -0.59 * 0.5 =  -0.29 for ctc
+2026-01-27 15:06:30,620 | INFO | total log probability: -0.98
+2026-01-27 15:06:30,620 | INFO | normalized log probability: -0.05
+2026-01-27 15:06:30,620 | INFO | total number of ended hypotheses: 147
+2026-01-27 15:06:30,621 | INFO | best hypo: ▁le▁pauvre▁vieux▁tout▁découragé▁s'endort
+
+2026-01-27 15:06:30,622 | INFO | speech length: 426080
+2026-01-27 15:06:30,671 | INFO | decoder input length: 665
+2026-01-27 15:06:30,671 | INFO | max output length: 665
+2026-01-27 15:06:30,671 | INFO | min output length: 66
+2026-01-27 15:06:50,206 | INFO | end detected at 197
+2026-01-27 15:06:50,208 | INFO | -486.53 * 0.5 = -243.27 for decoder
+2026-01-27 15:06:50,208 | INFO | -165.04 * 0.5 = -82.52 for ctc
+2026-01-27 15:06:50,208 | INFO | total log probability: -325.79
+2026-01-27 15:06:50,208 | INFO | normalized log probability: -1.71
+2026-01-27 15:06:50,208 | INFO | total number of ended hypotheses: 165
+2026-01-27 15:06:50,210 | INFO | best hypo: ▁aussitôt▁l'horloge▁s'ouvre▁de▁petits▁déteints▁sur▁le▁plancher▁sur▁le▁plancher▁l'un▁s'appeltique▁l'autre▁s'appelle▁tack▁arrangeant▁les▁étagères▁etparant▁les▁souliers▁repousant▁le▁linge▁d'éstiques▁et▁préparons▁nous▁un▁gâteau▁bêtant▁du▁guye▁au▁plafondon▁change▁ses▁vieux▁rideau▁ajou▁taques▁il▁ni▁s'un▁des▁deux▁faillant▁un▁petit▁hutins▁rentre▁dans▁la▁pendule▁l'otsmain▁le▁pauvre▁cordnier▁s'éveille
+
+2026-01-27 15:06:50,213 | INFO | speech length: 64000
+2026-01-27 15:06:50,252 | INFO | decoder input length: 99
+2026-01-27 15:06:50,252 | INFO | max output length: 99
+2026-01-27 15:06:50,252 | INFO | min output length: 9
+2026-01-27 15:06:51,545 | INFO | end detected at 33
+2026-01-27 15:06:51,546 | INFO |  -3.45 * 0.5 =  -1.73 for decoder
+2026-01-27 15:06:51,546 | INFO | -10.85 * 0.5 =  -5.42 for ctc
+2026-01-27 15:06:51,546 | INFO | total log probability: -7.15
+2026-01-27 15:06:51,546 | INFO | normalized log probability: -0.26
+2026-01-27 15:06:51,546 | INFO | total number of ended hypotheses: 166
+2026-01-27 15:06:51,547 | INFO | best hypo: ▁joachim▁a▁préparé▁ce▁beau▁gâteau▁qui▁donc▁arrangé▁la▁maison
+
+2026-01-27 15:06:51,549 | INFO | speech length: 50561
+2026-01-27 15:06:51,593 | INFO | decoder input length: 78
+2026-01-27 15:06:51,593 | INFO | max output length: 78
+2026-01-27 15:06:51,593 | INFO | min output length: 7
+2026-01-27 15:06:52,785 | INFO | end detected at 30
+2026-01-27 15:06:52,787 | INFO | -11.44 * 0.5 =  -5.72 for decoder
+2026-01-27 15:06:52,787 | INFO | -11.04 * 0.5 =  -5.52 for ctc
+2026-01-27 15:06:52,787 | INFO | total log probability: -11.24
+2026-01-27 15:06:52,787 | INFO | normalized log probability: -0.51
+2026-01-27 15:06:52,787 | INFO | total number of ended hypotheses: 177
+2026-01-27 15:06:52,787 | INFO | best hypo: ▁dick▁taque▁tic▁tak▁dit▁la▁vieille▁role
+
+2026-01-27 15:06:52,799 | INFO | Chunk: 0 | WER=26.744186 | S=15 D=8 I=0
+2026-01-27 15:06:52,799 | INFO | Chunk: 1 | WER=12.500000 | S=0 D=1 I=0
+2026-01-27 15:06:52,802 | INFO | Chunk: 2 | WER=54.054054 | S=33 D=5 I=2
+2026-01-27 15:06:52,803 | INFO | Chunk: 3 | WER=40.000000 | S=2 D=4 I=0
+2026-01-27 15:06:52,803 | INFO | Chunk: 4 | WER=55.555556 | S=4 D=1 I=0
+2026-01-27 15:06:52,804 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageoises', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'et', 'mangent', 'tout', 'seuls', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'ay', 'devant', 'vous', 'un', 'gros', 'taque', 'de', 'sulliers', 'et', 'de', 'guettes', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'ages', 'et', 'tropets', 'malade', 'preques', 'et', 'de', 'lui', 'la', 'grosse', 'heloct', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'de', 'petits', 'deteints', 'sur', 'le', 'plancher', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appeltique', 'l', 'autre', 's', 'appelle', 'tack', 'arrangeant', 'les', 'etageres', 'etparant', 'les', 'souliers', 'repousant', 'le', 'linge', 'd', 'estiques', 'et', 'preparons', 'nous', 'un', 'gateau', 'betant', 'du', 'guye', 'au', 'plafondon', 'change', 'ses', 'vieux', 'rideau', 'ajou', 'taques', 'il', 'ni', 's', 'un', 'des', 'deux', 'faillant', 'un', 'petit', 'hutins', 'rentre', 'dans', 'la', 'pendule', 'l', 'otsmain', 'le', 'pauvre', 'cordnier', 's', 'eveille', 'joachim', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'arrange', 'la', 'maison', 'dick', 'taque', 'tic', 'tak', 'dit', 'la', 'vieille', 'role']
+2026-01-27 15:06:52,804 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'viz', 'zwa', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'respiration', 'respiration', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'deux', 'petits', 'dete', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'ta', 'me', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:06:52,820 | INFO | File: CCM-003148-01_L01.wav | WER=36.931818 | S=48 D=9 I=8
+2026-01-27 15:06:52,820 | INFO | ------------------------------
+2026-01-27 15:06:52,820 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003148-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:06:52,820 | INFO |  File duration: 63.15827664399093 seconds
+2026-01-27 15:06:54,446 | INFO | Using rVAD model
+2026-01-27 15:06:57,313 | INFO | speech length: 216800
+2026-01-27 15:06:57,344 | INFO | decoder input length: 338
+2026-01-27 15:06:57,345 | INFO | max output length: 338
+2026-01-27 15:06:57,345 | INFO | min output length: 33
+2026-01-27 15:07:03,138 | INFO | end detected at 90
+2026-01-27 15:07:03,140 | INFO | -46.97 * 0.5 = -23.48 for decoder
+2026-01-27 15:07:03,140 | INFO | -23.88 * 0.5 = -11.94 for ctc
+2026-01-27 15:07:03,140 | INFO | total log probability: -35.42
+2026-01-27 15:07:03,140 | INFO | normalized log probability: -0.42
+2026-01-27 15:07:03,140 | INFO | total number of ended hypotheses: 177
+2026-01-27 15:07:03,141 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁un▁cordonnier▁tout▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁supportent▁des▁choses▁supportent▁des▁chaussures▁à▁réparer▁mais▁ils▁ne▁travaillent▁pas▁vite▁tous▁les▁soirs▁mangent▁tout▁seuls
+
+2026-01-27 15:07:03,143 | INFO | speech length: 224960
+2026-01-27 15:07:03,183 | INFO | decoder input length: 351
+2026-01-27 15:07:03,183 | INFO | max output length: 351
+2026-01-27 15:07:03,183 | INFO | min output length: 35
+2026-01-27 15:07:10,623 | INFO | end detected at 116
+2026-01-27 15:07:10,625 | INFO | -80.05 * 0.5 = -40.02 for decoder
+2026-01-27 15:07:10,625 | INFO | -53.71 * 0.5 = -26.86 for ctc
+2026-01-27 15:07:10,625 | INFO | total log probability: -66.88
+2026-01-27 15:07:10,625 | INFO | normalized log probability: -0.61
+2026-01-27 15:07:10,625 | INFO | total number of ended hypotheses: 188
+2026-01-27 15:07:10,627 | INFO | best hypo: ▁bien▁tristement▁ce▁soir▁il▁a▁devant▁lui▁un▁gros▁tape▁soulier▁des▁gâtes▁à▁coups▁jamais▁je▁pourrai▁les▁réparer▁et▁je▁suis▁trop▁âgé▁trop▁malades▁près▁de▁la▁grosse▁horloge▁quictte▁dictacle▁le▁pauvre▁vieux▁tout▁découragé▁s'endort
+
+2026-01-27 15:07:10,629 | INFO | speech length: 479840
+2026-01-27 15:07:10,667 | INFO | decoder input length: 749
+2026-01-27 15:07:10,667 | INFO | max output length: 749
+2026-01-27 15:07:10,667 | INFO | min output length: 74
+2026-01-27 15:07:35,270 | INFO | end detected at 233
+2026-01-27 15:07:35,271 | INFO | -819.43 * 0.5 = -409.72 for decoder
+2026-01-27 15:07:35,271 | INFO | -258.28 * 0.5 = -129.14 for ctc
+2026-01-27 15:07:35,271 | INFO | total log probability: -538.86
+2026-01-27 15:07:35,271 | INFO | normalized log probability: -2.41
+2026-01-27 15:07:35,271 | INFO | total number of ended hypotheses: 178
+2026-01-27 15:07:35,274 | INFO | best hypo: ▁aussitôt▁l'horloge▁sourd▁adopté▁lutin▁saute▁sur▁le▁plancher▁l'un▁s'appelle▁dit▁claude▁s'appelle▁taques▁rongeant▁les▁étagères▁et▁parant▁les▁souliers▁recoousant▁le▁linge▁dits▁type▁répareant▁le▁gâteau▁éttant▁du▁guic▁au▁plafonds▁changeant▁ses▁vieux▁rideaux▁jout▁taxe▁minu▁sonnes▁les▁deux▁vaillants▁petit▁lutins▁rentres▁dans▁la▁pendule▁et▁le▁pende▁lins▁et▁le▁pauvre▁kirs▁cordonnier▁s'é▁éveille▁aux▁gua▁qui▁a▁prépare▁ce▁beau▁cateau▁qui▁est▁donc▁arrangé▁la▁maison▁quicttak
+
+2026-01-27 15:07:35,276 | INFO | speech length: 19840
+2026-01-27 15:07:35,321 | INFO | decoder input length: 30
+2026-01-27 15:07:35,321 | INFO | max output length: 30
+2026-01-27 15:07:35,321 | INFO | min output length: 3
+2026-01-27 15:07:35,808 | INFO | end detected at 17
+2026-01-27 15:07:35,809 | INFO |  -0.84 * 0.5 =  -0.42 for decoder
+2026-01-27 15:07:35,809 | INFO |  -0.02 * 0.5 =  -0.01 for ctc
+2026-01-27 15:07:35,809 | INFO | total log probability: -0.43
+2026-01-27 15:07:35,809 | INFO | normalized log probability: -0.03
+2026-01-27 15:07:35,809 | INFO | total number of ended hypotheses: 138
+2026-01-27 15:07:35,809 | INFO | best hypo: ▁dit▁la▁vieille▁horloge
+
+2026-01-27 15:07:35,817 | INFO | Chunk: 0 | WER=34.146341 | S=8 D=5 I=1
+2026-01-27 15:07:35,818 | INFO | Chunk: 1 | WER=31.914894 | S=8 D=6 I=1
+2026-01-27 15:07:35,822 | INFO | Chunk: 2 | WER=58.762887 | S=33 D=19 I=5
+2026-01-27 15:07:35,822 | INFO | Chunk: 3 | WER=20.000000 | S=0 D=1 I=0
+2026-01-27 15:07:35,823 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'un', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'supportent', 'des', 'choses', 'supportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'ils', 'ne', 'travaillent', 'pas', 'vite', 'tous', 'les', 'soirs', 'mangent', 'tout', 'seuls', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'gros', 'tape', 'soulier', 'des', 'gates', 'a', 'coups', 'jamais', 'je', 'pourrai', 'les', 'reparer', 'et', 'je', 'suis', 'trop', 'age', 'trop', 'malades', 'pres', 'de', 'la', 'grosse', 'horloge', 'quictte', 'dictacle', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 'sourd', 'adopte', 'lutin', 'saute', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'dit', 'claude', 's', 'appelle', 'taques', 'rongeant', 'les', 'etageres', 'et', 'parant', 'les', 'souliers', 'recoousant', 'le', 'linge', 'dits', 'type', 'repareant', 'le', 'gateau', 'ettant', 'du', 'guic', 'au', 'plafonds', 'changeant', 'ses', 'vieux', 'rideaux', 'jout', 'taxe', 'minu', 'sonnes', 'les', 'deux', 'vaillants', 'petit', 'lutins', 'rentres', 'dans', 'la', 'pendule', 'et', 'le', 'pende', 'lins', 'et', 'le', 'pauvre', 'kirs', 'cordonnier', 's', 'e', 'eveille', 'aux', 'gua', 'qui', 'a', 'prepare', 'ce', 'beau', 'cateau', 'qui', 'est', 'donc', 'arrange', 'la', 'maison', 'quicttak', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:07:35,823 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'un', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'le', 'syport', 'desosyport', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'kudr', 'jamais', 'je', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:07:35,836 | INFO | File: CCM-003346-01_L01.wav | WER=41.520468 | S=46 D=15 I=10
+2026-01-27 15:07:35,836 | INFO | ------------------------------
+2026-01-27 15:07:35,836 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003346-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:07:35,836 | INFO |  File duration: 84.14911564625851 seconds
+2026-01-27 15:07:38,067 | INFO | Using rVAD model
+2026-01-27 15:07:42,295 | INFO | speech length: 31679
+2026-01-27 15:07:42,343 | INFO | decoder input length: 48
+2026-01-27 15:07:42,343 | INFO | max output length: 48
+2026-01-27 15:07:42,343 | INFO | min output length: 4
+2026-01-27 15:07:43,239 | INFO | end detected at 18
+2026-01-27 15:07:43,240 | INFO |  -0.97 * 0.5 =  -0.49 for decoder
+2026-01-27 15:07:43,240 | INFO |  -0.00 * 0.5 =  -0.00 for ctc
+2026-01-27 15:07:43,240 | INFO | total log probability: -0.49
+2026-01-27 15:07:43,240 | INFO | normalized log probability: -0.03
+2026-01-27 15:07:43,240 | INFO | total number of ended hypotheses: 144
+2026-01-27 15:07:43,241 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne
+
+2026-01-27 15:07:43,242 | INFO | speech length: 98400
+2026-01-27 15:07:43,296 | INFO | decoder input length: 153
+2026-01-27 15:07:43,296 | INFO | max output length: 153
+2026-01-27 15:07:43,296 | INFO | min output length: 15
+2026-01-27 15:07:46,004 | INFO | end detected at 45
+2026-01-27 15:07:46,007 | INFO |  -2.86 * 0.5 =  -1.43 for decoder
+2026-01-27 15:07:46,007 | INFO |  -0.68 * 0.5 =  -0.34 for ctc
+2026-01-27 15:07:46,007 | INFO | total log probability: -1.77
+2026-01-27 15:07:46,007 | INFO | normalized log probability: -0.04
+2026-01-27 15:07:46,007 | INFO | total number of ended hypotheses: 157
+2026-01-27 15:07:46,007 | INFO | best hypo: ▁il▁y▁a▁un▁pauvre▁cordonnier▁tout▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁apportent▁des▁chaussures
+
+2026-01-27 15:07:46,009 | INFO | speech length: 219200
+2026-01-27 15:07:46,047 | INFO | decoder input length: 342
+2026-01-27 15:07:46,047 | INFO | max output length: 342
+2026-01-27 15:07:46,047 | INFO | min output length: 34
+2026-01-27 15:07:53,566 | INFO | end detected at 86
+2026-01-27 15:07:53,568 | INFO | -112.04 * 0.5 = -56.02 for decoder
+2026-01-27 15:07:53,568 | INFO | -32.69 * 0.5 = -16.34 for ctc
+2026-01-27 15:07:53,568 | INFO | total log probability: -72.36
+2026-01-27 15:07:53,568 | INFO | normalized log probability: -0.92
+2026-01-27 15:07:53,568 | INFO | total number of ended hypotheses: 175
+2026-01-27 15:07:53,570 | INFO | best hypo: ▁a▁réparer▁mais▁il▁ne▁travaille▁pas▁vitre▁tous▁les▁soirs▁il▁mange▁tout▁seul▁bien▁tristement▁le▁soir▁il▁y▁a▁devant▁lui▁un▁gros▁tas▁de▁souliers▁et▁de▁guettes▁à▁recommoder▁à▁recoudre
+
+2026-01-27 15:07:53,572 | INFO | speech length: 215360
+2026-01-27 15:07:53,617 | INFO | decoder input length: 336
+2026-01-27 15:07:53,617 | INFO | max output length: 336
+2026-01-27 15:07:53,617 | INFO | min output length: 33
+2026-01-27 15:08:01,610 | INFO | end detected at 92
+2026-01-27 15:08:01,612 | INFO | -84.96 * 0.5 = -42.48 for decoder
+2026-01-27 15:08:01,613 | INFO | -40.46 * 0.5 = -20.23 for ctc
+2026-01-27 15:08:01,613 | INFO | total log probability: -62.71
+2026-01-27 15:08:01,613 | INFO | normalized log probability: -0.73
+2026-01-27 15:08:01,613 | INFO | total number of ended hypotheses: 176
+2026-01-27 15:08:01,614 | INFO | best hypo: ▁jamais▁je▁ne▁pourrais▁les▁réparer▁je▁suis▁trop▁âgé▁et▁trop▁malade▁près▁de▁lui▁le▁grosse▁la▁grosse▁horloge▁fais▁tic▁tap▁tic▁top▁le▁pauvre▁le▁pauvre▁vieux▁tout▁découragé▁s'endor
+
+2026-01-27 15:08:01,616 | INFO | speech length: 139040
+2026-01-27 15:08:01,654 | INFO | decoder input length: 216
+2026-01-27 15:08:01,654 | INFO | max output length: 216
+2026-01-27 15:08:01,655 | INFO | min output length: 21
+2026-01-27 15:08:06,508 | INFO | end detected at 69
+2026-01-27 15:08:06,510 | INFO |  -8.80 * 0.5 =  -4.40 for decoder
+2026-01-27 15:08:06,510 | INFO |  -5.90 * 0.5 =  -2.95 for ctc
+2026-01-27 15:08:06,510 | INFO | total log probability: -7.35
+2026-01-27 15:08:06,511 | INFO | normalized log probability: -0.11
+2026-01-27 15:08:06,511 | INFO | total number of ended hypotheses: 178
+2026-01-27 15:08:06,512 | INFO | best hypo: ▁aussitôt▁l'horloge▁s'ouvre▁et▁deux▁petits▁lutins▁s'autrent▁sur▁le▁plancher▁l'un▁s'appelle▁tick▁l'autre▁s'appelle▁tuck
+
+2026-01-27 15:08:06,514 | INFO | speech length: 233440
+2026-01-27 15:08:06,564 | INFO | decoder input length: 364
+2026-01-27 15:08:06,565 | INFO | max output length: 364
+2026-01-27 15:08:06,565 | INFO | min output length: 36
+2026-01-27 15:08:14,981 | INFO | end detected at 90
+2026-01-27 15:08:14,983 | INFO | -73.69 * 0.5 = -36.84 for decoder
+2026-01-27 15:08:14,983 | INFO | -36.12 * 0.5 = -18.06 for ctc
+2026-01-27 15:08:14,983 | INFO | total log probability: -54.91
+2026-01-27 15:08:14,983 | INFO | normalized log probability: -0.66
+2026-01-27 15:08:14,983 | INFO | total number of ended hypotheses: 181
+2026-01-27 15:08:14,984 | INFO | best hypo: ▁rongeons▁les▁étagères▁réparez▁les▁souliers▁recousons▁le▁linge▁doit▁il▁réparons▁en▁préparant▁un▁gâteau▁mettant▁du▁guy▁au▁plafond▁changeant▁ses▁vieux▁rideaux▁ajou▁tak
+
+2026-01-27 15:08:14,987 | INFO | speech length: 273440
+2026-01-27 15:08:15,035 | INFO | decoder input length: 426
+2026-01-27 15:08:15,035 | INFO | max output length: 426
+2026-01-27 15:08:15,035 | INFO | min output length: 42
+2026-01-27 15:08:25,369 | INFO | end detected at 104
+2026-01-27 15:08:25,372 | INFO | -104.18 * 0.5 = -52.09 for decoder
+2026-01-27 15:08:25,372 | INFO | -38.33 * 0.5 = -19.17 for ctc
+2026-01-27 15:08:25,372 | INFO | total log probability: -71.26
+2026-01-27 15:08:25,372 | INFO | normalized log probability: -0.77
+2026-01-27 15:08:25,372 | INFO | total number of ended hypotheses: 207
+2026-01-27 15:08:25,374 | INFO | best hypo: ▁minuit▁sonne▁les▁deux▁voyants▁petits▁lutins▁rentrent▁dans▁la▁pendule▁le▁lendemain▁le▁pauvre▁cordonnier▁s'éveillent▁ô▁joois▁qui▁a▁préparé▁ce▁beau▁bateau▁qui▁donc▁arrangé▁ta▁la▁maison▁taque▁dit▁la▁vieille▁horloge
+
+2026-01-27 15:08:25,384 | INFO | Chunk: 0 | WER=12.500000 | S=0 D=1 I=0
+2026-01-27 15:08:25,384 | INFO | Chunk: 1 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:08:25,385 | INFO | Chunk: 2 | WER=16.216216 | S=5 D=1 I=0
+2026-01-27 15:08:25,386 | INFO | Chunk: 3 | WER=27.777778 | S=9 D=1 I=0
+2026-01-27 15:08:25,387 | INFO | Chunk: 4 | WER=17.391304 | S=3 D=0 I=1
+2026-01-27 15:08:25,388 | INFO | Chunk: 5 | WER=50.000000 | S=13 D=1 I=0
+2026-01-27 15:08:25,389 | INFO | Chunk: 6 | WER=24.390244 | S=6 D=4 I=0
+2026-01-27 15:08:25,389 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vitre', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'le', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guettes', 'a', 'recommoder', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrais', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'le', 'grosse', 'la', 'grosse', 'horloge', 'fais', 'tic', 'tap', 'tic', 'top', 'le', 'pauvre', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endor', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 's', 'autrent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tick', 'l', 'autre', 's', 'appelle', 'tuck', 'rongeons', 'les', 'etageres', 'reparez', 'les', 'souliers', 'recousons', 'le', 'linge', 'doit', 'il', 'reparons', 'en', 'preparant', 'un', 'gateau', 'mettant', 'du', 'guy', 'au', 'plafond', 'changeant', 'ses', 'vieux', 'rideaux', 'ajou', 'tak', 'minuit', 'sonne', 'les', 'deux', 'voyants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveillent', 'o', 'joois', 'qui', 'a', 'prepare', 'ce', 'beau', 'bateau', 'qui', 'donc', 'arrange', 'ta', 'la', 'maison', 'taque', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:08:25,390 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:08:25,406 | INFO | File: CCM-003557-01_L01.wav | WER=23.163842 | S=29 D=3 I=9
+2026-01-27 15:08:25,406 | INFO | ------------------------------
+2026-01-27 15:08:25,406 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003557-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:08:25,406 | INFO |  File duration: 124.83047619047619 seconds
+2026-01-27 15:08:28,768 | INFO | Using rVAD model
+2026-01-27 15:08:35,333 | INFO | speech length: 96800
+2026-01-27 15:08:35,369 | INFO | decoder input length: 150
+2026-01-27 15:08:35,369 | INFO | max output length: 150
+2026-01-27 15:08:35,369 | INFO | min output length: 15
+2026-01-27 15:08:37,158 | INFO | end detected at 40
+2026-01-27 15:08:37,159 | INFO |  -8.11 * 0.5 =  -4.05 for decoder
+2026-01-27 15:08:37,159 | INFO |  -3.07 * 0.5 =  -1.53 for ctc
+2026-01-27 15:08:37,159 | INFO | total log probability: -5.59
+2026-01-27 15:08:37,159 | INFO | normalized log probability: -0.16
+2026-01-27 15:08:37,159 | INFO | total number of ended hypotheses: 168
+2026-01-27 15:08:37,160 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁montagne▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁civé
+
+2026-01-27 15:08:37,162 | INFO | speech length: 15038
+2026-01-27 15:08:37,211 | INFO | decoder input length: 22
+2026-01-27 15:08:37,211 | INFO | max output length: 22
+2026-01-27 15:08:37,211 | INFO | min output length: 2
+2026-01-27 15:08:37,579 | INFO | end detected at 11
+2026-01-27 15:08:37,580 | INFO |  -2.82 * 0.5 =  -1.41 for decoder
+2026-01-27 15:08:37,580 | INFO |  -4.50 * 0.5 =  -2.25 for ctc
+2026-01-27 15:08:37,580 | INFO | total log probability: -3.66
+2026-01-27 15:08:37,580 | INFO | normalized log probability: -0.61
+2026-01-27 15:08:37,580 | INFO | total number of ended hypotheses: 160
+2026-01-27 15:08:37,580 | INFO | best hypo: ▁tout▁comme▁sait
+
+2026-01-27 15:08:37,582 | INFO | speech length: 94880
+2026-01-27 15:08:37,613 | INFO | decoder input length: 147
+2026-01-27 15:08:37,614 | INFO | max output length: 147
+2026-01-27 15:08:37,614 | INFO | min output length: 14
+2026-01-27 15:08:39,374 | INFO | end detected at 38
+2026-01-27 15:08:39,375 | INFO |  -6.72 * 0.5 =  -3.36 for decoder
+2026-01-27 15:08:39,375 | INFO |  -5.01 * 0.5 =  -2.50 for ctc
+2026-01-27 15:08:39,375 | INFO | total log probability: -5.86
+2026-01-27 15:08:39,375 | INFO | normalized log probability: -0.18
+2026-01-27 15:08:39,375 | INFO | total number of ended hypotheses: 174
+2026-01-27 15:08:39,376 | INFO | best hypo: ▁les▁villageois▁lui▁apportent▁des▁chaussures▁à▁réparer▁mais▁il▁s'abat▁pas▁vite
+
+2026-01-27 15:08:39,378 | INFO | speech length: 68320
+2026-01-27 15:08:39,424 | INFO | decoder input length: 106
+2026-01-27 15:08:39,424 | INFO | max output length: 106
+2026-01-27 15:08:39,424 | INFO | min output length: 10
+2026-01-27 15:08:40,505 | INFO | end detected at 28
+2026-01-27 15:08:40,506 | INFO |  -4.51 * 0.5 =  -2.25 for decoder
+2026-01-27 15:08:40,506 | INFO |  -3.29 * 0.5 =  -1.64 for ctc
+2026-01-27 15:08:40,506 | INFO | total log probability: -3.90
+2026-01-27 15:08:40,507 | INFO | normalized log probability: -0.17
+2026-01-27 15:08:40,507 | INFO | total number of ended hypotheses: 162
+2026-01-27 15:08:40,507 | INFO | best hypo: ▁tous▁les▁soirs▁il▁mange▁tout▁seul▁mais▁un▁tristement
+
+2026-01-27 15:08:40,508 | INFO | speech length: 21440
+2026-01-27 15:08:40,541 | INFO | decoder input length: 33
+2026-01-27 15:08:40,541 | INFO | max output length: 33
+2026-01-27 15:08:40,541 | INFO | min output length: 3
+2026-01-27 15:08:40,960 | INFO | end detected at 12
+2026-01-27 15:08:40,961 | INFO |  -1.40 * 0.5 =  -0.70 for decoder
+2026-01-27 15:08:40,961 | INFO |  -5.83 * 0.5 =  -2.92 for ctc
+2026-01-27 15:08:40,961 | INFO | total log probability: -3.61
+2026-01-27 15:08:40,961 | INFO | normalized log probability: -0.60
+2026-01-27 15:08:40,961 | INFO | total number of ended hypotheses: 162
+2026-01-27 15:08:40,961 | INFO | best hypo: ▁ce▁soir
+
+2026-01-27 15:08:40,963 | INFO | speech length: 93760
+2026-01-27 15:08:40,996 | INFO | decoder input length: 146
+2026-01-27 15:08:40,996 | INFO | max output length: 146
+2026-01-27 15:08:40,996 | INFO | min output length: 14
+2026-01-27 15:08:42,398 | INFO | end detected at 31
+2026-01-27 15:08:42,400 | INFO |  -9.19 * 0.5 =  -4.60 for decoder
+2026-01-27 15:08:42,400 | INFO | -11.49 * 0.5 =  -5.75 for ctc
+2026-01-27 15:08:42,400 | INFO | total log probability: -10.34
+2026-01-27 15:08:42,400 | INFO | normalized log probability: -0.45
+2026-01-27 15:08:42,400 | INFO | total number of ended hypotheses: 198
+2026-01-27 15:08:42,400 | INFO | best hypo: ▁il▁a▁devant▁lui▁un▁go▁tors▁de▁côte▁de▁soulier▁et
+
+2026-01-27 15:08:42,402 | INFO | speech length: 18559
+2026-01-27 15:08:42,434 | INFO | decoder input length: 28
+2026-01-27 15:08:42,434 | INFO | max output length: 28
+2026-01-27 15:08:42,434 | INFO | min output length: 2
+2026-01-27 15:08:42,803 | INFO | end detected at 11
+2026-01-27 15:08:42,804 | INFO |  -0.57 * 0.5 =  -0.29 for decoder
+2026-01-27 15:08:42,804 | INFO |  -4.11 * 0.5 =  -2.05 for ctc
+2026-01-27 15:08:42,805 | INFO | total log probability: -2.34
+2026-01-27 15:08:42,805 | INFO | normalized log probability: -0.33
+2026-01-27 15:08:42,805 | INFO | total number of ended hypotheses: 180
+2026-01-27 15:08:42,805 | INFO | best hypo: ▁deux▁fêtes
+
+2026-01-27 15:08:42,806 | INFO | speech length: 14880
+2026-01-27 15:08:42,832 | INFO | decoder input length: 22
+2026-01-27 15:08:42,832 | INFO | max output length: 22
+2026-01-27 15:08:42,832 | INFO | min output length: 2
+2026-01-27 15:08:43,251 | INFO | end detected at 13
+2026-01-27 15:08:43,253 | INFO |  -5.51 * 0.5 =  -2.75 for decoder
+2026-01-27 15:08:43,253 | INFO |  -2.54 * 0.5 =  -1.27 for ctc
+2026-01-27 15:08:43,253 | INFO | total log probability: -4.02
+2026-01-27 15:08:43,253 | INFO | normalized log probability: -0.57
+2026-01-27 15:08:43,253 | INFO | total number of ended hypotheses: 187
+2026-01-27 15:08:43,253 | INFO | best hypo: ▁un▁re▁coude
+
+2026-01-27 15:08:43,255 | INFO | speech length: 173760
+2026-01-27 15:08:43,288 | INFO | decoder input length: 271
+2026-01-27 15:08:43,289 | INFO | max output length: 271
+2026-01-27 15:08:43,289 | INFO | min output length: 27
+2026-01-27 15:08:47,023 | INFO | end detected at 63
+2026-01-27 15:08:47,024 | INFO | -36.30 * 0.5 = -18.15 for decoder
+2026-01-27 15:08:47,024 | INFO | -37.78 * 0.5 = -18.89 for ctc
+2026-01-27 15:08:47,024 | INFO | total log probability: -37.04
+2026-01-27 15:08:47,025 | INFO | normalized log probability: -0.69
+2026-01-27 15:08:47,025 | INFO | total number of ended hypotheses: 202
+2026-01-27 15:08:47,025 | INFO | best hypo: ▁jamais▁je▁ne▁pourrais▁les▁rêve▁réparer▁je▁suis▁enragé▁étant▁malade▁près▁de▁lui▁la▁grosse▁de▁l'on▁je▁fais▁petite▁tacque
+
+2026-01-27 15:08:47,028 | INFO | speech length: 53760
+2026-01-27 15:08:47,060 | INFO | decoder input length: 83
+2026-01-27 15:08:47,060 | INFO | max output length: 83
+2026-01-27 15:08:47,060 | INFO | min output length: 8
+2026-01-27 15:08:48,065 | INFO | end detected at 29
+2026-01-27 15:08:48,067 | INFO |  -8.77 * 0.5 =  -4.38 for decoder
+2026-01-27 15:08:48,067 | INFO | -12.00 * 0.5 =  -6.00 for ctc
+2026-01-27 15:08:48,067 | INFO | total log probability: -10.38
+2026-01-27 15:08:48,067 | INFO | normalized log probability: -0.43
+2026-01-27 15:08:48,067 | INFO | total number of ended hypotheses: 165
+2026-01-27 15:08:48,067 | INFO | best hypo: ▁le▁pauvre▁vieux▁tous▁deux▁coulagers▁sans▁dôme
+
+2026-01-27 15:08:48,069 | INFO | speech length: 28640
+2026-01-27 15:08:48,099 | INFO | decoder input length: 44
+2026-01-27 15:08:48,099 | INFO | max output length: 44
+2026-01-27 15:08:48,099 | INFO | min output length: 4
+2026-01-27 15:08:48,723 | INFO | end detected at 20
+2026-01-27 15:08:48,724 | INFO |  -2.05 * 0.5 =  -1.02 for decoder
+2026-01-27 15:08:48,724 | INFO |  -3.93 * 0.5 =  -1.97 for ctc
+2026-01-27 15:08:48,724 | INFO | total log probability: -2.99
+2026-01-27 15:08:48,724 | INFO | normalized log probability: -0.19
+2026-01-27 15:08:48,724 | INFO | total number of ended hypotheses: 159
+2026-01-27 15:08:48,724 | INFO | best hypo: ▁aussitôt▁la▁george▁s'ouvre
+
+2026-01-27 15:08:48,726 | INFO | speech length: 59040
+2026-01-27 15:08:48,754 | INFO | decoder input length: 91
+2026-01-27 15:08:48,754 | INFO | max output length: 91
+2026-01-27 15:08:48,754 | INFO | min output length: 9
+2026-01-27 15:08:49,739 | INFO | end detected at 27
+2026-01-27 15:08:49,741 | INFO |  -2.70 * 0.5 =  -1.35 for decoder
+2026-01-27 15:08:49,741 | INFO |  -7.67 * 0.5 =  -3.84 for ctc
+2026-01-27 15:08:49,741 | INFO | total log probability: -5.19
+2026-01-27 15:08:49,741 | INFO | normalized log probability: -0.25
+2026-01-27 15:08:49,741 | INFO | total number of ended hypotheses: 181
+2026-01-27 15:08:49,741 | INFO | best hypo: ▁et▁deux▁petits▁lutins▁sortent▁sur▁le▁plancher
+
+2026-01-27 15:08:49,743 | INFO | speech length: 47680
+2026-01-27 15:08:49,773 | INFO | decoder input length: 74
+2026-01-27 15:08:49,773 | INFO | max output length: 74
+2026-01-27 15:08:49,773 | INFO | min output length: 7
+2026-01-27 15:08:50,876 | INFO | end detected at 31
+2026-01-27 15:08:50,877 | INFO |  -7.61 * 0.5 =  -3.81 for decoder
+2026-01-27 15:08:50,877 | INFO | -15.86 * 0.5 =  -7.93 for ctc
+2026-01-27 15:08:50,877 | INFO | total log probability: -11.74
+2026-01-27 15:08:50,877 | INFO | normalized log probability: -0.51
+2026-01-27 15:08:50,877 | INFO | total number of ended hypotheses: 192
+2026-01-27 15:08:50,878 | INFO | best hypo: ▁l'un▁s'appelle▁x▁l'autre▁appel▁tac
+
+2026-01-27 15:08:50,879 | INFO | speech length: 20960
+2026-01-27 15:08:50,922 | INFO | decoder input length: 32
+2026-01-27 15:08:50,922 | INFO | max output length: 32
+2026-01-27 15:08:50,922 | INFO | min output length: 3
+2026-01-27 15:08:51,285 | INFO | end detected at 11
+2026-01-27 15:08:51,286 | INFO |  -0.43 * 0.5 =  -0.21 for decoder
+2026-01-27 15:08:51,286 | INFO |  -3.71 * 0.5 =  -1.85 for ctc
+2026-01-27 15:08:51,286 | INFO | total log probability: -2.07
+2026-01-27 15:08:51,286 | INFO | normalized log probability: -0.30
+2026-01-27 15:08:51,286 | INFO | total number of ended hypotheses: 163
+2026-01-27 15:08:51,286 | INFO | best hypo: ▁mangeons
+
+2026-01-27 15:08:51,288 | INFO | speech length: 22400
+2026-01-27 15:08:51,316 | INFO | decoder input length: 34
+2026-01-27 15:08:51,317 | INFO | max output length: 34
+2026-01-27 15:08:51,317 | INFO | min output length: 3
+2026-01-27 15:08:51,785 | INFO | end detected at 13
+2026-01-27 15:08:51,787 | INFO |  -0.67 * 0.5 =  -0.33 for decoder
+2026-01-27 15:08:51,787 | INFO |  -1.07 * 0.5 =  -0.54 for ctc
+2026-01-27 15:08:51,787 | INFO | total log probability: -0.87
+2026-01-27 15:08:51,787 | INFO | normalized log probability: -0.10
+2026-01-27 15:08:51,788 | INFO | total number of ended hypotheses: 155
+2026-01-27 15:08:51,788 | INFO | best hypo: ▁les▁étrangers
+
+2026-01-27 15:08:51,789 | INFO | speech length: 16960
+2026-01-27 15:08:51,823 | INFO | decoder input length: 26
+2026-01-27 15:08:51,823 | INFO | max output length: 26
+2026-01-27 15:08:51,823 | INFO | min output length: 2
+2026-01-27 15:08:52,267 | INFO | end detected at 12
+2026-01-27 15:08:52,268 | INFO |  -2.03 * 0.5 =  -1.02 for decoder
+2026-01-27 15:08:52,268 | INFO |  -5.63 * 0.5 =  -2.82 for ctc
+2026-01-27 15:08:52,268 | INFO | total log probability: -3.83
+2026-01-27 15:08:52,268 | INFO | normalized log probability: -0.64
+2026-01-27 15:08:52,269 | INFO | total number of ended hypotheses: 165
+2026-01-27 15:08:52,269 | INFO | best hypo: ▁raisons
+
+2026-01-27 15:08:52,270 | INFO | speech length: 48000
+2026-01-27 15:08:52,301 | INFO | decoder input length: 74
+2026-01-27 15:08:52,301 | INFO | max output length: 74
+2026-01-27 15:08:52,301 | INFO | min output length: 7
+2026-01-27 15:08:53,006 | INFO | end detected at 18
+2026-01-27 15:08:53,007 | INFO |  -2.99 * 0.5 =  -1.50 for decoder
+2026-01-27 15:08:53,007 | INFO |  -7.23 * 0.5 =  -3.62 for ctc
+2026-01-27 15:08:53,007 | INFO | total log probability: -5.11
+2026-01-27 15:08:53,007 | INFO | normalized log probability: -0.37
+2026-01-27 15:08:53,007 | INFO | total number of ended hypotheses: 140
+2026-01-27 15:08:53,008 | INFO | best hypo: ▁régraignerons▁les▁souliers
+
+2026-01-27 15:08:53,009 | INFO | speech length: 19360
+2026-01-27 15:08:53,040 | INFO | decoder input length: 29
+2026-01-27 15:08:53,040 | INFO | max output length: 29
+2026-01-27 15:08:53,040 | INFO | min output length: 2
+2026-01-27 15:08:53,431 | INFO | end detected at 12
+2026-01-27 15:08:53,432 | INFO |  -2.84 * 0.5 =  -1.42 for decoder
+2026-01-27 15:08:53,432 | INFO |  -3.49 * 0.5 =  -1.75 for ctc
+2026-01-27 15:08:53,432 | INFO | total log probability: -3.16
+2026-01-27 15:08:53,432 | INFO | normalized log probability: -0.40
+2026-01-27 15:08:53,432 | INFO | total number of ended hypotheses: 160
+2026-01-27 15:08:53,432 | INFO | best hypo: ▁racouillons
+
+2026-01-27 15:08:53,433 | INFO | speech length: 26080
+2026-01-27 15:08:53,462 | INFO | decoder input length: 40
+2026-01-27 15:08:53,462 | INFO | max output length: 40
+2026-01-27 15:08:53,462 | INFO | min output length: 4
+2026-01-27 15:08:54,021 | INFO | end detected at 17
+2026-01-27 15:08:54,023 | INFO |  -4.59 * 0.5 =  -2.29 for decoder
+2026-01-27 15:08:54,023 | INFO |  -8.85 * 0.5 =  -4.43 for ctc
+2026-01-27 15:08:54,023 | INFO | total log probability: -6.72
+2026-01-27 15:08:54,023 | INFO | normalized log probability: -0.67
+2026-01-27 15:08:54,023 | INFO | total number of ended hypotheses: 199
+2026-01-27 15:08:54,023 | INFO | best hypo: ▁le▁linge▁est▁utique
+
+2026-01-27 15:08:54,025 | INFO | speech length: 65120
+2026-01-27 15:08:54,054 | INFO | decoder input length: 101
+2026-01-27 15:08:54,054 | INFO | max output length: 101
+2026-01-27 15:08:54,054 | INFO | min output length: 10
+2026-01-27 15:08:55,104 | INFO | end detected at 28
+2026-01-27 15:08:55,106 | INFO | -10.28 * 0.5 =  -5.14 for decoder
+2026-01-27 15:08:55,106 | INFO | -15.21 * 0.5 =  -7.60 for ctc
+2026-01-27 15:08:55,106 | INFO | total log probability: -12.75
+2026-01-27 15:08:55,107 | INFO | normalized log probability: -0.67
+2026-01-27 15:08:55,107 | INFO | total number of ended hypotheses: 204
+2026-01-27 15:08:55,107 | INFO | best hypo: ▁vos▁parents▁un▁gre▁tomate▁mettons
+
+2026-01-27 15:08:55,108 | INFO | speech length: 90720
+2026-01-27 15:08:55,136 | INFO | decoder input length: 141
+2026-01-27 15:08:55,136 | INFO | max output length: 141
+2026-01-27 15:08:55,136 | INFO | min output length: 14
+2026-01-27 15:08:56,627 | INFO | end detected at 35
+2026-01-27 15:08:56,628 | INFO |  -4.44 * 0.5 =  -2.22 for decoder
+2026-01-27 15:08:56,628 | INFO |  -8.37 * 0.5 =  -4.18 for ctc
+2026-01-27 15:08:56,628 | INFO | total log probability: -6.40
+2026-01-27 15:08:56,628 | INFO | normalized log probability: -0.21
+2026-01-27 15:08:56,628 | INFO | total number of ended hypotheses: 165
+2026-01-27 15:08:56,628 | INFO | best hypo: ▁lui▁dit▁au▁plafond▁mangeant▁ses▁vieux▁rideaux▁ajoute▁tak
+
+2026-01-27 15:08:56,630 | INFO | speech length: 12800
+2026-01-27 15:08:56,662 | INFO | decoder input length: 19
+2026-01-27 15:08:56,662 | INFO | max output length: 19
+2026-01-27 15:08:56,662 | INFO | min output length: 1
+2026-01-27 15:08:57,192 | INFO | end detected at 11
+2026-01-27 15:08:57,193 | INFO |  -0.43 * 0.5 =  -0.21 for decoder
+2026-01-27 15:08:57,193 | INFO |  -2.46 * 0.5 =  -1.23 for ctc
+2026-01-27 15:08:57,193 | INFO | total log probability: -1.44
+2026-01-27 15:08:57,193 | INFO | normalized log probability: -0.24
+2026-01-27 15:08:57,193 | INFO | total number of ended hypotheses: 165
+2026-01-27 15:08:57,194 | INFO | best hypo: ▁minute
+
+2026-01-27 15:08:57,195 | INFO | speech length: 81600
+2026-01-27 15:08:57,225 | INFO | decoder input length: 127
+2026-01-27 15:08:57,225 | INFO | max output length: 127
+2026-01-27 15:08:57,225 | INFO | min output length: 12
+2026-01-27 15:08:58,379 | INFO | end detected at 27
+2026-01-27 15:08:58,380 | INFO |  -7.82 * 0.5 =  -3.91 for decoder
+2026-01-27 15:08:58,380 | INFO |  -4.77 * 0.5 =  -2.38 for ctc
+2026-01-27 15:08:58,380 | INFO | total log probability: -6.29
+2026-01-27 15:08:58,380 | INFO | normalized log probability: -0.29
+2026-01-27 15:08:58,380 | INFO | total number of ended hypotheses: 173
+2026-01-27 15:08:58,380 | INFO | best hypo: ▁nous▁sommes▁les▁deux▁vaillants▁petits▁lutins▁rente
+
+2026-01-27 15:08:58,382 | INFO | speech length: 22560
+2026-01-27 15:08:58,409 | INFO | decoder input length: 34
+2026-01-27 15:08:58,409 | INFO | max output length: 34
+2026-01-27 15:08:58,409 | INFO | min output length: 3
+2026-01-27 15:08:58,811 | INFO | end detected at 12
+2026-01-27 15:08:58,812 | INFO |  -1.63 * 0.5 =  -0.82 for decoder
+2026-01-27 15:08:58,812 | INFO |  -0.61 * 0.5 =  -0.30 for ctc
+2026-01-27 15:08:58,812 | INFO | total log probability: -1.12
+2026-01-27 15:08:58,812 | INFO | normalized log probability: -0.14
+2026-01-27 15:08:58,812 | INFO | total number of ended hypotheses: 146
+2026-01-27 15:08:58,812 | INFO | best hypo: ▁dans▁la▁pendule
+
+2026-01-27 15:08:58,814 | INFO | speech length: 103680
+2026-01-27 15:08:58,846 | INFO | decoder input length: 161
+2026-01-27 15:08:58,846 | INFO | max output length: 161
+2026-01-27 15:08:58,846 | INFO | min output length: 16
+2026-01-27 15:09:00,599 | INFO | end detected at 40
+2026-01-27 15:09:00,600 | INFO |  -8.34 * 0.5 =  -4.17 for decoder
+2026-01-27 15:09:00,600 | INFO | -19.46 * 0.5 =  -9.73 for ctc
+2026-01-27 15:09:00,600 | INFO | total log probability: -13.90
+2026-01-27 15:09:00,600 | INFO | normalized log probability: -0.40
+2026-01-27 15:09:00,600 | INFO | total number of ended hypotheses: 159
+2026-01-27 15:09:00,600 | INFO | best hypo: ▁le▁lendemain▁la▁pauvre▁côte▁la▁pauvre▁condamnée▁à▁sa▁veille▁on▁choit▁aussi
+
+2026-01-27 15:09:00,602 | INFO | speech length: 79200
+2026-01-27 15:09:00,632 | INFO | decoder input length: 123
+2026-01-27 15:09:00,632 | INFO | max output length: 123
+2026-01-27 15:09:00,632 | INFO | min output length: 12
+2026-01-27 15:09:01,877 | INFO | end detected at 31
+2026-01-27 15:09:01,879 | INFO |  -5.82 * 0.5 =  -2.91 for decoder
+2026-01-27 15:09:01,879 | INFO | -10.39 * 0.5 =  -5.19 for ctc
+2026-01-27 15:09:01,879 | INFO | total log probability: -8.11
+2026-01-27 15:09:01,879 | INFO | normalized log probability: -0.32
+2026-01-27 15:09:01,879 | INFO | total number of ended hypotheses: 196
+2026-01-27 15:09:01,879 | INFO | best hypo: ▁qui▁a▁réparé▁c'est▁beaucoup▁ce▁beau▁gâteau
+
+2026-01-27 15:09:01,881 | INFO | speech length: 118080
+2026-01-27 15:09:01,918 | INFO | decoder input length: 184
+2026-01-27 15:09:01,918 | INFO | max output length: 184
+2026-01-27 15:09:01,918 | INFO | min output length: 18
+2026-01-27 15:09:03,809 | INFO | end detected at 37
+2026-01-27 15:09:03,810 | INFO | -10.68 * 0.5 =  -5.34 for decoder
+2026-01-27 15:09:03,810 | INFO | -16.15 * 0.5 =  -8.07 for ctc
+2026-01-27 15:09:03,810 | INFO | total log probability: -13.41
+2026-01-27 15:09:03,810 | INFO | normalized log probability: -0.43
+2026-01-27 15:09:03,810 | INFO | total number of ended hypotheses: 189
+2026-01-27 15:09:03,811 | INFO | best hypo: ▁qui▁donc▁a▁en▁vein▁la▁maison▁dites▁tac▁tac▁dit▁il▁la▁vieille▁horloge
+
+2026-01-27 15:09:03,822 | INFO | Chunk: 0 | WER=23.529412 | S=3 D=1 I=0
+2026-01-27 15:09:03,822 | INFO | Chunk: 1 | WER=100.000000 | S=1 D=0 I=1
+2026-01-27 15:09:03,823 | INFO | Chunk: 2 | WER=23.076923 | S=2 D=0 I=1
+2026-01-27 15:09:03,823 | INFO | Chunk: 3 | WER=22.222222 | S=1 D=0 I=1
+2026-01-27 15:09:03,823 | INFO | Chunk: 4 | WER=33.333333 | S=0 D=1 I=0
+2026-01-27 15:09:03,823 | INFO | Chunk: 5 | WER=41.666667 | S=5 D=0 I=0
+2026-01-27 15:09:03,824 | INFO | Chunk: 6 | WER=100.000000 | S=2 D=1 I=0
+2026-01-27 15:09:03,824 | INFO | Chunk: 7 | WER=100.000000 | S=3 D=0 I=0
+2026-01-27 15:09:03,824 | INFO | Chunk: 8 | WER=57.692308 | S=9 D=4 I=2
+2026-01-27 15:09:03,825 | INFO | Chunk: 9 | WER=71.428571 | S=4 D=0 I=1
+2026-01-27 15:09:03,825 | INFO | Chunk: 10 | WER=40.000000 | S=2 D=0 I=0
+2026-01-27 15:09:03,825 | INFO | Chunk: 11 | WER=12.500000 | S=1 D=0 I=0
+2026-01-27 15:09:03,825 | INFO | Chunk: 12 | WER=30.000000 | S=2 D=1 I=0
+2026-01-27 15:09:03,825 | INFO | Chunk: 13 | WER=100.000000 | S=1 D=2 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 14 | WER=100.000000 | S=2 D=1 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 15 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 16 | WER=50.000000 | S=1 D=1 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 17 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 18 | WER=50.000000 | S=2 D=0 I=0
+2026-01-27 15:09:03,826 | INFO | Chunk: 19 | WER=80.000000 | S=3 D=0 I=1
+2026-01-27 15:09:03,827 | INFO | Chunk: 20 | WER=58.333333 | S=5 D=2 I=0
+2026-01-27 15:09:03,827 | INFO | Chunk: 21 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 15:09:03,827 | INFO | Chunk: 22 | WER=50.000000 | S=2 D=1 I=1
+2026-01-27 15:09:03,827 | INFO | Chunk: 23 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:09:03,827 | INFO | Chunk: 24 | WER=76.923077 | S=9 D=0 I=1
+2026-01-27 15:09:03,828 | INFO | Chunk: 25 | WER=42.857143 | S=1 D=0 I=2
+2026-01-27 15:09:03,828 | INFO | Chunk: 26 | WER=26.666667 | S=2 D=1 I=1
+2026-01-27 15:09:03,829 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'montagne', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'cive', 'tout', 'comme', 'sait', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 's', 'abat', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'mais', 'un', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'go', 'tors', 'de', 'cote', 'de', 'soulier', 'et', 'deux', 'fetes', 'un', 're', 'coude', 'jamais', 'je', 'ne', 'pourrais', 'les', 'reve', 'reparer', 'je', 'suis', 'enrage', 'etant', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'de', 'l', 'on', 'je', 'fais', 'petite', 'tacque', 'le', 'pauvre', 'vieux', 'tous', 'deux', 'coulagers', 'sans', 'dome', 'aussitot', 'la', 'george', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sortent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'x', 'l', 'autre', 'appel', 'tac', 'mangeons', 'les', 'etrangers', 'raisons', 'regraignerons', 'les', 'souliers', 'racouillons', 'le', 'linge', 'est', 'utique', 'vos', 'parents', 'un', 'gre', 'tomate', 'mettons', 'lui', 'dit', 'au', 'plafond', 'mangeant', 'ses', 'vieux', 'rideaux', 'ajoute', 'tak', 'minute', 'nous', 'sommes', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rente', 'dans', 'la', 'pendule', 'le', 'lendemain', 'la', 'pauvre', 'cote', 'la', 'pauvre', 'condamnee', 'a', 'sa', 'veille', 'on', 'choit', 'aussi', 'qui', 'a', 'repare', 'c', 'est', 'beaucoup', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'en', 'vein', 'la', 'maison', 'dites', 'tac', 'tac', 'dit', 'il', 'la', 'vieille', 'horloge']
+2026-01-27 15:09:03,829 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'casse', 'des', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'et', 'de', 'kret', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'ma', 'zo', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'repare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:09:03,845 | INFO | File: CCM-003733-01_L01.wav | WER=50.595238 | S=49 D=5 I=31
+2026-01-27 15:09:03,845 | INFO | ------------------------------
+2026-01-27 15:09:03,845 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003733-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:09:03,845 | INFO |  File duration: 73.3750566893424 seconds
+2026-01-27 15:09:05,753 | INFO | Using rVAD model
+2026-01-27 15:09:09,416 | INFO | speech length: 167680
+2026-01-27 15:09:09,457 | INFO | decoder input length: 261
+2026-01-27 15:09:09,458 | INFO | max output length: 261
+2026-01-27 15:09:09,458 | INFO | min output length: 26
+2026-01-27 15:09:14,710 | INFO | end detected at 70
+2026-01-27 15:09:14,712 | INFO | -13.39 * 0.5 =  -6.69 for decoder
+2026-01-27 15:09:14,712 | INFO |  -2.06 * 0.5 =  -1.03 for ctc
+2026-01-27 15:09:14,712 | INFO | total log probability: -7.73
+2026-01-27 15:09:14,712 | INFO | normalized log probability: -0.12
+2026-01-27 15:09:14,712 | INFO | total number of ended hypotheses: 164
+2026-01-27 15:09:14,713 | INFO | best hypo: ▁dans▁un▁petit▁village▁de▁la▁montagne▁il▁y▁a▁un▁pauvre▁cordonnier▁tout▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁apportent▁des▁chaussures▁à▁réparer▁mais▁il▁ne▁travaille▁pas▁vite
+
+2026-01-27 15:09:14,716 | INFO | speech length: 42240
+2026-01-27 15:09:14,754 | INFO | decoder input length: 65
+2026-01-27 15:09:14,754 | INFO | max output length: 65
+2026-01-27 15:09:14,754 | INFO | min output length: 6
+2026-01-27 15:09:15,946 | INFO | end detected at 27
+2026-01-27 15:09:15,948 | INFO |  -1.57 * 0.5 =  -0.78 for decoder
+2026-01-27 15:09:15,948 | INFO |  -0.73 * 0.5 =  -0.37 for ctc
+2026-01-27 15:09:15,948 | INFO | total log probability: -1.15
+2026-01-27 15:09:15,948 | INFO | normalized log probability: -0.05
+2026-01-27 15:09:15,948 | INFO | total number of ended hypotheses: 162
+2026-01-27 15:09:15,948 | INFO | best hypo: ▁tous▁les▁soirs▁il▁mange▁tout▁seul▁bien▁tristement
+
+2026-01-27 15:09:15,950 | INFO | speech length: 56800
+2026-01-27 15:09:15,987 | INFO | decoder input length: 88
+2026-01-27 15:09:15,987 | INFO | max output length: 88
+2026-01-27 15:09:15,987 | INFO | min output length: 8
+2026-01-27 15:09:17,409 | INFO | end detected at 29
+2026-01-27 15:09:17,411 | INFO |  -2.56 * 0.5 =  -1.28 for decoder
+2026-01-27 15:09:17,411 | INFO |  -0.25 * 0.5 =  -0.12 for ctc
+2026-01-27 15:09:17,411 | INFO | total log probability: -1.40
+2026-01-27 15:09:17,411 | INFO | normalized log probability: -0.06
+2026-01-27 15:09:17,411 | INFO | total number of ended hypotheses: 163
+2026-01-27 15:09:17,412 | INFO | best hypo: ▁ce▁soir▁il▁y▁a▁devant▁lui▁un▁gros▁temps▁de▁souliers
+
+2026-01-27 15:09:17,414 | INFO | speech length: 75680
+2026-01-27 15:09:17,450 | INFO | decoder input length: 117
+2026-01-27 15:09:17,450 | INFO | max output length: 117
+2026-01-27 15:09:17,450 | INFO | min output length: 11
+2026-01-27 15:09:19,635 | INFO | end detected at 40
+2026-01-27 15:09:19,636 | INFO |  -5.62 * 0.5 =  -2.81 for decoder
+2026-01-27 15:09:19,636 | INFO |  -6.87 * 0.5 =  -3.43 for ctc
+2026-01-27 15:09:19,636 | INFO | total log probability: -6.24
+2026-01-27 15:09:19,636 | INFO | normalized log probability: -0.17
+2026-01-27 15:09:19,636 | INFO | total number of ended hypotheses: 164
+2026-01-27 15:09:19,637 | INFO | best hypo: ▁et▁doguette▁à▁recournes▁jamais▁je▁ne▁pourrais▁les▁réparer▁je▁suis▁trop▁âgée
+
+2026-01-27 15:09:19,639 | INFO | speech length: 120960
+2026-01-27 15:09:19,689 | INFO | decoder input length: 188
+2026-01-27 15:09:19,689 | INFO | max output length: 188
+2026-01-27 15:09:19,689 | INFO | min output length: 18
+2026-01-27 15:09:23,885 | INFO | end detected at 63
+2026-01-27 15:09:23,887 | INFO |  -8.28 * 0.5 =  -4.14 for decoder
+2026-01-27 15:09:23,887 | INFO | -11.88 * 0.5 =  -5.94 for ctc
+2026-01-27 15:09:23,888 | INFO | total log probability: -10.08
+2026-01-27 15:09:23,888 | INFO | normalized log probability: -0.17
+2026-01-27 15:09:23,888 | INFO | total number of ended hypotheses: 167
+2026-01-27 15:09:23,889 | INFO | best hypo: ▁et▁trop▁malade▁près▁de▁l'huile▁la▁grosse▁horloge▁faite▁ticta▁tictac▁le▁pauvre▁vieux▁tout▁découragé▁s'endort
+
+2026-01-27 15:09:23,891 | INFO | speech length: 28000
+2026-01-27 15:09:23,931 | INFO | decoder input length: 43
+2026-01-27 15:09:23,931 | INFO | max output length: 43
+2026-01-27 15:09:23,931 | INFO | min output length: 4
+2026-01-27 15:09:24,903 | INFO | end detected at 22
+2026-01-27 15:09:24,906 | INFO |  -1.30 * 0.5 =  -0.65 for decoder
+2026-01-27 15:09:24,906 | INFO |  -6.66 * 0.5 =  -3.33 for ctc
+2026-01-27 15:09:24,906 | INFO | total log probability: -3.98
+2026-01-27 15:09:24,907 | INFO | normalized log probability: -0.23
+2026-01-27 15:09:24,907 | INFO | total number of ended hypotheses: 159
+2026-01-27 15:09:24,907 | INFO | best hypo: ▁aussitôt▁l'horloge▁s'ouvre
+
+2026-01-27 15:09:24,909 | INFO | speech length: 85440
+2026-01-27 15:09:24,951 | INFO | decoder input length: 133
+2026-01-27 15:09:24,951 | INFO | max output length: 133
+2026-01-27 15:09:24,951 | INFO | min output length: 13
+2026-01-27 15:09:26,988 | INFO | end detected at 46
+2026-01-27 15:09:26,989 | INFO |  -6.20 * 0.5 =  -3.10 for decoder
+2026-01-27 15:09:26,989 | INFO |  -8.60 * 0.5 =  -4.30 for ctc
+2026-01-27 15:09:26,989 | INFO | total log probability: -7.40
+2026-01-27 15:09:26,989 | INFO | normalized log probability: -0.18
+2026-01-27 15:09:26,989 | INFO | total number of ended hypotheses: 174
+2026-01-27 15:09:26,990 | INFO | best hypo: ▁et▁deux▁petits▁lutins▁sautent▁sur▁le▁plancher▁l'un▁chapel▁pique▁l'autre▁s'appelle▁tack
+
+2026-01-27 15:09:26,992 | INFO | speech length: 93440
+2026-01-27 15:09:27,026 | INFO | decoder input length: 145
+2026-01-27 15:09:27,026 | INFO | max output length: 145
+2026-01-27 15:09:27,027 | INFO | min output length: 14
+2026-01-27 15:09:28,992 | INFO | end detected at 44
+2026-01-27 15:09:28,994 | INFO |  -4.91 * 0.5 =  -2.45 for decoder
+2026-01-27 15:09:28,994 | INFO |  -8.05 * 0.5 =  -4.02 for ctc
+2026-01-27 15:09:28,994 | INFO | total log probability: -6.48
+2026-01-27 15:09:28,994 | INFO | normalized log probability: -0.17
+2026-01-27 15:09:28,994 | INFO | total number of ended hypotheses: 194
+2026-01-27 15:09:28,995 | INFO | best hypo: ▁rangeons▁les▁étagères▁réparons▁les▁souliers▁recousons▁là▁le▁linge▁dictique
+
+2026-01-27 15:09:28,997 | INFO | speech length: 102080
+2026-01-27 15:09:29,045 | INFO | decoder input length: 159
+2026-01-27 15:09:29,045 | INFO | max output length: 159
+2026-01-27 15:09:29,045 | INFO | min output length: 15
+2026-01-27 15:09:31,702 | INFO | end detected at 58
+2026-01-27 15:09:31,703 | INFO | -15.46 * 0.5 =  -7.73 for decoder
+2026-01-27 15:09:31,703 | INFO | -10.21 * 0.5 =  -5.11 for ctc
+2026-01-27 15:09:31,703 | INFO | total log probability: -12.84
+2026-01-27 15:09:31,703 | INFO | normalized log probability: -0.24
+2026-01-27 15:09:31,703 | INFO | total number of ended hypotheses: 175
+2026-01-27 15:09:31,704 | INFO | best hypo: ▁préparons▁un▁gâteau▁mettons▁du▁gui▁au▁plafond▁changeon▁changeons▁ses▁vieux▁rideaux▁ajoutent▁taques
+
+2026-01-27 15:09:31,706 | INFO | speech length: 63520
+2026-01-27 15:09:31,743 | INFO | decoder input length: 98
+2026-01-27 15:09:31,743 | INFO | max output length: 98
+2026-01-27 15:09:31,743 | INFO | min output length: 9
+2026-01-27 15:09:33,076 | INFO | end detected at 34
+2026-01-27 15:09:33,078 | INFO |  -2.32 * 0.5 =  -1.16 for decoder
+2026-01-27 15:09:33,078 | INFO |  -6.48 * 0.5 =  -3.24 for ctc
+2026-01-27 15:09:33,078 | INFO | total log probability: -4.40
+2026-01-27 15:09:33,078 | INFO | normalized log probability: -0.15
+2026-01-27 15:09:33,078 | INFO | total number of ended hypotheses: 159
+2026-01-27 15:09:33,078 | INFO | best hypo: ▁minuit▁sonne▁les▁deux▁vaillants▁petits▁lutins▁rentrent▁dans▁la▁pendule
+
+2026-01-27 15:09:33,080 | INFO | speech length: 154080
+2026-01-27 15:09:33,114 | INFO | decoder input length: 240
+2026-01-27 15:09:33,114 | INFO | max output length: 240
+2026-01-27 15:09:33,114 | INFO | min output length: 24
+2026-01-27 15:09:37,268 | INFO | end detected at 78
+2026-01-27 15:09:37,269 | INFO | -16.47 * 0.5 =  -8.23 for decoder
+2026-01-27 15:09:37,269 | INFO | -16.39 * 0.5 =  -8.19 for ctc
+2026-01-27 15:09:37,269 | INFO | total log probability: -16.43
+2026-01-27 15:09:37,270 | INFO | normalized log probability: -0.23
+2026-01-27 15:09:37,270 | INFO | total number of ended hypotheses: 182
+2026-01-27 15:09:37,270 | INFO | best hypo: ▁le▁lendemain▁le▁pauvre▁cordonnier▁s'éveille▁ô▁jouaque▁qui▁a▁préparé▁ce▁beau▁gâteau▁qui▁donc▁arrangé▁la▁maison▁dicta▁ticta▁dit▁la▁vieille▁horloger
+
+2026-01-27 15:09:37,279 | INFO | Chunk: 0 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:09:37,279 | INFO | Chunk: 1 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:09:37,280 | INFO | Chunk: 2 | WER=8.333333 | S=1 D=0 I=0
+2026-01-27 15:09:37,280 | INFO | Chunk: 3 | WER=33.333333 | S=4 D=1 I=0
+2026-01-27 15:09:37,281 | INFO | Chunk: 4 | WER=31.818182 | S=5 D=2 I=0
+2026-01-27 15:09:37,281 | INFO | Chunk: 5 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:09:37,282 | INFO | Chunk: 6 | WER=22.222222 | S=3 D=1 I=0
+2026-01-27 15:09:37,282 | INFO | Chunk: 7 | WER=16.666667 | S=1 D=1 I=0
+2026-01-27 15:09:37,282 | INFO | Chunk: 8 | WER=31.250000 | S=4 D=1 I=0
+2026-01-27 15:09:37,283 | INFO | Chunk: 9 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 15:09:37,283 | INFO | Chunk: 10 | WER=27.586207 | S=5 D=3 I=0
+2026-01-27 15:09:37,284 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'temps', 'de', 'souliers', 'et', 'doguette', 'a', 'recournes', 'jamais', 'je', 'ne', 'pourrais', 'les', 'reparer', 'je', 'suis', 'trop', 'agee', 'et', 'trop', 'malade', 'pres', 'de', 'l', 'huile', 'la', 'grosse', 'horloge', 'faite', 'ticta', 'tictac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 'chapel', 'pique', 'l', 'autre', 's', 'appelle', 'tack', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'la', 'le', 'linge', 'dictique', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeon', 'changeons', 'ses', 'vieux', 'rideaux', 'ajoutent', 'taques', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'jouaque', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'arrange', 'la', 'maison', 'dicta', 'ticta', 'dit', 'la', 'vieille', 'horloger']
+2026-01-27 15:09:37,285 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:09:37,299 | INFO | File: CCM-003734-01_L01.wav | WER=18.079096 | S=21 D=8 I=3
+2026-01-27 15:09:37,299 | INFO | ------------------------------
+2026-01-27 15:09:37,299 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003734-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:09:37,300 | INFO |  File duration: 68.89360544217688 seconds
+2026-01-27 15:09:39,131 | INFO | Using rVAD model
+2026-01-27 15:09:43,464 | INFO | speech length: 165760
+2026-01-27 15:09:43,502 | INFO | decoder input length: 258
+2026-01-27 15:09:43,502 | INFO | max output length: 258
+2026-01-27 15:09:43,502 | INFO | min output length: 25
+2026-01-27 15:09:47,852 | INFO | end detected at 76
+2026-01-27 15:09:47,854 | INFO | -12.68 * 0.5 =  -6.34 for decoder
+2026-01-27 15:09:47,854 | INFO |  -4.86 * 0.5 =  -2.43 for ctc
+2026-01-27 15:09:47,854 | INFO | total log probability: -8.77
+2026-01-27 15:09:47,854 | INFO | normalized log probability: -0.13
+2026-01-27 15:09:47,854 | INFO | total number of ended hypotheses: 178
+2026-01-27 15:09:47,855 | INFO | best hypo: ▁grand▁mère▁raconte▁dans▁un▁petit▁village▁de▁la▁montagne▁et▁un▁pauvre▁cordonnier▁tout▁vieux▁et▁tout▁cassé▁les▁villageois▁lui▁apportent▁des▁chaussures▁réparées▁mais▁il▁ne▁travaille▁pas▁vite
+
+2026-01-27 15:09:47,857 | INFO | speech length: 69760
+2026-01-27 15:09:47,899 | INFO | decoder input length: 108
+2026-01-27 15:09:47,899 | INFO | max output length: 108
+2026-01-27 15:09:47,899 | INFO | min output length: 10
+2026-01-27 15:09:49,046 | INFO | end detected at 28
+2026-01-27 15:09:49,047 | INFO |  -3.29 * 0.5 =  -1.64 for decoder
+2026-01-27 15:09:49,047 | INFO |  -0.77 * 0.5 =  -0.38 for ctc
+2026-01-27 15:09:49,047 | INFO | total log probability: -2.03
+2026-01-27 15:09:49,047 | INFO | normalized log probability: -0.09
+2026-01-27 15:09:49,047 | INFO | total number of ended hypotheses: 162
+2026-01-27 15:09:49,047 | INFO | best hypo: ▁tous▁les▁soirs▁ils▁mangent▁tout▁seul▁bien▁tristement
+
+2026-01-27 15:09:49,049 | INFO | speech length: 5760
+2026-01-27 15:09:49,077 | INFO | decoder input length: 8
+2026-01-27 15:09:49,077 | INFO | max output length: 8
+2026-01-27 15:09:49,077 | INFO | min output length: 0
+2026-01-27 15:09:49,305 | INFO | adding <eos> in the last position in the loop
+2026-01-27 15:09:49,313 | INFO | no hypothesis. Finish decoding.
+2026-01-27 15:09:49,314 | INFO |  -3.63 * 0.5 =  -1.82 for decoder
+2026-01-27 15:09:49,314 | INFO |  -2.58 * 0.5 =  -1.29 for ctc
+2026-01-27 15:09:49,314 | INFO | total log probability: -3.10
+2026-01-27 15:09:49,314 | INFO | normalized log probability: -1.55
+2026-01-27 15:09:49,314 | INFO | total number of ended hypotheses: 149
+2026-01-27 15:09:49,314 | INFO | best hypo: 
+
+2026-01-27 15:09:49,315 | INFO | speech length: 165600
+2026-01-27 15:09:49,346 | INFO | decoder input length: 258
+2026-01-27 15:09:49,346 | INFO | max output length: 258
+2026-01-27 15:09:49,346 | INFO | min output length: 25
+2026-01-27 15:09:54,244 | INFO | end detected at 88
+2026-01-27 15:09:54,244 | INFO | -41.67 * 0.5 = -20.84 for decoder
+2026-01-27 15:09:54,245 | INFO | -19.71 * 0.5 =  -9.85 for ctc
+2026-01-27 15:09:54,245 | INFO | total log probability: -30.69
+2026-01-27 15:09:54,245 | INFO | normalized log probability: -0.37
+2026-01-27 15:09:54,245 | INFO | total number of ended hypotheses: 171
+2026-01-27 15:09:54,246 | INFO | best hypo: ▁ce▁soir▁il▁a▁demandé▁un▁grand▁tatsoudi▁et▁des▁guêtres▁à▁recoudre▁jamais▁je▁ne▁pourrai▁le▁réparer▁je▁suis▁trop▁âgé▁et▁trop▁malade▁près▁de▁lui▁la▁grosse▁horloge▁fait▁dictacle
+
+2026-01-27 15:09:54,248 | INFO | speech length: 33120
+2026-01-27 15:09:54,288 | INFO | decoder input length: 51
+2026-01-27 15:09:54,288 | INFO | max output length: 51
+2026-01-27 15:09:54,288 | INFO | min output length: 5
+2026-01-27 15:09:55,294 | INFO | end detected at 23
+2026-01-27 15:09:55,296 | INFO |  -4.23 * 0.5 =  -2.12 for decoder
+2026-01-27 15:09:55,296 | INFO | -11.13 * 0.5 =  -5.57 for ctc
+2026-01-27 15:09:55,296 | INFO | total log probability: -7.68
+2026-01-27 15:09:55,296 | INFO | normalized log probability: -0.43
+2026-01-27 15:09:55,296 | INFO | total number of ended hypotheses: 163
+2026-01-27 15:09:55,296 | INFO | best hypo: ▁le▁pauvre▁yeux▁tout▁décourage▁est▁standard
+
+2026-01-27 15:09:55,298 | INFO | speech length: 167840
+2026-01-27 15:09:55,341 | INFO | decoder input length: 261
+2026-01-27 15:09:55,341 | INFO | max output length: 261
+2026-01-27 15:09:55,341 | INFO | min output length: 26
+2026-01-27 15:10:00,169 | INFO | end detected at 95
+2026-01-27 15:10:00,170 | INFO | -72.81 * 0.5 = -36.41 for decoder
+2026-01-27 15:10:00,170 | INFO | -23.25 * 0.5 = -11.62 for ctc
+2026-01-27 15:10:00,170 | INFO | total log probability: -48.03
+2026-01-27 15:10:00,170 | INFO | normalized log probability: -0.55
+2026-01-27 15:10:00,170 | INFO | total number of ended hypotheses: 185
+2026-01-27 15:10:00,171 | INFO | best hypo: ▁aussitôt▁l'horloge▁s'ouvre▁et▁d'un▁petit▁lutas▁saute▁sur▁le▁plancher▁l'un▁sa▁baltique▁l'autre▁s'appelle▁tack▁ranangeant▁les▁étagères▁et▁barrant▁les▁souliers▁crus▁ou▁le▁linge▁ditique
+
+2026-01-27 15:10:00,173 | INFO | speech length: 92640
+2026-01-27 15:10:00,204 | INFO | decoder input length: 144
+2026-01-27 15:10:00,204 | INFO | max output length: 144
+2026-01-27 15:10:00,204 | INFO | min output length: 14
+2026-01-27 15:10:02,660 | INFO | end detected at 57
+2026-01-27 15:10:02,662 | INFO | -11.48 * 0.5 =  -5.74 for decoder
+2026-01-27 15:10:02,662 | INFO | -16.90 * 0.5 =  -8.45 for ctc
+2026-01-27 15:10:02,662 | INFO | total log probability: -14.19
+2026-01-27 15:10:02,662 | INFO | normalized log probability: -0.28
+2026-01-27 15:10:02,662 | INFO | total number of ended hypotheses: 189
+2026-01-27 15:10:02,663 | INFO | best hypo: ▁préparons▁nous▁préparons▁un▁gâteau▁bâton▁du▁guillaume▁avant▁changeant▁ce▁vieux▁rideau▁ajoute▁tacks
+
+2026-01-27 15:10:02,665 | INFO | speech length: 224800
+2026-01-27 15:10:02,711 | INFO | decoder input length: 350
+2026-01-27 15:10:02,711 | INFO | max output length: 350
+2026-01-27 15:10:02,711 | INFO | min output length: 35
+2026-01-27 15:10:09,454 | INFO | end detected at 104
+2026-01-27 15:10:09,455 | INFO | -142.59 * 0.5 = -71.30 for decoder
+2026-01-27 15:10:09,455 | INFO | -61.96 * 0.5 = -30.98 for ctc
+2026-01-27 15:10:09,455 | INFO | total log probability: -102.27
+2026-01-27 15:10:09,455 | INFO | normalized log probability: -1.09
+2026-01-27 15:10:09,455 | INFO | total number of ended hypotheses: 196
+2026-01-27 15:10:09,456 | INFO | best hypo: ▁mais▁minuit▁sonne▁les▁deux▁vaillants▁petits▁luthards▁entrent▁dans▁la▁pendule▁elle▁drama▁le▁bord▁à▁cordonnier▁s'éveille▁oh▁joua▁qui▁a▁préparé▁ce▁beau▁gâteau▁qui▁donc▁arrangé▁la▁maison▁dicque▁dict▁dit▁la▁vieille▁orreur
+
+2026-01-27 15:10:09,465 | INFO | Chunk: 0 | WER=25.000000 | S=2 D=3 I=3
+2026-01-27 15:10:09,465 | INFO | Chunk: 1 | WER=30.000000 | S=2 D=1 I=0
+2026-01-27 15:10:09,465 | INFO | Chunk: 2 | WER=100.000000 | S=1 D=8 I=0
+2026-01-27 15:10:09,466 | INFO | Chunk: 3 | WER=31.707317 | S=6 D=7 I=0
+2026-01-27 15:10:09,466 | INFO | Chunk: 4 | WER=42.857143 | S=3 D=0 I=0
+2026-01-27 15:10:09,467 | INFO | Chunk: 5 | WER=48.571429 | S=11 D=3 I=3
+2026-01-27 15:10:09,468 | INFO | Chunk: 6 | WER=64.705882 | S=9 D=2 I=0
+2026-01-27 15:10:09,469 | INFO | Chunk: 7 | WER=40.476190 | S=12 D=4 I=1
+2026-01-27 15:10:09,470 | INFO | ['grand', 'mere', 'raconte', 'dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'et', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'reparees', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'ils', 'mangent', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'demande', 'un', 'grand', 'tatsoudi', 'et', 'des', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'le', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'dictacle', 'le', 'pauvre', 'yeux', 'tout', 'decourage', 'est', 'standard', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'd', 'un', 'petit', 'lutas', 'saute', 'sur', 'le', 'plancher', 'l', 'un', 'sa', 'baltique', 'l', 'autre', 's', 'appelle', 'tack', 'ranangeant', 'les', 'etageres', 'et', 'barrant', 'les', 'souliers', 'crus', 'ou', 'le', 'linge', 'ditique', 'preparons', 'nous', 'preparons', 'un', 'gateau', 'baton', 'du', 'guillaume', 'avant', 'changeant', 'ce', 'vieux', 'rideau', 'ajoute', 'tacks', 'mais', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'luthards', 'entrent', 'dans', 'la', 'pendule', 'elle', 'drama', 'le', 'bord', 'a', 'cordonnier', 's', 'eveille', 'oh', 'joua', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'arrange', 'la', 'maison', 'dicque', 'dict', 'dit', 'la', 'vieille', 'orreur']
+2026-01-27 15:10:09,470 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 15:10:09,485 | INFO | File: CCM-003848-01_L01.wav | WER=37.853107 | S=43 D=15 I=9
+2026-01-27 15:10:09,485 | INFO | ------------------------------
+2026-01-27 15:10:09,485 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/8-PARK/CCM-003848-01_L01_pr_analyse.wav does not exist
+2026-01-27 15:10:09,485 | INFO | ===================== GLOBAL WER ======================
+2026-01-27 15:10:09,485 | INFO | The number of files is 8
+2026-01-27 15:10:09,485 | INFO | WER: 37.69%
+2026-01-27 15:10:09,485 | INFO | =============================================================

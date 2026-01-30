@@ -1,0 +1,241 @@
+2026-01-29 14:00:15,108 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-29 14:00:15,109 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-29 14:00:15,142 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-29 14:00:15,666 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-29 14:00:15,678 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-29 14:00:15,678 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-29 14:00:15,678 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-29 14:00:15,678 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-29 14:00:15,678 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-29 14:00:15,678 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-29 14:00:15,678 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-29 14:00:15,679 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-29 14:00:15,679 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-29 14:00:15,679 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-29 14:00:15,679 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-29 14:00:18,988 | INFO |  File duration: 48.074666666666666 seconds
+2026-01-29 14:00:20,847 | INFO | Using rVAD model
+2026-01-29 14:00:23,024 | INFO | Number of chunks: 7
+2026-01-29 14:00:25,177 | INFO | Created a temporary directory at /tmp/tmp3qo1h4fn
+2026-01-29 14:00:25,177 | INFO | Writing /tmp/tmp3qo1h4fn/_remote_module_non_scriptable.py
+2026-01-29 14:00:25,366 | DEBUG | Registered checkpoint save hook for save
+2026-01-29 14:00:25,366 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-29 14:00:25,582 | INFO | ------------------------------
+2026-01-29 14:00:25,582 | INFO | ------------------------------
+2026-01-29 14:00:25,590 | INFO | File: 1HC-ACBC-image.wav | WER=20.869565 | S=12 D=10 I=2
+2026-01-29 14:00:25,590 | INFO | ------------------------------
+2026-01-29 14:00:25,591 | INFO |  File duration: 103.43733333333333 seconds
+2026-01-29 14:00:27,944 | INFO | Using rVAD model
+2026-01-29 14:00:32,981 | INFO | Number of chunks: 7
+2026-01-29 14:00:33,308 | INFO | ------------------------------
+2026-01-29 14:00:33,308 | INFO | ------------------------------
+2026-01-29 14:00:33,333 | INFO | File: 1HC-AQAC-image.wav | WER=18.487395 | S=16 D=24 I=4
+2026-01-29 14:00:33,333 | INFO | ------------------------------
+2026-01-29 14:00:33,334 | INFO |  File duration: 72.93466666666667 seconds
+2026-01-29 14:00:34,776 | INFO | Using rVAD model
+2026-01-29 14:00:38,012 | INFO | Number of chunks: 3
+2026-01-29 14:00:38,182 | INFO | ------------------------------
+2026-01-29 14:00:38,182 | INFO | ------------------------------
+2026-01-29 14:00:38,209 | INFO | File: 1HC-AVGE-image.wav | WER=26.506024 | S=37 D=26 I=3
+2026-01-29 14:00:38,209 | INFO | ------------------------------
+2026-01-29 14:00:38,209 | INFO |  File duration: 80.624 seconds
+2026-01-29 14:00:39,809 | INFO | Using rVAD model
+2026-01-29 14:00:43,559 | INFO | Number of chunks: 11
+2026-01-29 14:00:43,907 | INFO | ------------------------------
+2026-01-29 14:00:43,907 | INFO | ------------------------------
+2026-01-29 14:00:43,923 | INFO | File: 1HC-ECKC-image.wav | WER=7.428571 | S=10 D=2 I=1
+2026-01-29 14:00:43,923 | INFO | ------------------------------
+2026-01-29 14:00:43,923 | INFO |  File duration: 40.05733333333333 seconds
+2026-01-29 14:00:44,745 | INFO | Using rVAD model
+2026-01-29 14:00:46,579 | INFO | Number of chunks: 7
+2026-01-29 14:00:46,785 | INFO | ------------------------------
+2026-01-29 14:00:46,786 | INFO | ------------------------------
+2026-01-29 14:00:46,790 | INFO | File: 1HC-FXRA-image.wav | WER=13.698630 | S=2 D=6 I=2
+2026-01-29 14:00:46,791 | INFO | ------------------------------
+2026-01-29 14:00:46,791 | INFO |  File duration: 59.4 seconds
+2026-01-29 14:00:48,029 | INFO | Using rVAD model
+2026-01-29 14:00:50,871 | INFO | Number of chunks: 5
+2026-01-29 14:00:51,064 | INFO | ------------------------------
+2026-01-29 14:00:51,064 | INFO | ------------------------------
+2026-01-29 14:00:51,073 | INFO | File: 1HC-GDZI-image.wav | WER=13.178295 | S=7 D=9 I=1
+2026-01-29 14:00:51,073 | INFO | ------------------------------
+2026-01-29 14:00:51,074 | INFO |  File duration: 89.03733333333334 seconds
+2026-01-29 14:00:52,908 | INFO | Using rVAD model
+2026-01-29 14:00:57,020 | INFO | Number of chunks: 10
+2026-01-29 14:00:57,371 | INFO | ------------------------------
+2026-01-29 14:00:57,371 | INFO | ------------------------------
+2026-01-29 14:00:57,389 | INFO | File: 1HC-IAJC-image.wav | WER=14.035088 | S=5 D=3 I=16
+2026-01-29 14:00:57,389 | INFO | ------------------------------
+2026-01-29 14:00:57,389 | WARNING | The file /vol/corpora/Daoudi/Data/Monologue/HC/1HC-IAJC_éléments_extralinguisitiques-image.wav does not exist
+2026-01-29 14:00:57,390 | INFO |  File duration: 92.12533333333333 seconds
+2026-01-29 14:00:59,309 | INFO | Using rVAD model
+2026-01-29 14:01:03,483 | INFO | Number of chunks: 5
+2026-01-29 14:01:03,717 | INFO | ------------------------------
+2026-01-29 14:01:03,717 | INFO | ------------------------------
+2026-01-29 14:01:03,740 | INFO | File: 1HC-IQKL-image.wav | WER=14.720812 | S=12 D=8 I=9
+2026-01-29 14:01:03,740 | INFO | ------------------------------
+2026-01-29 14:01:03,741 | INFO |  File duration: 28.00529166666667 seconds
+2026-01-29 14:01:04,314 | INFO | Using rVAD model
+2026-01-29 14:01:05,508 | INFO | Number of chunks: 1
+2026-01-29 14:01:05,569 | INFO | ------------------------------
+2026-01-29 14:01:05,569 | INFO | ------------------------------
+2026-01-29 14:01:05,573 | INFO | File: 1HC-KGAP-image.wav | WER=23.214286 | S=9 D=4 I=0
+2026-01-29 14:01:05,573 | INFO | ------------------------------
+2026-01-29 14:01:05,573 | INFO |  File duration: 45.268 seconds
+2026-01-29 14:01:06,519 | INFO | Using rVAD model
+2026-01-29 14:01:08,556 | INFO | Number of chunks: 8
+2026-01-29 14:01:08,837 | INFO | ------------------------------
+2026-01-29 14:01:08,837 | INFO | ------------------------------
+2026-01-29 14:01:08,847 | INFO | File: 1HC-KWZA-image.wav | WER=7.142857 | S=3 D=0 I=3
+2026-01-29 14:01:08,847 | INFO | ------------------------------
+2026-01-29 14:01:08,848 | INFO |  File duration: 82.65866666666666 seconds
+2026-01-29 14:01:10,558 | INFO | Using rVAD model
+2026-01-29 14:01:14,440 | INFO | Number of chunks: 9
+2026-01-29 14:01:14,759 | INFO | ------------------------------
+2026-01-29 14:01:14,759 | INFO | ------------------------------
+2026-01-29 14:01:14,775 | INFO | File: 1HC-KXRA-image.wav | WER=15.909091 | S=8 D=3 I=17
+2026-01-29 14:01:14,775 | INFO | ------------------------------
+2026-01-29 14:01:14,776 | INFO |  File duration: 66.812 seconds
+2026-01-29 14:01:16,142 | INFO | Using rVAD model
+2026-01-29 14:01:19,088 | INFO | Number of chunks: 9
+2026-01-29 14:01:19,339 | INFO | ------------------------------
+2026-01-29 14:01:19,339 | INFO | ------------------------------
+2026-01-29 14:01:19,351 | INFO | File: 1HC-LKZT-image.wav | WER=6.622517 | S=7 D=1 I=2
+2026-01-29 14:01:19,351 | INFO | ------------------------------
+2026-01-29 14:01:19,352 | INFO |  File duration: 47.06 seconds
+2026-01-29 14:01:20,286 | INFO | Using rVAD model
+2026-01-29 14:01:22,552 | INFO | Number of chunks: 2
+2026-01-29 14:01:22,660 | INFO | ------------------------------
+2026-01-29 14:01:22,660 | INFO | ------------------------------
+2026-01-29 14:01:22,668 | INFO | File: 1HC-MLSV-image.wav | WER=9.803922 | S=8 D=1 I=1
+2026-01-29 14:01:22,668 | INFO | ------------------------------
+2026-01-29 14:01:22,668 | INFO |  File duration: 18.528 seconds
+2026-01-29 14:01:23,057 | INFO | Using rVAD model
+2026-01-29 14:01:23,868 | INFO | Number of chunks: 2
+2026-01-29 14:01:23,934 | INFO | ------------------------------
+2026-01-29 14:01:23,934 | INFO | ------------------------------
+2026-01-29 14:01:23,937 | INFO | File: 1HC-MZQO-image.wav | WER=20.833333 | S=5 D=5 I=0
+2026-01-29 14:01:23,938 | INFO | ------------------------------
+2026-01-29 14:01:23,938 | INFO |  File duration: 66.94533333333334 seconds
+2026-01-29 14:01:25,274 | INFO | Using rVAD model
+2026-01-29 14:01:28,197 | INFO | Number of chunks: 6
+2026-01-29 14:01:28,402 | INFO | ------------------------------
+2026-01-29 14:01:28,402 | INFO | ------------------------------
+2026-01-29 14:01:28,418 | INFO | File: 1HC-OZUD-image.wav | WER=12.280702 | S=14 D=5 I=2
+2026-01-29 14:01:28,418 | INFO | ------------------------------
+2026-01-29 14:01:28,418 | INFO |  File duration: 97.16533333333334 seconds
+2026-01-29 14:01:30,402 | INFO | Using rVAD model
+2026-01-29 14:01:34,767 | INFO | Number of chunks: 14
+2026-01-29 14:01:35,144 | INFO | ------------------------------
+2026-01-29 14:01:35,144 | INFO | ------------------------------
+2026-01-29 14:01:35,172 | INFO | File: 1HC-PLIQ-image.wav | WER=7.786885 | S=14 D=2 I=3
+2026-01-29 14:01:35,172 | INFO | ------------------------------
+2026-01-29 14:01:35,172 | INFO |  File duration: 62.62266666666667 seconds
+2026-01-29 14:01:36,437 | INFO | Using rVAD model
+2026-01-29 14:01:39,341 | INFO | Number of chunks: 4
+2026-01-29 14:01:39,512 | INFO | ------------------------------
+2026-01-29 14:01:39,512 | INFO | ------------------------------
+2026-01-29 14:01:39,528 | INFO | File: 1HC-PVSZ-image.wav | WER=7.558140 | S=9 D=1 I=3
+2026-01-29 14:01:39,528 | INFO | ------------------------------
+2026-01-29 14:01:39,528 | INFO |  File duration: 107.196 seconds
+2026-01-29 14:01:41,797 | INFO | Using rVAD model
+2026-01-29 14:01:46,598 | INFO | Number of chunks: 4
+2026-01-29 14:01:46,834 | INFO | ------------------------------
+2026-01-29 14:01:46,834 | INFO | ------------------------------
+2026-01-29 14:01:46,876 | INFO | File: 1HC-ZANM-image.wav | WER=13.486842 | S=17 D=17 I=7
+2026-01-29 14:01:46,877 | INFO | ------------------------------
+2026-01-29 14:01:46,877 | INFO |  File duration: 60.6208 seconds
+2026-01-29 14:01:47,512 | INFO | Using rVAD model
+2026-01-29 14:01:50,177 | INFO | Number of chunks: 5
+2026-01-29 14:01:50,351 | INFO | ------------------------------
+2026-01-29 14:01:50,351 | INFO | ------------------------------
+2026-01-29 14:01:50,364 | INFO | File: 1HC2-AEOW-image.wav | WER=25.949367 | S=16 D=20 I=5
+2026-01-29 14:01:50,364 | INFO | ------------------------------
+2026-01-29 14:01:50,364 | INFO |  File duration: 22.186666666666667 seconds
+2026-01-29 14:01:50,867 | INFO | Using rVAD model
+2026-01-29 14:01:51,839 | INFO | Number of chunks: 1
+2026-01-29 14:01:51,884 | INFO | ------------------------------
+2026-01-29 14:01:51,884 | INFO | ------------------------------
+2026-01-29 14:01:51,888 | INFO | File: 1HC2-CEZE-image.wav | WER=11.475410 | S=2 D=5 I=0
+2026-01-29 14:01:51,888 | INFO | ------------------------------
+2026-01-29 14:01:51,888 | INFO |  File duration: 58.24512 seconds
+2026-01-29 14:01:52,510 | INFO | Using rVAD model
+2026-01-29 14:01:55,075 | INFO | Number of chunks: 6
+2026-01-29 14:01:55,271 | INFO | ------------------------------
+2026-01-29 14:01:55,271 | INFO | ------------------------------
+2026-01-29 14:01:55,283 | INFO | File: 1HC2-DWWQ-image.wav | WER=18.803419 | S=11 D=11 I=0
+2026-01-29 14:01:55,283 | INFO | ------------------------------
+2026-01-29 14:01:55,283 | INFO |  File duration: 48.66048 seconds
+2026-01-29 14:01:55,816 | INFO | Using rVAD model
+2026-01-29 14:01:57,925 | INFO | Number of chunks: 2
+2026-01-29 14:01:58,043 | INFO | ------------------------------
+2026-01-29 14:01:58,043 | INFO | ------------------------------
+2026-01-29 14:01:58,051 | INFO | File: 1HC2-FCSY-image.wav | WER=16.806723 | S=7 D=13 I=0
+2026-01-29 14:01:58,051 | INFO | ------------------------------
+2026-01-29 14:01:58,052 | INFO |  File duration: 53.373333333333335 seconds
+2026-01-29 14:01:59,213 | INFO | Using rVAD model
+2026-01-29 14:02:01,534 | INFO | Number of chunks: 4
+2026-01-29 14:02:01,684 | INFO | ------------------------------
+2026-01-29 14:02:01,684 | INFO | ------------------------------
+2026-01-29 14:02:01,690 | INFO | File: 1HC2-GJTD-image.wav | WER=20.833333 | S=10 D=10 I=0
+2026-01-29 14:02:01,690 | INFO | ------------------------------
+2026-01-29 14:02:01,690 | INFO |  File duration: 81.56133333333334 seconds
+2026-01-29 14:02:03,556 | INFO | Using rVAD model
+2026-01-29 14:02:07,237 | INFO | Number of chunks: 17
+2026-01-29 14:02:07,803 | INFO | ------------------------------
+2026-01-29 14:02:07,803 | INFO | ------------------------------
+2026-01-29 14:02:07,816 | INFO | File: 1HC2-IWVU-image.wav | WER=24.691358 | S=16 D=20 I=4
+2026-01-29 14:02:07,816 | INFO | ------------------------------
+2026-01-29 14:02:07,817 | INFO |  File duration: 72.74496 seconds
+2026-01-29 14:02:08,675 | INFO | Using rVAD model
+2026-01-29 14:02:11,836 | INFO | Number of chunks: 12
+2026-01-29 14:02:12,185 | INFO | ------------------------------
+2026-01-29 14:02:12,185 | INFO | ------------------------------
+2026-01-29 14:02:12,198 | INFO | File: 1HC2-ODZI-image.wav | WER=22.292994 | S=13 D=14 I=8
+2026-01-29 14:02:12,198 | INFO | ------------------------------
+2026-01-29 14:02:12,198 | INFO |  File duration: 97.97733333333333 seconds
+2026-01-29 14:02:14,325 | INFO | Using rVAD model
+2026-01-29 14:02:18,814 | INFO | Number of chunks: 5
+2026-01-29 14:02:19,056 | INFO | ------------------------------
+2026-01-29 14:02:19,056 | INFO | ------------------------------
+2026-01-29 14:02:19,076 | INFO | File: 1HC2-OZTK-image.wav | WER=9.004739 | S=11 D=7 I=1
+2026-01-29 14:02:19,077 | INFO | ------------------------------
+2026-01-29 14:02:19,077 | INFO |  File duration: 43.17184 seconds
+2026-01-29 14:02:19,524 | INFO | Using rVAD model
+2026-01-29 14:02:21,395 | INFO | Number of chunks: 6
+2026-01-29 14:02:21,595 | INFO | ------------------------------
+2026-01-29 14:02:21,595 | INFO | ------------------------------
+2026-01-29 14:02:21,602 | INFO | File: 1HC2-RKHI-image.wav | WER=17.647059 | S=6 D=5 I=7
+2026-01-29 14:02:21,602 | INFO | ------------------------------
+2026-01-29 14:02:21,603 | INFO |  File duration: 103.55466666666666 seconds
+2026-01-29 14:02:23,796 | INFO | Using rVAD model
+2026-01-29 14:02:28,365 | INFO | Number of chunks: 12
+2026-01-29 14:02:28,747 | INFO | ------------------------------
+2026-01-29 14:02:28,747 | INFO | ------------------------------
+2026-01-29 14:02:28,772 | INFO | File: 1HC2-TATW-image.wav | WER=31.250000 | S=41 D=32 I=2
+2026-01-29 14:02:28,772 | INFO | ------------------------------
+2026-01-29 14:02:28,772 | INFO |  File duration: 56.70133333333333 seconds
+2026-01-29 14:02:29,955 | INFO | Using rVAD model
+2026-01-29 14:02:32,401 | INFO | Number of chunks: 4
+2026-01-29 14:02:32,549 | INFO | ------------------------------
+2026-01-29 14:02:32,549 | INFO | ------------------------------
+2026-01-29 14:02:32,559 | INFO | File: 1HC2-YSZL-image.wav | WER=10.370370 | S=11 D=0 I=3
+2026-01-29 14:02:32,560 | INFO | ------------------------------
+2026-01-29 14:02:32,560 | INFO |  File duration: 45.75389583333333 seconds
+2026-01-29 14:02:33,462 | INFO | Using rVAD model
+2026-01-29 14:02:35,439 | INFO | Number of chunks: 6
+2026-01-29 14:02:35,623 | INFO | ------------------------------
+2026-01-29 14:02:35,624 | INFO | ------------------------------
+2026-01-29 14:02:35,630 | INFO | File: 2HC-IWHW-image.wav | WER=15.463918 | S=8 D=6 I=1
+2026-01-29 14:02:35,630 | INFO | ------------------------------
+2026-01-29 14:02:35,631 | INFO |  File duration: 77.97377083333333 seconds
+2026-01-29 14:02:37,227 | INFO | Using rVAD model
+2026-01-29 14:02:40,709 | INFO | Number of chunks: 4
+2026-01-29 14:02:40,901 | INFO | ------------------------------
+2026-01-29 14:02:40,901 | INFO | ------------------------------
+2026-01-29 14:02:40,926 | INFO | File: 2HC-MLLK-image.wav | WER=14.410480 | S=12 D=17 I=4
+2026-01-29 14:02:40,926 | INFO | ------------------------------
+2026-01-29 14:02:40,926 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:02:40,926 | INFO | The number of files is 31
+2026-01-29 14:02:40,926 | INFO | WER: 15.89%
+2026-01-29 14:02:40,927 | INFO | =============================================================

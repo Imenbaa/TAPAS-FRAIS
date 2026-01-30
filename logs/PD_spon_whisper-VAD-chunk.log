@@ -1,0 +1,132 @@
+2026-01-29 14:14:04,180 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/hyperparams.yaml'
+2026-01-29 14:14:04,180 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-29 14:14:05,339 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - WhisperModel is frozen.
+2026-01-29 14:14:05,339 | WARNING | speechbrain.lobes.models.huggingface_transformers.whisper - whisper encoder-decoder is frozen.
+2026-01-29 14:14:05,469 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr.
+2026-01-29 14:14:05,469 | INFO | Fetch whisper.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt'
+2026-01-29 14:14:05,469 | DEBUG | Set local path in self.paths["whisper"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-29 14:14:05,469 | INFO | Loading pretrained files for: whisper
+2026-01-29 14:14:05,469 | DEBUG | Redirecting (loading from local path): whisper -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-whisper-medium-commonvoice-fr/whisper.ckpt
+2026-01-29 14:14:09,657 | INFO |  File duration: 26.676 seconds
+2026-01-29 14:14:10,773 | INFO | Using rVAD model
+2026-01-29 14:14:11,918 | INFO | Number of chunks: 5
+2026-01-29 14:14:17,422 | INFO | ------------------------------
+2026-01-29 14:14:17,422 | INFO | ------------------------------
+2026-01-29 14:14:17,425 | INFO | File: 1PD-ZPHY-image.wav | WER=51.219512 | S=10 D=6 I=5
+2026-01-29 14:14:17,425 | INFO | ------------------------------
+2026-01-29 14:14:17,425 | INFO |  File duration: 55.44 seconds
+2026-01-29 14:14:18,537 | INFO | Using rVAD model
+2026-01-29 14:14:20,980 | INFO | Number of chunks: 4
+2026-01-29 14:14:25,912 | INFO | ------------------------------
+2026-01-29 14:14:25,912 | INFO | ------------------------------
+2026-01-29 14:14:25,919 | INFO | File: 1PD-PXMX-image.wav | WER=53.571429 | S=15 D=59 I=1
+2026-01-29 14:14:25,919 | INFO | ------------------------------
+2026-01-29 14:14:25,920 | INFO |  File duration: 88.63866666666667 seconds
+2026-01-29 14:14:27,835 | INFO | Using rVAD model
+2026-01-29 14:14:31,802 | INFO | Number of chunks: 21
+2026-01-29 14:14:41,054 | INFO | ------------------------------
+2026-01-29 14:14:41,055 | INFO | ------------------------------
+2026-01-29 14:14:41,065 | INFO | File: 1PD2-OAAY-image.wav | WER=21.739130 | S=17 D=9 I=4
+2026-01-29 14:14:41,065 | INFO | ------------------------------
+2026-01-29 14:14:41,066 | INFO |  File duration: 214.23020408163265 seconds
+2026-01-29 14:14:46,885 | INFO | Using rVAD model
+2026-01-29 14:14:56,665 | INFO | Number of chunks: 15
+2026-01-29 14:15:19,694 | INFO | ------------------------------
+2026-01-29 14:15:19,694 | INFO | ------------------------------
+2026-01-29 14:15:19,814 | INFO | File: 2PD2-KLWB-image.wav | WER=52.229299 | S=60 D=254 I=14
+2026-01-29 14:15:19,815 | INFO | ------------------------------
+2026-01-29 14:15:19,815 | INFO |  File duration: 57.744 seconds
+2026-01-29 14:15:20,991 | INFO | Using rVAD model
+2026-01-29 14:15:23,589 | INFO | Number of chunks: 3
+2026-01-29 14:15:29,309 | INFO | ------------------------------
+2026-01-29 14:15:29,309 | INFO | ------------------------------
+2026-01-29 14:15:29,319 | INFO | File: 1PD-WVGL-image.wav | WER=55.279503 | S=25 D=63 I=1
+2026-01-29 14:15:29,319 | INFO | ------------------------------
+2026-01-29 14:15:29,319 | INFO |  File duration: 69.10858333333333 seconds
+2026-01-29 14:15:30,685 | INFO | Using rVAD model
+2026-01-29 14:15:33,769 | INFO | Number of chunks: 8
+2026-01-29 14:15:40,777 | INFO | ------------------------------
+2026-01-29 14:15:40,777 | INFO | ------------------------------
+2026-01-29 14:15:40,790 | INFO | File: 2PD-TKHD-image.wav | WER=44.329897 | S=6 D=78 I=2
+2026-01-29 14:15:40,790 | INFO | ------------------------------
+2026-01-29 14:15:40,790 | INFO |  File duration: 112.26266666666666 seconds
+2026-01-29 14:15:43,088 | INFO | Using rVAD model
+2026-01-29 14:15:48,099 | INFO | Number of chunks: 11
+2026-01-29 14:16:01,712 | INFO | ------------------------------
+2026-01-29 14:16:01,712 | INFO | ------------------------------
+2026-01-29 14:16:01,735 | INFO | File: 2PD-HCTE-image.wav | WER=26.785714 | S=42 D=15 I=3
+2026-01-29 14:16:01,735 | INFO | ------------------------------
+2026-01-29 14:16:01,735 | INFO |  File duration: 46.20288 seconds
+2026-01-29 14:16:02,225 | INFO | Using rVAD model
+2026-01-29 14:16:04,327 | INFO | Number of chunks: 7
+2026-01-29 14:16:11,530 | INFO | ------------------------------
+2026-01-29 14:16:11,531 | INFO | ------------------------------
+2026-01-29 14:16:11,541 | INFO | File: 1PD-FSKS-image.wav | WER=27.205882 | S=20 D=13 I=4
+2026-01-29 14:16:11,541 | INFO | ------------------------------
+2026-01-29 14:16:11,542 | INFO |  File duration: 41.034666666666666 seconds
+2026-01-29 14:16:12,395 | INFO | Using rVAD model
+2026-01-29 14:16:14,269 | INFO | Number of chunks: 2
+2026-01-29 14:16:18,548 | INFO | ------------------------------
+2026-01-29 14:16:18,548 | INFO | ------------------------------
+2026-01-29 14:16:18,554 | INFO | File: 1PD-ZNPV-image.wav | WER=48.958333 | S=18 D=24 I=5
+2026-01-29 14:16:18,555 | INFO | ------------------------------
+2026-01-29 14:16:18,555 | INFO |  File duration: 45.54752 seconds
+2026-01-29 14:16:19,036 | INFO | Using rVAD model
+2026-01-29 14:16:21,050 | INFO | Number of chunks: 7
+2026-01-29 14:16:27,013 | INFO | ------------------------------
+2026-01-29 14:16:27,013 | INFO | ------------------------------
+2026-01-29 14:16:27,022 | INFO | File: 1PD-LEZQ-image.wav | WER=17.142857 | S=8 D=7 I=3
+2026-01-29 14:16:27,022 | INFO | ------------------------------
+2026-01-29 14:16:27,022 | INFO |  File duration: 107.64533333333334 seconds
+2026-01-29 14:16:29,348 | INFO | Using rVAD model
+2026-01-29 14:16:34,143 | INFO | Number of chunks: 10
+2026-01-29 14:16:49,772 | INFO | ------------------------------
+2026-01-29 14:16:49,773 | INFO | ------------------------------
+2026-01-29 14:16:49,812 | INFO | File: 2PD-NZWZ-image.wav | WER=13.559322 | S=19 D=14 I=7
+2026-01-29 14:16:49,812 | INFO | ------------------------------
+2026-01-29 14:16:49,812 | INFO |  File duration: 31.557333333333332 seconds
+2026-01-29 14:16:50,500 | INFO | Using rVAD model
+2026-01-29 14:16:51,861 | INFO | Number of chunks: 3
+2026-01-29 14:16:55,208 | INFO | ------------------------------
+2026-01-29 14:16:55,209 | INFO | ------------------------------
+2026-01-29 14:16:55,213 | INFO | File: 1PD-YIWI-image.wav | WER=36.842105 | S=7 D=21 I=0
+2026-01-29 14:16:55,213 | INFO | ------------------------------
+2026-01-29 14:16:55,213 | INFO |  File duration: 82.328 seconds
+2026-01-29 14:16:56,834 | INFO | Using rVAD model
+2026-01-29 14:17:00,431 | INFO | Number of chunks: 6
+2026-01-29 14:17:07,183 | INFO | ------------------------------
+2026-01-29 14:17:07,183 | INFO | ------------------------------
+2026-01-29 14:17:07,195 | INFO | File: 1PD-ZTLK-image.wav | WER=47.619048 | S=24 D=52 I=4
+2026-01-29 14:17:07,195 | INFO | ------------------------------
+2026-01-29 14:17:07,195 | INFO |  File duration: 77.408 seconds
+2026-01-29 14:17:08,790 | INFO | Using rVAD model
+2026-01-29 14:17:12,259 | INFO | Number of chunks: 3
+2026-01-29 14:17:19,430 | INFO | ------------------------------
+2026-01-29 14:17:19,430 | INFO | ------------------------------
+2026-01-29 14:17:19,444 | INFO | File: 2PD-TWIW-image.wav | WER=53.883495 | S=24 D=87 I=0
+2026-01-29 14:17:19,444 | INFO | ------------------------------
+2026-01-29 14:17:19,444 | INFO |  File duration: 98.80533333333334 seconds
+2026-01-29 14:17:21,534 | INFO | Using rVAD model
+2026-01-29 14:17:25,868 | INFO | Number of chunks: 18
+2026-01-29 14:17:34,695 | INFO | ------------------------------
+2026-01-29 14:17:34,695 | INFO | ------------------------------
+2026-01-29 14:17:34,706 | INFO | File: 1PD2-UVLI-image.wav | WER=30.714286 | S=20 D=15 I=8
+2026-01-29 14:17:34,707 | INFO | ------------------------------
+2026-01-29 14:17:34,707 | INFO |  File duration: 64.99733333333333 seconds
+2026-01-29 14:17:36,072 | INFO | Using rVAD model
+2026-01-29 14:17:38,909 | INFO | Number of chunks: 4
+2026-01-29 14:17:44,107 | INFO | ------------------------------
+2026-01-29 14:17:44,107 | INFO | ------------------------------
+2026-01-29 14:17:44,114 | INFO | File: 1PD2-XFZE-image.wav | WER=57.462687 | S=11 D=59 I=7
+2026-01-29 14:17:44,114 | INFO | ------------------------------
+2026-01-29 14:17:44,114 | INFO |  File duration: 55.73466666666667 seconds
+2026-01-29 14:17:45,207 | INFO | Using rVAD model
+2026-01-29 14:17:47,652 | INFO | Number of chunks: 5
+2026-01-29 14:17:51,794 | INFO | ------------------------------
+2026-01-29 14:17:51,794 | INFO | ------------------------------
+2026-01-29 14:17:51,800 | INFO | File: 2PD-DKVE-image.wav | WER=27.450980 | S=3 D=24 I=1
+2026-01-29 14:17:51,800 | INFO | ------------------------------
+2026-01-29 14:17:51,800 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:17:51,800 | INFO | The number of files is 17
+2026-01-29 14:17:51,800 | INFO | WER: 39.18%
+2026-01-29 14:17:51,801 | INFO | =============================================================

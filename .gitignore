@@ -13,3 +13,4 @@ src/asr-whisper-medium-commonvoice-fr
 src/utils/wer_analysis.ipynb
 src/utils/.ipynb_checkpoints
 logs/transcriptions
+logs/

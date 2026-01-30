@@ -1,0 +1,15 @@
+2026-01-28 15:19:06,552 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-28 15:19:06,552 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-28 15:19:06,596 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-28 15:19:07,177 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-28 15:19:07,191 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-28 15:19:07,192 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-28 15:19:07,192 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-28 15:19:07,192 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-28 15:19:07,192 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-28 15:19:07,192 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-28 15:19:07,192 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-28 15:19:07,192 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-28 15:19:07,192 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-28 15:19:07,192 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-28 15:19:07,192 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt

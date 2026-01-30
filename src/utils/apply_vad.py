@@ -13,7 +13,7 @@ def read_audio_16k(path):
 
     # mono
     if audio.ndim > 1:
-        audio = np.mean(audio, axis=0)
+        audio = np.mean(audio, axis=1)
 
     # resample if needed
     if sr != 16000:

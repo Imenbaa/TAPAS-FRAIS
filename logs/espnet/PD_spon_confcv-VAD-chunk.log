@@ -1,0 +1,1869 @@
+2026-01-29 14:38:44,386 | INFO | config file: /vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml
+2026-01-29 14:38:44,417 | INFO | Vocabulary size: 350
+2026-01-29 14:38:45,096 | INFO | Gradient checkpoint layers: []
+2026-01-29 14:38:47,431 | INFO | BatchBeamSearch implementation is selected.
+2026-01-29 14:38:47,434 | INFO | Beam_search: BatchBeamSearch(
+  (nn_dict): ModuleDict(
+    (decoder): TransformerDecoder(
+      (embed): Sequential(
+        (0): Embedding(350, 512)
+        (1): PositionalEncoding(
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+      (after_norm): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+      (output_layer): Linear(in_features=512, out_features=350, bias=True)
+      (decoders): MultiSequential(
+        (0): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (1): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (2): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (3): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (4): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+        (5): DecoderLayer(
+          (self_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (src_attn): MultiHeadedAttention(
+            (linear_q): Linear(in_features=512, out_features=512, bias=True)
+            (linear_k): Linear(in_features=512, out_features=512, bias=True)
+            (linear_v): Linear(in_features=512, out_features=512, bias=True)
+            (linear_out): Linear(in_features=512, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (q_norm): Identity()
+            (k_norm): Identity()
+          )
+          (feed_forward): PositionwiseFeedForward(
+            (w_1): Linear(in_features=512, out_features=2048, bias=True)
+            (w_2): Linear(in_features=2048, out_features=512, bias=True)
+            (dropout): Dropout(p=0.1, inplace=False)
+            (activation): ReLU()
+          )
+          (norm1): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm2): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (norm3): LayerNorm((512,), eps=1e-12, elementwise_affine=True)
+          (dropout): Dropout(p=0.1, inplace=False)
+        )
+      )
+    )
+  )
+)
+2026-01-29 14:38:47,434 | INFO | Decoding device=cuda, dtype=float32
+2026-01-29 14:38:47,435 | INFO | Text tokenizer: SentencepiecesTokenizer(model="/vol/experiments/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/bpe_unigram350/bpe.model")
+2026-01-29 14:38:47,436 | INFO |  File duration: 26.676 seconds
+2026-01-29 14:38:48,526 | INFO | Using rVAD model
+2026-01-29 14:38:49,617 | INFO | speech length: 109600
+2026-01-29 14:38:51,880 | INFO | decoder input length: 170
+2026-01-29 14:38:51,880 | INFO | max output length: 170
+2026-01-29 14:38:51,880 | INFO | min output length: 17
+2026-01-29 14:38:56,298 | INFO | end detected at 46
+2026-01-29 14:38:56,300 | INFO |  -3.26 * 0.5 =  -1.63 for decoder
+2026-01-29 14:38:56,300 | INFO |  -7.02 * 0.5 =  -3.51 for ctc
+2026-01-29 14:38:56,300 | INFO | total log probability: -5.14
+2026-01-29 14:38:56,300 | INFO | normalized log probability: -0.13
+2026-01-29 14:38:56,300 | INFO | total number of ended hypotheses: 177
+2026-01-29 14:38:56,301 | INFO | best hypo: ▁j'aperçois▁un▁quai▁avec▁trois▁bateaux▁accostés▁dont▁un▁de▁pêcheurs▁de▁de▁plaisance
+
+2026-01-29 14:38:56,303 | INFO | speech length: 74560
+2026-01-29 14:38:56,338 | INFO | decoder input length: 116
+2026-01-29 14:38:56,338 | INFO | max output length: 116
+2026-01-29 14:38:56,338 | INFO | min output length: 11
+2026-01-29 14:38:59,342 | INFO | end detected at 32
+2026-01-29 14:38:59,343 | INFO |  -4.06 * 0.5 =  -2.03 for decoder
+2026-01-29 14:38:59,343 | INFO |  -5.35 * 0.5 =  -2.68 for ctc
+2026-01-29 14:38:59,343 | INFO | total log probability: -4.71
+2026-01-29 14:38:59,343 | INFO | normalized log probability: -0.18
+2026-01-29 14:38:59,343 | INFO | total number of ended hypotheses: 166
+2026-01-29 14:38:59,343 | INFO | best hypo: ▁le▁quai▁est▁dégradé▁sur▁la▁main▁sur▁presque▁sa▁totalité
+
+2026-01-29 14:38:59,345 | INFO | speech length: 21440
+2026-01-29 14:38:59,379 | INFO | decoder input length: 33
+2026-01-29 14:38:59,379 | INFO | max output length: 33
+2026-01-29 14:38:59,379 | INFO | min output length: 3
+2026-01-29 14:39:00,548 | INFO | end detected at 14
+2026-01-29 14:39:00,550 | INFO |  -1.38 * 0.5 =  -0.69 for decoder
+2026-01-29 14:39:00,550 | INFO |  -2.46 * 0.5 =  -1.23 for ctc
+2026-01-29 14:39:00,550 | INFO | total log probability: -1.92
+2026-01-29 14:39:00,550 | INFO | normalized log probability: -0.19
+2026-01-29 14:39:00,550 | INFO | total number of ended hypotheses: 153
+2026-01-29 14:39:00,550 | INFO | best hypo: ▁l'amer▁est▁calme
+
+2026-01-29 14:39:00,551 | INFO | speech length: 78720
+2026-01-29 14:39:00,585 | INFO | decoder input length: 122
+2026-01-29 14:39:00,585 | INFO | max output length: 122
+2026-01-29 14:39:00,585 | INFO | min output length: 12
+2026-01-29 14:39:03,861 | INFO | end detected at 36
+2026-01-29 14:39:03,862 | INFO |  -7.00 * 0.5 =  -3.50 for decoder
+2026-01-29 14:39:03,862 | INFO | -10.51 * 0.5 =  -5.26 for ctc
+2026-01-29 14:39:03,862 | INFO | total log probability: -8.76
+2026-01-29 14:39:03,862 | INFO | normalized log probability: -0.28
+2026-01-29 14:39:03,862 | INFO | total number of ended hypotheses: 174
+2026-01-29 14:39:03,863 | INFO | best hypo: ▁il▁y▁a▁un▁bateau▁de▁sauvetage▁à▁côté▁de▁timbat▁d'un▁des▁bateaux
+
+2026-01-29 14:39:03,865 | INFO | ['j', 'apercois', 'un', 'quai', 'avec', 'trois', 'bateaux', 'accostes', 'dont', 'un', 'de', 'pecheurs', 'de', 'de', 'plaisance', 'le', 'quai', 'est', 'degrade', 'sur', 'la', 'main', 'sur', 'presque', 'sa', 'totalite', 'l', 'amer', 'est', 'calme', 'il', 'y', 'a', 'un', 'bateau', 'de', 'sauvetage', 'a', 'cote', 'de', 'timbat', 'd', 'un', 'des', 'bateaux']
+2026-01-29 14:39:03,865 | INFO | ['j', 'apercois', 'un', 'quai', 'avec', 'trois', 'bateaux', 'accostes', 'dont', 'un', 'de', 'de', 'pecheur', 'de', 'plaisance', 'le', 'quai', 'degrade', 'presque', 'sur', 'toute', 'sa', 'globalite', 'la', 'mer', 'est', 'calme', 'il', 'y', 'a', 'un', 'bateau', 'de', 'sauvetage', 'a', 'cote', 'd', 'un', 'ba', 'des', 'bateaux']
+2026-01-29 14:39:03,868 | INFO | File: 1PD-ZPHY-image.wav | WER=31.707317 | S=5 D=2 I=6
+2026-01-29 14:39:03,868 | INFO | ------------------------------
+2026-01-29 14:39:03,868 | INFO |  File duration: 55.44 seconds
+2026-01-29 14:39:04,955 | INFO | Using rVAD model
+2026-01-29 14:39:07,234 | INFO | speech length: 434720
+2026-01-29 14:39:07,272 | INFO | decoder input length: 678
+2026-01-29 14:39:07,272 | INFO | max output length: 678
+2026-01-29 14:39:07,272 | INFO | min output length: 67
+2026-01-29 14:39:37,650 | INFO | end detected at 203
+2026-01-29 14:39:37,651 | INFO | -401.22 * 0.5 = -200.61 for decoder
+2026-01-29 14:39:37,651 | INFO | -146.77 * 0.5 = -73.38 for ctc
+2026-01-29 14:39:37,651 | INFO | total log probability: -274.00
+2026-01-29 14:39:37,651 | INFO | normalized log probability: -1.38
+2026-01-29 14:39:37,651 | INFO | total number of ended hypotheses: 154
+2026-01-29 14:39:37,653 | INFO | best hypo: ▁j'ai▁eu▁la▁chance▁de▁partir▁de▁fois▁en▁polynésie▁et▁c'est▁ce'est▁un▁endroit▁que▁j'ai▁trouvé▁vraiment▁merveilleux▁des▁déjà▁en▁moments▁sympa▁et▁si▁vraiment▁mais▁j'ai▁découverts▁une▁forme▁d'a▁une▁forme▁de▁vie▁et▁une▁forme▁de▁ie▁facible▁et▁même▁et▁paisible▁que▁je▁ne▁retrouvais▁pas▁ici▁et▁j'aurais▁aiméte▁y▁retourner▁mais▁malheureusement▁je▁crois▁que▁ce▁serai▁pas▁posible▁et▁donc▁je▁j'espèrent▁toujours▁et▁le▁jour▁j'y▁reviendrai
+
+2026-01-29 14:39:37,655 | INFO | speech length: 8640
+2026-01-29 14:39:37,685 | INFO | decoder input length: 13
+2026-01-29 14:39:37,685 | INFO | max output length: 13
+2026-01-29 14:39:37,685 | INFO | min output length: 1
+2026-01-29 14:39:38,591 | INFO | end detected at 11
+2026-01-29 14:39:38,592 | INFO |  -1.52 * 0.5 =  -0.76 for decoder
+2026-01-29 14:39:38,592 | INFO |  -0.89 * 0.5 =  -0.45 for ctc
+2026-01-29 14:39:38,592 | INFO | total log probability: -1.21
+2026-01-29 14:39:38,592 | INFO | normalized log probability: -0.20
+2026-01-29 14:39:38,592 | INFO | total number of ended hypotheses: 157
+2026-01-29 14:39:38,593 | INFO | best hypo: ▁c'est▁vous
+
+2026-01-29 14:39:38,594 | INFO | speech length: 295680
+2026-01-29 14:39:38,628 | INFO | decoder input length: 461
+2026-01-29 14:39:38,629 | INFO | max output length: 461
+2026-01-29 14:39:38,629 | INFO | min output length: 46
+2026-01-29 14:39:52,520 | INFO | end detected at 148
+2026-01-29 14:39:52,521 | INFO | -271.01 * 0.5 = -135.51 for decoder
+2026-01-29 14:39:52,522 | INFO | -85.86 * 0.5 = -42.93 for ctc
+2026-01-29 14:39:52,522 | INFO | total log probability: -178.43
+2026-01-29 14:39:52,522 | INFO | normalized log probability: -1.25
+2026-01-29 14:39:52,522 | INFO | total number of ended hypotheses: 191
+2026-01-29 14:39:52,523 | INFO | best hypo: ▁voilà▁passé▁le▁j'ai▁mis▁en▁dehors▁du▁climat▁dehors▁des▁paysages▁idylliques▁j'ai▁beaucoup▁aimé▁la▁simplicité▁des▁gens▁et▁j'étais▁ontais▁été▁dans▁des▁dans▁des▁pensions▁de▁familles▁et▁donc▁bien▁loin▁des▁cliché▁des▁grands▁'hôtels▁et▁'était▁vraiment▁des▁gens▁à▁doigo▁adorables▁et▁abordables▁coin
+
+2026-01-29 14:39:52,525 | INFO | speech length: 23360
+2026-01-29 14:39:52,558 | INFO | decoder input length: 36
+2026-01-29 14:39:52,558 | INFO | max output length: 36
+2026-01-29 14:39:52,558 | INFO | min output length: 3
+2026-01-29 14:39:52,944 | INFO | end detected at 12
+2026-01-29 14:39:52,946 | INFO |  -1.14 * 0.5 =  -0.57 for decoder
+2026-01-29 14:39:52,946 | INFO |  -1.25 * 0.5 =  -0.63 for ctc
+2026-01-29 14:39:52,946 | INFO | total log probability: -1.20
+2026-01-29 14:39:52,946 | INFO | normalized log probability: -0.17
+2026-01-29 14:39:52,946 | INFO | total number of ended hypotheses: 164
+2026-01-29 14:39:52,946 | INFO | best hypo: ▁et▁simple
+
+2026-01-29 14:39:52,948 | INFO | ['j', 'ai', 'eu', 'la', 'chance', 'de', 'partir', 'de', 'fois', 'en', 'polynesie', 'et', 'c', 'est', 'ce', 'est', 'un', 'endroit', 'que', 'j', 'ai', 'trouve', 'vraiment', 'merveilleux', 'des', 'deja', 'en', 'moments', 'sympa', 'et', 'si', 'vraiment', 'mais', 'j', 'ai', 'decouverts', 'une', 'forme', 'd', 'a', 'une', 'forme', 'de', 'vie', 'et', 'une', 'forme', 'de', 'ie', 'facible', 'et', 'meme', 'et', 'paisible', 'que', 'je', 'ne', 'retrouvais', 'pas', 'ici', 'et', 'j', 'aurais', 'aimete', 'y', 'retourner', 'mais', 'malheureusement', 'je', 'crois', 'que', 'ce', 'serai', 'pas', 'posible', 'et', 'donc', 'je', 'j', 'esperent', 'toujours', 'et', 'le', 'jour', 'j', 'y', 'reviendrai', 'c', 'est', 'vous', 'voila', 'passe', 'le', 'j', 'ai', 'mis', 'en', 'dehors', 'du', 'climat', 'dehors', 'des', 'paysages', 'idylliques', 'j', 'ai', 'beaucoup', 'aime', 'la', 'simplicite', 'des', 'gens', 'et', 'j', 'etais', 'ontais', 'ete', 'dans', 'des', 'dans', 'des', 'pensions', 'de', 'familles', 'et', 'donc', 'bien', 'loin', 'des', 'cliche', 'des', 'grands', 'hotels', 'et', 'etait', 'vraiment', 'des', 'gens', 'a', 'doigo', 'adorables', 'et', 'abordables', 'coin', 'et', 'simple']
+2026-01-29 14:39:52,948 | INFO | ['j', 'ai', 'eu', 'la', 'chance', 'de', 'partir', 'deux', 'fois', 'en', 'polynesie', 'c', 'est', 'un', 'c', 'est', 'un', 'endroit', 'que', 'j', 'ai', 'trouve', 'vraiment', 'merveilleux', 'des', 'gens', 'vraiment', 'sympas', 'et', 'heu', 'c', 'est', 'vraiment', 'hum', 'et', 'j', 'ai', 'decouvert', 'des', 'une', 'forme', 'de', 'vie', 'une', 'forme', 'de', 'vie', 'facile', 'et', 'paisible', 'que', 'je', 'ne', 'retrouve', 'pas', 'ici', 'et', 'j', 'aurais', 'aime', 'y', 'retourner', 'mais', 'malheureusement', 'je', 'crois', 'que', 'ce', 'ne', 'sera', 'pas', 'possible', 'donc', 'j', 'espere', 'toujours', 'qu', 'un', 'jour', 'j', 'y', 'reviendrai', 'c', 'est', 'bon', 'voila', 'parce', 'que', 'j', 'ai', 'mis', 'en', 'dehors', 'du', 'climat', 'en', 'dehors', 'des', 'paysages', 'idylliques', 'j', 'ai', 'beaucoup', 'aime', 'la', 'simplicite', 'des', 'gens', 'et', 'on', 'etait', 'dans', 'des', 'dans', 'des', 'pensions', 'de', 'famille', 'et', 'donc', 'bien', 'loin', 'des', 'cliches', 'des', 'grands', 'hotels', 'et', 'c', 'etait', 'des', 'gens', 'vraiment', 'adorables', 'et', 'abordables', 'voila', 'quoi', 'et', 'simple']
+2026-01-29 14:39:52,959 | INFO | File: 1PD-PXMX-image.wav | WER=35.000000 | S=27 D=8 I=14
+2026-01-29 14:39:52,959 | INFO | ------------------------------
+2026-01-29 14:39:52,959 | INFO |  File duration: 88.63866666666667 seconds
+2026-01-29 14:39:54,786 | INFO | Using rVAD model
+2026-01-29 14:39:58,606 | INFO | speech length: 82720
+2026-01-29 14:39:58,643 | INFO | decoder input length: 128
+2026-01-29 14:39:58,643 | INFO | max output length: 128
+2026-01-29 14:39:58,643 | INFO | min output length: 12
+2026-01-29 14:40:02,836 | INFO | end detected at 37
+2026-01-29 14:40:02,837 | INFO |  -2.55 * 0.5 =  -1.28 for decoder
+2026-01-29 14:40:02,837 | INFO |  -6.49 * 0.5 =  -3.25 for ctc
+2026-01-29 14:40:02,837 | INFO | total log probability: -4.52
+2026-01-29 14:40:02,837 | INFO | normalized log probability: -0.14
+2026-01-29 14:40:02,837 | INFO | total number of ended hypotheses: 158
+2026-01-29 14:40:02,837 | INFO | best hypo: ▁j'ai▁compastant▁principal▁la▁musique▁j'adore▁la▁musique
+
+2026-01-29 14:40:02,839 | INFO | speech length: 81440
+2026-01-29 14:40:02,873 | INFO | decoder input length: 126
+2026-01-29 14:40:02,873 | INFO | max output length: 126
+2026-01-29 14:40:02,873 | INFO | min output length: 12
+2026-01-29 14:40:06,020 | INFO | end detected at 28
+2026-01-29 14:40:06,021 | INFO |  -5.33 * 0.5 =  -2.67 for decoder
+2026-01-29 14:40:06,021 | INFO |  -9.10 * 0.5 =  -4.55 for ctc
+2026-01-29 14:40:06,021 | INFO | total log probability: -7.22
+2026-01-29 14:40:06,021 | INFO | normalized log probability: -0.31
+2026-01-29 14:40:06,021 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:40:06,021 | INFO | best hypo: ▁et▁écouté▁de▁la▁musique▁je▁ne▁joue▁pas▁d'un▁instrument
+
+2026-01-29 14:40:06,023 | INFO | speech length: 69920
+2026-01-29 14:40:06,057 | INFO | decoder input length: 108
+2026-01-29 14:40:06,057 | INFO | max output length: 108
+2026-01-29 14:40:06,058 | INFO | min output length: 10
+2026-01-29 14:40:09,490 | INFO | end detected at 31
+2026-01-29 14:40:09,491 | INFO |  -1.91 * 0.5 =  -0.95 for decoder
+2026-01-29 14:40:09,491 | INFO |  -0.46 * 0.5 =  -0.23 for ctc
+2026-01-29 14:40:09,491 | INFO | total log probability: -1.18
+2026-01-29 14:40:09,491 | INFO | normalized log probability: -0.04
+2026-01-29 14:40:09,491 | INFO | total number of ended hypotheses: 150
+2026-01-29 14:40:09,491 | INFO | best hypo: ▁mais▁j'aime▁écouter▁la▁musique▁toute▁musique▁confondue
+
+2026-01-29 14:40:09,493 | INFO | speech length: 40320
+2026-01-29 14:40:09,531 | INFO | decoder input length: 62
+2026-01-29 14:40:09,531 | INFO | max output length: 62
+2026-01-29 14:40:09,531 | INFO | min output length: 6
+2026-01-29 14:40:11,611 | INFO | end detected at 19
+2026-01-29 14:40:11,612 | INFO |  -1.09 * 0.5 =  -0.54 for decoder
+2026-01-29 14:40:11,612 | INFO |  -0.24 * 0.5 =  -0.12 for ctc
+2026-01-29 14:40:11,612 | INFO | total log probability: -0.66
+2026-01-29 14:40:11,612 | INFO | normalized log probability: -0.04
+2026-01-29 14:40:11,612 | INFO | total number of ended hypotheses: 149
+2026-01-29 14:40:11,612 | INFO | best hypo: ▁allant▁de▁la▁musique▁classique
+
+2026-01-29 14:40:11,614 | INFO | speech length: 53440
+2026-01-29 14:40:11,646 | INFO | decoder input length: 83
+2026-01-29 14:40:11,646 | INFO | max output length: 83
+2026-01-29 14:40:11,646 | INFO | min output length: 8
+2026-01-29 14:40:14,262 | INFO | end detected at 24
+2026-01-29 14:40:14,263 | INFO |  -1.81 * 0.5 =  -0.91 for decoder
+2026-01-29 14:40:14,263 | INFO |  -1.03 * 0.5 =  -0.51 for ctc
+2026-01-29 14:40:14,263 | INFO | total log probability: -1.42
+2026-01-29 14:40:14,263 | INFO | normalized log probability: -0.08
+2026-01-29 14:40:14,263 | INFO | total number of ended hypotheses: 160
+2026-01-29 14:40:14,264 | INFO | best hypo: ▁musique▁traditionnelle▁la▁musique▁de▁jazz
+
+2026-01-29 14:40:14,265 | INFO | speech length: 26560
+2026-01-29 14:40:14,297 | INFO | decoder input length: 41
+2026-01-29 14:40:14,297 | INFO | max output length: 41
+2026-01-29 14:40:14,297 | INFO | min output length: 4
+2026-01-29 14:40:15,679 | INFO | end detected at 13
+2026-01-29 14:40:15,681 | INFO |  -0.55 * 0.5 =  -0.27 for decoder
+2026-01-29 14:40:15,681 | INFO |  -0.00 * 0.5 =  -0.00 for ctc
+2026-01-29 14:40:15,681 | INFO | total log probability: -0.28
+2026-01-29 14:40:15,681 | INFO | normalized log probability: -0.03
+2026-01-29 14:40:15,681 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:40:15,681 | INFO | best hypo: ▁le▁folklore
+
+2026-01-29 14:40:15,683 | INFO | speech length: 33760
+2026-01-29 14:40:15,717 | INFO | decoder input length: 52
+2026-01-29 14:40:15,717 | INFO | max output length: 52
+2026-01-29 14:40:15,717 | INFO | min output length: 5
+2026-01-29 14:40:16,866 | INFO | end detected at 11
+2026-01-29 14:40:16,866 | INFO |  -8.98 * 0.5 =  -4.49 for decoder
+2026-01-29 14:40:16,866 | INFO |  -6.08 * 0.5 =  -3.04 for ctc
+2026-01-29 14:40:16,866 | INFO | total log probability: -7.53
+2026-01-29 14:40:16,866 | INFO | normalized log probability: -1.08
+2026-01-29 14:40:16,866 | INFO | total number of ended hypotheses: 138
+2026-01-29 14:40:16,867 | INFO | best hypo: ▁la▁chorurale
+
+2026-01-29 14:40:16,868 | INFO | speech length: 59680
+2026-01-29 14:40:16,902 | INFO | decoder input length: 92
+2026-01-29 14:40:16,902 | INFO | max output length: 92
+2026-01-29 14:40:16,902 | INFO | min output length: 9
+2026-01-29 14:40:19,862 | INFO | end detected at 28
+2026-01-29 14:40:19,864 | INFO |  -1.60 * 0.5 =  -0.80 for decoder
+2026-01-29 14:40:19,864 | INFO |  -0.33 * 0.5 =  -0.16 for ctc
+2026-01-29 14:40:19,864 | INFO | total log probability: -0.96
+2026-01-29 14:40:19,864 | INFO | normalized log probability: -0.04
+2026-01-29 14:40:19,864 | INFO | total number of ended hypotheses: 178
+2026-01-29 14:40:19,865 | INFO | best hypo: ▁d'ailleurs▁je▁fais▁partie▁de▁la▁d'une▁chorale
+
+2026-01-29 14:40:19,866 | INFO | speech length: 20640
+2026-01-29 14:40:19,906 | INFO | decoder input length: 31
+2026-01-29 14:40:19,907 | INFO | max output length: 31
+2026-01-29 14:40:19,907 | INFO | min output length: 3
+2026-01-29 14:40:21,233 | INFO | end detected at 13
+2026-01-29 14:40:21,234 | INFO |  -1.12 * 0.5 =  -0.56 for decoder
+2026-01-29 14:40:21,234 | INFO |  -0.11 * 0.5 =  -0.06 for ctc
+2026-01-29 14:40:21,234 | INFO | total log probability: -0.62
+2026-01-29 14:40:21,234 | INFO | normalized log probability: -0.07
+2026-01-29 14:40:21,234 | INFO | total number of ended hypotheses: 149
+2026-01-29 14:40:21,234 | INFO | best hypo: ▁de▁ma▁communauté
+
+2026-01-29 14:40:21,236 | INFO | speech length: 27520
+2026-01-29 14:40:21,270 | INFO | decoder input length: 42
+2026-01-29 14:40:21,270 | INFO | max output length: 42
+2026-01-29 14:40:21,270 | INFO | min output length: 4
+2026-01-29 14:40:22,816 | INFO | end detected at 15
+2026-01-29 14:40:22,818 | INFO |  -0.75 * 0.5 =  -0.38 for decoder
+2026-01-29 14:40:22,818 | INFO |  -0.05 * 0.5 =  -0.03 for ctc
+2026-01-29 14:40:22,818 | INFO | total log probability: -0.40
+2026-01-29 14:40:22,818 | INFO | normalized log probability: -0.04
+2026-01-29 14:40:22,818 | INFO | total number of ended hypotheses: 134
+2026-01-29 14:40:22,818 | INFO | best hypo: ▁je▁chante▁régulièrement
+
+2026-01-29 14:40:22,820 | INFO | speech length: 27840
+2026-01-29 14:40:22,853 | INFO | decoder input length: 43
+2026-01-29 14:40:22,853 | INFO | max output length: 43
+2026-01-29 14:40:22,853 | INFO | min output length: 4
+2026-01-29 14:40:24,566 | INFO | end detected at 16
+2026-01-29 14:40:24,567 | INFO |  -0.83 * 0.5 =  -0.41 for decoder
+2026-01-29 14:40:24,567 | INFO |  -0.06 * 0.5 =  -0.03 for ctc
+2026-01-29 14:40:24,567 | INFO | total log probability: -0.44
+2026-01-29 14:40:24,567 | INFO | normalized log probability: -0.04
+2026-01-29 14:40:24,567 | INFO | total number of ended hypotheses: 141
+2026-01-29 14:40:24,567 | INFO | best hypo: ▁ah▁le▁week▁end
+
+2026-01-29 14:40:24,568 | INFO | speech length: 151840
+2026-01-29 14:40:24,601 | INFO | decoder input length: 236
+2026-01-29 14:40:24,602 | INFO | max output length: 236
+2026-01-29 14:40:24,602 | INFO | min output length: 23
+2026-01-29 14:40:32,066 | INFO | end detected at 61
+2026-01-29 14:40:32,069 | INFO |  -9.85 * 0.5 =  -4.92 for decoder
+2026-01-29 14:40:32,069 | INFO | -25.04 * 0.5 = -12.52 for ctc
+2026-01-29 14:40:32,069 | INFO | total log probability: -17.44
+2026-01-29 14:40:32,069 | INFO | normalized log probability: -0.34
+2026-01-29 14:40:32,069 | INFO | total number of ended hypotheses: 204
+2026-01-29 14:40:32,070 | INFO | best hypo: ▁arrivé▁à▁la▁maison▁je▁peux▁me▁mettre▁devant▁le▁mon▁ordi▁pour▁là▁ce▁sont▁des▁pulsions▁ossues▁spéciales▁puisque
+
+2026-01-29 14:40:32,072 | INFO | speech length: 57760
+2026-01-29 14:40:32,112 | INFO | decoder input length: 89
+2026-01-29 14:40:32,112 | INFO | max output length: 89
+2026-01-29 14:40:32,112 | INFO | min output length: 8
+2026-01-29 14:40:35,133 | INFO | end detected at 28
+2026-01-29 14:40:35,134 | INFO |  -3.62 * 0.5 =  -1.81 for decoder
+2026-01-29 14:40:35,135 | INFO |  -8.19 * 0.5 =  -4.09 for ctc
+2026-01-29 14:40:35,135 | INFO | total log probability: -5.90
+2026-01-29 14:40:35,135 | INFO | normalized log probability: -0.27
+2026-01-29 14:40:35,135 | INFO | total number of ended hypotheses: 191
+2026-01-29 14:40:35,135 | INFO | best hypo: ▁je▁commande▁beaucoup▁sur▁internet▁la▁musique
+
+2026-01-29 14:40:35,137 | INFO | speech length: 57918
+2026-01-29 14:40:35,172 | INFO | decoder input length: 89
+2026-01-29 14:40:35,172 | INFO | max output length: 89
+2026-01-29 14:40:35,172 | INFO | min output length: 8
+2026-01-29 14:40:38,489 | INFO | end detected at 31
+2026-01-29 14:40:38,490 | INFO |  -3.48 * 0.5 =  -1.74 for decoder
+2026-01-29 14:40:38,490 | INFO |  -7.50 * 0.5 =  -3.75 for ctc
+2026-01-29 14:40:38,490 | INFO | total log probability: -5.49
+2026-01-29 14:40:38,490 | INFO | normalized log probability: -0.21
+2026-01-29 14:40:38,490 | INFO | total number of ended hypotheses: 177
+2026-01-29 14:40:38,491 | INFO | best hypo: ▁dont▁non▁seulement▁je▁l'écoute▁doy▁mais▁je▁consomme▁aussi
+
+2026-01-29 14:40:38,493 | INFO | speech length: 32000
+2026-01-29 14:40:38,530 | INFO | decoder input length: 49
+2026-01-29 14:40:38,530 | INFO | max output length: 49
+2026-01-29 14:40:38,530 | INFO | min output length: 4
+2026-01-29 14:40:40,008 | INFO | end detected at 14
+2026-01-29 14:40:40,009 | INFO |  -0.68 * 0.5 =  -0.34 for decoder
+2026-01-29 14:40:40,009 | INFO |  -1.59 * 0.5 =  -0.79 for ctc
+2026-01-29 14:40:40,009 | INFO | total log probability: -1.13
+2026-01-29 14:40:40,009 | INFO | normalized log probability: -0.13
+2026-01-29 14:40:40,009 | INFO | total number of ended hypotheses: 174
+2026-01-29 14:40:40,010 | INFO | best hypo: ▁et▁depuis▁là
+
+2026-01-29 14:40:40,011 | INFO | speech length: 33120
+2026-01-29 14:40:40,044 | INFO | decoder input length: 51
+2026-01-29 14:40:40,044 | INFO | max output length: 51
+2026-01-29 14:40:40,044 | INFO | min output length: 5
+2026-01-29 14:40:41,700 | INFO | end detected at 18
+2026-01-29 14:40:41,701 | INFO |  -4.24 * 0.5 =  -2.12 for decoder
+2026-01-29 14:40:41,701 | INFO |  -1.16 * 0.5 =  -0.58 for ctc
+2026-01-29 14:40:41,701 | INFO | total log probability: -2.70
+2026-01-29 14:40:41,701 | INFO | normalized log probability: -0.19
+2026-01-29 14:40:41,701 | INFO | total number of ended hypotheses: 146
+2026-01-29 14:40:41,702 | INFO | best hypo: ▁la▁pose▁est▁du▁diagnostique
+
+2026-01-29 14:40:41,703 | INFO | speech length: 34880
+2026-01-29 14:40:41,740 | INFO | decoder input length: 54
+2026-01-29 14:40:41,740 | INFO | max output length: 54
+2026-01-29 14:40:41,740 | INFO | min output length: 5
+2026-01-29 14:40:42,962 | INFO | end detected at 15
+2026-01-29 14:40:42,963 | INFO |  -1.88 * 0.5 =  -0.94 for decoder
+2026-01-29 14:40:42,963 | INFO |  -4.13 * 0.5 =  -2.07 for ctc
+2026-01-29 14:40:42,963 | INFO | total log probability: -3.00
+2026-01-29 14:40:42,963 | INFO | normalized log probability: -0.27
+2026-01-29 14:40:42,963 | INFO | total number of ended hypotheses: 174
+2026-01-29 14:40:42,963 | INFO | best hypo: ▁eh▁je▁me▁suis▁mis
+
+2026-01-29 14:40:42,965 | INFO | speech length: 20960
+2026-01-29 14:40:43,000 | INFO | decoder input length: 32
+2026-01-29 14:40:43,000 | INFO | max output length: 32
+2026-01-29 14:40:43,000 | INFO | min output length: 3
+2026-01-29 14:40:44,747 | INFO | end detected at 17
+2026-01-29 14:40:44,748 | INFO |  -1.98 * 0.5 =  -0.99 for decoder
+2026-01-29 14:40:44,748 | INFO |  -0.58 * 0.5 =  -0.29 for ctc
+2026-01-29 14:40:44,748 | INFO | total log probability: -1.28
+2026-01-29 14:40:44,748 | INFO | normalized log probability: -0.11
+2026-01-29 14:40:44,748 | INFO | total number of ended hypotheses: 163
+2026-01-29 14:40:44,749 | INFO | best hypo: ▁beaucoup▁commandé
+
+2026-01-29 14:40:44,750 | INFO | speech length: 59040
+2026-01-29 14:40:44,788 | INFO | decoder input length: 91
+2026-01-29 14:40:44,788 | INFO | max output length: 91
+2026-01-29 14:40:44,788 | INFO | min output length: 9
+2026-01-29 14:40:48,569 | INFO | end detected at 35
+2026-01-29 14:40:48,571 | INFO |  -6.37 * 0.5 =  -3.19 for decoder
+2026-01-29 14:40:48,571 | INFO |  -5.71 * 0.5 =  -2.86 for ctc
+2026-01-29 14:40:48,571 | INFO | total log probability: -6.04
+2026-01-29 14:40:48,571 | INFO | normalized log probability: -0.19
+2026-01-29 14:40:48,571 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:40:48,571 | INFO | best hypo: ▁non▁m'a▁dépensé▁beaucoup▁d'argent▁sur▁la▁mieux▁sur▁la▁musique
+
+2026-01-29 14:40:48,573 | INFO | speech length: 39040
+2026-01-29 14:40:48,606 | INFO | decoder input length: 60
+2026-01-29 14:40:48,606 | INFO | max output length: 60
+2026-01-29 14:40:48,606 | INFO | min output length: 6
+2026-01-29 14:40:50,636 | INFO | end detected at 19
+2026-01-29 14:40:50,637 | INFO |  -1.17 * 0.5 =  -0.58 for decoder
+2026-01-29 14:40:50,637 | INFO |  -2.37 * 0.5 =  -1.19 for ctc
+2026-01-29 14:40:50,637 | INFO | total log probability: -1.77
+2026-01-29 14:40:50,637 | INFO | normalized log probability: -0.13
+2026-01-29 14:40:50,637 | INFO | total number of ended hypotheses: 153
+2026-01-29 14:40:50,637 | INFO | best hypo: ▁et▁quand▁on▁ne▁m'en▁compte▁pas
+
+2026-01-29 14:40:50,639 | INFO | speech length: 8160
+2026-01-29 14:40:50,669 | INFO | decoder input length: 12
+2026-01-29 14:40:50,669 | INFO | max output length: 12
+2026-01-29 14:40:50,669 | INFO | min output length: 1
+2026-01-29 14:40:51,607 | INFO | end detected at 9
+2026-01-29 14:40:51,607 | INFO |  -0.32 * 0.5 =  -0.16 for decoder
+2026-01-29 14:40:51,607 | INFO |  -0.01 * 0.5 =  -0.01 for ctc
+2026-01-29 14:40:51,607 | INFO | total log probability: -0.17
+2026-01-29 14:40:51,607 | INFO | normalized log probability: -0.03
+2026-01-29 14:40:51,607 | INFO | total number of ended hypotheses: 138
+2026-01-29 14:40:51,608 | INFO | best hypo: ▁encore
+
+2026-01-29 14:40:51,610 | INFO | ['j', 'ai', 'compastant', 'principal', 'la', 'musique', 'j', 'adore', 'la', 'musique', 'et', 'ecoute', 'de', 'la', 'musique', 'je', 'ne', 'joue', 'pas', 'd', 'un', 'instrument', 'mais', 'j', 'aime', 'ecouter', 'la', 'musique', 'toute', 'musique', 'confondue', 'allant', 'de', 'la', 'musique', 'classique', 'musique', 'traditionnelle', 'la', 'musique', 'de', 'jazz', 'le', 'folklore', 'la', 'chorurale', 'd', 'ailleurs', 'je', 'fais', 'partie', 'de', 'la', 'd', 'une', 'chorale', 'de', 'ma', 'communaute', 'je', 'chante', 'regulierement', 'ah', 'le', 'week', 'end', 'arrive', 'a', 'la', 'maison', 'je', 'peux', 'me', 'mettre', 'devant', 'le', 'mon', 'ordi', 'pour', 'la', 'ce', 'sont', 'des', 'pulsions', 'ossues', 'speciales', 'puisque', 'je', 'commande', 'beaucoup', 'sur', 'internet', 'la', 'musique', 'dont', 'non', 'seulement', 'je', 'l', 'ecoute', 'doy', 'mais', 'je', 'consomme', 'aussi', 'et', 'depuis', 'la', 'la', 'pose', 'est', 'du', 'diagnostique', 'eh', 'je', 'me', 'suis', 'mis', 'beaucoup', 'commande', 'non', 'm', 'a', 'depense', 'beaucoup', 'd', 'argent', 'sur', 'la', 'mieux', 'sur', 'la', 'musique', 'et', 'quand', 'on', 'ne', 'm', 'en', 'compte', 'pas', 'encore']
+2026-01-29 14:40:51,610 | INFO | ['j', 'ai', 'comme', 'passe', 'temps', 'principal', 'la', 'musique', 'j', 'adore', 'la', 'musique', 'ecouter', 'de', 'la', 'musique', 'je', 'suis', 'je', 'joue', 'pas', 'd', 'un', 'instrument', 'mais', 'j', 'aime', 'ecouter', 'la', 'musique', 'toute', 'musique', 'confondue', 'allant', 'de', 'la', 'musique', 'classique', 'au', 'musique', 'traditionnelle', 'la', 'musique', 'de', 'jazz', 'le', 'folklore', 'la', 'chorale', 'd', 'ailleurs', 'je', 'fais', 'partie', 'd', 'une', 'chorale', 'de', 'la', 'communaute', 'je', 'chante', 'regulierement', 'le', 'week', 'end', 'eu', 'arrive', 'a', 'la', 'maison', 'je', 'peux', 'me', 'mettre', 'devant', 'mon', 'ordi', 'pour', 'eu', 'la', 'ce', 'sont', 'des', 'pulsions', 'assez', 'speciales', 'puisque', 'je', 'commande', 'beaucoup', 'sur', 'internet', 'de', 'la', 'musique', 'donc', 'non', 'seulement', 'je', 'l', 'ecoute', 'mais', 'je', 'consomme', 'aussi', 'et', 'depuis', 'la', 'la', 'pause', 'du', 'diagnostic', 'je', 'me', 'suis', 'mis', 'a', 'a', 'beaucoup', 'commander', 'a', 'depenser', 'de', 'l', 'argent', 'sur', 'la', 'musique', 'et', 'quand', 'on', 'aime', 'on', 'ne', 'compte', 'pas', 'encore']
+2026-01-29 14:40:51,620 | INFO | File: 1PD2-OAAY-image.wav | WER=26.811594 | S=19 D=7 I=11
+2026-01-29 14:40:51,620 | INFO | ------------------------------
+2026-01-29 14:40:51,621 | INFO |  File duration: 214.23020408163265 seconds
+2026-01-29 14:40:57,134 | INFO | Using rVAD model
+2026-01-29 14:41:06,038 | INFO | speech length: 59200
+2026-01-29 14:41:06,079 | INFO | decoder input length: 92
+2026-01-29 14:41:06,079 | INFO | max output length: 92
+2026-01-29 14:41:06,079 | INFO | min output length: 9
+2026-01-29 14:41:09,313 | INFO | end detected at 29
+2026-01-29 14:41:09,315 | INFO |  -4.45 * 0.5 =  -2.23 for decoder
+2026-01-29 14:41:09,315 | INFO |  -3.54 * 0.5 =  -1.77 for ctc
+2026-01-29 14:41:09,315 | INFO | total log probability: -4.00
+2026-01-29 14:41:09,315 | INFO | normalized log probability: -0.17
+2026-01-29 14:41:09,315 | INFO | total number of ended hypotheses: 174
+2026-01-29 14:41:09,315 | INFO | best hypo: ▁donc▁je▁suis▁parti▁au▁viêt▁nam▁pour▁douze▁jours
+
+2026-01-29 14:41:09,317 | INFO | speech length: 462560
+2026-01-29 14:41:09,359 | INFO | decoder input length: 722
+2026-01-29 14:41:09,359 | INFO | max output length: 722
+2026-01-29 14:41:09,359 | INFO | min output length: 72
+2026-01-29 14:41:41,501 | INFO | end detected at 201
+2026-01-29 14:41:41,502 | INFO | -532.32 * 0.5 = -266.16 for decoder
+2026-01-29 14:41:41,502 | INFO | -253.86 * 0.5 = -126.93 for ctc
+2026-01-29 14:41:41,502 | INFO | total log probability: -393.09
+2026-01-29 14:41:41,502 | INFO | normalized log probability: -2.00
+2026-01-29 14:41:41,502 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:41:41,504 | INFO | best hypo: ▁nous▁sommes▁parités▁de▁toulouse▁nous▁avons▁faire▁roissi▁dubail▁dubail▁saïgon▁à▁saïgon▁nous▁sommes▁restés▁pour▁faire▁le▁golfe▁du▁mécong▁qui▁est▁très▁riche▁en▁rizière▁rès▁c'est▁un▁haut▁lieu▁de▁la▁culture▁du▁riz▁la▁viêt▁nammes▁étant▁de▁maingtenante▁le▁rième▁educteur▁de▁riz▁au▁monde▁ou▁nous▁avon▁été▁un▁ronk▁et▁une▁st▁bannée▁en▁bord▁de▁la▁mer▁nous▁sommes▁revenus▁à▁saïgon▁et▁là▁nous▁avon▁nous▁pris▁à▁avionte▁pour▁aller▁à▁dangue
+
+2026-01-29 14:41:41,506 | INFO | speech length: 390560
+2026-01-29 14:41:41,543 | INFO | decoder input length: 609
+2026-01-29 14:41:41,543 | INFO | max output length: 609
+2026-01-29 14:41:41,543 | INFO | min output length: 60
+2026-01-29 14:42:07,141 | INFO | end detected at 176
+2026-01-29 14:42:07,143 | INFO | -328.83 * 0.5 = -164.42 for decoder
+2026-01-29 14:42:07,143 | INFO | -37.19 * 0.5 = -18.60 for ctc
+2026-01-29 14:42:07,143 | INFO | total log probability: -183.01
+2026-01-29 14:42:07,143 | INFO | normalized log probability: -1.07
+2026-01-29 14:42:07,143 | INFO | total number of ended hypotheses: 170
+2026-01-29 14:42:07,145 | INFO | best hypo: ▁dananenk▁est▁une▁station▁aussi▁au▁bord▁de▁la▁mer▁très▁touristique▁de▁là▁nous▁avons▁pris▁le▁quart▁pour▁aller▁jusqu'à▁hué▁qu'est▁l'ancienne▁capitale▁historique▁du▁viêt▁nam▁la▁cité▁impériale▁qui▁est▁magnifique▁qui▁sur▁une▁rivière▁qui▁s'appelle▁la▁vient▁des▁cinq▁parfums▁où▁l'aye▁et▁une▁multitude▁de▁temples▁de▁d'hommes▁de▁comment▁s'appelle▁de▁oui▁se▁sont▁des▁temples▁bouddhistes
+
+2026-01-29 14:42:07,147 | INFO | speech length: 219680
+2026-01-29 14:42:07,182 | INFO | decoder input length: 342
+2026-01-29 14:42:07,183 | INFO | max output length: 342
+2026-01-29 14:42:07,183 | INFO | min output length: 34
+2026-01-29 14:42:18,910 | INFO | end detected at 102
+2026-01-29 14:42:18,911 | INFO | -76.08 * 0.5 = -38.04 for decoder
+2026-01-29 14:42:18,911 | INFO | -36.02 * 0.5 = -18.01 for ctc
+2026-01-29 14:42:18,911 | INFO | total log probability: -56.05
+2026-01-29 14:42:18,911 | INFO | normalized log probability: -0.58
+2026-01-29 14:42:18,912 | INFO | total number of ended hypotheses: 162
+2026-01-29 14:42:18,913 | INFO | best hypo: ▁et▁à▁cerrouler▁la▁gastronomie▁vietnamienne▁nous▁avons▁eu▁des▁cours▁de▁cuisine▁ont▁fait▁du▁vélo▁dans▁les▁rizières▁ensuite▁nous▁avons▁pris▁en▁train▁de▁nuit▁de▁grande▁partie▁de▁donc▁huer▁pour▁remonter▁jusqu'à▁hanoï
+
+2026-01-29 14:42:18,914 | INFO | speech length: 79360
+2026-01-29 14:42:18,948 | INFO | decoder input length: 123
+2026-01-29 14:42:18,949 | INFO | max output length: 123
+2026-01-29 14:42:18,949 | INFO | min output length: 12
+2026-01-29 14:42:21,291 | INFO | end detected at 36
+2026-01-29 14:42:21,292 | INFO |  -2.27 * 0.5 =  -1.13 for decoder
+2026-01-29 14:42:21,292 | INFO |  -0.24 * 0.5 =  -0.12 for ctc
+2026-01-29 14:42:21,292 | INFO | total log probability: -1.25
+2026-01-29 14:42:21,292 | INFO | normalized log probability: -0.04
+2026-01-29 14:42:21,292 | INFO | total number of ended hypotheses: 175
+2026-01-29 14:42:21,293 | INFO | best hypo: ▁alors▁c'est▁un▁voyage▁assez▁épique▁parce▁que▁ce▁sont▁des▁trains▁un▁peu▁anciens
+
+2026-01-29 14:42:21,294 | INFO | speech length: 119040
+2026-01-29 14:42:21,327 | INFO | decoder input length: 185
+2026-01-29 14:42:21,327 | INFO | max output length: 185
+2026-01-29 14:42:21,327 | INFO | min output length: 18
+2026-01-29 14:42:26,067 | INFO | end detected at 62
+2026-01-29 14:42:26,069 | INFO | -18.56 * 0.5 =  -9.28 for decoder
+2026-01-29 14:42:26,069 | INFO | -16.78 * 0.5 =  -8.39 for ctc
+2026-01-29 14:42:26,069 | INFO | total log probability: -17.67
+2026-01-29 14:42:26,069 | INFO | normalized log probability: -0.33
+2026-01-29 14:42:26,069 | INFO | total number of ended hypotheses: 193
+2026-01-29 14:42:26,070 | INFO | best hypo: ▁et▁qui▁roule▁pas▁très▁vite▁il▁voilà▁soixante▁dix▁kilomètres▁mâles▁donc▁pour▁faire▁du▁genre▁quatre▁cents▁kilomètres▁passa▁nous▁après▁huit▁heures
+
+2026-01-29 14:42:26,072 | INFO | speech length: 80800
+2026-01-29 14:42:26,106 | INFO | decoder input length: 125
+2026-01-29 14:42:26,106 | INFO | max output length: 125
+2026-01-29 14:42:26,106 | INFO | min output length: 12
+2026-01-29 14:42:30,994 | INFO | end detected at 42
+2026-01-29 14:42:30,995 | INFO |  -2.66 * 0.5 =  -1.33 for decoder
+2026-01-29 14:42:30,995 | INFO |  -0.16 * 0.5 =  -0.08 for ctc
+2026-01-29 14:42:30,995 | INFO | total log probability: -1.41
+2026-01-29 14:42:30,995 | INFO | normalized log probability: -0.04
+2026-01-29 14:42:30,995 | INFO | total number of ended hypotheses: 147
+2026-01-29 14:42:30,995 | INFO | best hypo: ▁et▁nous▁sommes▁arrivés▁au▁petit▁matin▁à▁hanoï▁et▁nous▁avons▁commencé▁un▁périple
+
+2026-01-29 14:42:30,997 | INFO | speech length: 114240
+2026-01-29 14:42:31,031 | INFO | decoder input length: 178
+2026-01-29 14:42:31,031 | INFO | max output length: 178
+2026-01-29 14:42:31,031 | INFO | min output length: 17
+2026-01-29 14:42:38,067 | INFO | end detected at 60
+2026-01-29 14:42:38,068 | INFO |  -4.77 * 0.5 =  -2.39 for decoder
+2026-01-29 14:42:38,068 | INFO |  -6.32 * 0.5 =  -3.16 for ctc
+2026-01-29 14:42:38,068 | INFO | total log probability: -5.55
+2026-01-29 14:42:38,068 | INFO | normalized log probability: -0.10
+2026-01-29 14:42:38,068 | INFO | total number of ended hypotheses: 162
+2026-01-29 14:42:38,069 | INFO | best hypo: ▁dans▁la▁ville▁d'hanoï▁nous▁avons▁commencé▁à▁six▁heures▁du▁matin▁à▁faire▁du▁taichi▁avec▁la▁population▁la▁gymnastique▁locale
+
+2026-01-29 14:42:38,071 | INFO | speech length: 282560
+2026-01-29 14:42:38,112 | INFO | decoder input length: 441
+2026-01-29 14:42:38,112 | INFO | max output length: 441
+2026-01-29 14:42:38,112 | INFO | min output length: 44
+2026-01-29 14:42:56,819 | INFO | end detected at 134
+2026-01-29 14:42:56,821 | INFO | -229.22 * 0.5 = -114.61 for decoder
+2026-01-29 14:42:56,821 | INFO | -75.61 * 0.5 = -37.81 for ctc
+2026-01-29 14:42:56,821 | INFO | total log probability: -152.42
+2026-01-29 14:42:56,821 | INFO | normalized log probability: -1.20
+2026-01-29 14:42:56,821 | INFO | total number of ended hypotheses: 195
+2026-01-29 14:42:56,822 | INFO | best hypo: ▁ensuite▁nous▁avons▁repris▁des▁vélos▁et▁nous▁avons▁été▁nous▁promener▁autour▁de▁hanoy▁en▁vélos▁dans▁les▁rizières▁ensuite▁nous▁avons▁dînés▁dans▁la▁rue▁déjeuner▁dans▁la▁rue▁avec▁des▁peine▁d'aliments▁petits▁restaurants▁de▁la▁rue▁nous▁avés▁quand▁même▁rejoints▁notre▁hôtel▁parces▁d'on▁un▁peu▁fatigué
+
+2026-01-29 14:42:56,825 | INFO | speech length: 78880
+2026-01-29 14:42:56,858 | INFO | decoder input length: 122
+2026-01-29 14:42:56,858 | INFO | max output length: 122
+2026-01-29 14:42:56,858 | INFO | min output length: 12
+2026-01-29 14:43:02,700 | INFO | end detected at 54
+2026-01-29 14:43:02,702 | INFO |  -3.90 * 0.5 =  -1.95 for decoder
+2026-01-29 14:43:02,702 | INFO |  -1.96 * 0.5 =  -0.98 for ctc
+2026-01-29 14:43:02,702 | INFO | total log probability: -2.93
+2026-01-29 14:43:02,702 | INFO | normalized log probability: -0.06
+2026-01-29 14:43:02,702 | INFO | total number of ended hypotheses: 156
+2026-01-29 14:43:02,703 | INFO | best hypo: ▁on▁a▁pris▁une▁bonne▁douche▁et▁on▁est▁sorti▁le▁soir▁pour▁aller▁dans▁des▁restaurants▁aussi▁des▁restaurants▁typiques
+
+2026-01-29 14:43:02,704 | INFO | speech length: 441440
+2026-01-29 14:43:02,745 | INFO | decoder input length: 689
+2026-01-29 14:43:02,745 | INFO | max output length: 689
+2026-01-29 14:43:02,745 | INFO | min output length: 68
+2026-01-29 14:43:36,362 | INFO | end detected at 223
+2026-01-29 14:43:36,364 | INFO | -833.81 * 0.5 = -416.90 for decoder
+2026-01-29 14:43:36,364 | INFO | -252.31 * 0.5 = -126.16 for ctc
+2026-01-29 14:43:36,364 | INFO | total log probability: -543.06
+2026-01-29 14:43:36,364 | INFO | normalized log probability: -2.50
+2026-01-29 14:43:36,364 | INFO | total number of ended hypotheses: 169
+2026-01-29 14:43:36,366 | INFO | best hypo: ▁et▁le▁lendemain▁nous▁avons▁pris▁le▁bus▁pour▁aller▁à▁la▁fameuse▁baie▁d'alongh▁bedalong▁est▁un▁haut▁lieu▁du▁patrimoine▁mondial▁mais▁que▁malheureusement▁ils▁chers▁vietnamiens▁s'en▁trans▁trainent▁de▁foutre▁en▁l'hairnt▁en▁construisant▁autour▁et▁de▁cette▁c▁été▁protégée▁face▁au▁sites▁protégés▁d'i'iiens▁hôtels▁parce▁que▁l'▁il▁y▁sont▁en▁train▁et▁de▁se▁développer▁par▁un▁tourisme▁et▁de▁masse▁y▁transigne▁actuellement▁ce▁viêtam▁en▁thaïlande▁et▁des▁hôtels▁pas▁moins▁et▁quine▁étage▁chaque▁fois
+
+2026-01-29 14:43:36,369 | INFO | speech length: 448320
+2026-01-29 14:43:36,404 | INFO | decoder input length: 700
+2026-01-29 14:43:36,404 | INFO | max output length: 700
+2026-01-29 14:43:36,405 | INFO | min output length: 70
+2026-01-29 14:44:05,928 | INFO | end detected at 216
+2026-01-29 14:44:05,929 | INFO | -604.29 * 0.5 = -302.14 for decoder
+2026-01-29 14:44:05,929 | INFO | -207.27 * 0.5 = -103.63 for ctc
+2026-01-29 14:44:05,930 | INFO | total log probability: -405.78
+2026-01-29 14:44:05,930 | INFO | normalized log probability: -1.92
+2026-01-29 14:44:05,930 | INFO | total number of ended hypotheses: 162
+2026-01-29 14:44:05,932 | INFO | best hypo: ▁et▁ils▁ont▁bétonné▁tout▁letour▁de▁la▁vallée▁de▁la▁baie▁d'along▁qu'est▁qui▁reste▁quand▁même▁une▁splendeur▁ensuite▁une▁fois▁que▁nous▁sommes▁restés▁deux▁jours▁en▁labédalongue▁mais▁ensuite▁nous▁sommes▁revenus▁vers▁en▁hanoïs▁ons▁voir▁la▁bédalongue▁terrestre▁qui▁elle▁est▁beaucoup▁plus▁jolie▁et▁elle▁beaucoup▁moins▁istiquement▁beaucoupement▁moins▁pétonnée▁mais▁qui▁est▁un▁splendeur▁aussi▁à▁la▁différon▁que▁c'▁est▁une▁rivière▁n'est▁pas▁sur▁la▁mer▁che▁un▁grand▁fleuve▁qui▁soillage▁à▁traversée▁piton▁karstique
+
+2026-01-29 14:44:05,934 | INFO | speech length: 90720
+2026-01-29 14:44:05,969 | INFO | decoder input length: 141
+2026-01-29 14:44:05,969 | INFO | max output length: 141
+2026-01-29 14:44:05,969 | INFO | min output length: 14
+2026-01-29 14:44:11,357 | INFO | end detected at 50
+2026-01-29 14:44:11,358 | INFO |  -8.94 * 0.5 =  -4.47 for decoder
+2026-01-29 14:44:11,358 | INFO | -14.31 * 0.5 =  -7.16 for ctc
+2026-01-29 14:44:11,358 | INFO | total log probability: -11.63
+2026-01-29 14:44:11,358 | INFO | normalized log probability: -0.26
+2026-01-29 14:44:11,358 | INFO | total number of ended hypotheses: 165
+2026-01-29 14:44:11,359 | INFO | best hypo: ▁avec▁des▁grottes▁on▁se▁promène▁dedans▁barque▁on▁sillonne▁tous▁au▁lieu▁là▁sac▁et▁assez▁magique
+
+2026-01-29 14:44:11,361 | INFO | speech length: 341920
+2026-01-29 14:44:11,400 | INFO | decoder input length: 533
+2026-01-29 14:44:11,400 | INFO | max output length: 533
+2026-01-29 14:44:11,400 | INFO | min output length: 53
+2026-01-29 14:44:31,765 | INFO | end detected at 153
+2026-01-29 14:44:31,766 | INFO | -425.25 * 0.5 = -212.63 for decoder
+2026-01-29 14:44:31,766 | INFO | -155.72 * 0.5 = -77.86 for ctc
+2026-01-29 14:44:31,766 | INFO | total log probability: -290.49
+2026-01-29 14:44:31,766 | INFO | normalized log probability: -1.96
+2026-01-29 14:44:31,766 | INFO | total number of ended hypotheses: 149
+2026-01-29 14:44:31,768 | INFO | best hypo: ▁ensuite▁ben▁nous▁avons▁nous▁sommes▁revenus▁à▁hanoï▁et▁là▁nous▁avons▁visité▁des▁cultures▁de▁soie▁ce▁que▁là▁s'étant▁au▁lieu▁de▁la▁culture▁de▁soie▁où▁vous▁pouvez▁vous▁faire▁faire▁des▁vêtementsï▁vous▁prennent▁vos▁de▁mes▁heures▁le▁soir▁mais▁et▁le▁vendemain▁à▁cinq▁heures▁et▁c'est▁à▁mesouures▁à▁votre▁ôtel▁et▁voilà▁bon▁s'est▁balader▁comme▁ça
+
+2026-01-29 14:44:31,770 | INFO | speech length: 40480
+2026-01-29 14:44:31,801 | INFO | decoder input length: 62
+2026-01-29 14:44:31,801 | INFO | max output length: 62
+2026-01-29 14:44:31,802 | INFO | min output length: 6
+2026-01-29 14:44:34,405 | INFO | end detected at 33
+2026-01-29 14:44:34,406 | INFO |  -1.92 * 0.5 =  -0.96 for decoder
+2026-01-29 14:44:34,406 | INFO |  -0.37 * 0.5 =  -0.19 for ctc
+2026-01-29 14:44:34,406 | INFO | total log probability: -1.15
+2026-01-29 14:44:34,406 | INFO | normalized log probability: -0.04
+2026-01-29 14:44:34,406 | INFO | total number of ended hypotheses: 167
+2026-01-29 14:44:34,406 | INFO | best hypo: ▁et▁le▁lendemain▁nous▁avons▁une▁journée▁libre▁à▁hanoï
+
+2026-01-29 14:44:34,410 | INFO | ['donc', 'je', 'suis', 'parti', 'au', 'viet', 'nam', 'pour', 'douze', 'jours', 'nous', 'sommes', 'parites', 'de', 'toulouse', 'nous', 'avons', 'faire', 'roissi', 'dubail', 'dubail', 'saigon', 'a', 'saigon', 'nous', 'sommes', 'restes', 'pour', 'faire', 'le', 'golfe', 'du', 'mecong', 'qui', 'est', 'tres', 'riche', 'en', 'riziere', 'res', 'c', 'est', 'un', 'haut', 'lieu', 'de', 'la', 'culture', 'du', 'riz', 'la', 'viet', 'nammes', 'etant', 'de', 'maingtenante', 'le', 'rieme', 'educteur', 'de', 'riz', 'au', 'monde', 'ou', 'nous', 'avon', 'ete', 'un', 'ronk', 'et', 'une', 'st', 'bannee', 'en', 'bord', 'de', 'la', 'mer', 'nous', 'sommes', 'revenus', 'a', 'saigon', 'et', 'la', 'nous', 'avon', 'nous', 'pris', 'a', 'avionte', 'pour', 'aller', 'a', 'dangue', 'dananenk', 'est', 'une', 'station', 'aussi', 'au', 'bord', 'de', 'la', 'mer', 'tres', 'touristique', 'de', 'la', 'nous', 'avons', 'pris', 'le', 'quart', 'pour', 'aller', 'jusqu', 'a', 'hue', 'qu', 'est', 'l', 'ancienne', 'capitale', 'historique', 'du', 'viet', 'nam', 'la', 'cite', 'imperiale', 'qui', 'est', 'magnifique', 'qui', 'sur', 'une', 'riviere', 'qui', 's', 'appelle', 'la', 'vient', 'des', 'cinq', 'parfums', 'ou', 'l', 'aye', 'et', 'une', 'multitude', 'de', 'temples', 'de', 'd', 'hommes', 'de', 'comment', 's', 'appelle', 'de', 'oui', 'se', 'sont', 'des', 'temples', 'bouddhistes', 'et', 'a', 'cerrouler', 'la', 'gastronomie', 'vietnamienne', 'nous', 'avons', 'eu', 'des', 'cours', 'de', 'cuisine', 'ont', 'fait', 'du', 'velo', 'dans', 'les', 'rizieres', 'ensuite', 'nous', 'avons', 'pris', 'en', 'train', 'de', 'nuit', 'de', 'grande', 'partie', 'de', 'donc', 'huer', 'pour', 'remonter', 'jusqu', 'a', 'hanoi', 'alors', 'c', 'est', 'un', 'voyage', 'assez', 'epique', 'parce', 'que', 'ce', 'sont', 'des', 'trains', 'un', 'peu', 'anciens', 'et', 'qui', 'roule', 'pas', 'tres', 'vite', 'il', 'voila', 'soixante', 'dix', 'kilometres', 'males', 'donc', 'pour', 'faire', 'du', 'genre', 'quatre', 'cents', 'kilometres', 'passa', 'nous', 'apres', 'huit', 'heures', 'et', 'nous', 'sommes', 'arrives', 'au', 'petit', 'matin', 'a', 'hanoi', 'et', 'nous', 'avons', 'commence', 'un', 'periple', 'dans', 'la', 'ville', 'd', 'hanoi', 'nous', 'avons', 'commence', 'a', 'six', 'heures', 'du', 'matin', 'a', 'faire', 'du', 'taichi', 'avec', 'la', 'population', 'la', 'gymnastique', 'locale', 'ensuite', 'nous', 'avons', 'repris', 'des', 'velos', 'et', 'nous', 'avons', 'ete', 'nous', 'promener', 'autour', 'de', 'hanoy', 'en', 'velos', 'dans', 'les', 'rizieres', 'ensuite', 'nous', 'avons', 'dines', 'dans', 'la', 'rue', 'dejeuner', 'dans', 'la', 'rue', 'avec', 'des', 'peine', 'd', 'aliments', 'petits', 'restaurants', 'de', 'la', 'rue', 'nous', 'aves', 'quand', 'meme', 'rejoints', 'notre', 'hotel', 'parces', 'd', 'on', 'un', 'peu', 'fatigue', 'on', 'a', 'pris', 'une', 'bonne', 'douche', 'et', 'on', 'est', 'sorti', 'le', 'soir', 'pour', 'aller', 'dans', 'des', 'restaurants', 'aussi', 'des', 'restaurants', 'typiques', 'et', 'le', 'lendemain', 'nous', 'avons', 'pris', 'le', 'bus', 'pour', 'aller', 'a', 'la', 'fameuse', 'baie', 'd', 'alongh', 'bedalong', 'est', 'un', 'haut', 'lieu', 'du', 'patrimoine', 'mondial', 'mais', 'que', 'malheureusement', 'ils', 'chers', 'vietnamiens', 's', 'en', 'trans', 'trainent', 'de', 'foutre', 'en', 'l', 'hairnt', 'en', 'construisant', 'autour', 'et', 'de', 'cette', 'c', 'ete', 'protegee', 'face', 'au', 'sites', 'proteges', 'd', 'i', 'iiens', 'hotels', 'parce', 'que', 'l', 'il', 'y', 'sont', 'en', 'train', 'et', 'de', 'se', 'developper', 'par', 'un', 'tourisme', 'et', 'de', 'masse', 'y', 'transigne', 'actuellement', 'ce', 'vietam', 'en', 'thailande', 'et', 'des', 'hotels', 'pas', 'moins', 'et', 'quine', 'etage', 'chaque', 'fois', 'et', 'ils', 'ont', 'betonne', 'tout', 'letour', 'de', 'la', 'vallee', 'de', 'la', 'baie', 'd', 'along', 'qu', 'est', 'qui', 'reste', 'quand', 'meme', 'une', 'splendeur', 'ensuite', 'une', 'fois', 'que', 'nous', 'sommes', 'restes', 'deux', 'jours', 'en', 'labedalongue', 'mais', 'ensuite', 'nous', 'sommes', 'revenus', 'vers', 'en', 'hanois', 'ons', 'voir', 'la', 'bedalongue', 'terrestre', 'qui', 'elle', 'est', 'beaucoup', 'plus', 'jolie', 'et', 'elle', 'beaucoup', 'moins', 'istiquement', 'beaucoupement', 'moins', 'petonnee', 'mais', 'qui', 'est', 'un', 'splendeur', 'aussi', 'a', 'la', 'differon', 'que', 'c', 'est', 'une', 'riviere', 'n', 'est', 'pas', 'sur', 'la', 'mer', 'che', 'un', 'grand', 'fleuve', 'qui', 'soillage', 'a', 'traversee', 'piton', 'karstique', 'avec', 'des', 'grottes', 'on', 'se', 'promene', 'dedans', 'barque', 'on', 'sillonne', 'tous', 'au', 'lieu', 'la', 'sac', 'et', 'assez', 'magique', 'ensuite', 'ben', 'nous', 'avons', 'nous', 'sommes', 'revenus', 'a', 'hanoi', 'et', 'la', 'nous', 'avons', 'visite', 'des', 'cultures', 'de', 'soie', 'ce', 'que', 'la', 's', 'etant', 'au', 'lieu', 'de', 'la', 'culture', 'de', 'soie', 'ou', 'vous', 'pouvez', 'vous', 'faire', 'faire', 'des', 'vetementsi', 'vous', 'prennent', 'vos', 'de', 'mes', 'heures', 'le', 'soir', 'mais', 'et', 'le', 'vendemain', 'a', 'cinq', 'heures', 'et', 'c', 'est', 'a', 'mesouures', 'a', 'votre', 'otel', 'et', 'voila', 'bon', 's', 'est', 'balader', 'comme', 'ca', 'et', 'le', 'lendemain', 'nous', 'avons', 'une', 'journee', 'libre', 'a', 'hanoi']
+2026-01-29 14:44:34,411 | INFO | ['donc', 'je', 'suis', 'parti', 'au', 'vietnam', 'pour', 'douze', 'jours', 'nous', 'sommes', 'partis', 'de', 'toulouse', 'nous', 'avons', 'faire', 'roissy', 'dubai', 'dubai', 'sailligon', 'a', 'sailligon', 'nous', 'sommes', 'restes', 'pour', 'faire', 'le', 'golf', 'du', 'mecon', 'qui', 'est', 'tres', 'riche', 'en', 'riziere', 'tres', 'c', 'est', 'un', 'haut', 'lieu', 'de', 'la', 'culture', 'du', 'riz', 'le', 'vietnam', 'qui', 'est', 'maintenant', 'le', '3e', 'producteur', 'de', 'riz', 'au', 'monde', 'ensuite', 'nous', 'avons', 'ete', 'a', 'natron', 'qui', 'est', 'une', 'station', 'balneaire', 'en', 'bord', 'de', 'mer', 'nous', 'sommes', 'revenus', 'a', 'sailligon', 'et', 'la', 'nous', 'avons', 'pris', 'un', 'avion', 'pour', 'aller', 'a', 'danang', 'danang', 'qui', 'est', 'aussi', 'une', 'station', 'au', 'bord', 'de', 'la', 'mer', 'tres', 'touristique', 'de', 'la', 'nous', 'avons', 'pris', 'le', 'car', 'pour', 'aller', 'jusqu', 'a', 'huet', 'qui', 'est', 'l', 'ancienne', 'capitale', 'historique', 'du', 'vietnam', 'la', 'cite', 'imperial', 'qui', 'est', 'magnifique', 'qui', 'est', 'sur', 'une', 'riviere', 'qui', 's', 'appelle', 'la', 'riviere', 'des', 'cinq', 'parfums', 'ou', 'la', 'il', 'y', 'a', 'une', 'multitude', 'de', 'temples', 'de', 'comment', 's', 'appelle', 'de', 'temple', 'de', 'oui', 'ce', 'sont', 'des', 'temples', 'bouddhistes', 'et', 'c', 'est', 'un', 'haut', 'lieu', 'de', 'la', 'gastronomie', 'vietnamienne', 'nous', 'avons', 'eu', 'des', 'cours', 'de', 'cuisine', 'nous', 'avons', 'fait', 'du', 'velo', 'dans', 'les', 'rizieres', 'ensuite', 'nous', 'avons', 'pris', 'un', 'train', 'de', 'nuit', 'nous', 'sommes', 'partis', 'donc', 'de', 'huet', 'jusqu', 'a', 'anoye', 'alors', 'cet', 'un', 'voyage', 'assez', 'epique', 'parce', 'que', 'ce', 'sont', 'des', 'trains', 'un', 'peu', 'anciens', 'et', 'qui', 'roule', 'pas', 'tres', 'vite', 'qui', 'roule', 'soixante', 'dix', 'kilometres', 'heures', 'max', 'donc', 'pour', 'faire', 'du', 'genre', 'quatre', 'cents', 'kilometres', 'ca', 'vous', 'a', 'pris', 'huit', 'heures', 'et', 'nous', 'sommes', 'arrives', 'au', 'petit', 'matin', 'a', 'anoye', 'et', 'nous', 'avons', 'commence', 'un', 'periple', 'dans', 'la', 'ville', 'd', 'anoye', 'nous', 'avons', 'commence', 'a', 'faire', 'a', 'six', 'heures', 'du', 'matin', 'du', 'taishi', 'avec', 'la', 'population', 'la', 'gymnastique', 'locale', 'ensuite', 'nous', 'avons', 'repris', 'des', 'velos', 'et', 'nous', 'avons', 'ete', 'nous', 'promener', 'autour', 'de', 'anoye', 'en', 'velo', 'dans', 'les', 'rizieres', 'ensuite', 'nous', 'avons', 'dine', 'dans', 'la', 'rue', 'dejeune', 'dans', 'la', 'rue', 'avec', 'des', 'petits', 'restaurants', 'de', 'la', 'rue', 'ensuite', 'nous', 'avons', 'quand', 'meme', 'rejoint', 'notre', 'hotel', 'parce', 'qu', 'on', 'etait', 'un', 'peu', 'fatigue', 'on', 'a', 'pris', 'une', 'bonne', 'douche', 'et', 'on', 'est', 'sorti', 'le', 'soir', 'dans', 'des', 'restaurants', 'aussi', 'des', 'restaurants', 'typiques', 'et', 'le', 'lendemain', 'nous', 'avons', 'pris', 'le', 'bus', 'pour', 'aller', 'a', 'la', 'fameuse', 'bedalongue', 'qui', 'est', 'un', 'haut', 'lieu', 'du', 'patrimoine', 'mondial', 'et', 'que', 'malheureusement', 'ses', 'chers', 'vietnamiens', 'sont', 'en', 'train', 'de', 'foutre', 'en', 'l', 'air', 'en', 'construisant', 'autour', 'de', 'cette', 'cite', 'protegee', 'fin', 'ce', 'site', 'protege', 'd', 'immenses', 'hotels', 'parce', 'qu', 'ils', 'sont', 'en', 'train', 'de', 'se', 'developper', 'pour', 'un', 'tourisme', 'de', 'masse', 'ils', 'transforment', 'actuellement', 'le', 'vietnam', 'en', 'thailande', 'avec', 'des', 'hotels', 'de', 'pas', 'moins', 'de', 'quinze', 'etages', 'chaque', 'fois', 'et', 'et', 'ils', 'ont', 'betonne', 'tout', 'le', 'tour', 'de', 'la', 'val', 'de', 'la', 'bedalongue', 'qui', 'reste', 'quand', 'meme', 'une', 'splendeur', 'ensuite', 'une', 'fois', 'nous', 'sommes', 'restes', 'deux', 'jours', 'dans', 'la', 'bedalongue', 'ensuite', 'nous', 'sommes', 'revenus', 'vers', 'la', 'baie', 'd', 'anoye', 'voir', 'la', 'bedalongue', 'terrestre', 'qui', 'elle', 'est', 'beaucoup', 'plus', 'jolie', 'beaucoup', 'moins', 'touristique', 'beaucoup', 'moins', 'betonne', 'mais', 'qui', 'a', 'une', 'splendeur', 'aussi', 'a', 'la', 'difference', 'que', 'ce', 'n', 'est', 'pas', 'une', 'riviere', 'mais', 'on', 'n', 'est', 'pas', 'sur', 'la', 'mer', 'on', 'est', 'sur', 'un', 'grand', 'fleuve', 'qui', 'sillonne', 'a', 'travers', 'ces', 'pythons', 'carstiques', 'avec', 'des', 'grottes', 'on', 'se', 'promene', 'dedans', 'en', 'barque', 'on', 'sillonne', 'tout', 'ce', 'lieu', 'et', 'ca', 'c', 'est', 'assez', 'magique', 'ensuite', 'nous', 'avons', 'nous', 'sommes', 'revenus', 'sur', 'anoye', 'et', 'la', 'nous', 'avons', 'visite', 'la', 'culture', 'de', 'la', 'soie', 'c', 'est', 'un', 'haut', 'lieu', 'de', 'la', 'culture', 'de', 'la', 'soie', 'ou', 'vous', 'pouvez', 'vous', 'faire', 'faire', 'des', 'vetements', 'ils', 'vous', 'prennent', 'vos', 'mesures', 'le', 'soir', 'et', 'le', 'lendemain', 'c', 'est', 'sur', 'mesure', 'a', 'votre', 'hotel', 'et', 'voila', 'on', 's', 'est', 'balade', 'comme', 'ca', 'et', 'le', 'lendemain', 'nous', 'avons', 'eu', 'une', 'journee', 'libre', 'a', 'anoye']
+2026-01-29 14:44:34,585 | INFO | File: 2PD2-KLWB-image.wav | WER=34.394904 | S=135 D=35 I=46
+2026-01-29 14:44:34,585 | INFO | ------------------------------
+2026-01-29 14:44:34,586 | INFO |  File duration: 57.744 seconds
+2026-01-29 14:44:35,729 | INFO | Using rVAD model
+2026-01-29 14:44:38,080 | INFO | speech length: 441280
+2026-01-29 14:44:38,111 | INFO | decoder input length: 689
+2026-01-29 14:44:38,111 | INFO | max output length: 689
+2026-01-29 14:44:38,111 | INFO | min output length: 68
+2026-01-29 14:45:07,710 | INFO | end detected at 196
+2026-01-29 14:45:07,711 | INFO | -425.86 * 0.5 = -212.93 for decoder
+2026-01-29 14:45:07,711 | INFO | -132.01 * 0.5 = -66.00 for ctc
+2026-01-29 14:45:07,711 | INFO | total log probability: -278.93
+2026-01-29 14:45:07,712 | INFO | normalized log probability: -1.46
+2026-01-29 14:45:07,712 | INFO | total number of ended hypotheses: 163
+2026-01-29 14:45:07,714 | INFO | best hypo: ▁avant▁de▁partir▁il▁fallait▁fermer▁la▁maison▁prenez▁tant▁le▁chien▁prenez▁ne▁prenait▁on▁pas▁le▁chien▁allez▁on▁avait▁décidé▁de▁le▁prendre▁on▁mettez▁les▁bottes▁on▁prenez▁le▁panier▁le▁couteau▁à▁champignon▁et▁on▁parttez▁dans▁le▁bois▁et▁repcherche▁a▁longue▁parfois▁▁fructueuse▁parfois▁rien▁tout▁mais▁le▁plaisir▁était▁se▁promener▁dans▁le▁bois▁d'être▁avec▁le▁chien▁mais▁surtt▁il▁ne▁fallait▁qu'un▁chevreuil▁ou▁un▁gipier▁de▁la▁main
+
+2026-01-29 14:45:07,716 | INFO | speech length: 421120
+2026-01-29 14:45:07,752 | INFO | decoder input length: 657
+2026-01-29 14:45:07,752 | INFO | max output length: 657
+2026-01-29 14:45:07,752 | INFO | min output length: 65
+2026-01-29 14:45:39,049 | INFO | end detected at 202
+2026-01-29 14:45:39,050 | INFO | -379.33 * 0.5 = -189.67 for decoder
+2026-01-29 14:45:39,050 | INFO | -99.93 * 0.5 = -49.97 for ctc
+2026-01-29 14:45:39,050 | INFO | total log probability: -239.63
+2026-01-29 14:45:39,050 | INFO | normalized log probability: -1.23
+2026-01-29 14:45:39,050 | INFO | total number of ended hypotheses: 173
+2026-01-29 14:45:39,052 | INFO | best hypo: ▁il▁peut▁part▁parce▁que▁le▁chien▁seré▁l'aurait▁suivi▁nous▁avons▁la▁dernière▁fois▁trouver▁un▁seul▁cèpe▁mais▁on▁était▁content▁nous▁n'étions▁pas▁revenu▁broadway▁on▁retourner▁à▁la▁maison▁il▁on▁ouvrirait▁la▁porte▁on▁et▁faisait▁les▁bottes▁le▁chien▁était▁content▁il▁allait▁boire▁à▁sa▁gamelle▁rapidement▁et▁puis▁nous▁et▁bien▁envaquer▁à▁d'autres▁oeccupions▁soit▁regarder▁la▁on▁soit▁lire▁soit▁par▁éplucher▁le▁champignon▁comme▁allait▁manger▁le▁soit
+
+2026-01-29 14:45:39,056 | INFO | speech length: 8480
+2026-01-29 14:45:39,090 | INFO | decoder input length: 12
+2026-01-29 14:45:39,090 | INFO | max output length: 12
+2026-01-29 14:45:39,090 | INFO | min output length: 1
+2026-01-29 14:45:40,075 | INFO | adding <eos> in the last position in the loop
+2026-01-29 14:45:40,083 | INFO | end detected at 11
+2026-01-29 14:45:40,084 | INFO |  -0.50 * 0.5 =  -0.25 for decoder
+2026-01-29 14:45:40,084 | INFO |  -0.28 * 0.5 =  -0.14 for ctc
+2026-01-29 14:45:40,084 | INFO | total log probability: -0.39
+2026-01-29 14:45:40,084 | INFO | normalized log probability: -0.06
+2026-01-29 14:45:40,084 | INFO | total number of ended hypotheses: 166
+2026-01-29 14:45:40,084 | INFO | best hypo: ▁c'est▁bon
+
+2026-01-29 14:45:40,086 | INFO | ['avant', 'de', 'partir', 'il', 'fallait', 'fermer', 'la', 'maison', 'prenez', 'tant', 'le', 'chien', 'prenez', 'ne', 'prenait', 'on', 'pas', 'le', 'chien', 'allez', 'on', 'avait', 'decide', 'de', 'le', 'prendre', 'on', 'mettez', 'les', 'bottes', 'on', 'prenez', 'le', 'panier', 'le', 'couteau', 'a', 'champignon', 'et', 'on', 'parttez', 'dans', 'le', 'bois', 'et', 'repcherche', 'a', 'longue', 'parfois', 'fructueuse', 'parfois', 'rien', 'tout', 'mais', 'le', 'plaisir', 'etait', 'se', 'promener', 'dans', 'le', 'bois', 'd', 'etre', 'avec', 'le', 'chien', 'mais', 'surtt', 'il', 'ne', 'fallait', 'qu', 'un', 'chevreuil', 'ou', 'un', 'gipier', 'de', 'la', 'main', 'il', 'peut', 'part', 'parce', 'que', 'le', 'chien', 'sere', 'l', 'aurait', 'suivi', 'nous', 'avons', 'la', 'derniere', 'fois', 'trouver', 'un', 'seul', 'cepe', 'mais', 'on', 'etait', 'content', 'nous', 'n', 'etions', 'pas', 'revenu', 'broadway', 'on', 'retourner', 'a', 'la', 'maison', 'il', 'on', 'ouvrirait', 'la', 'porte', 'on', 'et', 'faisait', 'les', 'bottes', 'le', 'chien', 'etait', 'content', 'il', 'allait', 'boire', 'a', 'sa', 'gamelle', 'rapidement', 'et', 'puis', 'nous', 'et', 'bien', 'envaquer', 'a', 'd', 'autres', 'oeccupions', 'soit', 'regarder', 'la', 'on', 'soit', 'lire', 'soit', 'par', 'eplucher', 'le', 'champignon', 'comme', 'allait', 'manger', 'le', 'soit', 'c', 'est', 'bon']
+2026-01-29 14:45:40,087 | INFO | ['avant', 'de', 'partir', 'il', 'fallait', 'fermer', 'la', 'maison', 'prenait', 'on', 'le', 'chien', 'ne', 'prenait', 'on', 'pas', 'le', 'chien', 'aller', 'on', 'avait', 'decide', 'de', 'le', 'prendre', 'on', 'mettait', 'les', 'bottes', 'on', 'prenait', 'des', 'le', 'panier', 'le', 'couteau', 'a', 'champignon', 'et', 'on', 'partait', 'dans', 'le', 'bois', 'la', 'recherche', 'etait', 'longue', 'parfois', 'fructueuse', 'parfois', 'rien', 'du', 'tout', 'mais', 'le', 'plaisir', 'etait', 'de', 'se', 'promener', 'dans', 'le', 'bois', 'd', 'etre', 'avec', 'le', 'chien', 'surtout', 'il', 'ne', 'fallait', 'pas', 'qu', 'un', 'chevreuil', 'ou', 'un', 'gibier', 'de', 'la', 'parte', 'sinon', 'le', 'chien', 'l', 'aurait', 'suivi', 'nous', 'avons', 'trouve', 'la', 'derniere', 'fois', 'un', 'seul', 'cepe', 'mais', 'on', 'etait', 'content', 'nous', 'n', 'etions', 'pas', 'revenus', 'bredouille', 'on', 'retournait', 'a', 'la', 'maison', 'on', 'rouvrait', 'la', 'porte', 'on', 'defaisait', 'les', 'bottes', 'le', 'chien', 'etait', 'content', 'il', 'allait', 'boire', 'a', 'sa', 'gamelle', 'rapidement', 'et', 'puis', 'nous', 'on', 'va', 'acquet', 'a', 'd', 'autres', 'occupations', 'soit', 'regarder', 'la', 'tele', 'soit', 'lire', 'soit', 'eplucher', 'le', 'champignon', 'qu', 'on', 'allait', 'manger', 'le', 'soir', 'c', 'est', 'bon']
+2026-01-29 14:45:40,100 | INFO | File: 1PD-WVGL-image.wav | WER=26.086957 | S=25 D=6 I=11
+2026-01-29 14:45:40,100 | INFO | ------------------------------
+2026-01-29 14:45:40,101 | INFO |  File duration: 69.10858333333333 seconds
+2026-01-29 14:45:41,463 | INFO | Using rVAD model
+2026-01-29 14:45:44,321 | INFO | speech length: 343520
+2026-01-29 14:45:44,359 | INFO | decoder input length: 536
+2026-01-29 14:45:44,359 | INFO | max output length: 536
+2026-01-29 14:45:44,359 | INFO | min output length: 53
+2026-01-29 14:46:01,521 | INFO | end detected at 141
+2026-01-29 14:46:01,522 | INFO | -308.34 * 0.5 = -154.17 for decoder
+2026-01-29 14:46:01,522 | INFO | -115.31 * 0.5 = -57.66 for ctc
+2026-01-29 14:46:01,523 | INFO | total log probability: -211.82
+2026-01-29 14:46:01,523 | INFO | normalized log probability: -1.56
+2026-01-29 14:46:01,523 | INFO | total number of ended hypotheses: 171
+2026-01-29 14:46:01,524 | INFO | best hypo: ▁au▁premier▁plan▁je▁vois▁un▁bateau▁ancien▁type▁galion▁sur▁la▁partie▁gauche▁de▁l'image▁ou▁un▁immeuble▁regroupe▁d'immeubles▁sur▁la▁au▁fond▁derrière▁bateau▁pour▁on▁trouve▁une▁tour▁ancienne▁tour▁droite▁d'un▁pont▁autour▁du▁galion▁au▁fond▁du▁bateau▁types▁ancien▁on▁est▁un▁centre▁de▁bateau▁bateau▁à▁voile▁et▁bateau▁à▁moteur
+
+2026-01-29 14:46:01,526 | INFO | speech length: 108320
+2026-01-29 14:46:01,561 | INFO | decoder input length: 168
+2026-01-29 14:46:01,561 | INFO | max output length: 168
+2026-01-29 14:46:01,561 | INFO | min output length: 16
+2026-01-29 14:46:05,835 | INFO | end detected at 59
+2026-01-29 14:46:05,837 | INFO | -12.93 * 0.5 =  -6.47 for decoder
+2026-01-29 14:46:05,837 | INFO |  -2.14 * 0.5 =  -1.07 for ctc
+2026-01-29 14:46:05,837 | INFO | total log probability: -7.54
+2026-01-29 14:46:05,837 | INFO | normalized log probability: -0.14
+2026-01-29 14:46:05,837 | INFO | total number of ended hypotheses: 146
+2026-01-29 14:46:05,838 | INFO | best hypo: ▁derrière▁on▁voit▁donc▁le▁reste▁de▁la▁ville▁notamment▁sur▁la▁partie▁entre▁partie▁gauche▁entre▁l'immeuble▁et▁le▁bateau▁ou▁un▁parking
+
+2026-01-29 14:46:05,840 | INFO | speech length: 126080
+2026-01-29 14:46:05,876 | INFO | decoder input length: 196
+2026-01-29 14:46:05,876 | INFO | max output length: 196
+2026-01-29 14:46:05,876 | INFO | min output length: 19
+2026-01-29 14:46:12,230 | INFO | end detected at 64
+2026-01-29 14:46:12,232 | INFO | -14.64 * 0.5 =  -7.32 for decoder
+2026-01-29 14:46:12,232 | INFO | -11.69 * 0.5 =  -5.85 for ctc
+2026-01-29 14:46:12,232 | INFO | total log probability: -13.17
+2026-01-29 14:46:12,232 | INFO | normalized log probability: -0.23
+2026-01-29 14:46:12,232 | INFO | total number of ended hypotheses: 178
+2026-01-29 14:46:12,233 | INFO | best hypo: ▁on▁voit▁des▁gens▁qui▁sont▁sur▁le▁bateau▁on▁voit▁également▁des▁gens▁qui▁sont▁sur▁les▁autres▁bateaux▁visiblement▁ce▁bateau▁s'en▁va▁de▁son▁port▁d'attache
+
+2026-01-29 14:46:12,235 | INFO | speech length: 28960
+2026-01-29 14:46:12,270 | INFO | decoder input length: 44
+2026-01-29 14:46:12,270 | INFO | max output length: 44
+2026-01-29 14:46:12,270 | INFO | min output length: 4
+2026-01-29 14:46:14,003 | INFO | end detected at 19
+2026-01-29 14:46:14,005 | INFO |  -2.24 * 0.5 =  -1.12 for decoder
+2026-01-29 14:46:14,005 | INFO |  -2.14 * 0.5 =  -1.07 for ctc
+2026-01-29 14:46:14,005 | INFO | total log probability: -2.19
+2026-01-29 14:46:14,005 | INFO | normalized log probability: -0.16
+2026-01-29 14:46:14,005 | INFO | total number of ended hypotheses: 154
+2026-01-29 14:46:14,006 | INFO | best hypo: ▁les▁bateaux▁qui▁sont▁au▁tour▁le▁suivent
+
+2026-01-29 14:46:14,007 | INFO | speech length: 46720
+2026-01-29 14:46:14,044 | INFO | decoder input length: 72
+2026-01-29 14:46:14,045 | INFO | max output length: 72
+2026-01-29 14:46:14,045 | INFO | min output length: 7
+2026-01-29 14:46:15,882 | INFO | end detected at 20
+2026-01-29 14:46:15,883 | INFO |  -1.12 * 0.5 =  -0.56 for decoder
+2026-01-29 14:46:15,884 | INFO |  -0.02 * 0.5 =  -0.01 for ctc
+2026-01-29 14:46:15,884 | INFO | total log probability: -0.57
+2026-01-29 14:46:15,884 | INFO | normalized log probability: -0.04
+2026-01-29 14:46:15,884 | INFO | total number of ended hypotheses: 141
+2026-01-29 14:46:15,884 | INFO | best hypo: ▁ensuite▁on▁voit▁également▁derrière▁le▁bateau
+
+2026-01-29 14:46:15,886 | INFO | speech length: 76160
+2026-01-29 14:46:15,919 | INFO | decoder input length: 118
+2026-01-29 14:46:15,919 | INFO | max output length: 118
+2026-01-29 14:46:15,919 | INFO | min output length: 11
+2026-01-29 14:46:19,603 | INFO | end detected at 33
+2026-01-29 14:46:19,604 | INFO |  -4.51 * 0.5 =  -2.25 for decoder
+2026-01-29 14:46:19,605 | INFO |  -4.42 * 0.5 =  -2.21 for ctc
+2026-01-29 14:46:19,605 | INFO | total log probability: -4.47
+2026-01-29 14:46:19,605 | INFO | normalized log probability: -0.15
+2026-01-29 14:46:19,605 | INFO | total number of ended hypotheses: 147
+2026-01-29 14:46:19,605 | INFO | best hypo: ▁he▁une▁route▁on▁y▁semble▁voir▁sur▁la▁partie▁gauche▁des▁conteneurs
+
+2026-01-29 14:46:19,607 | INFO | speech length: 108960
+2026-01-29 14:46:19,645 | INFO | decoder input length: 169
+2026-01-29 14:46:19,645 | INFO | max output length: 169
+2026-01-29 14:46:19,645 | INFO | min output length: 16
+2026-01-29 14:46:24,007 | INFO | end detected at 38
+2026-01-29 14:46:24,009 | INFO |  -3.74 * 0.5 =  -1.87 for decoder
+2026-01-29 14:46:24,009 | INFO |  -1.98 * 0.5 =  -0.99 for ctc
+2026-01-29 14:46:24,009 | INFO | total log probability: -2.86
+2026-01-29 14:46:24,009 | INFO | normalized log probability: -0.09
+2026-01-29 14:46:24,009 | INFO | total number of ended hypotheses: 167
+2026-01-29 14:46:24,009 | INFO | best hypo: ▁de▁stockage▁derrière▁le▁bateau▁voit▁également▁à▁côté▁du▁parking▁de▁des▁armes
+
+2026-01-29 14:46:24,012 | INFO | speech length: 131360
+2026-01-29 14:46:24,050 | INFO | decoder input length: 204
+2026-01-29 14:46:24,050 | INFO | max output length: 204
+2026-01-29 14:46:24,050 | INFO | min output length: 20
+2026-01-29 14:46:30,812 | INFO | end detected at 56
+2026-01-29 14:46:30,814 | INFO | -22.04 * 0.5 = -11.02 for decoder
+2026-01-29 14:46:30,814 | INFO |  -4.82 * 0.5 =  -2.41 for ctc
+2026-01-29 14:46:30,814 | INFO | total log probability: -13.43
+2026-01-29 14:46:30,814 | INFO | normalized log probability: -0.27
+2026-01-29 14:46:30,814 | INFO | total number of ended hypotheses: 201
+2026-01-29 14:46:30,815 | INFO | best hypo: ▁puis▁on▁voit▁également▁sur▁la▁partie▁gauche▁partie▁droite▁pardon▁l'espace▁du▁bâtiment▁type▁un▁bâtiment▁df
+
+2026-01-29 14:46:30,817 | INFO | ['au', 'premier', 'plan', 'je', 'vois', 'un', 'bateau', 'ancien', 'type', 'galion', 'sur', 'la', 'partie', 'gauche', 'de', 'l', 'image', 'ou', 'un', 'immeuble', 'regroupe', 'd', 'immeubles', 'sur', 'la', 'au', 'fond', 'derriere', 'bateau', 'pour', 'on', 'trouve', 'une', 'tour', 'ancienne', 'tour', 'droite', 'd', 'un', 'pont', 'autour', 'du', 'galion', 'au', 'fond', 'du', 'bateau', 'types', 'ancien', 'on', 'est', 'un', 'centre', 'de', 'bateau', 'bateau', 'a', 'voile', 'et', 'bateau', 'a', 'moteur', 'derriere', 'on', 'voit', 'donc', 'le', 'reste', 'de', 'la', 'ville', 'notamment', 'sur', 'la', 'partie', 'entre', 'partie', 'gauche', 'entre', 'l', 'immeuble', 'et', 'le', 'bateau', 'ou', 'un', 'parking', 'on', 'voit', 'des', 'gens', 'qui', 'sont', 'sur', 'le', 'bateau', 'on', 'voit', 'egalement', 'des', 'gens', 'qui', 'sont', 'sur', 'les', 'autres', 'bateaux', 'visiblement', 'ce', 'bateau', 's', 'en', 'va', 'de', 'son', 'port', 'd', 'attache', 'les', 'bateaux', 'qui', 'sont', 'au', 'tour', 'le', 'suivent', 'ensuite', 'on', 'voit', 'egalement', 'derriere', 'le', 'bateau', 'he', 'une', 'route', 'on', 'y', 'semble', 'voir', 'sur', 'la', 'partie', 'gauche', 'des', 'conteneurs', 'de', 'stockage', 'derriere', 'le', 'bateau', 'voit', 'egalement', 'a', 'cote', 'du', 'parking', 'de', 'des', 'armes', 'puis', 'on', 'voit', 'egalement', 'sur', 'la', 'partie', 'gauche', 'partie', 'droite', 'pardon', 'l', 'espace', 'du', 'batiment', 'type', 'un', 'batiment', 'df']
+2026-01-29 14:46:30,818 | INFO | ['au', 'premier', 'plan', 'je', 'vois', 'un', 'bateau', 'ancien', 'type', 'galion', 'sur', 'la', 'partie', 'gauche', 'de', 'l', 'image', 'on', 'voit', 'un', 'immeuble', 'enfin', 'un', 'groupe', 'd', 'immeuble', 'sur', 'la', 'au', 'fond', 'du', 'derriere', 'le', 'ba', 'le', 'bateau', 'une', 'tour', 'une', 'ancienne', 'tour', 'a', 'droite', 'un', 'pont', 'autour', 'du', 'du', 'galion', 'fin', 'du', 'bateau', 'type', 'ancien', 'on', 'trouve', 'un', 'certain', 'nombre', 'de', 'bateau', 'bateau', 'a', 'voile', 'et', 'bateau', 'a', 'moteur', 'derriere', 'on', 'voit', 'donc', 'le', 'reste', 'de', 'la', 'ville', 'notamment', 'sur', 'la', 'partie', 'entre', 'partie', 'gauche', 'entre', 'l', 'immeuble', 'et', 'le', 'bateau', 'on', 'voit', 'un', 'parking', 'on', 'voit', 'des', 'gens', 'qui', 'sont', 'sur', 'le', 'bateau', 'on', 'voit', 'egalement', 'des', 'gens', 'qui', 'sont', 'sur', 'les', 'autres', 'bateaux', 'visiblement', 'ce', 'bateau', 's', 'en', 'va', 'de', 'de', 'son', 'port', 'd', 'attache', 'et', 'les', 'bateaux', 'qui', 'sont', 'autour', 'le', 'suivent', 'heu', 'ensuite', 'on', 'voit', 'egalement', 'derriere', 'le', 'bateau', 'heu', 'un', 'une', 'route', 'il', 'semble', 'voir', 'sur', 'la', 'partie', 'gauche', 'des', 'conteneurs', 'de', 'stockages', 'heu', 'derriere', 'le', 'bateau', 'on', 'voit', 'egalement', 'a', 'cote', 'du', 'parking', 'de', 'des', 'arbres', 'et', 'puis', 'on', 'voit', 'heu', 'egalement', 'sur', 'la', 'partie', 'gauche', 'partie', 'droite', 'pardon', 'heu', 'un', 'un', 'un', 'espece', 'de', 'batiment', 'type', 'batiment', 'edf']
+2026-01-29 14:46:30,834 | INFO | File: 2PD-TKHD-image.wav | WER=23.711340 | S=21 D=20 I=5
+2026-01-29 14:46:30,834 | INFO | ------------------------------
+2026-01-29 14:46:30,835 | INFO |  File duration: 112.26266666666666 seconds
+2026-01-29 14:46:33,109 | INFO | Using rVAD model
+2026-01-29 14:46:37,773 | INFO | speech length: 114720
+2026-01-29 14:46:37,812 | INFO | decoder input length: 178
+2026-01-29 14:46:37,812 | INFO | max output length: 178
+2026-01-29 14:46:37,812 | INFO | min output length: 17
+2026-01-29 14:46:43,569 | INFO | end detected at 50
+2026-01-29 14:46:43,571 | INFO |  -5.74 * 0.5 =  -2.87 for decoder
+2026-01-29 14:46:43,571 | INFO |  -5.44 * 0.5 =  -2.72 for ctc
+2026-01-29 14:46:43,571 | INFO | total log probability: -5.59
+2026-01-29 14:46:43,571 | INFO | normalized log probability: -0.12
+2026-01-29 14:46:43,571 | INFO | total number of ended hypotheses: 191
+2026-01-29 14:46:43,571 | INFO | best hypo: ▁oui▁bonjour▁je▁tiens▁d'abord▁à▁me▁présenter▁donc▁frédéric▁hacquat▁je▁suis▁conseiller▁de▁prévention
+
+2026-01-29 14:46:43,573 | INFO | speech length: 119040
+2026-01-29 14:46:43,607 | INFO | decoder input length: 185
+2026-01-29 14:46:43,607 | INFO | max output length: 185
+2026-01-29 14:46:43,607 | INFO | min output length: 18
+2026-01-29 14:46:50,589 | INFO | end detected at 61
+2026-01-29 14:46:50,591 | INFO |  -9.22 * 0.5 =  -4.61 for decoder
+2026-01-29 14:46:50,591 | INFO | -13.54 * 0.5 =  -6.77 for ctc
+2026-01-29 14:46:50,591 | INFO | total log probability: -11.38
+2026-01-29 14:46:50,591 | INFO | normalized log probability: -0.21
+2026-01-29 14:46:50,591 | INFO | total number of ended hypotheses: 197
+2026-01-29 14:46:50,592 | INFO | best hypo: ▁a▁l'école▁nationale▁de▁l'aviation▁civile▁le▁multi▁site▁a▁le▁rôle▁d'un▁quand▁cette▁prévention▁c'est▁bien▁évidemment▁de
+
+2026-01-29 14:46:50,594 | INFO | speech length: 59040
+2026-01-29 14:46:50,628 | INFO | decoder input length: 91
+2026-01-29 14:46:50,628 | INFO | max output length: 91
+2026-01-29 14:46:50,628 | INFO | min output length: 9
+2026-01-29 14:46:53,584 | INFO | end detected at 27
+2026-01-29 14:46:53,585 | INFO |  -1.66 * 0.5 =  -0.83 for decoder
+2026-01-29 14:46:53,586 | INFO |  -0.02 * 0.5 =  -0.01 for ctc
+2026-01-29 14:46:53,586 | INFO | total log probability: -0.84
+2026-01-29 14:46:53,586 | INFO | normalized log probability: -0.04
+2026-01-29 14:46:53,586 | INFO | total number of ended hypotheses: 145
+2026-01-29 14:46:53,586 | INFO | best hypo: ▁d'adapter▁de▁faire▁progresser▁les▁concepts
+
+2026-01-29 14:46:53,588 | INFO | speech length: 101440
+2026-01-29 14:46:53,628 | INFO | decoder input length: 158
+2026-01-29 14:46:53,628 | INFO | max output length: 158
+2026-01-29 14:46:53,628 | INFO | min output length: 15
+2026-01-29 14:46:59,179 | INFO | end detected at 52
+2026-01-29 14:46:59,181 | INFO |  -3.53 * 0.5 =  -1.76 for decoder
+2026-01-29 14:46:59,181 | INFO |  -1.19 * 0.5 =  -0.59 for ctc
+2026-01-29 14:46:59,181 | INFO | total log probability: -2.36
+2026-01-29 14:46:59,181 | INFO | normalized log probability: -0.05
+2026-01-29 14:46:59,181 | INFO | total number of ended hypotheses: 139
+2026-01-29 14:46:59,182 | INFO | best hypo: ▁en▁hygiène▁sécurité▁sur▁l'ensemble▁du▁site▁ou▁plutôt▁même▁des▁sites▁les▁actions▁sont▁assez▁variées
+
+2026-01-29 14:46:59,183 | INFO | speech length: 82240
+2026-01-29 14:46:59,216 | INFO | decoder input length: 128
+2026-01-29 14:46:59,216 | INFO | max output length: 128
+2026-01-29 14:46:59,216 | INFO | min output length: 12
+2026-01-29 14:47:02,580 | INFO | end detected at 31
+2026-01-29 14:47:02,582 | INFO |  -3.33 * 0.5 =  -1.67 for decoder
+2026-01-29 14:47:02,582 | INFO |  -2.24 * 0.5 =  -1.12 for ctc
+2026-01-29 14:47:02,582 | INFO | total log probability: -2.78
+2026-01-29 14:47:02,582 | INFO | normalized log probability: -0.11
+2026-01-29 14:47:02,582 | INFO | total number of ended hypotheses: 179
+2026-01-29 14:47:02,582 | INFO | best hypo: ▁formation▁information▁préparation▁des▁comités▁gène▁sécurité
+
+2026-01-29 14:47:02,584 | INFO | speech length: 436160
+2026-01-29 14:47:02,620 | INFO | decoder input length: 681
+2026-01-29 14:47:02,620 | INFO | max output length: 681
+2026-01-29 14:47:02,620 | INFO | min output length: 68
+2026-01-29 14:47:23,568 | INFO | end detected at 133
+2026-01-29 14:47:23,569 | INFO | -323.40 * 0.5 = -161.70 for decoder
+2026-01-29 14:47:23,569 | INFO | -117.82 * 0.5 = -58.91 for ctc
+2026-01-29 14:47:23,569 | INFO | total log probability: -220.61
+2026-01-29 14:47:23,569 | INFO | normalized log probability: -1.72
+2026-01-29 14:47:23,569 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:47:23,571 | INFO | best hypo: ▁et▁conditions▁de▁travail▁ça▁peut▁toucher▁également▁toutes▁les▁bras▁les▁pratiques▁qui▁sont▁exercées▁par▁des▁collègues▁de▁travaille▁avec▁qui▁nous▁avons▁nous▁échangeons▁mais▁assez▁régulièrement▁je▁vais▁parler▁du▁médecin▁des▁prévention▁ou▁ou▁du▁service▁en▁général▁les▁médico▁social▁et▁de▁l'entrepris▁ou▁es▁'ayer▁de▁faire▁le▁progresser
+
+2026-01-29 14:47:23,573 | INFO | speech length: 144800
+2026-01-29 14:47:23,609 | INFO | decoder input length: 225
+2026-01-29 14:47:23,609 | INFO | max output length: 225
+2026-01-29 14:47:23,609 | INFO | min output length: 22
+2026-01-29 14:47:29,346 | INFO | end detected at 60
+2026-01-29 14:47:29,347 | INFO | -12.78 * 0.5 =  -6.39 for decoder
+2026-01-29 14:47:29,347 | INFO |  -2.75 * 0.5 =  -1.38 for ctc
+2026-01-29 14:47:29,347 | INFO | total log probability: -7.76
+2026-01-29 14:47:29,347 | INFO | normalized log probability: -0.14
+2026-01-29 14:47:29,347 | INFO | total number of ended hypotheses: 153
+2026-01-29 14:47:29,348 | INFO | best hypo: ▁ce▁matin▁la▁prise▁en▁compte▁de▁l'accessibilité▁ou▁handicap▁est▁regard▁au▁regard▁de▁la▁loi▁de▁la▁réglementation▁de▁ce▁jour
+
+2026-01-29 14:47:29,350 | INFO | speech length: 88320
+2026-01-29 14:47:29,382 | INFO | decoder input length: 137
+2026-01-29 14:47:29,382 | INFO | max output length: 137
+2026-01-29 14:47:29,382 | INFO | min output length: 13
+2026-01-29 14:47:31,231 | INFO | end detected at 46
+2026-01-29 14:47:31,232 | INFO |  -3.79 * 0.5 =  -1.89 for decoder
+2026-01-29 14:47:31,233 | INFO |  -0.91 * 0.5 =  -0.45 for ctc
+2026-01-29 14:47:31,233 | INFO | total log probability: -2.35
+2026-01-29 14:47:31,233 | INFO | normalized log probability: -0.06
+2026-01-29 14:47:31,233 | INFO | total number of ended hypotheses: 150
+2026-01-29 14:47:31,233 | INFO | best hypo: ▁c'est▁un▁sujet▁assez▁sérieux▁puisque▁nous▁avons▁quand▁même▁pas▁mal▁de▁deux▁retards▁à▁combler
+
+2026-01-29 14:47:31,235 | INFO | speech length: 226880
+2026-01-29 14:47:31,266 | INFO | decoder input length: 354
+2026-01-29 14:47:31,266 | INFO | max output length: 354
+2026-01-29 14:47:31,266 | INFO | min output length: 35
+2026-01-29 14:47:40,099 | INFO | end detected at 79
+2026-01-29 14:47:40,101 | INFO | -70.72 * 0.5 = -35.36 for decoder
+2026-01-29 14:47:40,101 | INFO |  -6.14 * 0.5 =  -3.07 for ctc
+2026-01-29 14:47:40,101 | INFO | total log probability: -38.43
+2026-01-29 14:47:40,101 | INFO | normalized log probability: -0.52
+2026-01-29 14:47:40,101 | INFO | total number of ended hypotheses: 153
+2026-01-29 14:47:40,102 | INFO | best hypo: ▁les▁démarches▁de▁du▁dossier▁de▁l'agenda▁d'accessibilité▁a▁été▁déposées▁en▁préfecture▁de▁façon▁à▁être▁validée▁sur▁le▁travail▁effectué▁et▁ensuite▁on▁fera▁un▁point
+
+2026-01-29 14:47:40,103 | INFO | speech length: 119840
+2026-01-29 14:47:40,137 | INFO | decoder input length: 186
+2026-01-29 14:47:40,137 | INFO | max output length: 186
+2026-01-29 14:47:40,137 | INFO | min output length: 18
+2026-01-29 14:47:43,349 | INFO | end detected at 34
+2026-01-29 14:47:43,350 | INFO |  -5.35 * 0.5 =  -2.68 for decoder
+2026-01-29 14:47:43,350 | INFO |  -8.41 * 0.5 =  -4.21 for ctc
+2026-01-29 14:47:43,350 | INFO | total log probability: -6.88
+2026-01-29 14:47:43,350 | INFO | normalized log probability: -0.25
+2026-01-29 14:47:43,350 | INFO | total number of ended hypotheses: 163
+2026-01-29 14:47:43,351 | INFO | best hypo: ▁au▁chst▁ordre▁du▁jour▁au▁numéro▁huit▁pour▁informer▁le▁plus▁grand▁nombre
+
+2026-01-29 14:47:43,352 | INFO | speech length: 83040
+2026-01-29 14:47:43,384 | INFO | decoder input length: 129
+2026-01-29 14:47:43,384 | INFO | max output length: 129
+2026-01-29 14:47:43,384 | INFO | min output length: 12
+2026-01-29 14:47:47,661 | INFO | end detected at 44
+2026-01-29 14:47:47,663 | INFO |  -4.52 * 0.5 =  -2.26 for decoder
+2026-01-29 14:47:47,663 | INFO |  -6.66 * 0.5 =  -3.33 for ctc
+2026-01-29 14:47:47,663 | INFO | total log probability: -5.59
+2026-01-29 14:47:47,663 | INFO | normalized log probability: -0.16
+2026-01-29 14:47:47,663 | INFO | total number of ended hypotheses: 175
+2026-01-29 14:47:47,663 | INFO | best hypo: ▁de▁nos▁personnels▁furent▁la▁mise▁en▁place▁très▁prochaine▁de▁certains▁matériaux
+
+2026-01-29 14:47:47,666 | INFO | ['oui', 'bonjour', 'je', 'tiens', 'd', 'abord', 'a', 'me', 'presenter', 'donc', 'frederic', 'hacquat', 'je', 'suis', 'conseiller', 'de', 'prevention', 'a', 'l', 'ecole', 'nationale', 'de', 'l', 'aviation', 'civile', 'le', 'multi', 'site', 'a', 'le', 'role', 'd', 'un', 'quand', 'cette', 'prevention', 'c', 'est', 'bien', 'evidemment', 'de', 'd', 'adapter', 'de', 'faire', 'progresser', 'les', 'concepts', 'en', 'hygiene', 'securite', 'sur', 'l', 'ensemble', 'du', 'site', 'ou', 'plutot', 'meme', 'des', 'sites', 'les', 'actions', 'sont', 'assez', 'variees', 'formation', 'information', 'preparation', 'des', 'comites', 'gene', 'securite', 'et', 'conditions', 'de', 'travail', 'ca', 'peut', 'toucher', 'egalement', 'toutes', 'les', 'bras', 'les', 'pratiques', 'qui', 'sont', 'exercees', 'par', 'des', 'collegues', 'de', 'travaille', 'avec', 'qui', 'nous', 'avons', 'nous', 'echangeons', 'mais', 'assez', 'regulierement', 'je', 'vais', 'parler', 'du', 'medecin', 'des', 'prevention', 'ou', 'ou', 'du', 'service', 'en', 'general', 'les', 'medico', 'social', 'et', 'de', 'l', 'entrepris', 'ou', 'es', 'ayer', 'de', 'faire', 'le', 'progresser', 'ce', 'matin', 'la', 'prise', 'en', 'compte', 'de', 'l', 'accessibilite', 'ou', 'handicap', 'est', 'regard', 'au', 'regard', 'de', 'la', 'loi', 'de', 'la', 'reglementation', 'de', 'ce', 'jour', 'c', 'est', 'un', 'sujet', 'assez', 'serieux', 'puisque', 'nous', 'avons', 'quand', 'meme', 'pas', 'mal', 'de', 'deux', 'retards', 'a', 'combler', 'les', 'demarches', 'de', 'du', 'dossier', 'de', 'l', 'agenda', 'd', 'accessibilite', 'a', 'ete', 'deposees', 'en', 'prefecture', 'de', 'facon', 'a', 'etre', 'validee', 'sur', 'le', 'travail', 'effectue', 'et', 'ensuite', 'on', 'fera', 'un', 'point', 'au', 'chst', 'ordre', 'du', 'jour', 'au', 'numero', 'huit', 'pour', 'informer', 'le', 'plus', 'grand', 'nombre', 'de', 'nos', 'personnels', 'furent', 'la', 'mise', 'en', 'place', 'tres', 'prochaine', 'de', 'certains', 'materiaux']
+2026-01-29 14:47:47,666 | INFO | ['oui', 'bonjour', 'je', 'tiens', 'd', 'abord', 'a', 'me', 'presenter', 'donc', 'frederic', 'aka', 'je', 'suis', 'conseille', 'de', 'prevention', 'de', 'l', 'ecole', 'nationale', 'de', 'l', 'aviation', 'civile', 'multi', 'sites', 'alors', 'le', 'role', 'd', 'un', 'conseiller', 'de', 'prevention', 'c', 'est', 'bien', 'evidemment', 'd', 'adapter', 'de', 'faire', 'progresser', 'les', 'concepts', 'en', 'hygiene', 'securite', 'sur', 'l', 'ensemble', 'du', 'site', 'ou', 'plutot', 'meme', 'des', 'sites', 'des', 'actions', 'sont', 'assez', 'variees', 'formation', 'information', 'preparation', 'des', 'comites', 'hygienes', 'securites', 'et', 'condition', 'de', 'travail', 'ca', 'peut', 'toucher', 'egalement', 'toutes', 'les', 'pratiques', 'qui', 'sont', 'exercees', 'par', 'des', 'collegues', 'de', 'travail', 'avec', 'qui', 'nous', 'avons', 'nous', 'echangeons', 'assez', 'regulierement', 'heu', 'je', 'veux', 'parler', 'du', 'medecin', 'de', 'prevention', 'ou', 'du', 'service', 'en', 'general', 'medico', 'social', 'de', 'l', 'entreprise', 'pour', 'essayer', 'de', 'faire', 'progresser', 'ce', 'matin', 'la', 'prise', 'en', 'compte', 'de', 'l', 'accessibilite', 'ou', 'handicap', 'et', 'au', 'au', 'regard', 'de', 'la', 'loi', 'de', 'l', 'argumentation', 'a', 'ce', 'jour', 'c', 'est', 'un', 'sujet', 'assez', 'serieux', 'pisque', 'nous', 'avons', 'quand', 'meme', 'pas', 'mal', 'de', 'de', 'retard', 'a', 'combler', 'les', 'demarches', 'de', 'du', 'dossier', 'de', 'l', 'agenda', 'd', 'accessibilite', 'a', 'ete', 'deposes', 'a', 'la', 'prefecture', 'de', 'facon', 'a', 'etre', 'valide', 'sur', 'le', 'travail', 'effectue', 'et', 'ensuite', 'on', 'fera', 'un', 'point', 'au', 'chst', 'ordre', 'du', 'jour', 'numero', 'huit', 'pour', 'in', 'informer', 'le', 'plus', 'grand', 'nombre', 'de', 'nos', 'personnels', 'sur', 'la', 'mise', 'en', 'place', 'tres', 'prochaine', 'de', 'certains', 'materiaux', 'ou', 'materiels', 'et']
+2026-01-29 14:47:47,688 | INFO | File: 2PD-HCTE-image.wav | WER=20.535714 | S=29 D=6 I=11
+2026-01-29 14:47:47,688 | INFO | ------------------------------
+2026-01-29 14:47:47,688 | INFO |  File duration: 46.20288 seconds
+2026-01-29 14:47:48,162 | INFO | Using rVAD model
+2026-01-29 14:47:50,064 | INFO | speech length: 107200
+2026-01-29 14:47:50,100 | INFO | decoder input length: 167
+2026-01-29 14:47:50,100 | INFO | max output length: 167
+2026-01-29 14:47:50,100 | INFO | min output length: 16
+2026-01-29 14:47:56,967 | INFO | end detected at 70
+2026-01-29 14:47:56,968 | INFO |  -5.00 * 0.5 =  -2.50 for decoder
+2026-01-29 14:47:56,968 | INFO | -10.71 * 0.5 =  -5.35 for ctc
+2026-01-29 14:47:56,968 | INFO | total log probability: -7.85
+2026-01-29 14:47:56,968 | INFO | normalized log probability: -0.12
+2026-01-29 14:47:56,968 | INFO | total number of ended hypotheses: 167
+2026-01-29 14:47:56,969 | INFO | best hypo: ▁bas▁le▁sujet▁qui▁m'intéresse▁aujourd'hui▁c'est▁le▁problème▁des▁palestiniens▁de▁gazas▁qui▁se▁passe▁aujourd'hui▁là▁bas
+
+2026-01-29 14:47:56,971 | INFO | speech length: 152160
+2026-01-29 14:47:57,005 | INFO | decoder input length: 237
+2026-01-29 14:47:57,005 | INFO | max output length: 237
+2026-01-29 14:47:57,005 | INFO | min output length: 23
+2026-01-29 14:48:05,517 | INFO | end detected at 81
+2026-01-29 14:48:05,519 | INFO | -29.89 * 0.5 = -14.94 for decoder
+2026-01-29 14:48:05,519 | INFO |  -8.31 * 0.5 =  -4.16 for ctc
+2026-01-29 14:48:05,519 | INFO | total log probability: -19.10
+2026-01-29 14:48:05,519 | INFO | normalized log probability: -0.25
+2026-01-29 14:48:05,519 | INFO | total number of ended hypotheses: 180
+2026-01-29 14:48:05,520 | INFO | best hypo: ▁c'est▁comment▁dire▁ces▁dégueulas▁c'est▁affreux▁ce▁que▁d'un▁côté▁on▁est▁en▁train▁de▁d'aider▁les▁israéliens▁et▁de▁l'autre▁côté▁on▁est▁en▁train▁de▁tuer▁les▁palestiniens
+
+2026-01-29 14:48:05,522 | INFO | speech length: 30880
+2026-01-29 14:48:05,556 | INFO | decoder input length: 47
+2026-01-29 14:48:05,556 | INFO | max output length: 47
+2026-01-29 14:48:05,556 | INFO | min output length: 4
+2026-01-29 14:48:07,824 | INFO | end detected at 25
+2026-01-29 14:48:07,825 | INFO |  -3.13 * 0.5 =  -1.57 for decoder
+2026-01-29 14:48:07,825 | INFO |  -3.22 * 0.5 =  -1.61 for ctc
+2026-01-29 14:48:07,825 | INFO | total log probability: -3.18
+2026-01-29 14:48:07,825 | INFO | normalized log probability: -0.16
+2026-01-29 14:48:07,825 | INFO | total number of ended hypotheses: 164
+2026-01-29 14:48:07,825 | INFO | best hypo: ▁c'est▁pas▁possible▁c'est▁pas▁normal
+
+2026-01-29 14:48:07,827 | INFO | speech length: 79680
+2026-01-29 14:48:07,861 | INFO | decoder input length: 124
+2026-01-29 14:48:07,861 | INFO | max output length: 124
+2026-01-29 14:48:07,861 | INFO | min output length: 12
+2026-01-29 14:48:12,141 | INFO | end detected at 46
+2026-01-29 14:48:12,142 | INFO |  -4.12 * 0.5 =  -2.06 for decoder
+2026-01-29 14:48:12,142 | INFO |  -6.08 * 0.5 =  -3.04 for ctc
+2026-01-29 14:48:12,142 | INFO | total log probability: -5.10
+2026-01-29 14:48:12,142 | INFO | normalized log probability: -0.12
+2026-01-29 14:48:12,142 | INFO | total number of ended hypotheses: 176
+2026-01-29 14:48:12,143 | INFO | best hypo: ▁faut▁faire▁quelque▁chose▁les▁aider▁par▁tous▁les▁moyens▁regardez▁ce▁qui▁se▁passe▁en▁ukraine
+
+2026-01-29 14:48:12,144 | INFO | speech length: 153920
+2026-01-29 14:48:12,178 | INFO | decoder input length: 240
+2026-01-29 14:48:12,178 | INFO | max output length: 240
+2026-01-29 14:48:12,178 | INFO | min output length: 24
+2026-01-29 14:48:19,723 | INFO | end detected at 73
+2026-01-29 14:48:19,724 | INFO | -24.63 * 0.5 = -12.32 for decoder
+2026-01-29 14:48:19,724 | INFO | -16.01 * 0.5 =  -8.01 for ctc
+2026-01-29 14:48:19,724 | INFO | total log probability: -20.32
+2026-01-29 14:48:19,724 | INFO | normalized log probability: -0.31
+2026-01-29 14:48:19,724 | INFO | total number of ended hypotheses: 162
+2026-01-29 14:48:19,725 | INFO | best hypo: ▁leraces▁a▁bien▁conquis▁une▁partie▁de▁l'ukraine▁personne▁ne▁dit▁rien▁et▁là▁au▁niveau▁de▁ce▁qui▁se▁passe▁en▁palestine▁ça▁fait▁soixante▁dix▁ans▁c'est▁comme▁ça
+
+2026-01-29 14:48:19,727 | INFO | speech length: 36320
+2026-01-29 14:48:19,761 | INFO | decoder input length: 56
+2026-01-29 14:48:19,761 | INFO | max output length: 56
+2026-01-29 14:48:19,761 | INFO | min output length: 5
+2026-01-29 14:48:21,199 | INFO | end detected at 22
+2026-01-29 14:48:21,200 | INFO |  -3.07 * 0.5 =  -1.53 for decoder
+2026-01-29 14:48:21,200 | INFO |  -4.63 * 0.5 =  -2.32 for ctc
+2026-01-29 14:48:21,200 | INFO | total log probability: -3.85
+2026-01-29 14:48:21,200 | INFO | normalized log probability: -0.21
+2026-01-29 14:48:21,200 | INFO | total number of ended hypotheses: 155
+2026-01-29 14:48:21,201 | INFO | best hypo: ▁et▁personne▁ne▁dit▁il▁ne▁fait▁quelque▁chose
+
+2026-01-29 14:48:21,202 | INFO | speech length: 26880
+2026-01-29 14:48:21,232 | INFO | decoder input length: 41
+2026-01-29 14:48:21,232 | INFO | max output length: 41
+2026-01-29 14:48:21,232 | INFO | min output length: 4
+2026-01-29 14:48:21,762 | INFO | end detected at 17
+2026-01-29 14:48:21,763 | INFO |  -2.19 * 0.5 =  -1.10 for decoder
+2026-01-29 14:48:21,763 | INFO |  -5.02 * 0.5 =  -2.51 for ctc
+2026-01-29 14:48:21,763 | INFO | total log probability: -3.61
+2026-01-29 14:48:21,763 | INFO | normalized log probability: -0.28
+2026-01-29 14:48:21,763 | INFO | total number of ended hypotheses: 159
+2026-01-29 14:48:21,763 | INFO | best hypo: ▁c'est▁pas▁normal▁voilà
+
+2026-01-29 14:48:21,765 | INFO | ['bas', 'le', 'sujet', 'qui', 'm', 'interesse', 'aujourd', 'hui', 'c', 'est', 'le', 'probleme', 'des', 'palestiniens', 'de', 'gazas', 'qui', 'se', 'passe', 'aujourd', 'hui', 'la', 'bas', 'c', 'est', 'comment', 'dire', 'ces', 'degueulas', 'c', 'est', 'affreux', 'ce', 'que', 'd', 'un', 'cote', 'on', 'est', 'en', 'train', 'de', 'd', 'aider', 'les', 'israeliens', 'et', 'de', 'l', 'autre', 'cote', 'on', 'est', 'en', 'train', 'de', 'tuer', 'les', 'palestiniens', 'c', 'est', 'pas', 'possible', 'c', 'est', 'pas', 'normal', 'faut', 'faire', 'quelque', 'chose', 'les', 'aider', 'par', 'tous', 'les', 'moyens', 'regardez', 'ce', 'qui', 'se', 'passe', 'en', 'ukraine', 'leraces', 'a', 'bien', 'conquis', 'une', 'partie', 'de', 'l', 'ukraine', 'personne', 'ne', 'dit', 'rien', 'et', 'la', 'au', 'niveau', 'de', 'ce', 'qui', 'se', 'passe', 'en', 'palestine', 'ca', 'fait', 'soixante', 'dix', 'ans', 'c', 'est', 'comme', 'ca', 'et', 'personne', 'ne', 'dit', 'il', 'ne', 'fait', 'quelque', 'chose', 'c', 'est', 'pas', 'normal', 'voila']
+2026-01-29 14:48:21,765 | INFO | ['le', 'sujet', 'qui', 'm', 'interesse', 'aujourd', 'hui', 'c', 'est', 'le', 'probleme', 'des', 'palestiniens', 'a', 'gaza', 'ce', 'qu', 'il', 'se', 'passe', 'aujourd', 'hui', 'la', 'bas', 'c', 'est', 'comment', 'dire', 'c', 'est', 'degueulasse', 'c', 'est', 'affreux', 'parce', 'que', 'd', 'un', 'cote', 'on', 'est', 'en', 'train', 'd', 'aider', 'les', 'israeliens', 'et', 'd', 'un', 'autre', 'on', 'est', 'en', 'train', 'de', 'tuer', 'les', 'palestiniens', 'ce', 'n', 'est', 'pas', 'possible', 'ce', 'n', 'est', 'pas', 'normal', 'faut', 'faire', 'quelque', 'chose', 'faut', 'les', 'aider', 'par', 'tous', 'les', 'moyens', 'regardez', 'ce', 'qu', 'il', 'se', 'passe', 'en', 'ukraine', 'l', 'urss', 'a', 'bien', 'conquit', 'une', 'partie', 'de', 'l', 'ukraine', 'et', 'personne', 'dit', 'rien', 'et', 'la', 'au', 'niveau', 'de', 'ce', 'qu', 'il', 'se', 'passe', 'en', 'palestine', 'ca', 'fait', '70', 'ans', 'que', 'ca', 'se', 'passe', 'comme', 'ca', 'et', 'personne', 'ne', 'fait', 'quelque', 'chose', 'ce', 'n', 'est', 'pas', 'normal', 'voila']
+2026-01-29 14:48:21,775 | INFO | File: 1PD-FSKS-image.wav | WER=28.676471 | S=18 D=13 I=8
+2026-01-29 14:48:21,775 | INFO | ------------------------------
+2026-01-29 14:48:21,775 | INFO |  File duration: 41.034666666666666 seconds
+2026-01-29 14:48:22,589 | INFO | Using rVAD model
+2026-01-29 14:48:24,246 | INFO | speech length: 231840
+2026-01-29 14:48:24,280 | INFO | decoder input length: 361
+2026-01-29 14:48:24,280 | INFO | max output length: 361
+2026-01-29 14:48:24,280 | INFO | min output length: 36
+2026-01-29 14:48:36,391 | INFO | end detected at 110
+2026-01-29 14:48:36,392 | INFO | -125.89 * 0.5 = -62.94 for decoder
+2026-01-29 14:48:36,392 | INFO | -70.76 * 0.5 = -35.38 for ctc
+2026-01-29 14:48:36,392 | INFO | total log probability: -98.32
+2026-01-29 14:48:36,392 | INFO | normalized log probability: -0.95
+2026-01-29 14:48:36,392 | INFO | total number of ended hypotheses: 186
+2026-01-29 14:48:36,393 | INFO | best hypo: ▁le▁dernier▁voyage▁que▁j'ai▁fait▁avec▁bon▁époux▁en▁mars▁deux▁mille▁seize▁était▁à▁destination▁de▁la▁birmanie▁nous▁ne▁sommes▁énormément▁plus▁nous▁avions▁projetté▁d'y▁revenir▁malheureusement▁de▁le▁dix▁huit▁juin▁de▁mille▁de▁seize▁fin▁de▁mort▁subite
+
+2026-01-29 14:48:36,396 | INFO | speech length: 291520
+2026-01-29 14:48:36,430 | INFO | decoder input length: 455
+2026-01-29 14:48:36,430 | INFO | max output length: 455
+2026-01-29 14:48:36,430 | INFO | min output length: 45
+2026-01-29 14:48:50,643 | INFO | end detected at 111
+2026-01-29 14:48:50,644 | INFO | -152.25 * 0.5 = -76.13 for decoder
+2026-01-29 14:48:50,644 | INFO | -42.51 * 0.5 = -21.25 for ctc
+2026-01-29 14:48:50,644 | INFO | total log probability: -97.38
+2026-01-29 14:48:50,644 | INFO | normalized log probability: -0.92
+2026-01-29 14:48:50,644 | INFO | total number of ended hypotheses: 158
+2026-01-29 14:48:50,645 | INFO | best hypo: ▁a▁la▁suite▁de▁quoi▁je▁suis▁revenu▁en▁birmanie▁toutes▁les▁années▁suivantes▁en▁deux▁mille▁dix▁sept▁avec▁ma▁fille▁mon▁petit▁fils▁en▁deux▁mille▁dix▁huit▁en▁deux▁mille▁dix▁neuf▁avec▁ma▁fille▁et▁en▁deux▁mille▁vingt▁cinq▁nous▁avons▁projettés▁dire▁notre▁voyage▁est▁programmé▁et▁comme▁tous▁ans▁pour▁la▁birmanie
+
+2026-01-29 14:48:50,647 | INFO | ['le', 'dernier', 'voyage', 'que', 'j', 'ai', 'fait', 'avec', 'bon', 'epoux', 'en', 'mars', 'deux', 'mille', 'seize', 'etait', 'a', 'destination', 'de', 'la', 'birmanie', 'nous', 'ne', 'sommes', 'enormement', 'plus', 'nous', 'avions', 'projette', 'd', 'y', 'revenir', 'malheureusement', 'de', 'le', 'dix', 'huit', 'juin', 'de', 'mille', 'de', 'seize', 'fin', 'de', 'mort', 'subite', 'a', 'la', 'suite', 'de', 'quoi', 'je', 'suis', 'revenu', 'en', 'birmanie', 'toutes', 'les', 'annees', 'suivantes', 'en', 'deux', 'mille', 'dix', 'sept', 'avec', 'ma', 'fille', 'mon', 'petit', 'fils', 'en', 'deux', 'mille', 'dix', 'huit', 'en', 'deux', 'mille', 'dix', 'neuf', 'avec', 'ma', 'fille', 'et', 'en', 'deux', 'mille', 'vingt', 'cinq', 'nous', 'avons', 'projettes', 'dire', 'notre', 'voyage', 'est', 'programme', 'et', 'comme', 'tous', 'ans', 'pour', 'la', 'birmanie']
+2026-01-29 14:48:50,648 | INFO | ['le', 'dernier', 'voyage', 'que', 'j', 'ai', 'fait', 'avec', 'mon', 'epoux', 'etait', 'en', 'mars', '2016', 'etait', 'a', 'destination', 'de', 'la', 'birmanie', 'nous', 'nous', 'sommes', 'enormement', 'plus', 'nous', 'avions', 'projete', 'd', 'y', 'revenir', 'malheureusement', 'le', '10', 'juin', '2016', 'il', 'a', 'fait', 'une', 'mort', 'subite', 'a', 'la', 'suite', 'de', 'quoi', 'heu', 'je', 'suis', 'revenue', 'en', 'birmanie', 'toutes', 'les', 'annees', 'suivantes', 'en', '2017', 'avec', 'ma', 'fille', 'et', 'mon', 'petit', 'fils', 'en', '2018', 'en', '2019', 'avec', 'ma', 'fille', 'et', 'en', '2020', 'nous', 'avons', 'projete', 'd', 'y', 're', 'retourner', 'notre', 'voyage', 'est', 'programme', 'heu', 'comme', 'tous', 'les', 'ans', 'pour', 'la', 'birmanie', 'voila']
+2026-01-29 14:48:50,654 | INFO | File: 1PD-ZNPV-image.wav | WER=43.750000 | S=23 D=5 I=14
+2026-01-29 14:48:50,655 | INFO | ------------------------------
+2026-01-29 14:48:50,655 | INFO |  File duration: 45.54752 seconds
+2026-01-29 14:48:51,122 | INFO | Using rVAD model
+2026-01-29 14:48:52,986 | INFO | speech length: 172000
+2026-01-29 14:48:53,022 | INFO | decoder input length: 268
+2026-01-29 14:48:53,022 | INFO | max output length: 268
+2026-01-29 14:48:53,022 | INFO | min output length: 26
+2026-01-29 14:49:02,155 | INFO | end detected at 78
+2026-01-29 14:49:02,156 | INFO | -27.77 * 0.5 = -13.88 for decoder
+2026-01-29 14:49:02,156 | INFO |  -9.61 * 0.5 =  -4.80 for ctc
+2026-01-29 14:49:02,156 | INFO | total log probability: -18.69
+2026-01-29 14:49:02,156 | INFO | normalized log probability: -0.25
+2026-01-29 14:49:02,156 | INFO | total number of ended hypotheses: 156
+2026-01-29 14:49:02,157 | INFO | best hypo: ▁j'allais▁me▁promener▁dans▁la▁montagne▁et▁j'aimais▁ça▁souvent▁je▁regardais▁les▁oiseaux▁et▁puis▁après▁je▁redescendais▁j'allais▁me▁promener▁souvent▁j'avais
+
+2026-01-29 14:49:02,159 | INFO | speech length: 88160
+2026-01-29 14:49:02,198 | INFO | decoder input length: 137
+2026-01-29 14:49:02,198 | INFO | max output length: 137
+2026-01-29 14:49:02,198 | INFO | min output length: 13
+2026-01-29 14:49:08,549 | INFO | end detected at 54
+2026-01-29 14:49:08,550 | INFO |  -3.83 * 0.5 =  -1.91 for decoder
+2026-01-29 14:49:08,550 | INFO |  -1.51 * 0.5 =  -0.76 for ctc
+2026-01-29 14:49:08,550 | INFO | total log probability: -2.67
+2026-01-29 14:49:08,550 | INFO | normalized log probability: -0.05
+2026-01-29 14:49:08,550 | INFO | total number of ended hypotheses: 154
+2026-01-29 14:49:08,551 | INFO | best hypo: ▁j'avais▁mis▁une▁casquette▁pour▁le▁soleil▁et▁des▁lunettes▁et▁je▁me▁promenais▁j'étais▁heureux▁et▁libre
+
+2026-01-29 14:49:08,552 | INFO | speech length: 10080
+2026-01-29 14:49:08,593 | INFO | decoder input length: 15
+2026-01-29 14:49:08,593 | INFO | max output length: 15
+2026-01-29 14:49:08,593 | INFO | min output length: 1
+2026-01-29 14:49:09,766 | INFO | end detected at 11
+2026-01-29 14:49:09,767 | INFO |  -0.51 * 0.5 =  -0.26 for decoder
+2026-01-29 14:49:09,767 | INFO |  -0.00 * 0.5 =  -0.00 for ctc
+2026-01-29 14:49:09,767 | INFO | total log probability: -0.26
+2026-01-29 14:49:09,767 | INFO | normalized log probability: -0.04
+2026-01-29 14:49:09,767 | INFO | total number of ended hypotheses: 146
+2026-01-29 14:49:09,767 | INFO | best hypo: ▁dans▁ma▁tête
+
+2026-01-29 14:49:09,769 | INFO | speech length: 11200
+2026-01-29 14:49:09,802 | INFO | decoder input length: 17
+2026-01-29 14:49:09,802 | INFO | max output length: 17
+2026-01-29 14:49:09,802 | INFO | min output length: 1
+2026-01-29 14:49:11,165 | INFO | end detected at 13
+2026-01-29 14:49:11,166 | INFO |  -1.37 * 0.5 =  -0.69 for decoder
+2026-01-29 14:49:11,166 | INFO |  -7.52 * 0.5 =  -3.76 for ctc
+2026-01-29 14:49:11,166 | INFO | total log probability: -4.45
+2026-01-29 14:49:11,166 | INFO | normalized log probability: -0.49
+2026-01-29 14:49:11,166 | INFO | total number of ended hypotheses: 175
+2026-01-29 14:49:11,166 | INFO | best hypo: ▁passez▁où
+
+2026-01-29 14:49:11,168 | INFO | speech length: 28960
+2026-01-29 14:49:11,198 | INFO | decoder input length: 44
+2026-01-29 14:49:11,198 | INFO | max output length: 44
+2026-01-29 14:49:11,198 | INFO | min output length: 4
+2026-01-29 14:49:12,400 | INFO | end detected at 11
+2026-01-29 14:49:12,402 | INFO |  -8.82 * 0.5 =  -4.41 for decoder
+2026-01-29 14:49:12,402 | INFO |  -9.63 * 0.5 =  -4.82 for ctc
+2026-01-29 14:49:12,402 | INFO | total log probability: -9.23
+2026-01-29 14:49:12,402 | INFO | normalized log probability: -1.54
+2026-01-29 14:49:12,402 | INFO | total number of ended hypotheses: 160
+2026-01-29 14:49:12,402 | INFO | best hypo: ▁donc▁doncques
+
+2026-01-29 14:49:12,404 | INFO | speech length: 275520
+2026-01-29 14:49:12,437 | INFO | decoder input length: 430
+2026-01-29 14:49:12,438 | INFO | max output length: 430
+2026-01-29 14:49:12,438 | INFO | min output length: 43
+2026-01-29 14:49:26,232 | INFO | end detected at 98
+2026-01-29 14:49:26,233 | INFO | -110.31 * 0.5 = -55.15 for decoder
+2026-01-29 14:49:26,233 | INFO | -14.65 * 0.5 =  -7.32 for ctc
+2026-01-29 14:49:26,233 | INFO | total log probability: -62.48
+2026-01-29 14:49:26,233 | INFO | normalized log probability: -0.67
+2026-01-29 14:49:26,233 | INFO | total number of ended hypotheses: 177
+2026-01-29 14:49:26,234 | INFO | best hypo: ▁je▁souvent▁je▁vais▁à▁la▁piscine▁je▁me▁baigne▁et▁ça▁me▁fait▁du▁bien▁toutes▁mes▁muscles▁se▁décontracts▁je▁suis▁bien▁dans▁l'eau▁et▁après▁je▁vais▁dans▁la▁balnéo▁où▁je▁me▁défends▁tranquillement▁pendant▁que▁mais▁mes▁nerfs▁se▁reposent
+
+2026-01-29 14:49:26,237 | INFO | ['j', 'allais', 'me', 'promener', 'dans', 'la', 'montagne', 'et', 'j', 'aimais', 'ca', 'souvent', 'je', 'regardais', 'les', 'oiseaux', 'et', 'puis', 'apres', 'je', 'redescendais', 'j', 'allais', 'me', 'promener', 'souvent', 'j', 'avais', 'j', 'avais', 'mis', 'une', 'casquette', 'pour', 'le', 'soleil', 'et', 'des', 'lunettes', 'et', 'je', 'me', 'promenais', 'j', 'etais', 'heureux', 'et', 'libre', 'dans', 'ma', 'tete', 'passez', 'ou', 'donc', 'doncques', 'je', 'souvent', 'je', 'vais', 'a', 'la', 'piscine', 'je', 'me', 'baigne', 'et', 'ca', 'me', 'fait', 'du', 'bien', 'toutes', 'mes', 'muscles', 'se', 'decontracts', 'je', 'suis', 'bien', 'dans', 'l', 'eau', 'et', 'apres', 'je', 'vais', 'dans', 'la', 'balneo', 'ou', 'je', 'me', 'defends', 'tranquillement', 'pendant', 'que', 'mais', 'mes', 'nerfs', 'se', 'reposent']
+2026-01-29 14:49:26,237 | INFO | ['j', 'allais', 'me', 'promener', 'dans', 'la', 'montagne', 'et', 'j', 'aimais', 'ca', 'souvent', 'je', 'regardais', 'les', 'oiseaux', 'et', 'puis', 'apres', 'je', 'redescendais', 'j', 'allais', 'me', 'promener', 'et', 'souvent', 'j', 'avais', 'mis', 'une', 'casquette', 'pour', 'le', 'soleil', 'avec', 'des', 'lunettes', 'je', 'me', 'promenais', 'et', 'j', 'etais', 'heureux', 'j', 'etais', 'libre', 'dans', 'ma', 'tete', 'voila', 'c', 'est', 'assez', 'ou', 'donc', 'heu', 'souvent', 'je', 'vais', 'a', 'la', 'piscine', 'je', 'me', 'baigne', 'et', 'ca', 'me', 'fait', 'du', 'bien', 'et', 'toutes', 'tous', 'mes', 'muscles', 'se', 'decontractent', 'je', 'suis', 'bien', 'dans', 'l', 'eau', 'et', 'apres', 'je', 'vais', 'dans', 'la', 'balneo', 'ou', 'je', 'me', 'detends', 'tranquillement', 'pendant', 'que', 'mes', 'heu', 'nerfs', 'se', 'reposent']
+2026-01-29 14:49:26,243 | INFO | File: 1PD-LEZQ-image.wav | WER=19.047619 | S=6 D=9 I=5
+2026-01-29 14:49:26,243 | INFO | ------------------------------
+2026-01-29 14:49:26,244 | INFO |  File duration: 107.64533333333334 seconds
+2026-01-29 14:49:28,366 | INFO | Using rVAD model
+2026-01-29 14:49:32,903 | INFO | speech length: 265920
+2026-01-29 14:49:32,938 | INFO | decoder input length: 415
+2026-01-29 14:49:32,938 | INFO | max output length: 415
+2026-01-29 14:49:32,938 | INFO | min output length: 41
+2026-01-29 14:49:49,000 | INFO | end detected at 113
+2026-01-29 14:49:49,001 | INFO | -206.81 * 0.5 = -103.41 for decoder
+2026-01-29 14:49:49,001 | INFO | -21.99 * 0.5 = -10.99 for ctc
+2026-01-29 14:49:49,002 | INFO | total log probability: -114.40
+2026-01-29 14:49:49,002 | INFO | normalized log probability: -1.05
+2026-01-29 14:49:49,002 | INFO | total number of ended hypotheses: 150
+2026-01-29 14:49:49,003 | INFO | best hypo: ▁bonjour▁je▁vais▁maintenant▁vous▁parler▁du▁véloclub▁de▁montastru▁que▁la▁conseillère▁montastruc▁est▁un▁joli▁village▁qui▁se▁trouve▁au▁nord▁est▁de▁toulouse▁en▁direction▁d'albi▁et▁dont▁de▁la▁particularité▁d'avoir▁pas▁mals▁de▁côte▁et▁de▁collines▁à▁monter▁ou▁à▁descendre
+
+2026-01-29 14:49:49,005 | INFO | speech length: 150080
+2026-01-29 14:49:49,046 | INFO | decoder input length: 234
+2026-01-29 14:49:49,047 | INFO | max output length: 234
+2026-01-29 14:49:49,047 | INFO | min output length: 23
+2026-01-29 14:49:57,605 | INFO | end detected at 70
+2026-01-29 14:49:57,606 | INFO |  -9.76 * 0.5 =  -4.88 for decoder
+2026-01-29 14:49:57,606 | INFO |  -4.75 * 0.5 =  -2.38 for ctc
+2026-01-29 14:49:57,606 | INFO | total log probability: -7.26
+2026-01-29 14:49:57,606 | INFO | normalized log probability: -0.11
+2026-01-29 14:49:57,606 | INFO | total number of ended hypotheses: 162
+2026-01-29 14:49:57,607 | INFO | best hypo: ▁donc▁la▁caractéristique▁principale▁du▁club▁de▁montastruc▁est▁de▁former▁des▁gens▁à▁monter▁des▁côtes▁et▁aller▁descendre▁et▁éventuellement▁se▁promener▁entre▁les▁deux
+
+2026-01-29 14:49:57,609 | INFO | speech length: 162400
+2026-01-29 14:49:57,652 | INFO | decoder input length: 253
+2026-01-29 14:49:57,652 | INFO | max output length: 253
+2026-01-29 14:49:57,652 | INFO | min output length: 25
+2026-01-29 14:50:05,506 | INFO | end detected at 65
+2026-01-29 14:50:05,508 | INFO |  -9.99 * 0.5 =  -4.99 for decoder
+2026-01-29 14:50:05,508 | INFO |  -0.78 * 0.5 =  -0.39 for ctc
+2026-01-29 14:50:05,508 | INFO | total log probability: -5.38
+2026-01-29 14:50:05,508 | INFO | normalized log probability: -0.09
+2026-01-29 14:50:05,508 | INFO | total number of ended hypotheses: 175
+2026-01-29 14:50:05,509 | INFO | best hypo: ▁il▁y▁a▁beaucoup▁de▁participants▁dans▁son▁club▁environ▁une▁centaine▁donc▁ce▁qui▁permet▁à▁chacun▁de▁trouver▁un▁groupe▁à▁sa▁vitesse▁et▁à▁ses▁capacités
+
+2026-01-29 14:50:05,511 | INFO | speech length: 164160
+2026-01-29 14:50:05,547 | INFO | decoder input length: 256
+2026-01-29 14:50:05,547 | INFO | max output length: 256
+2026-01-29 14:50:05,548 | INFO | min output length: 25
+2026-01-29 14:50:16,319 | INFO | end detected at 88
+2026-01-29 14:50:16,320 | INFO | -11.34 * 0.5 =  -5.67 for decoder
+2026-01-29 14:50:16,320 | INFO |  -8.50 * 0.5 =  -4.25 for ctc
+2026-01-29 14:50:16,320 | INFO | total log probability: -9.92
+2026-01-29 14:50:16,320 | INFO | normalized log probability: -0.12
+2026-01-29 14:50:16,321 | INFO | total number of ended hypotheses: 176
+2026-01-29 14:50:16,322 | INFO | best hypo: ▁ce▁qui▁est▁amusant▁c'est▁de▁rencontrer▁des▁gens▁qui▁ont▁plus▁de▁quatre▁vingts▁ans▁qu'ils▁font▁encore▁des▁étapes▁de▁soixante▁dix▁quatre▁vingts▁kilomètres▁et▁on▁a▁parfois▁du▁mal▁à▁les▁suivre▁même▁avec▁vingt▁ans▁de▁moins
+
+2026-01-29 14:50:16,324 | INFO | speech length: 162720
+2026-01-29 14:50:16,357 | INFO | decoder input length: 253
+2026-01-29 14:50:16,357 | INFO | max output length: 253
+2026-01-29 14:50:16,357 | INFO | min output length: 25
+2026-01-29 14:50:26,489 | INFO | end detected at 82
+2026-01-29 14:50:26,491 | INFO | -18.99 * 0.5 =  -9.50 for decoder
+2026-01-29 14:50:26,491 | INFO | -10.55 * 0.5 =  -5.28 for ctc
+2026-01-29 14:50:26,491 | INFO | total log probability: -14.77
+2026-01-29 14:50:26,491 | INFO | normalized log probability: -0.20
+2026-01-29 14:50:26,491 | INFO | total number of ended hypotheses: 193
+2026-01-29 14:50:26,492 | INFO | best hypo: ▁le▁problème▁en▁ce▁moment▁c'est▁qu'il▁fait▁un▁peu▁froid▁et▁c'est▁plus▁agréable▁que▁même▁de▁faire▁du▁vélo▁par▁temps▁chaud▁jusqu'à▁trente▁degrés▁préfecte▁un▁peu▁trop▁chaud
+
+2026-01-29 14:50:26,494 | INFO | speech length: 160960
+2026-01-29 14:50:26,529 | INFO | decoder input length: 251
+2026-01-29 14:50:26,529 | INFO | max output length: 251
+2026-01-29 14:50:26,529 | INFO | min output length: 25
+2026-01-29 14:50:35,405 | INFO | end detected at 75
+2026-01-29 14:50:35,407 | INFO | -27.41 * 0.5 = -13.71 for decoder
+2026-01-29 14:50:35,407 | INFO | -14.76 * 0.5 =  -7.38 for ctc
+2026-01-29 14:50:35,407 | INFO | total log probability: -21.09
+2026-01-29 14:50:35,407 | INFO | normalized log probability: -0.30
+2026-01-29 14:50:35,407 | INFO | total number of ended hypotheses: 181
+2026-01-29 14:50:35,408 | INFO | best hypo: ▁mais▁en▁ce▁moment▁quand▁il▁fait▁trois▁cas▁degréène▁a▁du▁mal▁à▁démarrer▁mais▁ensuite▁le▁corps▁s'habitue▁et▁l'ambiance▁faisant▁le▁reste▁n'y▁a▁pas▁trop▁de▁problème
+
+2026-01-29 14:50:35,410 | INFO | speech length: 92480
+2026-01-29 14:50:35,448 | INFO | decoder input length: 144
+2026-01-29 14:50:35,448 | INFO | max output length: 144
+2026-01-29 14:50:35,448 | INFO | min output length: 14
+2026-01-29 14:50:40,911 | INFO | end detected at 49
+2026-01-29 14:50:40,912 | INFO |  -3.49 * 0.5 =  -1.74 for decoder
+2026-01-29 14:50:40,912 | INFO |  -1.02 * 0.5 =  -0.51 for ctc
+2026-01-29 14:50:40,912 | INFO | total log probability: -2.25
+2026-01-29 14:50:40,912 | INFO | normalized log probability: -0.05
+2026-01-29 14:50:40,912 | INFO | total number of ended hypotheses: 155
+2026-01-29 14:50:40,913 | INFO | best hypo: ▁les▁côtes▁aussi▁sont▁très▁avantageuses▁pour▁se▁réchauffer▁et▁on▁gagne▁encore▁quelques▁degrés▁à▁chaque▁montée
+
+2026-01-29 14:50:40,915 | INFO | speech length: 26880
+2026-01-29 14:50:40,948 | INFO | decoder input length: 41
+2026-01-29 14:50:40,949 | INFO | max output length: 41
+2026-01-29 14:50:40,949 | INFO | min output length: 4
+2026-01-29 14:50:42,070 | INFO | end detected at 11
+2026-01-29 14:50:42,072 | INFO |  -4.10 * 0.5 =  -2.05 for decoder
+2026-01-29 14:50:42,072 | INFO |  -2.93 * 0.5 =  -1.47 for ctc
+2026-01-29 14:50:42,072 | INFO | total log probability: -3.52
+2026-01-29 14:50:42,072 | INFO | normalized log probability: -0.59
+2026-01-29 14:50:42,072 | INFO | total number of ended hypotheses: 158
+2026-01-29 14:50:42,072 | INFO | best hypo: ▁me▁voilà
+
+2026-01-29 14:50:42,073 | INFO | speech length: 203520
+2026-01-29 14:50:42,114 | INFO | decoder input length: 317
+2026-01-29 14:50:42,114 | INFO | max output length: 317
+2026-01-29 14:50:42,114 | INFO | min output length: 31
+2026-01-29 14:50:51,965 | INFO | end detected at 87
+2026-01-29 14:50:51,967 | INFO | -66.62 * 0.5 = -33.31 for decoder
+2026-01-29 14:50:51,967 | INFO | -15.29 * 0.5 =  -7.65 for ctc
+2026-01-29 14:50:51,967 | INFO | total log probability: -40.96
+2026-01-29 14:50:51,967 | INFO | normalized log probability: -0.49
+2026-01-29 14:50:51,967 | INFO | total number of ended hypotheses: 149
+2026-01-29 14:50:51,968 | INFO | best hypo: ▁le▁club▁a▁d'autres▁activités▁il▁organise▁des▁soirées▁la▁chandleur▁récemment▁le▁chocolat▁chaud▁le▁samedi▁après▁midi▁et▁ils▁participe▁à▁la▁vie▁des▁village▁et▁des▁villages▁alentours
+
+2026-01-29 14:50:51,970 | INFO | speech length: 51680
+2026-01-29 14:50:52,004 | INFO | decoder input length: 80
+2026-01-29 14:50:52,004 | INFO | max output length: 80
+2026-01-29 14:50:52,004 | INFO | min output length: 8
+2026-01-29 14:50:54,460 | INFO | end detected at 28
+2026-01-29 14:50:54,462 | INFO |  -2.42 * 0.5 =  -1.21 for decoder
+2026-01-29 14:50:54,462 | INFO |  -3.61 * 0.5 =  -1.81 for ctc
+2026-01-29 14:50:54,462 | INFO | total log probability: -3.02
+2026-01-29 14:50:54,462 | INFO | normalized log probability: -0.13
+2026-01-29 14:50:54,462 | INFO | total number of ended hypotheses: 167
+2026-01-29 14:50:54,462 | INFO | best hypo: ▁plus▁que▁comme▁je▁le▁disais▁il▁y▁a▁pas▁mal▁de▁participants
+
+2026-01-29 14:50:54,465 | INFO | ['bonjour', 'je', 'vais', 'maintenant', 'vous', 'parler', 'du', 'veloclub', 'de', 'montastru', 'que', 'la', 'conseillere', 'montastruc', 'est', 'un', 'joli', 'village', 'qui', 'se', 'trouve', 'au', 'nord', 'est', 'de', 'toulouse', 'en', 'direction', 'd', 'albi', 'et', 'dont', 'de', 'la', 'particularite', 'd', 'avoir', 'pas', 'mals', 'de', 'cote', 'et', 'de', 'collines', 'a', 'monter', 'ou', 'a', 'descendre', 'donc', 'la', 'caracteristique', 'principale', 'du', 'club', 'de', 'montastruc', 'est', 'de', 'former', 'des', 'gens', 'a', 'monter', 'des', 'cotes', 'et', 'aller', 'descendre', 'et', 'eventuellement', 'se', 'promener', 'entre', 'les', 'deux', 'il', 'y', 'a', 'beaucoup', 'de', 'participants', 'dans', 'son', 'club', 'environ', 'une', 'centaine', 'donc', 'ce', 'qui', 'permet', 'a', 'chacun', 'de', 'trouver', 'un', 'groupe', 'a', 'sa', 'vitesse', 'et', 'a', 'ses', 'capacites', 'ce', 'qui', 'est', 'amusant', 'c', 'est', 'de', 'rencontrer', 'des', 'gens', 'qui', 'ont', 'plus', 'de', 'quatre', 'vingts', 'ans', 'qu', 'ils', 'font', 'encore', 'des', 'etapes', 'de', 'soixante', 'dix', 'quatre', 'vingts', 'kilometres', 'et', 'on', 'a', 'parfois', 'du', 'mal', 'a', 'les', 'suivre', 'meme', 'avec', 'vingt', 'ans', 'de', 'moins', 'le', 'probleme', 'en', 'ce', 'moment', 'c', 'est', 'qu', 'il', 'fait', 'un', 'peu', 'froid', 'et', 'c', 'est', 'plus', 'agreable', 'que', 'meme', 'de', 'faire', 'du', 'velo', 'par', 'temps', 'chaud', 'jusqu', 'a', 'trente', 'degres', 'prefecte', 'un', 'peu', 'trop', 'chaud', 'mais', 'en', 'ce', 'moment', 'quand', 'il', 'fait', 'trois', 'cas', 'degreene', 'a', 'du', 'mal', 'a', 'demarrer', 'mais', 'ensuite', 'le', 'corps', 's', 'habitue', 'et', 'l', 'ambiance', 'faisant', 'le', 'reste', 'n', 'y', 'a', 'pas', 'trop', 'de', 'probleme', 'les', 'cotes', 'aussi', 'sont', 'tres', 'avantageuses', 'pour', 'se', 'rechauffer', 'et', 'on', 'gagne', 'encore', 'quelques', 'degres', 'a', 'chaque', 'montee', 'me', 'voila', 'le', 'club', 'a', 'd', 'autres', 'activites', 'il', 'organise', 'des', 'soirees', 'la', 'chandleur', 'recemment', 'le', 'chocolat', 'chaud', 'le', 'samedi', 'apres', 'midi', 'et', 'ils', 'participe', 'a', 'la', 'vie', 'des', 'village', 'et', 'des', 'villages', 'alentours', 'plus', 'que', 'comme', 'je', 'le', 'disais', 'il', 'y', 'a', 'pas', 'mal', 'de', 'participants']
+2026-01-29 14:50:54,466 | INFO | ['bonjour', 'je', 'vais', 'maintenant', 'vous', 'parler', 'du', 'velo', 'club', 'de', 'montastruc', 'la', 'conseillere', 'montastruc', 'est', 'un', 'joli', 'village', 'qui', 'se', 'trouve', 'au', 'nord', 'est', 'de', 'toulouse', 'en', 'direction', 'de', 'albi', 'et', 'dont', 'la', 'particularite', 'est', 'd', 'avoir', 'pas', 'mal', 'de', 'cote', 'et', 'de', 'colline', 'a', 'monter', 'ou', 'a', 'descendre', 'heu', 'donc', 'la', 'caracteristique', 'principale', 'du', 'club', 'de', 'montastruc', 'est', 'de', 'former', 'des', 'gens', 'a', 'monter', 'des', 'cotes', 'et', 'a', 'les', 'descendre', 'et', 'eventuellement', 'a', 'se', 'promener', 'entre', 'les', 'deux', 'heu', 'il', 'y', 'a', 'beaucoup', 'de', 'participants', 'dans', 'son', 'club', 'environ', 'une', 'centaine', 'donc', 'ce', 'qui', 'permet', 'a', 'chacun', 'de', 'trouver', 'un', 'groupe', 'a', 'sa', 'vitesse', 'et', 'a', 'ses', 'capacites', 'ce', 'qui', 'est', 'amusant', 'c', 'est', 'de', 'rencontrer', 'des', 'gens', 'qui', 'ont', 'plus', 'de', '80', 'ans', 'qui', 'font', 'encore', 'des', 'etapes', 'de', '70', '80', 'km', 'et', 'on', 'a', 'parfois', 'du', 'mal', 'a', 'les', 'suivre', 'meme', 'avec', 'vingt', 'ans', 'de', 'moins', 'le', 'le', 'probleme', 'en', 'ce', 'moment', 'c', 'est', 'qu', 'il', 'fait', 'un', 'peu', 'froid', 'et', 'c', 'est', 'plus', 'agreable', 'quand', 'meme', 'de', 'faire', 'du', 'velo', 'par', 'temps', 'chaud', 'jusqu', 'a', 'trente', 'degres', 'apres', 'il', 'fait', 'peut', 'etre', 'un', 'peu', 'trop', 'chaud', 'mais', 'en', 'ce', 'moment', 'quand', 'il', 'fait', 'trois', 'quatre', 'degres', 'on', 'a', 'du', 'mal', 'a', 'demarrer', 'mais', 'ensuite', 'le', 'corps', 's', 'habitue', 'et', 'l', 'ambiance', 'dans', 'le', 'reste', 'il', 'n', 'y', 'a', 'pas', 'trop', 'de', 'problemes', 'les', 'cotes', 'sont', 'aussi', 'tres', 'avantageuses', 'pour', 'se', 'rechauffer', 'et', 'on', 'gagne', 'encore', 'quelques', 'degres', 'a', 'chaque', 'montee', 'hum', 'voila', 'le', 'club', 'a', 'd', 'autres', 'activites', 'il', 'organise', 'des', 'soirees', 'il', 'y', 'a', 'eu', 'la', 'chandeleur', 'recemment', 'les', 'chocolats', 'chauds', 'le', 'samedi', 'apres', 'midi', 'et', 'il', 'participe', 'a', 'la', 'vie', 'du', 'village', 'et', 'aux', 'villages', 'aux', 'alentours', 'puisque', 'comme', 'je', 'le', 'disais', 'il', 'y', 'a', 'pas', 'mal', 'de', 'participants']
+2026-01-29 14:50:54,501 | INFO | File: 2PD-NZWZ-image.wav | WER=17.966102 | S=26 D=19 I=8
+2026-01-29 14:50:54,501 | INFO | ------------------------------
+2026-01-29 14:50:54,501 | INFO |  File duration: 31.557333333333332 seconds
+2026-01-29 14:50:55,117 | INFO | Using rVAD model
+2026-01-29 14:50:56,388 | INFO | speech length: 275840
+2026-01-29 14:50:56,419 | INFO | decoder input length: 430
+2026-01-29 14:50:56,420 | INFO | max output length: 430
+2026-01-29 14:50:56,420 | INFO | min output length: 43
+2026-01-29 14:51:05,598 | INFO | end detected at 134
+2026-01-29 14:51:05,600 | INFO | -279.05 * 0.5 = -139.52 for decoder
+2026-01-29 14:51:05,601 | INFO | -169.85 * 0.5 = -84.92 for ctc
+2026-01-29 14:51:05,601 | INFO | total log probability: -224.45
+2026-01-29 14:51:05,601 | INFO | normalized log probability: -1.78
+2026-01-29 14:51:05,601 | INFO | total number of ended hypotheses: 214
+2026-01-29 14:51:05,602 | INFO | best hypo: ▁je▁suis▁juvoka▁depuis▁l'âge▁de▁sept▁ans▁j'ai▁commencé▁dans▁une▁école▁primaire▁avec▁un▁professeur▁très▁sympathique▁qui▁m'a▁donnait▁envie▁de▁se▁continuer▁j'ai▁été▁continuer▁su▁de▁▁la▁étetion▁'▁jusqu'au▁de▁ceintureur▁noire▁deuxième▁dahan▁et▁ensuite▁j'ai▁eu▁vieu
+
+2026-01-29 14:51:05,604 | INFO | speech length: 106240
+2026-01-29 14:51:05,639 | INFO | decoder input length: 165
+2026-01-29 14:51:05,640 | INFO | max output length: 165
+2026-01-29 14:51:05,640 | INFO | min output length: 16
+2026-01-29 14:51:08,676 | INFO | end detected at 62
+2026-01-29 14:51:08,677 | INFO |  -6.28 * 0.5 =  -3.14 for decoder
+2026-01-29 14:51:08,677 | INFO |  -9.13 * 0.5 =  -4.57 for ctc
+2026-01-29 14:51:08,677 | INFO | total log probability: -7.70
+2026-01-29 14:51:08,677 | INFO | normalized log probability: -0.13
+2026-01-29 14:51:08,677 | INFO | total number of ended hypotheses: 142
+2026-01-29 14:51:08,678 | INFO | best hypo: ▁j'ai▁enseigné▁à▁degamin▁dont▁j'ai▁passé▁le▁diplôme▁d'état▁pour▁pouvoir▁faire▁passer▁le▁même▁message▁sportif
+
+2026-01-29 14:51:08,680 | INFO | speech length: 36000
+2026-01-29 14:51:08,711 | INFO | decoder input length: 55
+2026-01-29 14:51:08,711 | INFO | max output length: 55
+2026-01-29 14:51:08,711 | INFO | min output length: 5
+2026-01-29 14:51:09,414 | INFO | end detected at 22
+2026-01-29 14:51:09,415 | INFO |  -1.52 * 0.5 =  -0.76 for decoder
+2026-01-29 14:51:09,415 | INFO |  -0.17 * 0.5 =  -0.08 for ctc
+2026-01-29 14:51:09,415 | INFO | total log probability: -0.85
+2026-01-29 14:51:09,415 | INFO | normalized log probability: -0.05
+2026-01-29 14:51:09,415 | INFO | total number of ended hypotheses: 143
+2026-01-29 14:51:09,415 | INFO | best hypo: ▁et▁le▁respect▁de▁l'adversaire
+
+2026-01-29 14:51:09,417 | INFO | ['je', 'suis', 'juvoka', 'depuis', 'l', 'age', 'de', 'sept', 'ans', 'j', 'ai', 'commence', 'dans', 'une', 'ecole', 'primaire', 'avec', 'un', 'professeur', 'tres', 'sympathique', 'qui', 'm', 'a', 'donnait', 'envie', 'de', 'se', 'continuer', 'j', 'ai', 'ete', 'continuer', 'su', 'de', 'la', 'etetion', 'jusqu', 'au', 'de', 'ceintureur', 'noire', 'deuxieme', 'dahan', 'et', 'ensuite', 'j', 'ai', 'eu', 'vieu', 'j', 'ai', 'enseigne', 'a', 'degamin', 'dont', 'j', 'ai', 'passe', 'le', 'diplome', 'd', 'etat', 'pour', 'pouvoir', 'faire', 'passer', 'le', 'meme', 'message', 'sportif', 'et', 'le', 'respect', 'de', 'l', 'adversaire']
+2026-01-29 14:51:09,417 | INFO | ['je', 'suis', 'judoka', 'depuis', 'l', 'age', 'de', '7', 'ans', 'j', 'ai', 'commence', 'dans', 'une', 'ecole', 'primaire', 'avec', 'un', 'professeur', 'tres', 'sympathique', 'qui', 'm', 'a', 'donne', 'envie', 'de', 'continuer', 'j', 'ai', 'continue', 'sur', 'de', 'la', 'competition', 'jusqu', 'a', 'la', 'ceinture', 'noire', 'noir', 'troisieme', 'dame', 'et', 'ensuite', 'j', 'ai', 'eu', 'envie', 'd', 'enseigner', 'a', 'des', 'gamins', 'donc', 'j', 'ai', 'passe', 'le', 'diplome', 'd', 'etat', 'pour', 'pouvoir', 'faire', 'passer', 'le', 'meme', 'message', 'sportif', 'et', 'de', 'respect', 'de', 'l', 'adversaire']
+2026-01-29 14:51:09,421 | INFO | File: 1PD-YIWI-image.wav | WER=28.947368 | S=17 D=2 I=3
+2026-01-29 14:51:09,422 | INFO | ------------------------------
+2026-01-29 14:51:09,422 | INFO |  File duration: 82.328 seconds
+2026-01-29 14:51:11,027 | INFO | Using rVAD model
+2026-01-29 14:51:14,422 | INFO | speech length: 307040
+2026-01-29 14:51:14,460 | INFO | decoder input length: 479
+2026-01-29 14:51:14,460 | INFO | max output length: 479
+2026-01-29 14:51:14,460 | INFO | min output length: 47
+2026-01-29 14:51:26,592 | INFO | end detected at 97
+2026-01-29 14:51:26,593 | INFO | -160.57 * 0.5 = -80.28 for decoder
+2026-01-29 14:51:26,593 | INFO | -48.32 * 0.5 = -24.16 for ctc
+2026-01-29 14:51:26,593 | INFO | total log probability: -104.44
+2026-01-29 14:51:26,593 | INFO | normalized log probability: -1.15
+2026-01-29 14:51:26,593 | INFO | total number of ended hypotheses: 159
+2026-01-29 14:51:26,594 | INFO | best hypo: ▁il▁s'agit▁il▁s'agit▁d'une▁image▁de▁marines▁non▁que▁c'est▁un▁paysage▁côtier▁avec▁des▁voiliers▁pruits▁d'un▁voilier▁ou▁les▁cordages▁les▁poulies▁et▁les▁haubans▁et▁'▁semblent▁que▁les▁mains▁âgée▁quatre▁vingt▁dix
+
+2026-01-29 14:51:26,596 | INFO | speech length: 101600
+2026-01-29 14:51:26,626 | INFO | decoder input length: 158
+2026-01-29 14:51:26,626 | INFO | max output length: 158
+2026-01-29 14:51:26,626 | INFO | min output length: 15
+2026-01-29 14:51:29,889 | INFO | end detected at 35
+2026-01-29 14:51:29,890 | INFO |  -4.49 * 0.5 =  -2.24 for decoder
+2026-01-29 14:51:29,890 | INFO |  -4.14 * 0.5 =  -2.07 for ctc
+2026-01-29 14:51:29,890 | INFO | total log probability: -4.32
+2026-01-29 14:51:29,890 | INFO | normalized log probability: -0.14
+2026-01-29 14:51:29,890 | INFO | total number of ended hypotheses: 155
+2026-01-29 14:51:29,891 | INFO | best hypo: ▁et▁le▁bateau▁de▁bateau▁visible▁en▁fond▁tire▁un▁zodiaque
+
+2026-01-29 14:51:29,894 | INFO | speech length: 126080
+2026-01-29 14:51:29,937 | INFO | decoder input length: 196
+2026-01-29 14:51:29,937 | INFO | max output length: 196
+2026-01-29 14:51:29,937 | INFO | min output length: 19
+2026-01-29 14:51:34,268 | INFO | end detected at 46
+2026-01-29 14:51:34,270 | INFO |  -6.73 * 0.5 =  -3.36 for decoder
+2026-01-29 14:51:34,270 | INFO |  -1.17 * 0.5 =  -0.59 for ctc
+2026-01-29 14:51:34,270 | INFO | total log probability: -3.95
+2026-01-29 14:51:34,270 | INFO | normalized log probability: -0.10
+2026-01-29 14:51:34,270 | INFO | total number of ended hypotheses: 172
+2026-01-29 14:51:34,271 | INFO | best hypo: ▁la▁côtre▁est▁verte▁et▁rocheuse▁avec▁des▁bâtiments▁haut▁à▁gauche▁la▁mer▁est▁bleue▁et▁peu▁agitée
+
+2026-01-29 14:51:34,273 | INFO | speech length: 235680
+2026-01-29 14:51:34,321 | INFO | decoder input length: 367
+2026-01-29 14:51:34,321 | INFO | max output length: 367
+2026-01-29 14:51:34,321 | INFO | min output length: 36
+2026-01-29 14:51:44,551 | INFO | end detected at 95
+2026-01-29 14:51:44,553 | INFO | -73.18 * 0.5 = -36.59 for decoder
+2026-01-29 14:51:44,553 | INFO |  -9.86 * 0.5 =  -4.93 for ctc
+2026-01-29 14:51:44,553 | INFO | total log probability: -41.52
+2026-01-29 14:51:44,553 | INFO | normalized log probability: -0.47
+2026-01-29 14:51:44,553 | INFO | total number of ended hypotheses: 169
+2026-01-29 14:51:44,554 | INFO | best hypo: ▁et▁le▁la▁côte▁est▁plus▁haute▁côté▁gauche▁que▁côté▁droit▁qui▁le▁côté▁droit▁semble▁plutôt▁urbanisé▁avec▁de▁végétation▁verte▁plutôt▁rasse▁l'ensemble▁s'assemble▁un▁paysage▁méditerranéen
+
+2026-01-29 14:51:44,556 | INFO | speech length: 101600
+2026-01-29 14:51:44,584 | INFO | decoder input length: 158
+2026-01-29 14:51:44,584 | INFO | max output length: 158
+2026-01-29 14:51:44,584 | INFO | min output length: 15
+2026-01-29 14:51:47,426 | INFO | end detected at 32
+2026-01-29 14:51:47,426 | INFO | -10.86 * 0.5 =  -5.43 for decoder
+2026-01-29 14:51:47,427 | INFO | -19.24 * 0.5 =  -9.62 for ctc
+2026-01-29 14:51:47,427 | INFO | total log probability: -15.05
+2026-01-29 14:51:47,427 | INFO | normalized log probability: -0.60
+2026-01-29 14:51:47,427 | INFO | total number of ended hypotheses: 173
+2026-01-29 14:51:47,427 | INFO | best hypo: ▁et▁bon▁viens▁au▁vase▁de▁cet▁un▁demain▁être▁de▁ma▁barque
+
+2026-01-29 14:51:47,429 | INFO | speech length: 337280
+2026-01-29 14:51:47,461 | INFO | decoder input length: 526
+2026-01-29 14:51:47,461 | INFO | max output length: 526
+2026-01-29 14:51:47,461 | INFO | min output length: 52
+2026-01-29 14:52:00,031 | INFO | end detected at 114
+2026-01-29 14:52:00,032 | INFO | -239.19 * 0.5 = -119.59 for decoder
+2026-01-29 14:52:00,032 | INFO | -73.22 * 0.5 = -36.61 for ctc
+2026-01-29 14:52:00,032 | INFO | total log probability: -156.20
+2026-01-29 14:52:00,032 | INFO | normalized log probability: -1.47
+2026-01-29 14:52:00,032 | INFO | total number of ended hypotheses: 159
+2026-01-29 14:52:00,034 | INFO | best hypo: ▁avec▁l'on▁nous▁semble▁être▁un▁fauntain▁premier▁d'un▁pavillon▁rouge▁au▁fond▁rouge▁avec▁des▁dragons▁de▁dragons▁superposés▁et▁l'autre▁mât▁porte▁un▁pavillon▁et▁une▁croix▁bleue▁fond▁blancs▁à▁gauches▁à▁droite▁bas▁à▁gauche▁ble▁marine
+
+2026-01-29 14:52:00,036 | INFO | ['il', 's', 'agit', 'il', 's', 'agit', 'd', 'une', 'image', 'de', 'marines', 'non', 'que', 'c', 'est', 'un', 'paysage', 'cotier', 'avec', 'des', 'voiliers', 'pruits', 'd', 'un', 'voilier', 'ou', 'les', 'cordages', 'les', 'poulies', 'et', 'les', 'haubans', 'et', 'semblent', 'que', 'les', 'mains', 'agee', 'quatre', 'vingt', 'dix', 'et', 'le', 'bateau', 'de', 'bateau', 'visible', 'en', 'fond', 'tire', 'un', 'zodiaque', 'la', 'cotre', 'est', 'verte', 'et', 'rocheuse', 'avec', 'des', 'batiments', 'haut', 'a', 'gauche', 'la', 'mer', 'est', 'bleue', 'et', 'peu', 'agitee', 'et', 'le', 'la', 'cote', 'est', 'plus', 'haute', 'cote', 'gauche', 'que', 'cote', 'droit', 'qui', 'le', 'cote', 'droit', 'semble', 'plutot', 'urbanise', 'avec', 'de', 'vegetation', 'verte', 'plutot', 'rasse', 'l', 'ensemble', 's', 'assemble', 'un', 'paysage', 'mediterraneen', 'et', 'bon', 'viens', 'au', 'vase', 'de', 'cet', 'un', 'demain', 'etre', 'de', 'ma', 'barque', 'avec', 'l', 'on', 'nous', 'semble', 'etre', 'un', 'fauntain', 'premier', 'd', 'un', 'pavillon', 'rouge', 'au', 'fond', 'rouge', 'avec', 'des', 'dragons', 'de', 'dragons', 'superposes', 'et', 'l', 'autre', 'mat', 'porte', 'un', 'pavillon', 'et', 'une', 'croix', 'bleue', 'fond', 'blancs', 'a', 'gauches', 'a', 'droite', 'bas', 'a', 'gauche', 'ble', 'marine']
+2026-01-29 14:52:00,036 | INFO | ['il', 'il', 's', 'agit', 'd', 'une', 'image', 'de', 'marine', 'donc', 'c', 'est', 'heu', 'un', 'paysage', 'heu', 'cotier', 'avec', 'des', 'voiliers', 'pru', 'pres', 'd', 'un', 'voilier', 'avec', 'des', 'cordages', 'et', 'les', 'poulies', 'et', 'les', 'haubans', 'et', 'heu', 'ca', 'semble', 'sur', 'les', 'mains', 'il', 'y', 'a', 'g90', 'et', 'heu', 'le', 'bateau', 'le', 'bateau', 'visible', 'en', 'fond', 'tire', 'un', 'zodiac', 'la', 'cote', 'est', 'verte', 'et', 'rocheuse', 'avec', 'des', 'batiments', 'en', 'haut', 'a', 'gauche', 'la', 'mer', 'est', 'bleue', 'et', 'peu', 'agitee', 'et', 'heu', 'la', 'cote', 'est', 'plus', 'haute', 'cote', 'gauche', 'que', 'cote', 'droit', 'puis', 'le', 'cote', 'droit', 'semble', 'plutot', 'urbanise', 'avec', 'de', 'la', 'vegetation', 'verte', 'plutot', 'rase', 'ca', 'semble', 'etre', 'un', 'paysage', 'plutot', 'mediterraneen', 'et', 'heu', 'on', 'voit', 'un', 'c', 'est', 'un', 'dema', 'un', 'dema', 'barque', 'avec', 'il', 'semble', 'etre', 'un', 'premier', 'pavillon', 'rouge', 'fond', 'rouge', 'avec', 'des', 'dragons', 'deux', 'dragons', 'superposes', 'et', 'l', 'autre', 'mat', 'porte', 'un', 'pavillon', 'une', 'croix', 'bleue', 'sur', 'fond', 'blanc', 'avec', 'en', 'haut', 'a', 'gauche', 'en', 'haut', 'a', 'droite', 'et', 'en', 'bas', 'a', 'gauche', 'une', 'bleue', 'marine']
+2026-01-29 14:52:00,050 | INFO | File: 1PD-ZTLK-image.wav | WER=38.690476 | S=34 D=19 I=12
+2026-01-29 14:52:00,050 | INFO | ------------------------------
+2026-01-29 14:52:00,050 | INFO |  File duration: 77.408 seconds
+2026-01-29 14:52:01,596 | INFO | Using rVAD model
+2026-01-29 14:52:04,776 | INFO | speech length: 445760
+2026-01-29 14:52:04,813 | INFO | decoder input length: 696
+2026-01-29 14:52:04,813 | INFO | max output length: 696
+2026-01-29 14:52:04,813 | INFO | min output length: 69
+2026-01-29 14:52:28,270 | INFO | end detected at 165
+2026-01-29 14:52:28,271 | INFO | -367.87 * 0.5 = -183.94 for decoder
+2026-01-29 14:52:28,272 | INFO | -126.44 * 0.5 = -63.22 for ctc
+2026-01-29 14:52:28,272 | INFO | total log probability: -247.16
+2026-01-29 14:52:28,272 | INFO | normalized log probability: -1.55
+2026-01-29 14:52:28,272 | INFO | total number of ended hypotheses: 151
+2026-01-29 14:52:28,273 | INFO | best hypo: ▁hier▁après▁midi▁vu▁qui▁faisait▁mauvais▁temps▁ma▁mère▁et▁moi▁nous▁avons▁décidés▁de▁travailler▁quand▁il▁pleut▁c'est▁vraiment▁le▁moment▁de▁travailler▁à▁la▁maison▁on▁a▁dit▁et▁si▁on▁faisait▁des▁biscuits▁le▁biscuits▁comme▁'on▁mangerait▁à▁on▁gouttetté▁avec▁le▁thé▁depuis▁ici▁'on▁avités▁sortirent▁des▁bis▁cuits▁maison▁c'est▁toujours▁meilleur▁que▁les▁bis▁cuits
+
+2026-01-29 14:52:28,275 | INFO | speech length: 350560
+2026-01-29 14:52:28,311 | INFO | decoder input length: 547
+2026-01-29 14:52:28,311 | INFO | max output length: 547
+2026-01-29 14:52:28,311 | INFO | min output length: 54
+2026-01-29 14:52:47,136 | INFO | end detected at 130
+2026-01-29 14:52:47,138 | INFO | -271.70 * 0.5 = -135.85 for decoder
+2026-01-29 14:52:47,138 | INFO | -75.49 * 0.5 = -37.74 for ctc
+2026-01-29 14:52:47,138 | INFO | total log probability: -173.59
+2026-01-29 14:52:47,138 | INFO | normalized log probability: -1.40
+2026-01-29 14:52:47,138 | INFO | total number of ended hypotheses: 151
+2026-01-29 14:52:47,139 | INFO | best hypo: ▁que▁qu'on▁achète▁des▁biscuits▁industriels▁par▁exemple▁ou▁voilà▁hein▁à▁le▁homme▁a▁passé▁l'après▁midi▁à▁faire▁des▁palais▁d'adams▁s'appelle▁je▁vous▁donnerai▁de▁la▁recette▁c'est▁très▁facile▁très▁simple▁ces▁et▁quelquescuillerits▁de▁de▁farine▁un▁peu▁de▁eux▁je▁crois▁de▁lait
+
+2026-01-29 14:52:47,141 | INFO | speech length: 371680
+2026-01-29 14:52:47,192 | INFO | decoder input length: 580
+2026-01-29 14:52:47,192 | INFO | max output length: 580
+2026-01-29 14:52:47,192 | INFO | min output length: 58
+2026-01-29 14:53:09,717 | INFO | end detected at 155
+2026-01-29 14:53:09,719 | INFO | -371.04 * 0.5 = -185.52 for decoder
+2026-01-29 14:53:09,719 | INFO | -123.32 * 0.5 = -61.66 for ctc
+2026-01-29 14:53:09,719 | INFO | total log probability: -247.18
+2026-01-29 14:53:09,719 | INFO | normalized log probability: -1.68
+2026-01-29 14:53:09,719 | INFO | total number of ended hypotheses: 180
+2026-01-29 14:53:09,721 | INFO | best hypo: ▁un▁peu▁de▁sucre▁bien▁sûr▁ajoutait▁des▁raisins▁secs▁mélangés▁tous▁ça▁faire▁des▁petits▁tas▁comme▁des▁macarons▁sur▁du▁papier▁sulférisé▁voilà▁nous▁mette▁sur▁la▁plaque▁et▁au▁four▁à▁dix▁minutes▁et▁sont▁cuits▁et▁je▁vous▁apsure▁et▁ils▁sont▁délicieux▁crous▁stillants▁intrattrats▁on▁les▁a▁fait▁é▁goûtés▁et▁tout▁le▁mon▁les▁trouve▁bons▁ors▁comme▁un
+
+2026-01-29 14:53:09,724 | INFO | ['hier', 'apres', 'midi', 'vu', 'qui', 'faisait', 'mauvais', 'temps', 'ma', 'mere', 'et', 'moi', 'nous', 'avons', 'decides', 'de', 'travailler', 'quand', 'il', 'pleut', 'c', 'est', 'vraiment', 'le', 'moment', 'de', 'travailler', 'a', 'la', 'maison', 'on', 'a', 'dit', 'et', 'si', 'on', 'faisait', 'des', 'biscuits', 'le', 'biscuits', 'comme', 'on', 'mangerait', 'a', 'on', 'gouttette', 'avec', 'le', 'the', 'depuis', 'ici', 'on', 'avites', 'sortirent', 'des', 'bis', 'cuits', 'maison', 'c', 'est', 'toujours', 'meilleur', 'que', 'les', 'bis', 'cuits', 'que', 'qu', 'on', 'achete', 'des', 'biscuits', 'industriels', 'par', 'exemple', 'ou', 'voila', 'hein', 'a', 'le', 'homme', 'a', 'passe', 'l', 'apres', 'midi', 'a', 'faire', 'des', 'palais', 'd', 'adams', 's', 'appelle', 'je', 'vous', 'donnerai', 'de', 'la', 'recette', 'c', 'est', 'tres', 'facile', 'tres', 'simple', 'ces', 'et', 'quelquescuillerits', 'de', 'de', 'farine', 'un', 'peu', 'de', 'eux', 'je', 'crois', 'de', 'lait', 'un', 'peu', 'de', 'sucre', 'bien', 'sur', 'ajoutait', 'des', 'raisins', 'secs', 'melanges', 'tous', 'ca', 'faire', 'des', 'petits', 'tas', 'comme', 'des', 'macarons', 'sur', 'du', 'papier', 'sulferise', 'voila', 'nous', 'mette', 'sur', 'la', 'plaque', 'et', 'au', 'four', 'a', 'dix', 'minutes', 'et', 'sont', 'cuits', 'et', 'je', 'vous', 'apsure', 'et', 'ils', 'sont', 'delicieux', 'crous', 'stillants', 'intrattrats', 'on', 'les', 'a', 'fait', 'e', 'goutes', 'et', 'tout', 'le', 'mon', 'les', 'trouve', 'bons', 'ors', 'comme', 'un']
+2026-01-29 14:53:09,724 | INFO | ['heu', 'hier', 'apres', 'midi', 'heu', 'vu', 'que', 'il', 'faisait', 'mauvais', 'temps', 'ma', 'mere', 'et', 'moi', 'heu', 'nous', 'avons', 'decide', 'de', 'de', 'travailler', 'quand', 'il', 'pleut', 'c', 'est', 'vraiment', 'le', 'moment', 'de', 'travailler', 'a', 'la', 'maison', 'alors', 'on', 'a', 'dit', 'si', 'on', 'faisait', 'hum', 'des', 'des', 'biscuits', 'des', 'biscuits', 'qu', 'on', 'mangerait', 'apres', 'heu', 'heu', 'au', 'gouter', 'avec', 'le', 'the', 'heu', 'et', 'puis', 'et', 'si', 'on', 'a', 'des', 'invites', 'heu', 'sortir', 'des', 'biscuits', 'heu', 'maisons', 'c', 'est', 'toujours', 'meilleur', 'que', 'les', 'biscuits', 'heu', 'que', 'qu', 'on', 'achete', 'des', 'biscuits', 'industriels', 'par', 'exemple', 'ou', 'voila', 'hein', 'on', 'a', 'passe', 'l', 'apres', 'midi', 'a', 'faire', 'des', 'palais', 'des', 'dames', 'ca', 's', 'appelle', 'heu', 'je', 'vous', 'donnerai', 'bien', 'la', 'recette', 'heu', 'c', 'est', 'tres', 'facile', 'tres', 'simple', 'c', 'est', 'quelques', 'cuillerees', 'de', 'de', 'farines', 'un', 'peu', 'de', 'deux', 'œufs', 'je', 'crois', 'heu', 'du', 'lait', 'un', 'peu', 'de', 'sucre', 'bien', 'sur', 'ajouter', 'des', 'raisins', 'secs', 'melanger', 'tout', 'ca', 'faire', 'des', 'petits', 'tas', 'comme', 'des', 'macarons', 'sur', 'du', 'papier', 'sulferise', 'sulfurise', 'voila', 'mettre', 'sur', 'la', 'plaque', 'et', 'au', 'four', 'en', 'dix', 'minutes', 'ils', 'sont', 'cuits', 'et', 'je', 'vous', 'assure', 'ils', 'sont', 'delicieux', 'ils', 'sont', 'croustillants', 'extra', 'extra', 'heu', 'on', 'les', 'a', 'fait', 'gouter', 'et', 'tout', 'le', 'monde', 'les', 'trouve', 'bon', 'on', 'recommencera']
+2026-01-29 14:53:09,742 | INFO | File: 2PD-TWIW-image.wav | WER=35.922330 | S=41 D=26 I=7
+2026-01-29 14:53:09,742 | INFO | ------------------------------
+2026-01-29 14:53:09,742 | INFO |  File duration: 98.80533333333334 seconds
+2026-01-29 14:53:11,797 | INFO | Using rVAD model
+2026-01-29 14:53:15,856 | INFO | speech length: 52960
+2026-01-29 14:53:15,891 | INFO | decoder input length: 82
+2026-01-29 14:53:15,891 | INFO | max output length: 82
+2026-01-29 14:53:15,891 | INFO | min output length: 8
+2026-01-29 14:53:18,478 | INFO | end detected at 30
+2026-01-29 14:53:18,479 | INFO |  -2.03 * 0.5 =  -1.02 for decoder
+2026-01-29 14:53:18,479 | INFO |  -1.13 * 0.5 =  -0.57 for ctc
+2026-01-29 14:53:18,479 | INFO | total log probability: -1.58
+2026-01-29 14:53:18,479 | INFO | normalized log probability: -0.06
+2026-01-29 14:53:18,479 | INFO | total number of ended hypotheses: 147
+2026-01-29 14:53:18,480 | INFO | best hypo: ▁je▁suis▁passionné▁par▁l'astronomie▁c'est▁un▁thème
+
+2026-01-29 14:53:18,481 | INFO | speech length: 72640
+2026-01-29 14:53:18,514 | INFO | decoder input length: 113
+2026-01-29 14:53:18,514 | INFO | max output length: 113
+2026-01-29 14:53:18,514 | INFO | min output length: 11
+2026-01-29 14:53:19,829 | INFO | end detected at 34
+2026-01-29 14:53:19,831 | INFO |  -8.06 * 0.5 =  -4.03 for decoder
+2026-01-29 14:53:19,831 | INFO |  -5.52 * 0.5 =  -2.76 for ctc
+2026-01-29 14:53:19,831 | INFO | total log probability: -6.79
+2026-01-29 14:53:19,831 | INFO | normalized log probability: -0.26
+2026-01-29 14:53:19,831 | INFO | total number of ended hypotheses: 188
+2026-01-29 14:53:19,831 | INFO | best hypo: ▁mobilis▁a▁beaucoup▁de▁gens▁actuellement▁pour▁en▁particulier
+
+2026-01-29 14:53:19,833 | INFO | speech length: 161280
+2026-01-29 14:53:19,864 | INFO | decoder input length: 251
+2026-01-29 14:53:19,864 | INFO | max output length: 251
+2026-01-29 14:53:19,864 | INFO | min output length: 25
+2026-01-29 14:53:23,924 | INFO | end detected at 81
+2026-01-29 14:53:23,925 | INFO | -19.49 * 0.5 =  -9.75 for decoder
+2026-01-29 14:53:23,925 | INFO |  -9.13 * 0.5 =  -4.57 for ctc
+2026-01-29 14:53:23,925 | INFO | total log probability: -14.31
+2026-01-29 14:53:23,925 | INFO | normalized log probability: -0.19
+2026-01-29 14:53:23,925 | INFO | total number of ended hypotheses: 149
+2026-01-29 14:53:23,926 | INFO | best hypo: ▁essaye▁de▁comprendre▁ce▁qui▁se▁passe▁au▁niveau▁de▁son▁appelle▁l'énergie▁noire▁c'est▁à▁dire▁d'une▁énergie▁qui▁n'aimait▁rien▁du▁tout▁mais▁qui▁a▁en▁effet▁malgré▁tout
+
+2026-01-29 14:53:23,928 | INFO | speech length: 12480
+2026-01-29 14:53:23,960 | INFO | decoder input length: 19
+2026-01-29 14:53:23,960 | INFO | max output length: 19
+2026-01-29 14:53:23,960 | INFO | min output length: 1
+2026-01-29 14:53:24,244 | INFO | end detected at 9
+2026-01-29 14:53:24,245 | INFO |  -0.56 * 0.5 =  -0.28 for decoder
+2026-01-29 14:53:24,245 | INFO |  -3.29 * 0.5 =  -1.65 for ctc
+2026-01-29 14:53:24,245 | INFO | total log probability: -1.93
+2026-01-29 14:53:24,246 | INFO | normalized log probability: -0.48
+2026-01-29 14:53:24,246 | INFO | total number of ended hypotheses: 167
+2026-01-29 14:53:24,246 | INFO | best hypo: ▁hey
+
+2026-01-29 14:53:24,247 | INFO | speech length: 18240
+2026-01-29 14:53:24,279 | INFO | decoder input length: 28
+2026-01-29 14:53:24,279 | INFO | max output length: 28
+2026-01-29 14:53:24,279 | INFO | min output length: 2
+2026-01-29 14:53:24,854 | INFO | end detected at 11
+2026-01-29 14:53:24,855 | INFO |  -1.35 * 0.5 =  -0.67 for decoder
+2026-01-29 14:53:24,855 | INFO |  -6.16 * 0.5 =  -3.08 for ctc
+2026-01-29 14:53:24,855 | INFO | total log probability: -3.75
+2026-01-29 14:53:24,856 | INFO | normalized log probability: -0.63
+2026-01-29 14:53:24,856 | INFO | total number of ended hypotheses: 174
+2026-01-29 14:53:24,856 | INFO | best hypo: ▁suis▁tard
+
+2026-01-29 14:53:24,857 | INFO | speech length: 18720
+2026-01-29 14:53:24,889 | INFO | decoder input length: 28
+2026-01-29 14:53:24,889 | INFO | max output length: 28
+2026-01-29 14:53:24,890 | INFO | min output length: 2
+2026-01-29 14:53:25,903 | INFO | end detected at 11
+2026-01-29 14:53:25,905 | INFO |  -1.07 * 0.5 =  -0.54 for decoder
+2026-01-29 14:53:25,905 | INFO |  -2.59 * 0.5 =  -1.30 for ctc
+2026-01-29 14:53:25,905 | INFO | total log probability: -1.83
+2026-01-29 14:53:25,905 | INFO | normalized log probability: -0.37
+2026-01-29 14:53:25,905 | INFO | total number of ended hypotheses: 189
+2026-01-29 14:53:25,905 | INFO | best hypo: ▁dos▁même
+
+2026-01-29 14:53:25,907 | INFO | speech length: 158880
+2026-01-29 14:53:25,941 | INFO | decoder input length: 247
+2026-01-29 14:53:25,941 | INFO | max output length: 247
+2026-01-29 14:53:25,941 | INFO | min output length: 24
+2026-01-29 14:53:33,650 | INFO | end detected at 69
+2026-01-29 14:53:33,651 | INFO | -13.44 * 0.5 =  -6.72 for decoder
+2026-01-29 14:53:33,651 | INFO |  -9.38 * 0.5 =  -4.69 for ctc
+2026-01-29 14:53:33,651 | INFO | total log probability: -11.41
+2026-01-29 14:53:33,652 | INFO | normalized log probability: -0.18
+2026-01-29 14:53:33,652 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:53:33,652 | INFO | best hypo: ▁dans▁lequel▁il▁y▁a▁beaucoup▁de▁théories▁cette▁théorie▁n'est▁pas▁de▁n'est▁pas▁du▁tout▁satisfaisante▁parce▁que▁terme▁suscite▁des▁contradictions
+
+2026-01-29 14:53:33,654 | INFO | speech length: 60320
+2026-01-29 14:53:33,687 | INFO | decoder input length: 93
+2026-01-29 14:53:33,688 | INFO | max output length: 93
+2026-01-29 14:53:33,688 | INFO | min output length: 9
+2026-01-29 14:53:35,659 | INFO | end detected at 21
+2026-01-29 14:53:35,661 | INFO |  -4.96 * 0.5 =  -2.48 for decoder
+2026-01-29 14:53:35,661 | INFO |  -4.02 * 0.5 =  -2.01 for ctc
+2026-01-29 14:53:35,661 | INFO | total log probability: -4.49
+2026-01-29 14:53:35,661 | INFO | normalized log probability: -0.30
+2026-01-29 14:53:35,661 | INFO | total number of ended hypotheses: 176
+2026-01-29 14:53:35,661 | INFO | best hypo: ▁il▁a▁commencé▁essentiellement
+
+2026-01-29 14:53:35,663 | INFO | speech length: 8800
+2026-01-29 14:53:35,687 | INFO | decoder input length: 13
+2026-01-29 14:53:35,687 | INFO | max output length: 13
+2026-01-29 14:53:35,687 | INFO | min output length: 1
+2026-01-29 14:53:36,392 | INFO | end detected at 8
+2026-01-29 14:53:36,393 | INFO |  -1.16 * 0.5 =  -0.58 for decoder
+2026-01-29 14:53:36,393 | INFO |  -1.82 * 0.5 =  -0.91 for ctc
+2026-01-29 14:53:36,393 | INFO | total log probability: -1.49
+2026-01-29 14:53:36,393 | INFO | normalized log probability: -0.50
+2026-01-29 14:53:36,393 | INFO | total number of ended hypotheses: 160
+2026-01-29 14:53:36,393 | INFO | best hypo: ▁un
+
+2026-01-29 14:53:36,395 | INFO | speech length: 47360
+2026-01-29 14:53:36,426 | INFO | decoder input length: 73
+2026-01-29 14:53:36,426 | INFO | max output length: 73
+2026-01-29 14:53:36,426 | INFO | min output length: 7
+2026-01-29 14:53:38,679 | INFO | end detected at 25
+2026-01-29 14:53:38,680 | INFO |  -7.39 * 0.5 =  -3.70 for decoder
+2026-01-29 14:53:38,680 | INFO |  -3.45 * 0.5 =  -1.72 for ctc
+2026-01-29 14:53:38,680 | INFO | total log probability: -5.42
+2026-01-29 14:53:38,680 | INFO | normalized log probability: -0.32
+2026-01-29 14:53:38,680 | INFO | total number of ended hypotheses: 161
+2026-01-29 14:53:38,680 | INFO | best hypo: ▁la▁fin▁du▁dix▁neuvième▁est▁au▁début▁vingtième
+
+2026-01-29 14:53:38,682 | INFO | speech length: 24000
+2026-01-29 14:53:38,714 | INFO | decoder input length: 37
+2026-01-29 14:53:38,714 | INFO | max output length: 37
+2026-01-29 14:53:38,714 | INFO | min output length: 3
+2026-01-29 14:53:39,854 | INFO | end detected at 13
+2026-01-29 14:53:39,856 | INFO |  -0.95 * 0.5 =  -0.48 for decoder
+2026-01-29 14:53:39,856 | INFO |  -0.88 * 0.5 =  -0.44 for ctc
+2026-01-29 14:53:39,856 | INFO | total log probability: -0.92
+2026-01-29 14:53:39,856 | INFO | normalized log probability: -0.10
+2026-01-29 14:53:39,856 | INFO | total number of ended hypotheses: 145
+2026-01-29 14:53:39,856 | INFO | best hypo: ▁ou▁des▁recherches
+
+2026-01-29 14:53:39,858 | INFO | speech length: 20640
+2026-01-29 14:53:39,884 | INFO | decoder input length: 31
+2026-01-29 14:53:39,885 | INFO | max output length: 31
+2026-01-29 14:53:39,885 | INFO | min output length: 3
+2026-01-29 14:53:40,906 | INFO | end detected at 12
+2026-01-29 14:53:40,908 | INFO |  -0.93 * 0.5 =  -0.47 for decoder
+2026-01-29 14:53:40,908 | INFO |  -1.19 * 0.5 =  -0.59 for ctc
+2026-01-29 14:53:40,908 | INFO | total log probability: -1.06
+2026-01-29 14:53:40,908 | INFO | normalized log probability: -0.15
+2026-01-29 14:53:40,908 | INFO | total number of ended hypotheses: 163
+2026-01-29 14:53:40,909 | INFO | best hypo: ▁pour▁montrer▁que
+
+2026-01-29 14:53:40,910 | INFO | speech length: 24960
+2026-01-29 14:53:40,959 | INFO | decoder input length: 38
+2026-01-29 14:53:40,959 | INFO | max output length: 38
+2026-01-29 14:53:40,959 | INFO | min output length: 3
+2026-01-29 14:53:42,749 | INFO | end detected at 21
+2026-01-29 14:53:42,751 | INFO |  -3.08 * 0.5 =  -1.54 for decoder
+2026-01-29 14:53:42,751 | INFO |  -5.38 * 0.5 =  -2.69 for ctc
+2026-01-29 14:53:42,751 | INFO | total log probability: -4.23
+2026-01-29 14:53:42,751 | INFO | normalized log probability: -0.35
+2026-01-29 14:53:42,751 | INFO | total number of ended hypotheses: 205
+2026-01-29 14:53:42,751 | INFO | best hypo: ▁il▁y▁avait▁des▁choses
+
+2026-01-29 14:53:42,753 | INFO | speech length: 44320
+2026-01-29 14:53:42,793 | INFO | decoder input length: 68
+2026-01-29 14:53:42,793 | INFO | max output length: 68
+2026-01-29 14:53:42,793 | INFO | min output length: 6
+2026-01-29 14:53:44,458 | INFO | end detected at 19
+2026-01-29 14:53:44,459 | INFO |  -1.07 * 0.5 =  -0.53 for decoder
+2026-01-29 14:53:44,459 | INFO |  -0.03 * 0.5 =  -0.02 for ctc
+2026-01-29 14:53:44,459 | INFO | total log probability: -0.55
+2026-01-29 14:53:44,459 | INFO | normalized log probability: -0.04
+2026-01-29 14:53:44,459 | INFO | total number of ended hypotheses: 138
+2026-01-29 14:53:44,459 | INFO | best hypo: ▁difficile▁à▁interpréter▁à▁prévoir
+
+2026-01-29 14:53:44,461 | INFO | speech length: 31200
+2026-01-29 14:53:44,494 | INFO | decoder input length: 48
+2026-01-29 14:53:44,494 | INFO | max output length: 48
+2026-01-29 14:53:44,494 | INFO | min output length: 4
+2026-01-29 14:53:46,065 | INFO | end detected at 18
+2026-01-29 14:53:46,066 | INFO |  -5.96 * 0.5 =  -2.98 for decoder
+2026-01-29 14:53:46,066 | INFO |  -7.26 * 0.5 =  -3.63 for ctc
+2026-01-29 14:53:46,066 | INFO | total log probability: -6.61
+2026-01-29 14:53:46,066 | INFO | normalized log probability: -0.51
+2026-01-29 14:53:46,066 | INFO | total number of ended hypotheses: 166
+2026-01-29 14:53:46,066 | INFO | best hypo: ▁un▁maître▁ac▁à▁calculer
+
+2026-01-29 14:53:46,068 | INFO | speech length: 51200
+2026-01-29 14:53:46,099 | INFO | decoder input length: 79
+2026-01-29 14:53:46,099 | INFO | max output length: 79
+2026-01-29 14:53:46,100 | INFO | min output length: 7
+2026-01-29 14:53:47,928 | INFO | end detected at 21
+2026-01-29 14:53:47,930 | INFO |  -7.92 * 0.5 =  -3.96 for decoder
+2026-01-29 14:53:47,930 | INFO | -13.90 * 0.5 =  -6.95 for ctc
+2026-01-29 14:53:47,930 | INFO | total log probability: -10.91
+2026-01-29 14:53:47,930 | INFO | normalized log probability: -0.73
+2026-01-29 14:53:47,930 | INFO | total number of ended hypotheses: 192
+2026-01-29 14:53:47,931 | INFO | best hypo: ▁et▁évidemment▁sa▁mie▁en▁néant
+
+2026-01-29 14:53:47,932 | INFO | speech length: 122560
+2026-01-29 14:53:47,966 | INFO | decoder input length: 191
+2026-01-29 14:53:47,966 | INFO | max output length: 191
+2026-01-29 14:53:47,966 | INFO | min output length: 19
+2026-01-29 14:53:53,486 | INFO | end detected at 55
+2026-01-29 14:53:53,488 | INFO |  -7.49 * 0.5 =  -3.74 for decoder
+2026-01-29 14:53:53,488 | INFO | -13.79 * 0.5 =  -6.89 for ctc
+2026-01-29 14:53:53,488 | INFO | total log probability: -10.64
+2026-01-29 14:53:53,488 | INFO | normalized log probability: -0.22
+2026-01-29 14:53:53,488 | INFO | total number of ended hypotheses: 181
+2026-01-29 14:53:53,488 | INFO | best hypo: ▁sa▁mia▁neuve▁en▁va▁dire▁mobiliser▁l'énergie▁de▁de▁toute▁la▁communauté▁de▁toute▁une▁communauté▁scientifique
+
+2026-01-29 14:53:53,490 | INFO | speech length: 15520
+2026-01-29 14:53:53,530 | INFO | decoder input length: 23
+2026-01-29 14:53:53,530 | INFO | max output length: 23
+2026-01-29 14:53:53,530 | INFO | min output length: 2
+2026-01-29 14:53:54,291 | INFO | end detected at 9
+2026-01-29 14:53:54,292 | INFO |  -8.68 * 0.5 =  -4.34 for decoder
+2026-01-29 14:53:54,292 | INFO |  -3.31 * 0.5 =  -1.65 for ctc
+2026-01-29 14:53:54,292 | INFO | total log probability: -6.00
+2026-01-29 14:53:54,293 | INFO | normalized log probability: -1.50
+2026-01-29 14:53:54,293 | INFO | total number of ended hypotheses: 160
+2026-01-29 14:53:54,293 | INFO | best hypo: ▁sixs
+
+2026-01-29 14:53:54,295 | INFO | ['je', 'suis', 'passionne', 'par', 'l', 'astronomie', 'c', 'est', 'un', 'theme', 'mobilis', 'a', 'beaucoup', 'de', 'gens', 'actuellement', 'pour', 'en', 'particulier', 'essaye', 'de', 'comprendre', 'ce', 'qui', 'se', 'passe', 'au', 'niveau', 'de', 'son', 'appelle', 'l', 'energie', 'noire', 'c', 'est', 'a', 'dire', 'd', 'une', 'energie', 'qui', 'n', 'aimait', 'rien', 'du', 'tout', 'mais', 'qui', 'a', 'en', 'effet', 'malgre', 'tout', 'hey', 'suis', 'tard', 'dos', 'meme', 'dans', 'lequel', 'il', 'y', 'a', 'beaucoup', 'de', 'theories', 'cette', 'theorie', 'n', 'est', 'pas', 'de', 'n', 'est', 'pas', 'du', 'tout', 'satisfaisante', 'parce', 'que', 'terme', 'suscite', 'des', 'contradictions', 'il', 'a', 'commence', 'essentiellement', 'un', 'la', 'fin', 'du', 'dix', 'neuvieme', 'est', 'au', 'debut', 'vingtieme', 'ou', 'des', 'recherches', 'pour', 'montrer', 'que', 'il', 'y', 'avait', 'des', 'choses', 'difficile', 'a', 'interpreter', 'a', 'prevoir', 'un', 'maitre', 'ac', 'a', 'calculer', 'et', 'evidemment', 'sa', 'mie', 'en', 'neant', 'sa', 'mia', 'neuve', 'en', 'va', 'dire', 'mobiliser', 'l', 'energie', 'de', 'de', 'toute', 'la', 'communaute', 'de', 'toute', 'une', 'communaute', 'scientifique', 'sixs']
+2026-01-29 14:53:54,295 | INFO | ['je', 'suis', 'passionne', 'par', 'par', 'l', 'astronomie', 'c', 'est', 'un', 'theme', 'qui', 'mobilise', 'beaucoup', 'de', 'gens', 'actuellement', 'pour', 'en', 'particulier', 'essayer', 'de', 'comprendre', 'ce', 'qu', 'il', 'se', 'passe', 'au', 'niveau', 'de', 'ce', 'que', 'l', 'on', 'appelle', 'l', 'energie', 'noire', 'c', 'est', 'a', 'dire', 'd', 'une', 'energie', 'qui', 'n', 'emet', 'rien', 'du', 'tout', 'mais', 'qui', 'a', 'un', 'effet', 'malgre', 'tout', 'suite', 'domaine', 'dans', 'lequel', 'il', 'y', 'a', 'beaucoup', 'de', 'theorie', 'cette', 'theorie', 'n', 'est', 'pas', 'du', 'tout', 'satisfaisante', 'que', 'elle', 'suscite', 'des', 'contradictions', 'ca', 'a', 'commence', 'essentiellement', 'a', 'la', 'fin', 'du', '19e', 'et', 'au', 'debut', 'du', '20e', 'ou', 'les', 'recherches', 'ont', 'montre', 'que', 'il', 'y', 'avait', 'des', 'choses', 'difficiles', 'a', 'interpreter', 'a', 'prevoir', 'a', 'mettre', 'a', 'calculer', 'evidement', 'ca', 'ca', 'n', 'a', 'rien', 'ca', 'a', 'mis', 'en', 'œuvre', 'mobilise', 'l', 'energie', 'de', 'de', 'de', 'toute', 'd', 'une', 'communaute', 'scientifique', 'qui', 'sait']
+2026-01-29 14:53:54,306 | INFO | File: 1PD2-UVLI-image.wav | WER=40.000000 | S=34 D=8 I=14
+2026-01-29 14:53:54,306 | INFO | ------------------------------
+2026-01-29 14:53:54,307 | INFO |  File duration: 64.99733333333333 seconds
+2026-01-29 14:53:55,629 | INFO | Using rVAD model
+2026-01-29 14:53:58,291 | INFO | speech length: 458240
+2026-01-29 14:53:58,335 | INFO | decoder input length: 715
+2026-01-29 14:53:58,335 | INFO | max output length: 715
+2026-01-29 14:53:58,335 | INFO | min output length: 71
+2026-01-29 14:54:25,833 | INFO | end detected at 176
+2026-01-29 14:54:25,835 | INFO | -488.43 * 0.5 = -244.22 for decoder
+2026-01-29 14:54:25,835 | INFO | -180.62 * 0.5 = -90.31 for ctc
+2026-01-29 14:54:25,835 | INFO | total log probability: -334.53
+2026-01-29 14:54:25,835 | INFO | normalized log probability: -1.98
+2026-01-29 14:54:25,835 | INFO | total number of ended hypotheses: 188
+2026-01-29 14:54:25,837 | INFO | best hypo: ▁je▁vais▁vous▁parler▁de▁mes▁vacances▁dernières▁aux▁maldives▁nous▁avons▁pris▁l'avions▁de▁dubail▁aux▁maldives▁quatre▁heures▁de▁vol▁et▁arrivées▁là▁bas▁l'île▁est▁absolument▁a▁magnifique▁de▁sables▁blancs▁nous▁avions▁aux▁nos▁enfants▁et▁avec▁nous▁a▁mon▁petit▁fils▁et▁nous▁avons▁en▁pu▁faire▁de▁du▁nombreuse▁actalités▁à▁des▁plonngées▁marines▁et▁du▁sorclein▁vus▁des▁tortues▁de▁rémant
+
+2026-01-29 14:54:25,840 | INFO | speech length: 419200
+2026-01-29 14:54:25,875 | INFO | decoder input length: 654
+2026-01-29 14:54:25,875 | INFO | max output length: 654
+2026-01-29 14:54:25,875 | INFO | min output length: 65
+2026-01-29 14:54:46,609 | INFO | end detected at 146
+2026-01-29 14:54:46,611 | INFO | -344.94 * 0.5 = -172.47 for decoder
+2026-01-29 14:54:46,611 | INFO | -112.13 * 0.5 = -56.06 for ctc
+2026-01-29 14:54:46,611 | INFO | total log probability: -228.53
+2026-01-29 14:54:46,611 | INFO | normalized log probability: -1.67
+2026-01-29 14:54:46,611 | INFO | total number of ended hypotheses: 189
+2026-01-29 14:54:46,613 | INFO | best hypo: ▁avec▁quelques▁requins▁également▁et▁nous▁avons▁pu▁faire▁du▁ski▁nautique▁et▁diverses▁diverses▁activités▁la▁semaine▁s'est▁déroulée▁avec▁un▁très▁beau▁temps▁'▁et▁dans▁une▁ambiance▁très▁très▁agréables▁nous▁sommes▁repartis▁en▁suis▁sur▁dubaï▁et▁nous▁avons▁fêté▁le▁jours▁de▁l'anons▁'▁en▁dubaïe▁et▁un▁bate▁face▁aux▁multip
+
+2026-01-29 14:54:46,615 | INFO | speech length: 70720
+2026-01-29 14:54:46,648 | INFO | decoder input length: 110
+2026-01-29 14:54:46,648 | INFO | max output length: 110
+2026-01-29 14:54:46,648 | INFO | min output length: 11
+2026-01-29 14:54:49,831 | INFO | end detected at 30
+2026-01-29 14:54:49,832 | INFO |  -2.84 * 0.5 =  -1.42 for decoder
+2026-01-29 14:54:49,833 | INFO |  -4.40 * 0.5 =  -2.20 for ctc
+2026-01-29 14:54:49,833 | INFO | total log probability: -3.62
+2026-01-29 14:54:49,833 | INFO | normalized log probability: -0.15
+2026-01-29 14:54:49,833 | INFO | total number of ended hypotheses: 178
+2026-01-29 14:54:49,833 | INFO | best hypo: ▁cérémonie▁qui▁a▁eu▁ce▁soir▁là▁à▁dubaï
+
+2026-01-29 14:54:49,835 | INFO | speech length: 12640
+2026-01-29 14:54:49,864 | INFO | decoder input length: 19
+2026-01-29 14:54:49,864 | INFO | max output length: 19
+2026-01-29 14:54:49,864 | INFO | min output length: 1
+2026-01-29 14:54:50,680 | INFO | end detected at 9
+2026-01-29 14:54:50,681 | INFO |  -0.33 * 0.5 =  -0.16 for decoder
+2026-01-29 14:54:50,681 | INFO |  -0.88 * 0.5 =  -0.44 for ctc
+2026-01-29 14:54:50,681 | INFO | total log probability: -0.60
+2026-01-29 14:54:50,681 | INFO | normalized log probability: -0.12
+2026-01-29 14:54:50,681 | INFO | total number of ended hypotheses: 145
+2026-01-29 14:54:50,681 | INFO | best hypo: ▁souvent
+
+2026-01-29 14:54:50,683 | INFO | ['je', 'vais', 'vous', 'parler', 'de', 'mes', 'vacances', 'dernieres', 'aux', 'maldives', 'nous', 'avons', 'pris', 'l', 'avions', 'de', 'dubail', 'aux', 'maldives', 'quatre', 'heures', 'de', 'vol', 'et', 'arrivees', 'la', 'bas', 'l', 'ile', 'est', 'absolument', 'a', 'magnifique', 'de', 'sables', 'blancs', 'nous', 'avions', 'aux', 'nos', 'enfants', 'et', 'avec', 'nous', 'a', 'mon', 'petit', 'fils', 'et', 'nous', 'avons', 'en', 'pu', 'faire', 'de', 'du', 'nombreuse', 'actalites', 'a', 'des', 'plonngees', 'marines', 'et', 'du', 'sorclein', 'vus', 'des', 'tortues', 'de', 'remant', 'avec', 'quelques', 'requins', 'egalement', 'et', 'nous', 'avons', 'pu', 'faire', 'du', 'ski', 'nautique', 'et', 'diverses', 'diverses', 'activites', 'la', 'semaine', 's', 'est', 'deroulee', 'avec', 'un', 'tres', 'beau', 'temps', 'et', 'dans', 'une', 'ambiance', 'tres', 'tres', 'agreables', 'nous', 'sommes', 'repartis', 'en', 'suis', 'sur', 'dubai', 'et', 'nous', 'avons', 'fete', 'le', 'jours', 'de', 'l', 'anons', 'en', 'dubaie', 'et', 'un', 'bate', 'face', 'aux', 'multip', 'ceremonie', 'qui', 'a', 'eu', 'ce', 'soir', 'la', 'a', 'dubai', 'souvent']
+2026-01-29 14:54:50,683 | INFO | ['je', 'vais', 'vous', 'parler', 'de', 'mes', 'vacances', 'dernieres', 'aux', 'maldives', 'nous', 'avons', 'pris', 'l', 'avion', 'de', 'dubai', 'aux', 'maldives', '4', 'heures', 'de', 'vol', 'arrives', 'la', 'bas', 'heu', 'l', 'ile', 'etait', 'absolument', 'magnifique', 'sable', 'blanc', 'nous', 'avions', 'nos', 'enfants', 'avec', 'nous', 'mon', 'petit', 'fils', 'nous', 'avions', 'pu', 'faire', 'de', 'nombreuses', 'activites', 'des', 'plongees', 'sous', 'marines', 'du', 'snorkeling', 'j', 'ai', 'vu', 'des', 'tortues', 'des', 'raies', 'mentas', 'avec', 'quelques', 'requins', 'egalement', 'et', 'nous', 'avons', 'pu', 'faire', 'du', 'ski', 'nautique', 'et', 'divers', 'activites', 'la', 'semaine', 's', 'est', 'deroulee', 'avec', 'un', 'tres', 'beau', 'temps', 'et', 'dans', 'une', 'ambiance', 'tres', 'agreable', 'nous', 'sommes', 'ensuite', 'repartis', 'sur', 'dubai', 'nous', 'avons', 'fete', 'le', 'jour', 'de', 'l', 'an', 'a', 'dubai', 'sur', 'un', 'bateau', 'face', 'aux', 'multiples', 'ceremonies', 'qu', 'a', 'eu', 'qu', 'il', 'y', 'a', 'eu', 'ce', 'soir', 'la', 'a', 'dubai', 'ca', 'vous', 'va']
+2026-01-29 14:54:50,693 | INFO | File: 1PD2-XFZE-image.wav | WER=41.791045 | S=29 D=12 I=15
+2026-01-29 14:54:50,693 | INFO | ------------------------------
+2026-01-29 14:54:50,693 | INFO |  File duration: 55.73466666666667 seconds
+2026-01-29 14:54:51,788 | INFO | Using rVAD model
+2026-01-29 14:54:54,137 | INFO | speech length: 172000
+2026-01-29 14:54:54,166 | INFO | decoder input length: 268
+2026-01-29 14:54:54,166 | INFO | max output length: 268
+2026-01-29 14:54:54,166 | INFO | min output length: 26
+2026-01-29 14:55:01,145 | INFO | end detected at 61
+2026-01-29 14:55:01,147 | INFO | -12.78 * 0.5 =  -6.39 for decoder
+2026-01-29 14:55:01,147 | INFO |  -5.51 * 0.5 =  -2.76 for ctc
+2026-01-29 14:55:01,147 | INFO | total log probability: -9.14
+2026-01-29 14:55:01,147 | INFO | normalized log probability: -0.17
+2026-01-29 14:55:01,147 | INFO | total number of ended hypotheses: 192
+2026-01-29 14:55:01,148 | INFO | best hypo: ▁alors▁tout▁d'abord▁c'est▁une▁image▁en▁noir▁et▁blanc▁il▁semblerait▁que▁ce▁soit▁un▁ruisseau▁avait▁peine▁de▁bateaux▁dessus
+
+2026-01-29 14:55:01,149 | INFO | speech length: 88800
+2026-01-29 14:55:01,185 | INFO | decoder input length: 138
+2026-01-29 14:55:01,185 | INFO | max output length: 138
+2026-01-29 14:55:01,185 | INFO | min output length: 13
+2026-01-29 14:55:04,644 | INFO | end detected at 36
+2026-01-29 14:55:04,646 | INFO |  -2.88 * 0.5 =  -1.44 for decoder
+2026-01-29 14:55:04,646 | INFO |  -0.59 * 0.5 =  -0.29 for ctc
+2026-01-29 14:55:04,646 | INFO | total log probability: -1.73
+2026-01-29 14:55:04,646 | INFO | normalized log probability: -0.06
+2026-01-29 14:55:04,646 | INFO | total number of ended hypotheses: 175
+2026-01-29 14:55:04,646 | INFO | best hypo: ▁il▁me▁semble▁qu'il▁y▁a▁un▁quai▁au▁fond▁y▁a▁quelques▁immeubles
+
+2026-01-29 14:55:04,648 | INFO | speech length: 74400
+2026-01-29 14:55:04,681 | INFO | decoder input length: 115
+2026-01-29 14:55:04,681 | INFO | max output length: 115
+2026-01-29 14:55:04,682 | INFO | min output length: 11
+2026-01-29 14:55:07,091 | INFO | end detected at 25
+2026-01-29 14:55:07,091 | INFO |  -1.74 * 0.5 =  -0.87 for decoder
+2026-01-29 14:55:07,091 | INFO |  -0.43 * 0.5 =  -0.22 for ctc
+2026-01-29 14:55:07,091 | INFO | total log probability: -1.09
+2026-01-29 14:55:07,092 | INFO | normalized log probability: -0.05
+2026-01-29 14:55:07,092 | INFO | total number of ended hypotheses: 142
+2026-01-29 14:55:07,092 | INFO | best hypo: ▁il▁me▁semble▁qu'il▁y▁a▁des▁maisons▁aussi▁au▁fond
+
+2026-01-29 14:55:07,093 | INFO | speech length: 32800
+2026-01-29 14:55:07,125 | INFO | decoder input length: 50
+2026-01-29 14:55:07,125 | INFO | max output length: 50
+2026-01-29 14:55:07,125 | INFO | min output length: 5
+2026-01-29 14:55:08,427 | INFO | end detected at 18
+2026-01-29 14:55:08,428 | INFO |  -6.71 * 0.5 =  -3.36 for decoder
+2026-01-29 14:55:08,429 | INFO |  -2.69 * 0.5 =  -1.34 for ctc
+2026-01-29 14:55:08,429 | INFO | total log probability: -4.70
+2026-01-29 14:55:08,429 | INFO | normalized log probability: -0.39
+2026-01-29 14:55:08,429 | INFO | total number of ended hypotheses: 165
+2026-01-29 14:55:08,429 | INFO | best hypo: ▁bol▁bâton▁des▁voiles
+
+2026-01-29 14:55:08,431 | INFO | speech length: 223680
+2026-01-29 14:55:08,463 | INFO | decoder input length: 349
+2026-01-29 14:55:08,464 | INFO | max output length: 349
+2026-01-29 14:55:08,464 | INFO | min output length: 34
+2026-01-29 14:55:21,243 | INFO | end detected at 101
+2026-01-29 14:55:21,244 | INFO | -81.94 * 0.5 = -40.97 for decoder
+2026-01-29 14:55:21,244 | INFO | -49.52 * 0.5 = -24.76 for ctc
+2026-01-29 14:55:21,244 | INFO | total log probability: -65.73
+2026-01-29 14:55:21,244 | INFO | normalized log probability: -0.68
+2026-01-29 14:55:21,244 | INFO | total number of ended hypotheses: 168
+2026-01-29 14:55:21,245 | INFO | best hypo: ▁les▁immeubles▁ont▁beaucoup▁d'étages▁enfiniana▁un▁premier▁plan▁qui▁a▁au▁moins▁une▁dizaine▁d'étages▁croisés▁des▁crues▁de▁charentiers▁mais▁ses▁parties▁frues▁de▁charpentier▁les▁voiles▁débattent▁aux▁propos
+
+2026-01-29 14:55:21,247 | INFO | ['alors', 'tout', 'd', 'abord', 'c', 'est', 'une', 'image', 'en', 'noir', 'et', 'blanc', 'il', 'semblerait', 'que', 'ce', 'soit', 'un', 'ruisseau', 'avait', 'peine', 'de', 'bateaux', 'dessus', 'il', 'me', 'semble', 'qu', 'il', 'y', 'a', 'un', 'quai', 'au', 'fond', 'y', 'a', 'quelques', 'immeubles', 'il', 'me', 'semble', 'qu', 'il', 'y', 'a', 'des', 'maisons', 'aussi', 'au', 'fond', 'bol', 'baton', 'des', 'voiles', 'les', 'immeubles', 'ont', 'beaucoup', 'd', 'etages', 'enfiniana', 'un', 'premier', 'plan', 'qui', 'a', 'au', 'moins', 'une', 'dizaine', 'd', 'etages', 'croises', 'des', 'crues', 'de', 'charentiers', 'mais', 'ses', 'parties', 'frues', 'de', 'charpentier', 'les', 'voiles', 'debattent', 'aux', 'propos']
+2026-01-29 14:55:21,248 | INFO | ['alors', 'tout', 'd', 'abord', 'c', 'est', 'une', 'image', 'en', 'noir', 'et', 'blanc', 'il', 'semblerait', 'que', 'ce', 'soit', 'un', 'ruisseau', 'avec', 'pleins', 'de', 'bateaux', 'dessus', 'heu', 'il', 'me', 'semble', 'qu', 'il', 'y', 'a', 'un', 'quai', 'au', 'fond', 'il', 'y', 'a', 'quelques', 'immeubles', 'il', 'me', 'semble', 'qu', 'il', 'y', 'a', 'des', 'maisons', 'aussi', 'au', 'fond', 'bon', 'les', 'bateaux', 'ont', 'des', 'voiles', 'je', 'sais', 'plus', 'quoi', 'dire', 'les', 'immeubles', 'ont', 'beaucoup', 'd', 'etages', 'il', 'y', 'en', 'a', 'un', 'au', 'premier', 'plan', 'qui', 'a', 'au', 'moins', 'une', 'dizaine', 'd', 'etage', 'je', 'croyais', 'que', 'c', 'etait', 'des', 'grues', 'de', 'chantier', 'mais', 'c', 'est', 'les', 'voiles', 'des', 'bateaux']
+2026-01-29 14:55:21,254 | INFO | File: 2PD-DKVE-image.wav | WER=33.333333 | S=13 D=17 I=4
+2026-01-29 14:55:21,254 | INFO | ------------------------------
+2026-01-29 14:55:21,254 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:55:21,254 | INFO | The number of files is 17
+2026-01-29 14:55:21,254 | INFO | WER: 30.96%
+2026-01-29 14:55:21,255 | INFO | =============================================================

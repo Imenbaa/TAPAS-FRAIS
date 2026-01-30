@@ -2,6 +2,13 @@ import torch
 import numpy as np
 from rVADfast import rVADfast
 import logging
+from pathlib import Path
+import tempfile
+import subprocess
+import soundfile as sf
+import torch
+import numpy as np
+from espnet2.bin.asr_inference import Speech2Text
 
 logger = logging.getLogger(__name__)
 def vad_to_speech_ts(vad_labels, vad_timestamps, sampling_rate):
@@ -24,6 +31,126 @@ def vad_to_speech_ts(vad_labels, vad_timestamps, sampling_rate):
         })
 
     return speech_ts
+def transcribe_audio(
+    bash_script,
+    wav_path=None,
+    audio=None,
+    sr=16000,
+    work_dir=None,
+    min_duration=0.3,  # secondes
+):
+    """
+    Transcrit un audio avec Kaldi (recognizer.sh).
+
+    Entrées possibles :
+      - wav_path : chemin vers un fichier wav
+      - audio    : chunk audio (torch.Tensor ou np.ndarray)
+    """
+
+    bash_script = Path(bash_script)
+    if not bash_script.exists():
+        raise FileNotFoundError(bash_script)
+
+    tmp_wav_path = None
+
+    # =====================================================
+    # 1) Préparation de l'audio
+    # =====================================================
+    if audio is not None:
+        # Tensor -> numpy
+        if isinstance(audio, torch.Tensor):
+            audio = audio.detach().cpu().numpy()
+
+        # mono
+        if audio.ndim == 2:
+            audio = audio.squeeze()
+
+        if audio.ndim != 1:
+            raise ValueError(f"Audio must be mono, got shape {audio.shape}")
+
+        # durée minimale (Kaldi n'aime pas les chunks trop courts)
+        if len(audio) < int(min_duration * sr):
+            return ""
+
+        # format sûr pour Kaldi / libsndfile
+        audio = audio.astype(np.float32)
+
+        tmp_wav = tempfile.NamedTemporaryFile(
+            suffix=".wav", delete=False
+        )
+        tmp_wav_path = Path(tmp_wav.name)
+
+        sf.write(
+            tmp_wav_path,
+            audio,
+            sr,
+            format="WAV",
+            subtype="PCM_16"
+        )
+
+        wav_path = tmp_wav_path
+
+    else:
+        # =================================================
+        # 2) Cas wav sur disque
+        # =================================================
+        if wav_path is None:
+            raise ValueError("Provide either wav_path or audio")
+
+        wav_path = Path(wav_path)
+        if not wav_path.exists():
+            raise FileNotFoundError(wav_path)
+
+    # =====================================================
+    # 3) Dossier de travail
+    # =====================================================
+    if work_dir is None:
+        work_dir = Path(tempfile.mkdtemp())
+    else:
+        work_dir = Path(work_dir)
+        work_dir.mkdir(parents=True, exist_ok=True)
+
+    ctm_path = work_dir / f"{wav_path.stem}.ctm"
+
+    # =====================================================
+    # 4) Appel Kaldi
+    # =====================================================
+    cmd = [
+        str(bash_script),
+        str(wav_path),
+        str(ctm_path)
+    ]
+
+    result = subprocess.run(
+        cmd,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
+    )
+
+    if result.returncode != 0:
+        raise RuntimeError(f"ASR failed:\n{result.stderr}")
+
+    # =====================================================
+    # 5) CTM → texte
+    # =====================================================
+    words = []
+    if ctm_path.exists():
+        with open(ctm_path, "r", encoding="utf-8") as f:
+            for line in f:
+                parts = line.strip().split()
+                if len(parts) >= 5:
+                    word = parts[4]
+                    if word != "<eps>":
+                        words.append(word)
+
+    # =====================================================
+    # 6) Nettoyage
+    # =====================================================
+    if tmp_wav_path is not None and tmp_wav_path.exists():
+        tmp_wav_path.unlink()
+
+    return " ".join(words)
 
 def vad_chunk_with_timestamps(
     wav,
@@ -98,7 +225,7 @@ def extract_chunk_audio(wav, start, end, sr=16000):
     return wav[s:e].unsqueeze(0)   # (1, T)
 
 def whisper_transcribe_chunks(
-    asr_model,
+    asr_model,model,
     wav,
     chunks,
     sr=16000
@@ -118,12 +245,82 @@ def whisper_transcribe_chunks(
         pred = asr_model.transcribe_batch(
             chunk_wav,
             wav_lens)
-        hyp = " ".join(pred[0][0]).strip()
+        #print(pred)
+        if model=="whisper-VAD-chunk" or model=="whisper-large-VAD-chunk":
+            hyp = " ".join(pred[0][0]).strip()
+        else:
+            hyp = " ".join(pred[0]).strip()
         results.append({
             "id": i,
             "start": ch["start"],
             "end": ch["end"],
             "text": hyp.strip()
+        })
+        #print(f"Durée chunk = {ch['end'] - ch['start']}")
+
+    return results
+def hmmtdnn_transcribe_chunks(script,wav,chunks,work_dir,sr=16000 ):
+    results = []
+
+    for i, ch in enumerate(chunks):
+        chunk_wav = extract_chunk_audio(
+            wav,
+            ch["start"],
+            ch["end"],
+            sr
+        )
+
+        wav_lens = torch.tensor([1.0])
+
+        pred = transcribe_audio(bash_script=script,audio =chunk_wav, work_dir=work_dir)
+        hyp = pred
+
+
+        results.append({
+            "id": i,
+            "start": ch["start"],
+            "end": ch["end"],
+            "text": hyp.strip()
+        })
+        #print(results)
+
+    return results
+
+
+def espnet_transcribe_chunks(
+    model,
+    wav,
+    chunks,
+    sr=16000
+):
+    results = []
+
+    for i, ch in enumerate(chunks):
+        dur = ch["end"] - ch["start"]
+        if dur < 0.5:  # skip very short segments
+            continue
+        chunk_wav = extract_chunk_audio(
+            wav,
+            ch["start"],
+            ch["end"],
+            sr
+        )
+        print(chunk_wav.shape)
+        if isinstance(chunk_wav, np.ndarray):
+            chunk_wav = torch.from_numpy(chunk_wav)
+
+        chunk_wav = chunk_wav.float().squeeze().cpu()
+        #wav_lens = torch.tensor([1.0])
+        res = model(speech=chunk_wav)
+        nbests = [text for text, token, token_int, hyp in res]
+        pred_transcriptions = nbests[0] if nbests is not None and len(nbests) > 0 else ""
+
+
+        results.append({
+            "id": i,
+            "start": ch["start"],
+            "end": ch["end"],
+            "text": pred_transcriptions
         })
 
     return results

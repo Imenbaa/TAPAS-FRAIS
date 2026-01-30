@@ -1,0 +1,159 @@
+2026-01-29 13:53:08,115 | INFO |  File duration: 48.074666666666666 seconds
+2026-01-29 13:53:09,627 | INFO | Using rVAD model
+2026-01-29 13:53:11,857 | INFO | Number of chunks: 7
+2026-01-29 13:53:46,898 | INFO | File: 1HC-ACBC-image.wav | WER=17.391304 | S=12 D=5 I=3
+2026-01-29 13:53:46,898 | INFO | ------------------------------
+2026-01-29 13:53:46,898 | INFO |  File duration: 103.43733333333333 seconds
+2026-01-29 13:53:48,933 | INFO | Using rVAD model
+2026-01-29 13:53:53,697 | INFO | Number of chunks: 7
+2026-01-29 13:54:53,316 | INFO | File: 1HC-AQAC-image.wav | WER=24.369748 | S=30 D=7 I=21
+2026-01-29 13:54:53,316 | INFO | ------------------------------
+2026-01-29 13:54:53,317 | INFO |  File duration: 72.93466666666667 seconds
+2026-01-29 13:54:54,740 | INFO | Using rVAD model
+2026-01-29 13:54:58,074 | INFO | Number of chunks: 3
+2026-01-29 13:55:40,286 | INFO | File: 1HC-AVGE-image.wav | WER=28.112450 | S=44 D=14 I=12
+2026-01-29 13:55:40,286 | INFO | ------------------------------
+2026-01-29 13:55:40,286 | INFO |  File duration: 80.624 seconds
+2026-01-29 13:55:41,910 | INFO | Using rVAD model
+2026-01-29 13:55:45,751 | INFO | Number of chunks: 11
+2026-01-29 13:56:30,041 | INFO | File: 1HC-ECKC-image.wav | WER=9.142857 | S=11 D=2 I=3
+2026-01-29 13:56:30,041 | INFO | ------------------------------
+2026-01-29 13:56:30,041 | INFO |  File duration: 40.05733333333333 seconds
+2026-01-29 13:56:30,839 | INFO | Using rVAD model
+2026-01-29 13:56:32,712 | INFO | Number of chunks: 7
+2026-01-29 13:57:02,184 | INFO | File: 1HC-FXRA-image.wav | WER=21.917808 | S=6 D=5 I=5
+2026-01-29 13:57:02,185 | INFO | ------------------------------
+2026-01-29 13:57:02,186 | INFO |  File duration: 59.4 seconds
+2026-01-29 13:57:03,359 | INFO | Using rVAD model
+2026-01-29 13:57:06,069 | INFO | Number of chunks: 5
+2026-01-29 13:57:33,295 | INFO | File: 1HC-GDZI-image.wav | WER=15.503876 | S=7 D=9 I=4
+2026-01-29 13:57:33,296 | INFO | ------------------------------
+2026-01-29 13:57:33,296 | INFO |  File duration: 89.03733333333334 seconds
+2026-01-29 13:57:35,053 | INFO | Using rVAD model
+2026-01-29 13:57:39,234 | INFO | Number of chunks: 10
+2026-01-29 13:58:25,909 | INFO | File: 1HC-IAJC-image.wav | WER=21.052632 | S=9 D=2 I=25
+2026-01-29 13:58:25,909 | INFO | ------------------------------
+2026-01-29 13:58:25,909 | INFO |  File duration: 92.12533333333333 seconds
+2026-01-29 13:58:27,720 | INFO | Using rVAD model
+2026-01-29 13:58:32,003 | INFO | Number of chunks: 5
+2026-01-29 13:59:10,671 | INFO | File: 1HC-IQKL-image.wav | WER=23.857868 | S=13 D=5 I=29
+2026-01-29 13:59:10,672 | INFO | ------------------------------
+2026-01-29 13:59:10,672 | INFO |  File duration: 28.00529166666667 seconds
+2026-01-29 13:59:11,231 | INFO | Using rVAD model
+2026-01-29 13:59:12,647 | INFO | Number of chunks: 1
+2026-01-29 13:59:24,857 | INFO | File: 1HC-KGAP-image.wav | WER=26.785714 | S=4 D=3 I=8
+2026-01-29 13:59:24,858 | INFO | ------------------------------
+2026-01-29 13:59:24,858 | INFO |  File duration: 45.268 seconds
+2026-01-29 13:59:25,743 | INFO | Using rVAD model
+2026-01-29 13:59:27,841 | INFO | Number of chunks: 8
+2026-01-29 13:59:58,643 | INFO | File: 1HC-KWZA-image.wav | WER=15.476190 | S=7 D=2 I=4
+2026-01-29 13:59:58,643 | INFO | ------------------------------
+2026-01-29 13:59:58,643 | INFO |  File duration: 82.65866666666666 seconds
+2026-01-29 14:00:00,380 | INFO | Using rVAD model
+2026-01-29 14:00:04,216 | INFO | Number of chunks: 9
+2026-01-29 14:00:52,162 | INFO | File: 1HC-KXRA-image.wav | WER=25.000000 | S=9 D=6 I=29
+2026-01-29 14:00:52,163 | INFO | ------------------------------
+2026-01-29 14:00:52,163 | INFO |  File duration: 66.812 seconds
+2026-01-29 14:00:53,599 | INFO | Using rVAD model
+2026-01-29 14:00:56,880 | INFO | Number of chunks: 9
+2026-01-29 14:01:34,269 | INFO | File: 1HC-LKZT-image.wav | WER=13.245033 | S=9 D=1 I=10
+2026-01-29 14:01:34,270 | INFO | ------------------------------
+2026-01-29 14:01:34,270 | INFO |  File duration: 47.06 seconds
+2026-01-29 14:01:35,229 | INFO | Using rVAD model
+2026-01-29 14:01:37,465 | INFO | Number of chunks: 2
+2026-01-29 14:01:56,802 | INFO | File: 1HC-MLSV-image.wav | WER=16.666667 | S=15 D=2 I=0
+2026-01-29 14:01:56,803 | INFO | ------------------------------
+2026-01-29 14:01:56,803 | INFO |  File duration: 18.528 seconds
+2026-01-29 14:01:57,181 | INFO | Using rVAD model
+2026-01-29 14:01:58,018 | INFO | Number of chunks: 2
+2026-01-29 14:02:08,086 | INFO | File: 1HC-MZQO-image.wav | WER=25.000000 | S=6 D=6 I=0
+2026-01-29 14:02:08,086 | INFO | ------------------------------
+2026-01-29 14:02:08,087 | INFO |  File duration: 66.94533333333334 seconds
+2026-01-29 14:02:09,482 | INFO | Using rVAD model
+2026-01-29 14:02:12,644 | INFO | Number of chunks: 6
+2026-01-29 14:02:47,233 | INFO | File: 1HC-OZUD-image.wav | WER=18.713450 | S=21 D=3 I=8
+2026-01-29 14:02:47,233 | INFO | ------------------------------
+2026-01-29 14:02:47,233 | INFO |  File duration: 97.16533333333334 seconds
+2026-01-29 14:02:49,178 | INFO | Using rVAD model
+2026-01-29 14:02:54,246 | INFO | Number of chunks: 14
+2026-01-29 14:03:54,966 | INFO | File: 1HC-PLIQ-image.wav | WER=17.213115 | S=28 D=4 I=10
+2026-01-29 14:03:54,966 | INFO | ------------------------------
+2026-01-29 14:03:54,966 | INFO |  File duration: 62.62266666666667 seconds
+2026-01-29 14:03:56,207 | INFO | Using rVAD model
+2026-01-29 14:03:59,143 | INFO | Number of chunks: 4
+2026-01-29 14:04:22,508 | INFO | File: 1HC-PVSZ-image.wav | WER=6.976744 | S=4 D=1 I=7
+2026-01-29 14:04:22,508 | INFO | ------------------------------
+2026-01-29 14:04:22,508 | INFO |  File duration: 107.196 seconds
+2026-01-29 14:04:24,767 | INFO | Using rVAD model
+2026-01-29 14:04:29,760 | INFO | Number of chunks: 4
+2026-01-29 14:05:11,393 | INFO | File: 1HC-ZANM-image.wav | WER=21.710526 | S=35 D=8 I=23
+2026-01-29 14:05:11,393 | INFO | ------------------------------
+2026-01-29 14:05:11,394 | INFO |  File duration: 60.6208 seconds
+2026-01-29 14:05:12,024 | INFO | Using rVAD model
+2026-01-29 14:05:14,827 | INFO | Number of chunks: 5
+2026-01-29 14:05:48,744 | INFO | File: 1HC2-AEOW-image.wav | WER=27.215190 | S=17 D=19 I=7
+2026-01-29 14:05:48,744 | INFO | ------------------------------
+2026-01-29 14:05:48,744 | INFO |  File duration: 22.186666666666667 seconds
+2026-01-29 14:05:49,228 | INFO | Using rVAD model
+2026-01-29 14:05:50,249 | INFO | Number of chunks: 1
+2026-01-29 14:05:59,097 | INFO | File: 1HC2-CEZE-image.wav | WER=9.836066 | S=1 D=4 I=1
+2026-01-29 14:05:59,097 | INFO | ------------------------------
+2026-01-29 14:05:59,098 | INFO |  File duration: 58.24512 seconds
+2026-01-29 14:05:59,764 | INFO | Using rVAD model
+2026-01-29 14:06:02,527 | INFO | Number of chunks: 6
+2026-01-29 14:06:32,744 | INFO | File: 1HC2-DWWQ-image.wav | WER=17.094017 | S=11 D=8 I=1
+2026-01-29 14:06:32,744 | INFO | ------------------------------
+2026-01-29 14:06:32,745 | INFO |  File duration: 48.66048 seconds
+2026-01-29 14:06:33,261 | INFO | Using rVAD model
+2026-01-29 14:06:35,589 | INFO | Number of chunks: 2
+2026-01-29 14:06:54,908 | INFO | File: 1HC2-FCSY-image.wav | WER=15.126050 | S=9 D=6 I=3
+2026-01-29 14:06:54,908 | INFO | ------------------------------
+2026-01-29 14:06:54,908 | INFO |  File duration: 53.373333333333335 seconds
+2026-01-29 14:06:56,039 | INFO | Using rVAD model
+2026-01-29 14:06:58,573 | INFO | Number of chunks: 4
+2026-01-29 14:07:25,190 | INFO | File: 1HC2-GJTD-image.wav | WER=19.791667 | S=11 D=4 I=4
+2026-01-29 14:07:25,190 | INFO | ------------------------------
+2026-01-29 14:07:25,191 | INFO |  File duration: 81.56133333333334 seconds
+2026-01-29 14:07:26,969 | INFO | Using rVAD model
+2026-01-29 14:07:30,768 | INFO | Number of chunks: 17
+2026-01-29 14:08:37,538 | INFO | File: 1HC2-IWVU-image.wav | WER=22.839506 | S=13 D=15 I=9
+2026-01-29 14:08:37,538 | INFO | ------------------------------
+2026-01-29 14:08:37,538 | INFO |  File duration: 72.74496 seconds
+2026-01-29 14:08:38,305 | INFO | Using rVAD model
+2026-01-29 14:08:41,809 | INFO | Number of chunks: 12
+2026-01-29 14:09:33,831 | INFO | File: 1HC2-ODZI-image.wav | WER=23.566879 | S=17 D=14 I=6
+2026-01-29 14:09:33,831 | INFO | ------------------------------
+2026-01-29 14:09:33,831 | INFO |  File duration: 97.97733333333333 seconds
+2026-01-29 14:09:35,944 | INFO | Using rVAD model
+2026-01-29 14:09:40,506 | INFO | Number of chunks: 5
+2026-01-29 14:10:22,042 | INFO | File: 1HC2-OZTK-image.wav | WER=14.218009 | S=23 D=4 I=3
+2026-01-29 14:10:22,042 | INFO | ------------------------------
+2026-01-29 14:10:22,043 | INFO |  File duration: 43.17184 seconds
+2026-01-29 14:10:22,494 | INFO | Using rVAD model
+2026-01-29 14:10:24,494 | INFO | Number of chunks: 6
+2026-01-29 14:10:55,678 | INFO | File: 1HC2-RKHI-image.wav | WER=9.803922 | S=2 D=0 I=8
+2026-01-29 14:10:55,678 | INFO | ------------------------------
+2026-01-29 14:10:55,679 | INFO |  File duration: 103.55466666666666 seconds
+2026-01-29 14:10:57,909 | INFO | Using rVAD model
+2026-01-29 14:11:02,725 | INFO | Number of chunks: 12
+2026-01-29 14:12:11,330 | INFO | File: 1HC2-TATW-image.wav | WER=36.666667 | S=50 D=32 I=6
+2026-01-29 14:12:11,330 | INFO | ------------------------------
+2026-01-29 14:12:11,330 | INFO |  File duration: 56.70133333333333 seconds
+2026-01-29 14:12:12,498 | INFO | Using rVAD model
+2026-01-29 14:12:15,142 | INFO | Number of chunks: 4
+2026-01-29 14:12:40,577 | INFO | File: 1HC2-YSZL-image.wav | WER=15.555556 | S=8 D=7 I=6
+2026-01-29 14:12:40,577 | INFO | ------------------------------
+2026-01-29 14:12:40,577 | INFO |  File duration: 45.75389583333333 seconds
+2026-01-29 14:12:41,482 | INFO | Using rVAD model
+2026-01-29 14:12:43,608 | INFO | Number of chunks: 6
+2026-01-29 14:13:12,368 | INFO | File: 2HC-IWHW-image.wav | WER=21.649485 | S=12 D=5 I=4
+2026-01-29 14:13:12,368 | INFO | ------------------------------
+2026-01-29 14:13:12,369 | INFO |  File duration: 77.97377083333333 seconds
+2026-01-29 14:13:13,949 | INFO | Using rVAD model
+2026-01-29 14:13:17,675 | INFO | Number of chunks: 4
+2026-01-29 14:13:50,631 | INFO | File: 2HC-MLLK-image.wav | WER=19.213974 | S=19 D=11 I=14
+2026-01-29 14:13:50,632 | INFO | ------------------------------
+2026-01-29 14:13:50,632 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:13:50,632 | INFO | The number of files is 31
+2026-01-29 14:13:50,632 | INFO | WER: 19.38%
+2026-01-29 14:13:50,632 | INFO | =============================================================

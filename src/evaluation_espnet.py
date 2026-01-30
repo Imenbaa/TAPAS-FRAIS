@@ -1,7 +1,7 @@
 import argparse
 import logging
 import os
-
+import torch
 from utils.read_transcription import *
 from utils.normalise_text import *
 from pathlib import Path
@@ -19,7 +19,7 @@ parser.add_argument('--wav_data', help='Path to the input WAV file or folder')
 parser.add_argument("--ref_trans", type=str,required=True, help="The reference transcription")
 parser.add_argument('--config', default='/vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR_config.yaml', help='Path to the ASR config file (default: asr_config.yml)')
 parser.add_argument('--model', default='/vol/experiments3/rouas/SpeechRecognition/saved_models/espnet2-commonvoice-conformer-FR/asr_commonvoice_conformer_FR.pth', help='Path to the ASR model file (default: asr.pth)')
-parser.add_argument("--vad", type=str,required=True, help="The logfile name")
+#parser.add_argument("--vad", type=str,required=True, help="The logfile name")
 parser.add_argument("--log_file", type=str,required=True, help="The logfile name")
 
 args = parser.parse_args()
@@ -35,32 +35,57 @@ def main(args):
 
     WERs = []
     number_files = 0
-    tg_to_wav = list_files(args.ref_trans)
+    args.ref_trans = unicodedata.normalize("NFD", args.ref_trans)
+    print(os.path.exists(args.ref_trans))
+    if args.wav_data.endswith("PD") or args.wav_data.endswith("MSA"):
+
+        tg_to_wav = {}
+        for w in os.listdir(args.wav_data):
+            for t in os.listdir(args.ref_trans):
+                if not t.startswith("._"):
+                    if w.split("-")[1] in t:
+                        tg_to_wav[t] = w
+    else:
+        tg_to_wav = list_files(args.ref_trans)
     for tg,wav in tg_to_wav.items():
         wav_file = os.path.join(args.wav_data, wav)
         trans_file = os.path.join(args.ref_trans, tg)
-        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid":
+        if os.path.exists(wav_file) and os.path.exists(trans_file) and tg !="CCM-004773-01_L01.TextGrid" and wav!="CCM-004773-01_L01.wav":
             number_files += 1
             logging.info(f" File duration: {librosa.get_duration(filename=wav_file)} seconds")
-            if "Rhapsodie" in args.ref_trans:
-                ref_transcriptions = get_textgrid_transcription_rhap(trans_file)
-            else:
-                ref_transcriptions = get_textgrid_transcription_tapas(trans_file)
             # load audio+apply silero VAD
-            if args.vad=="rvad":
-                audio_np=apply_rvad_return_audio(wav_file)
+            #if args.vad=="rvad":
+               # audio_np=apply_rvad_return_audio(wav_file)
+            #else:
+               # audio_np=apply_silero_vad_return_audio(wav_file)
+            # load audio
+            audio_np, sr = read_audio_16k(wav_file)
+            wav = torch.from_numpy(audio_np)
+            # VAD + chunking
+            chunks = vad_chunk_with_timestamps(wav)
+
+            results=espnet_transcribe_chunks(speech2text,wav,chunks,sr=16000)
+            if "Daoudi" not in args.ref_trans:
+
+                if "Rhapsodie" in args.ref_trans:
+                    words = get_textgrid_transcription_rhap_chunk(trans_file)
+                else:
+                    words = get_textgrid_transcription_chunk(trans_file)
+
+                ref_transcriptions, pred_transcriptions = wer_chunk(results, words)
             else:
-                audio_np=apply_silero_vad_return_audio(wav_file)
-            results = speech2text(speech=audio_np)
-            nbests = [text for text, token, token_int, hyp in results]
-            pred_transcriptions = nbests[0] if nbests is not None and len(nbests) > 0 else ""
-            ref_transcriptions = remove_words(ref_transcriptions)
-            print(normalization(pred_transcriptions))
-            print(normalization(ref_transcriptions))
+                ref_transcriptions = read_preprocess_transcription(trans_file)
+                ref_transcriptions = remove_words(ref_transcriptions)
+                #ref_transcriptions = clean_french_disfluencies(remove_words(ref_transcriptions))
+                pred_transcriptions = " ".join(r["text"] for r in results if r["text"].strip())
+
+            logging.info(normalization(pred_transcriptions))
+            logging.info(normalization(ref_transcriptions))
             # -------------------------------- WER per file   -------------------------------
             # --------------------------------------------------------------------------------
             WER = wer_segment(wav_file, ref_transcriptions, pred_transcriptions)
             WERs.append(WER)
+            #break
         else:
             logging.warning(f"The file {wav_file} does not exist")
     # -------------------------------- Global WER     -------------------------------

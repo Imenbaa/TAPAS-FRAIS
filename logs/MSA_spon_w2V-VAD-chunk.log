@@ -1,0 +1,121 @@
+2026-01-29 14:02:52,074 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-29 14:02:52,075 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-29 14:02:52,109 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-29 14:02:52,873 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-29 14:02:52,886 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-29 14:02:52,886 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-29 14:02:52,886 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-29 14:02:52,886 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-29 14:02:52,886 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-29 14:02:52,886 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-29 14:02:52,886 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-29 14:02:52,886 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-29 14:02:52,886 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-29 14:02:52,887 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-29 14:02:52,887 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-29 14:02:56,134 | INFO |  File duration: 51.372 seconds
+2026-01-29 14:02:57,800 | INFO | Using rVAD model
+2026-01-29 14:03:00,135 | INFO | Number of chunks: 12
+2026-01-29 14:03:02,493 | INFO | Created a temporary directory at /tmp/tmpaowk8s16
+2026-01-29 14:03:02,494 | INFO | Writing /tmp/tmpaowk8s16/_remote_module_non_scriptable.py
+2026-01-29 14:03:02,679 | DEBUG | Registered checkpoint save hook for save
+2026-01-29 14:03:02,680 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-29 14:03:03,010 | INFO | ------------------------------
+2026-01-29 14:03:03,010 | INFO | ------------------------------
+2026-01-29 14:03:03,016 | INFO | File: 1MSA-HGJK-image.wav | WER=31.034483 | S=9 D=9 I=0
+2026-01-29 14:03:03,016 | INFO | ------------------------------
+2026-01-29 14:03:03,016 | INFO |  File duration: 53.276 seconds
+2026-01-29 14:03:04,130 | INFO | Using rVAD model
+2026-01-29 14:03:06,567 | INFO | Number of chunks: 9
+2026-01-29 14:03:06,859 | INFO | ------------------------------
+2026-01-29 14:03:06,860 | INFO | ------------------------------
+2026-01-29 14:03:06,868 | INFO | File: 1MSA-ESWQ-image.wav | WER=19.298246 | S=5 D=5 I=1
+2026-01-29 14:03:06,868 | INFO | ------------------------------
+2026-01-29 14:03:06,868 | INFO |  File duration: 37.704 seconds
+2026-01-29 14:03:07,678 | INFO | Using rVAD model
+2026-01-29 14:03:09,393 | INFO | Number of chunks: 5
+2026-01-29 14:03:09,549 | INFO | ------------------------------
+2026-01-29 14:03:09,549 | INFO | ------------------------------
+2026-01-29 14:03:09,555 | INFO | File: 1MSA-YWWF-image.wav | WER=23.333333 | S=7 D=13 I=1
+2026-01-29 14:03:09,555 | INFO | ------------------------------
+2026-01-29 14:03:09,555 | INFO |  File duration: 90.57866666666666 seconds
+2026-01-29 14:03:11,519 | INFO | Using rVAD model
+2026-01-29 14:03:15,881 | INFO | Number of chunks: 7
+2026-01-29 14:03:16,164 | INFO | ------------------------------
+2026-01-29 14:03:16,164 | INFO | ------------------------------
+2026-01-29 14:03:16,194 | INFO | File: 1MSA2-MIHM-image.wav | WER=26.865672 | S=33 D=36 I=3
+2026-01-29 14:03:16,195 | INFO | ------------------------------
+2026-01-29 14:03:16,195 | INFO |  File duration: 110.62533333333333 seconds
+2026-01-29 14:03:18,596 | INFO | Using rVAD model
+2026-01-29 14:03:23,679 | INFO | Number of chunks: 9
+2026-01-29 14:03:24,027 | INFO | ------------------------------
+2026-01-29 14:03:24,027 | INFO | ------------------------------
+2026-01-29 14:03:24,048 | INFO | File: 1MSA2-HQZQ-image.wav | WER=41.395349 | S=45 D=38 I=6
+2026-01-29 14:03:24,048 | INFO | ------------------------------
+2026-01-29 14:03:24,048 | INFO |  File duration: 47.012 seconds
+2026-01-29 14:03:25,025 | INFO | Using rVAD model
+2026-01-29 14:03:27,178 | INFO | Number of chunks: 14
+2026-01-29 14:03:27,580 | INFO | ------------------------------
+2026-01-29 14:03:27,580 | INFO | ------------------------------
+2026-01-29 14:03:27,585 | INFO | File: 1MSA-FXAY-image.wav | WER=51.020408 | S=9 D=15 I=1
+2026-01-29 14:03:27,585 | INFO | ------------------------------
+2026-01-29 14:03:27,585 | INFO |  File duration: 34.48832 seconds
+2026-01-29 14:03:27,976 | INFO | Using rVAD model
+2026-01-29 14:03:29,550 | INFO | Number of chunks: 9
+2026-01-29 14:03:29,819 | INFO | ------------------------------
+2026-01-29 14:03:29,819 | INFO | ------------------------------
+2026-01-29 14:03:29,822 | INFO | File: 1MSA-EDKI-image.wav | WER=33.333333 | S=7 D=3 I=2
+2026-01-29 14:03:29,822 | INFO | ------------------------------
+2026-01-29 14:03:29,822 | INFO |  File duration: 32.71333333333333 seconds
+2026-01-29 14:03:30,482 | INFO | Using rVAD model
+2026-01-29 14:03:32,087 | INFO | Number of chunks: 6
+2026-01-29 14:03:32,281 | INFO | ------------------------------
+2026-01-29 14:03:32,281 | INFO | ------------------------------
+2026-01-29 14:03:32,287 | INFO | File: 1MSA-TJHD-image.wav | WER=22.352941 | S=12 D=7 I=0
+2026-01-29 14:03:32,287 | INFO | ------------------------------
+2026-01-29 14:03:32,287 | INFO |  File duration: 29.977333333333334 seconds
+2026-01-29 14:03:32,884 | INFO | Using rVAD model
+2026-01-29 14:03:34,248 | INFO | Number of chunks: 3
+2026-01-29 14:03:34,338 | INFO | ------------------------------
+2026-01-29 14:03:34,338 | INFO | ------------------------------
+2026-01-29 14:03:34,341 | INFO | File: 1MSA-JAJC-image.wav | WER=5.714286 | S=1 D=1 I=0
+2026-01-29 14:03:34,341 | INFO | ------------------------------
+2026-01-29 14:03:34,341 | INFO |  File duration: 65.648 seconds
+2026-01-29 14:03:35,690 | INFO | Using rVAD model
+2026-01-29 14:03:38,767 | INFO | Number of chunks: 3
+2026-01-29 14:03:38,919 | INFO | ------------------------------
+2026-01-29 14:03:38,919 | INFO | ------------------------------
+2026-01-29 14:03:38,939 | INFO | File: 1MSA-PLZK-image.wav | WER=23.611111 | S=21 D=30 I=0
+2026-01-29 14:03:38,939 | INFO | ------------------------------
+2026-01-29 14:03:38,940 | INFO |  File duration: 48.49066666666667 seconds
+2026-01-29 14:03:40,039 | INFO | Using rVAD model
+2026-01-29 14:03:42,280 | INFO | Number of chunks: 15
+2026-01-29 14:03:42,687 | INFO | ------------------------------
+2026-01-29 14:03:42,687 | INFO | ------------------------------
+2026-01-29 14:03:42,692 | INFO | File: 1MSA2-KHDK-image.wav | WER=21.951220 | S=10 D=8 I=0
+2026-01-29 14:03:42,692 | INFO | ------------------------------
+2026-01-29 14:03:42,692 | INFO |  File duration: 28.730666666666668 seconds
+2026-01-29 14:03:43,346 | INFO | Using rVAD model
+2026-01-29 14:03:44,629 | INFO | Number of chunks: 3
+2026-01-29 14:03:44,723 | INFO | ------------------------------
+2026-01-29 14:03:44,724 | INFO | ------------------------------
+2026-01-29 14:03:44,728 | INFO | File: 1MSA2-PDTD-image.wav | WER=19.736842 | S=5 D=10 I=0
+2026-01-29 14:03:44,728 | INFO | ------------------------------
+2026-01-29 14:03:44,729 | INFO |  File duration: 42.176 seconds
+2026-01-29 14:03:45,622 | INFO | Using rVAD model
+2026-01-29 14:03:47,594 | INFO | Number of chunks: 11
+2026-01-29 14:03:47,912 | INFO | ------------------------------
+2026-01-29 14:03:47,912 | INFO | ------------------------------
+2026-01-29 14:03:47,917 | INFO | File: 1MSA2-ADOD-image.wav | WER=43.283582 | S=20 D=7 I=2
+2026-01-29 14:03:47,917 | INFO | ------------------------------
+2026-01-29 14:03:47,917 | INFO |  File duration: 42.358666666666664 seconds
+2026-01-29 14:03:48,782 | INFO | Using rVAD model
+2026-01-29 14:03:50,725 | INFO | Number of chunks: 8
+2026-01-29 14:03:50,929 | INFO | ------------------------------
+2026-01-29 14:03:50,929 | INFO | ------------------------------
+2026-01-29 14:03:50,934 | INFO | File: 1MSA-MCKC-image.wav | WER=18.918919 | S=9 D=5 I=0
+2026-01-29 14:03:50,934 | INFO | ------------------------------
+2026-01-29 14:03:50,934 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:03:50,934 | INFO | The number of files is 14
+2026-01-29 14:03:50,934 | INFO | WER: 27.27%
+2026-01-29 14:03:50,935 | INFO | =============================================================

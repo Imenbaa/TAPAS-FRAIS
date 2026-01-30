@@ -42,3 +42,64 @@ def remove_words(trans):
 
     res = " ".join(clean_words)
     return res
+
+def clean_french_disfluencies(text: str) -> str:
+    # 1. Normalisation unicode
+    text = unicodedata.normalize("NFKC", text)
+
+    # 2. Passage en minuscules (optionnel mais conseillé)
+    text = text.lower()
+
+    # 3. Liste des hésitations / tics de langage fréquents
+    disfluencies = [
+
+        r"\beuh+\b",
+        r"\bbah+\b",
+        r"\beh+\b",
+        r"\bhein+\b",
+        r"\bhm+\b",
+        r"\bhum+\b",
+        r"\bben+\b",
+        r"\bmh+\b",
+        r"\bheu+\b",
+    ]
+
+    # 4. Suppression des hésitations
+    for pattern in disfluencies:
+        text = re.sub(pattern, " ", text)
+
+    # 6. Nettoyage des espaces
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text
+
+def clean_french_disfluencies_repetition(text: str) -> str:
+    # 1. Normalisation unicode
+    text = unicodedata.normalize("NFKC", text)
+
+    # 2. Passage en minuscules (optionnel mais conseillé)
+    text = text.lower()
+
+    # 3. Liste des hésitations / tics de langage fréquents
+    disfluencies = [
+        r"\beuh+\b",
+        r"\bbah+\b",
+        r"\beh+\b",
+        r"\bhein+\b",
+        r"\bhm+\b",
+        r"\bhum+\b",
+        r"\bben+\b",
+        r"\bmh+\b",
+    ]
+
+    # 4. Suppression des hésitations
+    for pattern in disfluencies:
+        text = re.sub(pattern, " ", text)
+
+    # 5. Suppression des répétitions de mots (ex: "je je", "c'est c'est")
+    text = re.sub(r"\b(\w+)(\s+\1\b)+", r"\1", text)
+
+    # 6. Nettoyage des espaces
+    text = re.sub(r"\s+", " ", text).strip()
+
+    return text

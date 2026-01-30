@@ -1,0 +1,74 @@
+2026-01-29 14:14:00,203 | INFO |  File duration: 51.372 seconds
+2026-01-29 14:14:01,768 | INFO | Using rVAD model
+2026-01-29 14:14:04,107 | INFO | Number of chunks: 12
+2026-01-29 14:14:52,083 | INFO | File: 1MSA-HGJK-image.wav | WER=63.793103 | S=16 D=20 I=1
+2026-01-29 14:14:52,083 | INFO | ------------------------------
+2026-01-29 14:14:52,084 | INFO |  File duration: 53.276 seconds
+2026-01-29 14:14:53,184 | INFO | Using rVAD model
+2026-01-29 14:14:55,529 | INFO | Number of chunks: 9
+2026-01-29 14:15:28,449 | INFO | File: 1MSA-ESWQ-image.wav | WER=38.596491 | S=13 D=8 I=1
+2026-01-29 14:15:28,450 | INFO | ------------------------------
+2026-01-29 14:15:28,450 | INFO |  File duration: 37.704 seconds
+2026-01-29 14:15:29,219 | INFO | Using rVAD model
+2026-01-29 14:15:30,834 | INFO | Number of chunks: 5
+2026-01-29 14:15:56,395 | INFO | File: 1MSA-YWWF-image.wav | WER=22.222222 | S=9 D=8 I=3
+2026-01-29 14:15:56,396 | INFO | ------------------------------
+2026-01-29 14:15:56,396 | INFO |  File duration: 90.57866666666666 seconds
+2026-01-29 14:15:58,305 | INFO | Using rVAD model
+2026-01-29 14:16:02,280 | INFO | Number of chunks: 7
+2026-01-29 14:17:11,697 | INFO | File: 1MSA2-MIHM-image.wav | WER=33.955224 | S=51 D=33 I=7
+2026-01-29 14:17:11,697 | INFO | ------------------------------
+2026-01-29 14:17:11,698 | INFO |  File duration: 110.62533333333333 seconds
+2026-01-29 14:17:14,114 | INFO | Using rVAD model
+2026-01-29 14:17:19,126 | INFO | Number of chunks: 9
+2026-01-29 14:18:51,049 | INFO | File: 1MSA2-HQZQ-image.wav | WER=38.139535 | S=48 D=24 I=10
+2026-01-29 14:18:51,049 | INFO | ------------------------------
+2026-01-29 14:18:51,050 | INFO |  File duration: 47.012 seconds
+2026-01-29 14:18:51,988 | INFO | Using rVAD model
+2026-01-29 14:18:54,045 | INFO | Number of chunks: 14
+2026-01-29 14:19:40,586 | INFO | File: 1MSA-FXAY-image.wav | WER=63.265306 | S=20 D=10 I=1
+2026-01-29 14:19:40,587 | INFO | ------------------------------
+2026-01-29 14:19:40,587 | INFO |  File duration: 34.48832 seconds
+2026-01-29 14:19:40,959 | INFO | Using rVAD model
+2026-01-29 14:19:42,458 | INFO | Number of chunks: 9
+2026-01-29 14:20:11,002 | INFO | File: 1MSA-EDKI-image.wav | WER=55.555556 | S=11 D=9 I=0
+2026-01-29 14:20:11,002 | INFO | ------------------------------
+2026-01-29 14:20:11,003 | INFO |  File duration: 32.71333333333333 seconds
+2026-01-29 14:20:11,659 | INFO | Using rVAD model
+2026-01-29 14:20:13,105 | INFO | Number of chunks: 6
+2026-01-29 14:20:41,085 | INFO | File: 1MSA-TJHD-image.wav | WER=25.882353 | S=13 D=8 I=1
+2026-01-29 14:20:41,085 | INFO | ------------------------------
+2026-01-29 14:20:41,086 | INFO |  File duration: 29.977333333333334 seconds
+2026-01-29 14:20:41,693 | INFO | Using rVAD model
+2026-01-29 14:20:42,983 | INFO | Number of chunks: 3
+2026-01-29 14:20:57,020 | INFO | File: 1MSA-JAJC-image.wav | WER=20.000000 | S=4 D=3 I=0
+2026-01-29 14:20:57,020 | INFO | ------------------------------
+2026-01-29 14:20:57,021 | INFO |  File duration: 65.648 seconds
+2026-01-29 14:20:58,411 | INFO | Using rVAD model
+2026-01-29 14:21:01,256 | INFO | Number of chunks: 3
+2026-01-29 14:21:34,614 | INFO | File: 1MSA-PLZK-image.wav | WER=19.444444 | S=27 D=15 I=0
+2026-01-29 14:21:34,614 | INFO | ------------------------------
+2026-01-29 14:21:34,615 | INFO |  File duration: 48.49066666666667 seconds
+2026-01-29 14:21:35,626 | INFO | Using rVAD model
+2026-01-29 14:21:37,701 | INFO | Number of chunks: 15
+2026-01-29 14:22:35,975 | INFO | File: 1MSA2-KHDK-image.wav | WER=35.365854 | S=19 D=9 I=1
+2026-01-29 14:22:35,976 | INFO | ------------------------------
+2026-01-29 14:22:35,976 | INFO |  File duration: 28.730666666666668 seconds
+2026-01-29 14:22:36,584 | INFO | Using rVAD model
+2026-01-29 14:22:37,804 | INFO | Number of chunks: 3
+2026-01-29 14:22:53,231 | INFO | File: 1MSA2-PDTD-image.wav | WER=25.000000 | S=11 D=7 I=1
+2026-01-29 14:22:53,232 | INFO | ------------------------------
+2026-01-29 14:22:53,232 | INFO |  File duration: 42.176 seconds
+2026-01-29 14:22:54,112 | INFO | Using rVAD model
+2026-01-29 14:22:55,947 | INFO | Number of chunks: 11
+2026-01-29 14:23:36,917 | INFO | File: 1MSA2-ADOD-image.wav | WER=38.805970 | S=15 D=10 I=1
+2026-01-29 14:23:36,917 | INFO | ------------------------------
+2026-01-29 14:23:36,918 | INFO |  File duration: 42.358666666666664 seconds
+2026-01-29 14:23:37,816 | INFO | Using rVAD model
+2026-01-29 14:23:39,746 | INFO | Number of chunks: 8
+2026-01-29 14:24:12,532 | INFO | File: 1MSA-MCKC-image.wav | WER=41.891892 | S=20 D=6 I=5
+2026-01-29 14:24:12,532 | INFO | ------------------------------
+2026-01-29 14:24:12,532 | INFO | ===================== GLOBAL WER ======================
+2026-01-29 14:24:12,532 | INFO | The number of files is 14
+2026-01-29 14:24:12,532 | INFO | WER: 37.28%
+2026-01-29 14:24:12,533 | INFO | =============================================================

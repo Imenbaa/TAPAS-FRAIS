@@ -46,7 +46,20 @@ def tier_score(tier: IntervalTier):
         (5 if name_bonus else 0)
     )
     return score
+def read_transcription(filename):
+    with open(filename, 'r') as f:
+        text = f.read()
 
+    return text
+
+
+def read_preprocess_transcription(filename):
+    with open(filename,encoding="utf-8", errors="ignore") as f:
+        text = f.read()
+    match = re.split(r'\*{3}', text, maxsplit=1)
+    after_stars = match[1].strip() if len(match) > 1 else ""
+
+    return after_stars
 
 def get_textgrid_transcription(tg_path):
     tg = TextGrid.fromFile(tg_path)

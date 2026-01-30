@@ -42,10 +42,12 @@ def extract_metrics(log_path, output_csv):
     print(f"✅ Extracted {len(rows)} entries into {output_csv}")
 
 
+
 if __name__ == "__main__":
+    log_path ="/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/silero/"
+    csv_folder = "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/typaloc/"
 
-
-    for f in os.listdir("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs"):
-        if f.endswith(".log"):
-            extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/"+f, "/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/"+f.split(".")[0]+".csv")
+    for f in os.listdir(log_path):
+        if f.endswith(".log") and "CEREB" in f or "PARK" in f or "SLA" in f or "CTRL" in f or "CTR" in f:
+            extract_metrics(log_path + f, csv_folder+f.split(".")[0]+"silero.csv")
     #extract_metrics("/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/wer_typaloc_SLA_wav2vec.log","/vol/experiments3/imbenamor/TAPAS-FRAIS/logs/csv_files/wer_typaloc_SLA_wav2vec.csv")

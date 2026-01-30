@@ -1,0 +1,295 @@
+2026-01-27 12:19:47,182 | INFO | Fetch hyperparams.yaml: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/hyperparams.yaml'
+2026-01-27 12:19:47,182 | DEBUG | Fetch: Source and destination '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/custom.py' are identical, returning assuming this is intended
+2026-01-27 12:19:47,218 | WARNING | This version of torchaudio is old. SpeechBrain no longer tries using the torchaudio global backend mechanism in recipes, so if you encounter issues, update torchaudio to >=2.1.0.
+2026-01-27 12:19:47,956 | WARNING | speechbrain.lobes.models.huggingface_transformers.huggingface - Wav2Vec2Model is frozen.
+2026-01-27 12:19:47,968 | DEBUG | Collecting files (or symlinks) for pretraining in /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr.
+2026-01-27 12:19:47,968 | INFO | Fetch wav2vec2.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt'
+2026-01-27 12:19:47,968 | DEBUG | Set local path in self.paths["wav2vec2"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-27 12:19:47,968 | INFO | Fetch asr.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt'
+2026-01-27 12:19:47,968 | DEBUG | Set local path in self.paths["asr"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-27 12:19:47,968 | INFO | Fetch tokenizer.ckpt: Using file found at '/vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt'
+2026-01-27 12:19:47,968 | DEBUG | Set local path in self.paths["tokenizer"] = /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-27 12:19:47,968 | INFO | Loading pretrained files for: wav2vec2, asr, tokenizer
+2026-01-27 12:19:47,969 | DEBUG | Redirecting (loading from local path): wav2vec2 -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/wav2vec2.ckpt
+2026-01-27 12:19:47,969 | DEBUG | Redirecting (loading from local path): asr -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/asr.ckpt
+2026-01-27 12:19:47,969 | DEBUG | Redirecting (loading from local path): tokenizer -> /vol/experiments3/imbenamor/TAPAS-FRAIS/models/asr-wav2vec2-commonvoice-fr/tokenizer.ckpt
+2026-01-27 12:19:50,533 | INFO |  File duration: 78.42133333333334 seconds
+2026-01-27 12:19:52,865 | INFO | Using rVAD model
+2026-01-27 12:19:57,269 | INFO | Number of chunks: 11
+2026-01-27 12:19:58,982 | INFO | Created a temporary directory at /tmp/tmpfxa_yq5t
+2026-01-27 12:19:58,982 | INFO | Writing /tmp/tmpfxa_yq5t/_remote_module_non_scriptable.py
+2026-01-27 12:19:59,315 | DEBUG | Registered checkpoint save hook for save
+2026-01-27 12:19:59,315 | DEBUG | Registered checkpoint load hook for load_if_possible
+2026-01-27 12:19:59,646 | INFO | Chunk: 0 | WER=52.631579 | S=6 D=2 I=2
+2026-01-27 12:19:59,647 | INFO | Chunk: 1 | WER=7.142857 | S=1 D=0 I=0
+2026-01-27 12:19:59,647 | INFO | Chunk: 2 | WER=11.111111 | S=1 D=0 I=0
+2026-01-27 12:19:59,647 | INFO | Chunk: 3 | WER=41.176471 | S=5 D=2 I=0
+2026-01-27 12:19:59,648 | INFO | Chunk: 4 | WER=28.571429 | S=2 D=2 I=0
+2026-01-27 12:19:59,648 | INFO | Chunk: 5 | WER=55.555556 | S=7 D=3 I=0
+2026-01-27 12:19:59,649 | INFO | Chunk: 6 | WER=50.000000 | S=7 D=5 I=0
+2026-01-27 12:19:59,649 | INFO | Chunk: 7 | WER=53.846154 | S=5 D=2 I=0
+2026-01-27 12:19:59,649 | INFO | Chunk: 8 | WER=73.333333 | S=7 D=4 I=0
+2026-01-27 12:19:59,650 | INFO | Chunk: 9 | WER=33.333333 | S=4 D=2 I=0
+2026-01-27 12:19:59,650 | INFO | Chunk: 10 | WER=50.000000 | S=8 D=3 I=0
+2026-01-27 12:19:59,650 | INFO | ------------------------------
+2026-01-27 12:19:59,650 | INFO | ------------------------------
+2026-01-27 12:19:59,651 | INFO | ['dans', 'un', 'petit', 'melage', 'de', 'moi', 'en', 'montagne', 'il', 'ny', 'un', 'pauvre', 'en', 'cordonnier', 'ton', 'vieux', 'est', 'tout', 'casse', 'les', 'villageois', 'lui', 'amportet', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'mieux', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'grad', 'temp', 'de', 'soumiers', 'et', 'donetre', 'renconnues', 'jamais', 'je', 'ne', 'pourrai', 'ly', 'reparer', 'je', 'suis', 'tropagee', 'et', 'trop', 'malade', 'prede', 'nuit', 'la', 'rose', 'horloge', 'fait', 'dictic', 'dictinc', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 'sans', 'no', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'nutes', 'sortent', 'sur', 'le', 'plancher', 'la', 'sypectique', 'et', 'l', 'antre', 'sapeltinc', 'revons', 'les', 'etageres', 'reparons', 'les', 'souniers', 'recousons', 'les', 'linges', 'dit', 'il', 'preparons', 'un', 'geton', 'mictondigi', 'en', 'plafond', 'changeons', 'seigneurideau', 'un', 'jouge', 'tinc', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petinutes', 'rentrent', 'dans', 'la', 'bonine', 'le', 'lendemain', 'le', 'pauvre', 'encoreneniq', 'semale', 'oh', 'chui', 'qui', 'a', 'prepare', 'ce', 'bon', 'gateau', 'qui', 'nongu', 'arrange', 'la', 'maison', 'titta', 'tictac', 'dit', 'la', 'vieille', 'horlage']
+2026-01-27 12:19:59,651 | INFO | ['dans', 'un', 'petit', 'village', 'd9mo', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:19:59,665 | INFO | File: PHO-000024-01_L01.wav | WER=41.807910 | S=53 D=19 I=2
+2026-01-27 12:19:59,665 | INFO | ------------------------------
+2026-01-27 12:19:59,666 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-000024-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:19:59,666 | INFO |  File duration: 217.77066666666667 seconds
+2026-01-27 12:20:04,361 | INFO | Using rVAD model
+2026-01-27 12:20:16,419 | INFO | Number of chunks: 23
+2026-01-27 12:20:18,089 | INFO | Chunk: 0 | WER=150.000000 | S=2 D=0 I=1
+2026-01-27 12:20:18,090 | INFO | Chunk: 1 | WER=68.750000 | S=7 D=3 I=1
+2026-01-27 12:20:18,090 | INFO | Chunk: 2 | WER=62.500000 | S=4 D=0 I=1
+2026-01-27 12:20:18,090 | INFO | Chunk: 3 | WER=33.333333 | S=2 D=0 I=0
+2026-01-27 12:20:18,091 | INFO | Chunk: 4 | WER=70.000000 | S=6 D=1 I=0
+2026-01-27 12:20:18,091 | INFO | Chunk: 5 | WER=88.235294 | S=9 D=6 I=0
+2026-01-27 12:20:18,091 | INFO | Chunk: 6 | WER=46.153846 | S=5 D=1 I=0
+2026-01-27 12:20:18,092 | INFO | Chunk: 7 | WER=90.909091 | S=5 D=4 I=1
+2026-01-27 12:20:18,092 | INFO | Chunk: 8 | WER=100.000000 | S=1 D=7 I=0
+2026-01-27 12:20:18,092 | INFO | Chunk: 9 | WER=100.000000 | S=2 D=1 I=0
+2026-01-27 12:20:18,092 | INFO | Chunk: 10 | WER=125.000000 | S=4 D=0 I=1
+2026-01-27 12:20:18,092 | INFO | Chunk: 11 | WER=100.000000 | S=7 D=3 I=0
+2026-01-27 12:20:18,093 | INFO | Chunk: 12 | WER=75.000000 | S=3 D=0 I=0
+2026-01-27 12:20:18,093 | INFO | Chunk: 13 | WER=40.000000 | S=3 D=1 I=0
+2026-01-27 12:20:18,093 | INFO | Chunk: 14 | WER=100.000000 | S=2 D=0 I=1
+2026-01-27 12:20:18,093 | INFO | Chunk: 15 | WER=112.500000 | S=7 D=0 I=2
+2026-01-27 12:20:18,094 | INFO | Chunk: 16 | WER=100.000000 | S=8 D=0 I=0
+2026-01-27 12:20:18,094 | INFO | Chunk: 17 | WER=50.000000 | S=3 D=0 I=0
+2026-01-27 12:20:18,094 | INFO | Chunk: 18 | WER=81.818182 | S=8 D=1 I=0
+2026-01-27 12:20:18,095 | INFO | Chunk: 19 | WER=114.285714 | S=4 D=0 I=4
+2026-01-27 12:20:18,095 | INFO | Chunk: 20 | WER=87.500000 | S=5 D=2 I=0
+2026-01-27 12:20:18,095 | INFO | Chunk: 21 | WER=66.666667 | S=2 D=2 I=0
+2026-01-27 12:20:18,095 | INFO | Chunk: 22 | WER=87.500000 | S=5 D=2 I=0
+2026-01-27 12:20:18,095 | INFO | ------------------------------
+2026-01-27 12:20:18,095 | INFO | ------------------------------
+2026-01-27 12:20:18,096 | INFO | ['j', 'ai', 'enfam', 'n', 'petit', 'village', 'de', 'la', 'montagne', 'et', 'an', 'pouvo', 'colonnee', 'soun', 'vieux', 'est', 'soucasse', 'les', 'villageoin', 'lui', 'apportent', 'les', 'chevau', 'sur', 'a', 'pa', 'mais', 'elle', 'ne', 'travaillet', 'pas', 'vite', 'tous', 'les', 'sois', 'eles', 'mangent', 'tous', 'seu', 'bien', 'teseument', 'ce', 'seraea', 'levenluer', 'engota', 'le', 'sourr', 'el', 'le', 'ges', 'a', 'recour', 'jamais', 'je', 'ne', 'pourrailer', 'par', 'je', 'suis', 'trop', 'pager', 'est', 'top', 'malade', 'pase', 'lue', 'la', 'rose', 'eno', 'le', 'fait', 'deqaer', 'cela', 'i', 'foutvagier', 'tou', 'ai', 'courage', 'sans', 'deure', 'ausitot', 'le', 'loge', 'seva', 'est', 'de', 'petesa', 'so', 'ser', 'le', 'pencher', 'l', 'un', 's', 'appelle', 'tike', 'loso', 's', 'appelle', 'tae', 'eng', 'on', 'les', 'etagere', 'un', 'pa', 'les', 'sourer', 'on', 'coulent', 'dans', 'lage', 'd', 'ete', 'pa', 'pas', 'e', 'gato', 'madon', 'duge', 'aube', 'enfant', 'changeons', 'ces', 'vieux', 'do', 'ajout', 'taille', 'minuit', 'sonnet', 'les', 'leu', 'valant', 'petiutens', 'eno', 'lan', 'lampe', 'fendue', 'je', 'lan', 'le', 'man', 'le', 'pova', 'quand', 'le', 'ne', 's', 'evele', 'oh', 'joa', 'que', 'fepa', 'ce', 'bolianto', 'jino', 'ajai', 'la', 'maison', 'ti', 'saqise', 'sage', 'de', 'la', 'veoge']
+2026-01-27 12:20:18,096 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:20:18,110 | INFO | File: PHO-000566-01_L01.wav | WER=78.378378 | S=107 D=29 I=9
+2026-01-27 12:20:18,110 | INFO | ------------------------------
+2026-01-27 12:20:18,110 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-000566-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:18,111 | INFO |  File duration: 142.57052154195011 seconds
+2026-01-27 12:20:21,837 | INFO | Using rVAD model
+2026-01-27 12:20:28,941 | INFO | Number of chunks: 15
+2026-01-27 12:20:29,952 | INFO | Chunk: 0 | WER=25.000000 | S=2 D=3 I=0
+2026-01-27 12:20:29,953 | INFO | Chunk: 1 | WER=41.176471 | S=4 D=3 I=0
+2026-01-27 12:20:29,953 | INFO | Chunk: 2 | WER=44.444444 | S=4 D=0 I=0
+2026-01-27 12:20:29,953 | INFO | Chunk: 3 | WER=44.444444 | S=5 D=3 I=0
+2026-01-27 12:20:29,954 | INFO | Chunk: 4 | WER=14.285714 | S=0 D=1 I=0
+2026-01-27 12:20:29,954 | INFO | Chunk: 5 | WER=14.285714 | S=1 D=0 I=0
+2026-01-27 12:20:29,954 | INFO | Chunk: 6 | WER=54.545455 | S=4 D=2 I=0
+2026-01-27 12:20:29,954 | INFO | Chunk: 7 | WER=14.285714 | S=1 D=0 I=0
+2026-01-27 12:20:29,955 | INFO | Chunk: 8 | WER=60.000000 | S=8 D=7 I=0
+2026-01-27 12:20:29,955 | INFO | Chunk: 9 | WER=91.666667 | S=11 D=0 I=0
+2026-01-27 12:20:29,956 | INFO | Chunk: 10 | WER=85.714286 | S=10 D=2 I=0
+2026-01-27 12:20:29,956 | INFO | Chunk: 11 | WER=36.363636 | S=3 D=1 I=0
+2026-01-27 12:20:29,956 | INFO | Chunk: 12 | WER=14.285714 | S=1 D=0 I=0
+2026-01-27 12:20:29,956 | INFO | Chunk: 13 | WER=42.857143 | S=4 D=1 I=1
+2026-01-27 12:20:29,957 | INFO | Chunk: 14 | WER=100.000000 | S=5 D=3 I=0
+2026-01-27 12:20:29,957 | INFO | ------------------------------
+2026-01-27 12:20:29,957 | INFO | ------------------------------
+2026-01-27 12:20:29,957 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'toutrule', 'et', 'tout', 'classe', 'les', 'villageois', 'nui', 'apportent', 'des', 'chages', 'a', 'reparer', 'mais', 'ils', 'ne', 'travaillent', 'pas', 'vite', 'tous', 'les', 'moi', 'il', 'marce', 'tout', 'seul', 'mais', 'interisseulement', 'ce', 'soi', 'il', 'y', 'a', 'devant', 'lui', 'un', 'grota', 'de', 'chaunieret', 'de', 'guete', 'a', 'holcun', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trope', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'mos', 'ernage', 'fait', 'tictake', 'titaqe', 'le', 'pauvre', 'embueu', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petites', 'nutes', 'sautet', 'sur', 'le', 'planche', 'la', 'sebetique', 'l', 'hote', 'sapeta', 'enman', 'jaune', 'es', 'etager', 'repaent', 'laiconnier', 'recose', 'dans', 'le', 'lage', 'd', 'ete', 'prepa', 'min', 'gateo', 'metondudie', 'ou', 'plafon', 'change', 'ses', 'vieux', 'rindo', 'ajoute', 'tak', 'minuit', 'sonne', 'les', 'deux', 'veillants', 'petits', 'nutes', 'rentrent', 'dans', 'lapmendune', 'le', 'lendemain', 'le', 'pauvre', 'cordenier', 's', 'eveille', 'o', 'chez', 'moi', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donte', 'arrange', 'na', 'maison', 'tictintitin', 'd', 'un', 'habilee', 'lanche']
+2026-01-27 12:20:29,958 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:20:29,972 | INFO | File: PHO-000814-01_L01.wav | WER=45.197740 | S=63 D=16 I=1
+2026-01-27 12:20:29,972 | INFO | ------------------------------
+2026-01-27 12:20:29,972 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-000814-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:29,973 | INFO |  File duration: 97.96266666666666 seconds
+2026-01-27 12:20:32,040 | INFO | Using rVAD model
+2026-01-27 12:20:36,695 | INFO | Number of chunks: 9
+2026-01-27 12:20:37,389 | INFO | Chunk: 0 | WER=700.000000 | S=1 D=0 I=6
+2026-01-27 12:20:37,389 | INFO | Chunk: 1 | WER=42.857143 | S=5 D=4 I=0
+2026-01-27 12:20:37,390 | INFO | Chunk: 2 | WER=73.333333 | S=10 D=11 I=1
+2026-01-27 12:20:37,390 | INFO | Chunk: 3 | WER=55.000000 | S=6 D=5 I=0
+2026-01-27 12:20:37,391 | INFO | Chunk: 4 | WER=62.500000 | S=5 D=5 I=0
+2026-01-27 12:20:37,391 | INFO | Chunk: 5 | WER=65.000000 | S=4 D=9 I=0
+2026-01-27 12:20:37,392 | INFO | Chunk: 6 | WER=80.000000 | S=11 D=9 I=0
+2026-01-27 12:20:37,392 | INFO | Chunk: 7 | WER=88.888889 | S=5 D=3 I=0
+2026-01-27 12:20:37,392 | INFO | Chunk: 8 | WER=87.500000 | S=13 D=8 I=0
+2026-01-27 12:20:37,392 | INFO | ------------------------------
+2026-01-27 12:20:37,392 | INFO | ------------------------------
+2026-01-27 12:20:37,393 | INFO | ['il', 'vaue', 'me', 'dire', 'd', 'apporter', 'mallenate', 'dans', 'un', 'petit', 'ili', 'de', 'la', 'montagne', 'il', 'ayant', 'un', 'pauvre', 'gordonier', 'tout', 'vieux', 'est', 'tout', 'caste', 'les', 'villageois', 'leur', 'epportent', 'des', 'jousererepares', 'mais', 'ne', 'drabins', 'pas', 'vide', 'tous', 'les', 'joins', 'ils', 'mangent', 'touteunes', 'bien', 'tres', 'tenois', 'ce', 'soir', 'elena', 'devant', 'lui', 'un', 'gros', 'stade', 'd', 'doulet', 'et', 'de', 'guetes', 'a', 'recourte', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'ceu', 'sudros', 'ages', 'eteront', 'malades', 'pres', 'de', 'lui', 'lagos', 'horloge', 'vetidatitaq', 'le', 'pauvre', 'enveu', 'tout', 'decoajesanda', 'aussitot', 'lon', 'nov', 'soumr', 'et', 'de', 'petits', 'letins', 'sautent', 'sur', 'la', 'blanche', 'lo', 'sapentik', 'lon', 'sapetak', 'orange', 'en', 'les', 'etalin', 'repaent', 'lajourne', 'oro', 'coue', 'son', 'lansage', 'ditique', 'paraprent', 'un', 'gateau', 'mettant', 'duri', 'an', 'plafond', 'chenvan', 'aux', 'ebieredo', 'adototag']
+2026-01-27 12:20:37,393 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tret2nwa', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'pare', 'parao', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac']
+2026-01-27 12:20:37,402 | INFO | File: PHO-001070-01_L01.wav | WER=68.115942 | S=59 D=27 I=8
+2026-01-27 12:20:37,402 | INFO | ------------------------------
+2026-01-27 12:20:37,402 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001070-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:37,403 | INFO |  File duration: 80.43392290249433 seconds
+2026-01-27 12:20:39,384 | INFO | Using rVAD model
+2026-01-27 12:20:42,990 | INFO | Number of chunks: 7
+2026-01-27 12:20:43,515 | INFO | Chunk: 0 | WER=15.789474 | S=2 D=1 I=0
+2026-01-27 12:20:43,516 | INFO | Chunk: 1 | WER=16.666667 | S=2 D=2 I=0
+2026-01-27 12:20:43,518 | INFO | Chunk: 2 | WER=16.981132 | S=1 D=8 I=0
+2026-01-27 12:20:43,518 | INFO | Chunk: 3 | WER=14.285714 | S=1 D=1 I=0
+2026-01-27 12:20:43,518 | INFO | Chunk: 4 | WER=33.333333 | S=2 D=1 I=1
+2026-01-27 12:20:43,519 | INFO | Chunk: 5 | WER=34.482759 | S=5 D=5 I=0
+2026-01-27 12:20:43,520 | INFO | Chunk: 6 | WER=36.363636 | S=7 D=9 I=0
+2026-01-27 12:20:43,520 | INFO | ------------------------------
+2026-01-27 12:20:43,520 | INFO | ------------------------------
+2026-01-27 12:20:43,521 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'est', 'tout', 'carse', 'le', 'villageois', 'lui', 'apportet', 'des', 'chaussures', 'a', 'reparer', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tictactitaque', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'le', 'tic', 'l', 'autre', 's', 'appelle', 'le', 'tak', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliir', 'recousons', 'le', 'nage', 'dit', 'tic', 'preparons', 'un', 'gateau', 'metant', 'nili', 'au', 'plafond', 'changeons', 'ses', 'vieux', 'rideaux', 'ajoute', 'tac', 'minison', 'les', 'deux', 'faillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joa', 'qui', 'a', 'prepare', 'ce', 'bou', 'gateau', 'qui', 'donc', 'arrange', 'la', 'maison', 'tictactictac', 'dit', 'la', 'vieille', 'hologe']
+2026-01-27 12:20:43,521 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouve', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:20:43,536 | INFO | File: PHO-001329-01_L01.wav | WER=17.514124 | S=19 D=10 I=2
+2026-01-27 12:20:43,536 | INFO | ------------------------------
+2026-01-27 12:20:43,536 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001329-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:43,536 | INFO |  File duration: 93.78133333333334 seconds
+2026-01-27 12:20:45,435 | INFO | Using rVAD model
+2026-01-27 12:20:49,769 | INFO | Number of chunks: 11
+2026-01-27 12:20:50,375 | INFO | Chunk: 0 | WER=18.750000 | S=2 D=1 I=0
+2026-01-27 12:20:50,375 | INFO | Chunk: 1 | WER=62.500000 | S=4 D=1 I=0
+2026-01-27 12:20:50,375 | INFO | Chunk: 2 | WER=33.333333 | S=2 D=0 I=0
+2026-01-27 12:20:50,375 | INFO | Chunk: 3 | WER=33.333333 | S=1 D=1 I=1
+2026-01-27 12:20:50,376 | INFO | Chunk: 4 | WER=47.058824 | S=5 D=2 I=1
+2026-01-27 12:20:50,376 | INFO | Chunk: 5 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:50,377 | INFO | Chunk: 6 | WER=42.105263 | S=3 D=5 I=0
+2026-01-27 12:20:50,377 | INFO | Chunk: 7 | WER=23.076923 | S=3 D=3 I=0
+2026-01-27 12:20:50,377 | INFO | Chunk: 8 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:50,377 | INFO | Chunk: 9 | WER=100.000000 | S=2 D=2 I=0
+2026-01-27 12:20:50,378 | INFO | Chunk: 10 | WER=71.428571 | S=3 D=2 I=0
+2026-01-27 12:20:50,378 | INFO | ------------------------------
+2026-01-27 12:20:50,378 | INFO | ------------------------------
+2026-01-27 12:20:50,378 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'montagne', 'il', 'est', 'un', 'pauvre', 'coordonne', 'tout', 'vieux', 'tout', 'casse', 'les', 'villageois', 'leur', 'portent', 'de', 'chaussures', 'repare', 'mais', 'il', 'n', 'attravaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'triste', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gro', 'tatcelier', 'et', 'des', 'gatres', 'a', 'an', 'coudeau', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'co', 'sorlage', 'vetitatitac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 'ouvre', 'et', 'deux', 'petits', 'lieutins', 'saute', 'sur', 'le', 'plancher', 'l', 'un', 'pla', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'repond', 'lesoulier', 'rue', 'coujons', 'le', 'linge', 'dictique']
+2026-01-27 12:20:50,378 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'montagne', 'il', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic']
+2026-01-27 12:20:50,386 | INFO | File: PHO-001473-01_L01.wav | WER=30.252101 | S=24 D=9 I=3
+2026-01-27 12:20:50,386 | INFO | ------------------------------
+2026-01-27 12:20:50,386 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001473-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:50,386 | INFO |  File duration: 116.65066666666667 seconds
+2026-01-27 12:20:52,768 | INFO | Using rVAD model
+2026-01-27 12:20:57,992 | INFO | Number of chunks: 18
+2026-01-27 12:20:58,856 | INFO | Chunk: 0 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:58,856 | INFO | Chunk: 1 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:58,856 | INFO | Chunk: 2 | WER=21.428571 | S=3 D=0 I=0
+2026-01-27 12:20:58,856 | INFO | Chunk: 3 | WER=30.000000 | S=2 D=1 I=0
+2026-01-27 12:20:58,857 | INFO | Chunk: 4 | WER=23.529412 | S=3 D=1 I=0
+2026-01-27 12:20:58,857 | INFO | Chunk: 5 | WER=23.076923 | S=1 D=2 I=0
+2026-01-27 12:20:58,857 | INFO | Chunk: 6 | WER=30.000000 | S=1 D=2 I=0
+2026-01-27 12:20:58,858 | INFO | Chunk: 7 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 12:20:58,858 | INFO | Chunk: 8 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:58,858 | INFO | Chunk: 9 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:20:58,858 | INFO | Chunk: 10 | WER=25.000000 | S=2 D=0 I=0
+2026-01-27 12:20:58,858 | INFO | Chunk: 11 | WER=40.000000 | S=2 D=2 I=0
+2026-01-27 12:20:58,859 | INFO | Chunk: 12 | WER=78.571429 | S=5 D=6 I=0
+2026-01-27 12:20:58,859 | INFO | Chunk: 13 | WER=31.250000 | S=3 D=2 I=0
+2026-01-27 12:20:58,859 | INFO | Chunk: 14 | WER=30.769231 | S=2 D=2 I=0
+2026-01-27 12:20:58,860 | INFO | Chunk: 15 | WER=31.250000 | S=4 D=1 I=0
+2026-01-27 12:20:58,860 | INFO | Chunk: 16 | WER=33.333333 | S=1 D=1 I=0
+2026-01-27 12:20:58,860 | INFO | Chunk: 17 | WER=100.000000 | S=5 D=4 I=0
+2026-01-27 12:20:58,860 | INFO | ------------------------------
+2026-01-27 12:20:58,860 | INFO | ------------------------------
+2026-01-27 12:20:58,861 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villoisgeois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaillen', 'pas', 'vie', 'tous', 'les', 'soirs', 'ils', 'mangent', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'des', 'getes', 'a', 'recone', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'troppageer', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tiqetan', 'bah', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'dex', 'petits', 'nutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 'sapeltique', 'l', 'autre', 's', 'appelle', 'dak', 'rangeant', 'les', 'etageres', 'reparant', 'les', 'ouliers', 'recosanlelage', 'litique', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'et', 'vieux', 'rideaux', 'a', 'jontemarg', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'nudin', 'rentre', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveilne', 'au', 'joi', 'qui', 'a', 'prepare', 'ce', 'bon', 'gateau', 'qui', 'donc', 'arrange', 'la', 'maison', 'dan', 'puti', 'dan', 'di', 'lavienol']
+2026-01-27 12:20:58,861 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:20:58,874 | INFO | File: PHO-001499-01_L01.wav | WER=27.272727 | S=35 D=13 I=0
+2026-01-27 12:20:58,874 | INFO | ------------------------------
+2026-01-27 12:20:58,874 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001499-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:20:58,875 | INFO |  File duration: 165.20533333333333 seconds
+2026-01-27 12:21:02,191 | INFO | Using rVAD model
+2026-01-27 12:21:09,592 | INFO | Number of chunks: 8
+2026-01-27 12:21:10,574 | INFO | Chunk: 0 | WER=71.698113 | S=15 D=23 I=0
+2026-01-27 12:21:10,575 | INFO | Chunk: 1 | WER=67.346939 | S=15 D=18 I=0
+2026-01-27 12:21:10,576 | INFO | Chunk: 2 | WER=70.370370 | S=7 D=12 I=0
+2026-01-27 12:21:10,577 | INFO | Chunk: 3 | WER=75.609756 | S=16 D=15 I=0
+2026-01-27 12:21:10,577 | INFO | Chunk: 4 | WER=100.000000 | S=6 D=0 I=2
+2026-01-27 12:21:10,577 | INFO | Chunk: 5 | WER=91.666667 | S=6 D=5 I=0
+2026-01-27 12:21:10,578 | INFO | Chunk: 6 | WER=88.636364 | S=17 D=22 I=0
+2026-01-27 12:21:10,579 | INFO | Chunk: 7 | WER=94.444444 | S=7 D=10 I=0
+2026-01-27 12:21:10,579 | INFO | ------------------------------
+2026-01-27 12:21:10,579 | INFO | ------------------------------
+2026-01-27 12:21:10,579 | INFO | ['dans', 'un', 'village', 'de', 'la', 'montagne', 'et', 'impot', 'gardinner', 'tout', 'vue', 'et', 'toucase', 'les', 'villago', 'aport', 'des', 'chosess', 'repare', 'mais', 'in', 'ne', 'travaillent', 'pas', 'vie', 'tous', 'les', 'soir', 'ilment', 'tous', 'bien', 'tritomme', 'se', 'soie', 'il', 'ya', 'devant', 'lui', 'un', 'gros', 'da', 'desoulier', 'de', 'guette', 'a', 'recone', 'jamais', 'je', 'ne', 'pour', 'le', 'para', 'pas', 'je', 'suis', 'tropage', 'etap', 'malade', 'ps', 'de', 'lui', 'la', 'gase', 'horloge', 'faitige', 'ciqe', 'le', 'pouv', 'tout', 'degorage', 's', 'endot', 'aussitot', 'l', 'horloge', 'sou', 'et', 'deux', 'petites', 'luttas', 'sautes', 'sur', 'le', 'broche', 'la', 'sapel', 'tique', 'l', 'autre', 's', 'appellent', 'taque', 'enjant', 'les', 'etagers', 'reparant', 'les', 'sourets', 'reposent', 'le', 'lae', 'dite', 'poet', 'pa', 'un', 'gato', 'meis', 'dans', 'du', 'gii', 'en', 'bleve', 'jarago', 'un', 'no', 'jan', 'jose', 'viorido', 'ajuteta', 'mi', 'nusonne', 'de', 'vaillant', 'petit', 'lute', 'entre', 'dans', 'la', 'pendue', 'le', 'lendema', 'le', 'pauvre', 'cordeneseve', 'auj', 'vois', 'quiara', 'parsevno', 'preparese', 'bougado', 'quidn', 'en', 'jeu', 'la', 'meilleure', 'tite', 'rtixte', 'de', 'lavelhologe']
+2026-01-27 12:21:10,580 | INFO | ['dans', 'un', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'man', 'ge', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'prepa', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tikee', 'kike', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 'zeve', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:21:10,591 | INFO | File: PHO-001522-01_L01.wav | WER=68.208092 | S=90 D=26 I=2
+2026-01-27 12:21:10,592 | INFO | ------------------------------
+2026-01-27 12:21:10,592 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001522-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:21:10,592 | INFO |  File duration: 89.088 seconds
+2026-01-27 12:21:12,354 | INFO | Using rVAD model
+2026-01-27 12:21:16,246 | INFO | Number of chunks: 17
+2026-01-27 12:21:17,038 | INFO | Chunk: 0 | WER=23.529412 | S=2 D=1 I=1
+2026-01-27 12:21:17,038 | INFO | Chunk: 1 | WER=100.000000 | S=7 D=0 I=0
+2026-01-27 12:21:17,038 | INFO | Chunk: 2 | WER=40.000000 | S=1 D=0 I=1
+2026-01-27 12:21:17,039 | INFO | Chunk: 3 | WER=88.888889 | S=6 D=2 I=0
+2026-01-27 12:21:17,039 | INFO | Chunk: 4 | WER=66.666667 | S=3 D=3 I=0
+2026-01-27 12:21:17,039 | INFO | Chunk: 5 | WER=81.818182 | S=4 D=5 I=0
+2026-01-27 12:21:17,039 | INFO | Chunk: 6 | WER=42.857143 | S=3 D=0 I=0
+2026-01-27 12:21:17,040 | INFO | Chunk: 7 | WER=66.666667 | S=6 D=8 I=0
+2026-01-27 12:21:17,040 | INFO | Chunk: 8 | WER=91.666667 | S=6 D=5 I=0
+2026-01-27 12:21:17,040 | INFO | Chunk: 9 | WER=100.000000 | S=4 D=6 I=0
+2026-01-27 12:21:17,040 | INFO | Chunk: 10 | WER=100.000000 | S=4 D=5 I=0
+2026-01-27 12:21:17,041 | INFO | Chunk: 11 | WER=85.714286 | S=9 D=3 I=0
+2026-01-27 12:21:17,041 | INFO | Chunk: 12 | WER=100.000000 | S=9 D=3 I=0
+2026-01-27 12:21:17,041 | INFO | Chunk: 13 | WER=71.428571 | S=4 D=1 I=0
+2026-01-27 12:21:17,041 | INFO | Chunk: 14 | WER=83.333333 | S=3 D=2 I=0
+2026-01-27 12:21:17,042 | INFO | Chunk: 15 | WER=0.000000 | S=0 D=0 I=0
+2026-01-27 12:21:17,042 | INFO | Chunk: 16 | WER=100.000000 | S=3 D=4 I=0
+2026-01-27 12:21:17,042 | INFO | ------------------------------
+2026-01-27 12:21:17,042 | INFO | ------------------------------
+2026-01-27 12:21:17,042 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'bretagne', 'il', 'y', 'a', 'un', 'pauvre', 'cor', 'delier', 'tout', 'vieux', 'tout', 'casse', 'le', 'villajeoi', 'de', 'la', 'poche', 'sur', 'epai', 'mais', 'il', 'ne', 'taille', 'pas', 'vite', 'tue', 'soi', 'mor', 'chaus', 'seul', 'bere', 'tristomenc', 'cesela', 'est', 'devant', 'lui', 'un', 'grotasouiller', 'eduguette', 'a', 'okud', 'jamais', 'jenpoule', 'pay', 'je', 'suis', 'top', 'bage', 'et', 'trop', 'malad', 'pas', 'pas', 'de', 'uigosag', 'fati', 'tatita', 'le', 'pour', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'on', 'choufe', 'de', 'ptitales', 'sautes', 'poche', 'lace', 'petit', 'doutee', 'petit', 'ojon', 'jiteja', 'repaenses', 'oqesonnat', 'papa', 'gato', 'beton', 'dugui', 'au', 'poinfond', 'changeans', 'ses', 'vieux', 'reseaux', 'ajouta', 'mille', 'huit', 'sons', 'i', 'de', 'veilleur', 'petita', 'ronda', 'pon', 'lendemain', 'pauvre', 'conde', 'ses', 'vets', 'ojoa', 'quia', 'papay', 'ce', 'bouguetau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'dicta', 'tite', 'deverole']
+2026-01-27 12:21:17,043 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'chaussures', 'a', 'reparer', 'mais', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'e', 'devant', 'lui', 'un', 'gros', 'tas', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'maa', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'oz', 's', 'ouvre', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'syj2', 'recousons', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pa', 'du', 'lendemain', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'vieille', 'horloge']
+2026-01-27 12:21:17,053 | INFO | File: PHO-001594-01_L01.wav | WER=73.493976 | S=73 D=46 I=3
+2026-01-27 12:21:17,053 | INFO | ------------------------------
+2026-01-27 12:21:17,053 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001594-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:21:17,053 | INFO |  File duration: 85.35655328798185 seconds
+2026-01-27 12:21:19,114 | INFO | Using rVAD model
+2026-01-27 12:21:23,050 | INFO | Number of chunks: 12
+2026-01-27 12:21:23,654 | INFO | Chunk: 0 | WER=16.666667 | S=2 D=1 I=0
+2026-01-27 12:21:23,654 | INFO | Chunk: 1 | WER=50.000000 | S=6 D=1 I=1
+2026-01-27 12:21:23,655 | INFO | Chunk: 2 | WER=20.000000 | S=1 D=1 I=0
+2026-01-27 12:21:23,655 | INFO | Chunk: 3 | WER=52.631579 | S=6 D=4 I=0
+2026-01-27 12:21:23,655 | INFO | Chunk: 4 | WER=66.666667 | S=7 D=3 I=0
+2026-01-27 12:21:23,656 | INFO | Chunk: 5 | WER=66.666667 | S=7 D=5 I=0
+2026-01-27 12:21:23,656 | INFO | Chunk: 6 | WER=55.000000 | S=6 D=5 I=0
+2026-01-27 12:21:23,656 | INFO | Chunk: 7 | WER=71.428571 | S=1 D=4 I=0
+2026-01-27 12:21:23,657 | INFO | Chunk: 8 | WER=58.333333 | S=6 D=1 I=0
+2026-01-27 12:21:23,657 | INFO | Chunk: 9 | WER=88.235294 | S=9 D=6 I=0
+2026-01-27 12:21:23,657 | INFO | Chunk: 10 | WER=61.538462 | S=6 D=2 I=0
+2026-01-27 12:21:23,658 | INFO | Chunk: 11 | WER=54.838710 | S=6 D=11 I=0
+2026-01-27 12:21:23,658 | INFO | ------------------------------
+2026-01-27 12:21:23,658 | INFO | ------------------------------
+2026-01-27 12:21:23,659 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieu', 'et', 'toucas', 'les', 'village', 'gol', 'lui', 'apportent', 'des', 'jodus', 'aux', 'arrets', 'paris', 'mais', 'il', 'ne', 'travaillen', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mort', 'tout', 'seul', 'bien', 'tristement', 'ce', 'troua', 'ridiare', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'soulier', 'et', 'deux', 'quete', 'a', 'augour', 'jamais', 'du', 'poil', 'est', 'repare', 'je', 'tuis', 'trop', 'parti', 'e', 'trop', 'malade', 'predui', 'les', 'groses', 'horloges', 'e', 'titaticac', 'le', 'pauvre', 'vieux', 'tout', 'decroise', 's', 'endort', 'aussitot', 'l', 'orgoge', 'jouvre', 'et', 'deux', 'petits', 'nutins', 'sautent', 'sur', 'le', 'plancher', 'las', 'a', 'beltique', 'l', 'autre', 'zebeltac', 'onjouans', 'les', 'etadieres', 'arreparons', 'les', 'soudier', 'occutons', 'le', 'linge', 'dit', 'il', 'preparons', 'un', 'catou', 'meton', 'dugi', 'auparfond', 'changea', 'de', 'vio', 'rido', 'ajoutetac', 'minuit', 'sonne', 'les', 'deux', 'vieillants', 'pedit', 'lutin', 'a', 'rotournua', 'la', 'pandule', 'le', 'lendemain', 'le', 'pauvre', 'cornennier', 'severe', 'o', 'joi', 'qui', 'a', 'prepare', 'ce', 'beau', 'gatou', 'qui', 'donc', 'arrange', 'la', 'maison', 'titatica']
+2026-01-27 12:21:23,659 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'tac', 'tic', 'tac', 'dit', 'la', 'j9', 'ho']
+2026-01-27 12:21:23,671 | INFO | File: PHO-001670-01_L01.wav | WER=50.847458 | S=62 D=26 I=2
+2026-01-27 12:21:23,672 | INFO | ------------------------------
+2026-01-27 12:21:23,672 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001670-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:21:23,672 | INFO |  File duration: 129.2887074829932 seconds
+2026-01-27 12:21:26,704 | INFO | Using rVAD model
+2026-01-27 12:21:32,776 | INFO | Number of chunks: 12
+2026-01-27 12:21:33,641 | INFO | Chunk: 0 | WER=69.696970 | S=14 D=9 I=0
+2026-01-27 12:21:33,641 | INFO | Chunk: 1 | WER=100.000000 | S=6 D=2 I=0
+2026-01-27 12:21:33,642 | INFO | Chunk: 2 | WER=72.727273 | S=5 D=3 I=0
+2026-01-27 12:21:33,642 | INFO | Chunk: 3 | WER=75.862069 | S=16 D=6 I=0
+2026-01-27 12:21:33,643 | INFO | Chunk: 4 | WER=91.489362 | S=29 D=14 I=0
+2026-01-27 12:21:33,643 | INFO | Chunk: 5 | WER=100.000000 | S=3 D=1 I=0
+2026-01-27 12:21:33,644 | INFO | Chunk: 6 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 12:21:33,644 | INFO | Chunk: 7 | WER=100.000000 | S=7 D=3 I=0
+2026-01-27 12:21:33,644 | INFO | Chunk: 8 | WER=100.000000 | S=5 D=2 I=0
+2026-01-27 12:21:33,645 | INFO | Chunk: 9 | WER=96.153846 | S=22 D=3 I=0
+2026-01-27 12:21:33,645 | INFO | Chunk: 10 | WER=92.857143 | S=9 D=4 I=0
+2026-01-27 12:21:33,645 | INFO | Chunk: 11 | WER=100.000000 | S=1 D=0 I=0
+2026-01-27 12:21:33,645 | INFO | ------------------------------
+2026-01-27 12:21:33,645 | INFO | ------------------------------
+2026-01-27 12:21:33,646 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'vientn', 'pau', 'coordonner', 'toutlu', 'et', 'tout', 'crachi', 'les', 'villagoigne', 'apforte', 'dex', 'casu', 'avin', 'mai', 'ile', 'sae', 'falune', 'tous', 'les', 'soir', 'touchaent', 'mais', 'testamment', 'lui', 'connaissoi', 'il', 'mange', 'tout', 'jamais', 'en', 'changeent', 'chansmin', 'et', 'alon', 'nui', 'en', 'gros', 'tatou', 'nir', 'et', 'ne', 'geste', 'avant', 'cou', 'jamais', 'je', 'vois', 'le', 'banj', 'ai', 'trop', 'mage', 'trop', 'malade', 'fal', 'de', 'luila', 'rocalogue', 'mai', 'si', 'la', 'si', 'la', 'neponnen', 'tous', 'les', 'vouagins', 'san', 'non', 'aussi', 'nous', 'lalogee', 'son', 'en', 'deux', 'petits', 'mesins', 'churteu', 'le', 'bangin', 'naabencit', 'oamantn', 'rangan', 'le', 'anin', 'pa', 'esonnan', 'revonont', 'me', 'nez', 'se', 'bim', 'bon', 'aiasno', 'met', 'son', 'lui', 'mano', 'channom', 'sevu', 'ari', 'lon', 'amounemin', 'munije', 'len', 'deux', 'vaillant', 'paumne', 'en', 'en', 'a', 'manun', 'enendement', 'ne', 'vou', 'vanone', 'jelin', 'oh', 'je', 'm', 'en', 'fie', 'ufai', 'ma', 'je', 'mirano', 'silon', 'ea', 'maison', 'si', 'na', 'ni', 'na', 'ni', 'lavi', 'ordonne', 'toujo']
+2026-01-27 12:21:33,646 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'et', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'tune', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'ti', 'l', 'autre', 's', 'appelle', 'ta', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'm', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'ta', 'minuit', 'sonne', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule', 'le', 'lendemain', 'le', 'pauvre', 'cordonnier', 's', 'eveille', 'o', 'joie', 'qui', 'a', 'prepare', 'ce', 'beau', 'gateau', 'qui', 'donc', 'a', 'range', 'la', 'maison', 'tic', 'ta', 'tic', 'ta', 'dit', 'la', 'vieille', 'horloge']
+2026-01-27 12:21:33,658 | INFO | File: PHO-001836-01_L01.wav | WER=85.795455 | S=115 D=34 I=2
+2026-01-27 12:21:33,658 | INFO | ------------------------------
+2026-01-27 12:21:33,658 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-001836-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:21:33,658 | INFO |  File duration: 67.15210884353742 seconds
+2026-01-27 12:21:35,352 | INFO | Using rVAD model
+2026-01-27 12:21:38,327 | INFO | Number of chunks: 9
+2026-01-27 12:21:38,818 | INFO | Chunk: 0 | WER=58.620690 | S=8 D=9 I=0
+2026-01-27 12:21:38,819 | INFO | Chunk: 1 | WER=100.000000 | S=2 D=1 I=0
+2026-01-27 12:21:38,819 | INFO | Chunk: 2 | WER=32.000000 | S=6 D=2 I=0
+2026-01-27 12:21:38,820 | INFO | Chunk: 3 | WER=57.894737 | S=5 D=6 I=0
+2026-01-27 12:21:38,820 | INFO | Chunk: 4 | WER=14.285714 | S=1 D=1 I=0
+2026-01-27 12:21:38,820 | INFO | Chunk: 5 | WER=84.210526 | S=8 D=8 I=0
+2026-01-27 12:21:38,820 | INFO | Chunk: 6 | WER=100.000000 | S=1 D=1 I=0
+2026-01-27 12:21:38,822 | INFO | Chunk: 7 | WER=58.181818 | S=16 D=16 I=0
+2026-01-27 12:21:38,823 | INFO | Chunk: 8 | WER=57.894737 | S=6 D=5 I=0
+2026-01-27 12:21:38,823 | INFO | ------------------------------
+2026-01-27 12:21:38,823 | INFO | ------------------------------
+2026-01-27 12:21:38,823 | INFO | ['dans', 'un', 'petit', 'village', 'dans', 'un', 'petit', 'nuage', 'de', 'la', 'montagne', 'ily', 'un', 'pauvre', 'cornin', 'tout', 'vieux', 'a', 'toutcerse', 'a', 'un', 'amitla', 'les', 'menageoirs', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'ils', 'ne', 'travaillent', 'pas', 'vite', 'tous', 'les', 'soirs', 'ils', 'manchent', 'tout', 'sel', 'bien', 'tristement', 'ce', 'soir', 'il', 'niant', 'daennui', 'un', 'conton', 'de', 'suge', 'et', 'neguetre', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'le', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pre', 'de', 'nuil', 'un', 'grasoge', 'fattictactitac', 'le', 'pouie', 'tout', 'decouvrage', 'senore', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'doptinutun', 'saut', 'sur', 'le', 'plancher', 'l', 'un', 'sappelle', 'tick', 'l', 'autre', 's', 'appelletak', 'rangeont', 'les', 'etageres', 'reparont', 'les', 'soignes', 'coujours', 'le', 'na', 'recosot', 'le', 'nage', 'nyctique', 'preparant', 'un', 'gateau', 'meton', 'du', 'gia', 'plafond', 'chanjosep', 'viorino', 'ajouta', 'qua', 'minuit', 'sone', 'les', 'deux', 'vaillants', 'pontinuta', 'rentrent', 'dans', 'la', 'pendule']
+2026-01-27 12:21:38,823 | INFO | ['dans', 'un', 'petit', 'village', 'de', 'la', 'montagne', 'il', 'y', 'a', 'un', 'pauvre', 'cordonnier', 'tout', 'vieux', 'a', 'tout', 'casse', 'les', 'villageois', 'lui', 'apportent', 'des', 'chaussures', 'a', 'reparer', 'mais', 'il', 'ne', 'travaille', 'pas', 'vite', 'tous', 'les', 'soirs', 'il', 'mange', 'tout', 'seul', 'bien', 'tristement', 'ce', 'soir', 'il', 'y', 'a', 'devant', 'lui', 'un', 'gros', 'tas', 'de', 'souliers', 'et', 'de', 'guetres', 'a', 'recoudre', 'jamais', 'je', 'ne', 'pourrai', 'les', 'reparer', 'je', 'suis', 'trop', 'age', 'et', 'trop', 'malade', 'pres', 'de', 'lui', 'la', 'grosse', 'horloge', 'fait', 'tic', 'tac', 'tic', 'tac', 'le', 'pauvre', 'vieux', 'tout', 'decourage', 's', 'endort', 'aussitot', 'l', 'horloge', 's', 'ouvre', 'et', 'deux', 'petits', 'lutins', 'sautent', 'sur', 'le', 'plancher', 'l', 'un', 's', 'appelle', 'tic', 'l', 'autre', 's', 'appelle', 'tac', 'rangeons', 'les', 'etageres', 'reparons', 'les', 'souliers', 'l', 'recousons', 'le', 'linge', 'dit', 'tic', 'preparons', 'un', 'gateau', 'mettons', 'du', 'gui', 'au', 'plafond', 'changeons', 'ces', 'vieux', 'rideaux', 'ajoute', 'tac', 'minuit', 's', 'l', 'les', 'deux', 'vaillants', 'petits', 'lutins', 'rentrent', 'dans', 'la', 'pendule']
+2026-01-27 12:21:38,834 | INFO | File: PHO-307175-01_L01.wav | WER=50.666667 | S=45 D=23 I=8
+2026-01-27 12:21:38,834 | INFO | ------------------------------
+2026-01-27 12:21:38,834 | WARNING | The file /vol/corpora/TAPAS_FRAIS/Data_partagees_ParisTypaloc-TapasFrais/12-SLA/PHO-307175-01_L01_pr_analyse.wav does not exist
+2026-01-27 12:21:38,834 | INFO | ===================== GLOBAL WER ======================
+2026-01-27 12:21:38,834 | INFO | The number of files is 12
+2026-01-27 12:21:38,834 | INFO | WER: 53.13%
+2026-01-27 12:21:38,835 | INFO | =============================================================

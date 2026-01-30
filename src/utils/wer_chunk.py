@@ -1,5 +1,5 @@
 from utils.VAD_chunk import ref_text_for_chunk
-from utils.normalise_text import normalization
+from utils.normalise_text import *
 from hyperpyyaml import load_hyperpyyaml
 
 import logging
@@ -10,7 +10,7 @@ def wer_chunk(results,words):
     wer_hparams = load_hyperpyyaml("""wer_stats: !new:speechbrain.utils.metric_stats.ErrorRateStats""")
 
     for r in results:
-        r["ref"] = ref_text_for_chunk(words, r["start"], r["end"])
+        r["ref"] = remove_words(ref_text_for_chunk(words, r["start"], r["end"]))
     for id, r in enumerate(results):
         print(f"[{r['start']:.2f}-{r['end']:.2f}]")
         print("REF:", normalization(r["ref"]))
