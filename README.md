@@ -160,7 +160,7 @@ Dans typaloc CEREB il y a un fichier .mix.textgrid a changer to .TextGrid
 
 #### Typaloc dataset
 <img src="figures/wer_typaloc_plot.png" width="600">
-<img src="figures/typaloc_heatmap_normalized_group" width="600">
+<img src="figures/typaloc_heatmap_normalized_group.png" width="600">
 
 Remarques: Typaloc CEREB: CCM-002710-01_L01.TextGrid la transcription est décalé au début, elle n'est pas fiable et elle contient le mot "respiration"
 'a', 'jeimais', 'je', 'ne', 'jenase', 'pas', 'nonp', 'premiere', 'rencontre' ce n'est pas mis dans la trasncription ref mais il y a ces mots dans l'audio
